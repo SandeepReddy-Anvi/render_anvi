@@ -1,5 +1,15 @@
-import React from "react";
-import HeroSection from "./heroSection";
+import { IndustryCardVer } from "../pages/Industries";
+import { IndustriesCardsList } from "../utils/IndustriesCardsList";
+import { mainPagesLinksList } from "../utils/PagesLinkList";
+import Footer from "./footer";
+import HeroSection from "./HeroSection";
+
+const footerUpBoxInfoObj = {
+  head: "Ready to Transform Your Industry?",
+  para: "Don't see your industry listed, We work across diverse sectors and can adapt our technologies to meet your specific needs.",
+  linkLabel: "Contact Us",
+  link: mainPagesLinksList.ContactUs,
+};
 
 const IndustryLayout = ({
   backgroundImage,
@@ -41,59 +51,37 @@ const IndustryLayout = ({
             Explore Other Industries
           </p>
           <p className="text-[16px] text-[#465455]">
-            Discover how Anvi is revolutionizing technology across multiple sectors, 
-            driving innovation, efficiency, and sustainable growth for a smarter future.
+            Discover how Anvi is revolutionizing technology across multiple
+            sectors, driving innovation, efficiency, and sustainable growth for
+            a smarter future.
           </p>
         </div>
 
         {/* Example Cards */}
-        <div className="px-6 md:px-[157px] w-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center">
+        <div className="px-6 xl:px-[157px] w-full">
+          <div className="flex flex-col md:flex-row gap-[48px] items-center">
             {/* Robotics */}
-            <div className="relative group transition-transform duration-300 ease-in-out hover:scale-[1.02] origin-top-left p-6 md:p-[64px] rounded-[32px] bg-white gap-[64px]">
-              <div className="flex flex-col justify-center pl-[21.63px]">
-                <p className="font-normal text-[24px] md:text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                  Robotics
-                </p>
-                <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                  Blending intelligence with engineering, our robotics division transforms how humans interact with challenging environments.
-                </p>
-                <button className="rounded-[32px] border border-gray-200 text-gray-900 px-[23px] py-[11px] self-start">
-                  Learn More
-                </button>
-                <img
-                  loading="lazy"
-                  src="/images/robotics.png"
-                  alt="Robotics"
-                  className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg mt-8"
-                />
-              </div>
-            </div>
+            {IndustryCardVer(
+              IndustriesCardsList.robotics.title,
+              IndustriesCardsList.robotics.desc,
+              IndustriesCardsList.robotics.link,
+              IndustriesCardsList.robotics.imgUrl
+            )}
 
-            {/* Space */}
-            <div className="relative group transition-transform duration-300 ease-in-out hover:scale-[1.02] origin-top-left p-6 md:p-[64px] rounded-[32px] bg-white gap-[64px]">
-              <div className="flex flex-col justify-center pl-[21.63px]">
-                <p className="font-normal text-[24px] md:text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                  Space
-                </p>
-                <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                    Our mission is to make space safer, smarter, and scalable by advancing innovation and fostering sustainability.
-                </p>
-                <button className="rounded-[32px] border border-gray-200 text-gray-900 px-[23px] py-[11px] self-start">
-                  Learn More
-                </button>
-                <img
-                  loading="lazy"
-                  src="/images/robotics.png"
-                  alt="Robotics"
-                  className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg mt-8"
-                />
-              </div>
-            </div>
-
+            {/* Space  & Energy*/}
+            {IndustryCardVer(
+              IndustriesCardsList.space.title,
+              IndustriesCardsList.space.desc,
+              IndustriesCardsList.space.link,
+              IndustriesCardsList.space.imgUrl
+            )}
           </div>
         </div>
+
       </div>
+
+      {/* Footer */}
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>
   );
 };

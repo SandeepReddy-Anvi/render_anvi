@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 export const Energy = () => {
   return (
-    <div className="pt-[106px]">
+    <div>
     <IndustryLayout
       backgroundImage="/images/industries/energy.jpg"
       title="Energy"

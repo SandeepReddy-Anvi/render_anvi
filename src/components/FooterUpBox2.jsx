@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { IconsObj } from "../utils/Iconify_icons";
 
-export const FooterUpBox = ({ info }) => {
+export const FooterUpBox2 = ({ info }) => {
   const data = info || {};
   const { head, para, linkLabel, link } = data;
   // console.log("info : ", info);

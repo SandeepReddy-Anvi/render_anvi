@@ -1,5 +1,14 @@
-import HeroSection from "../components/heroSection";
+import Footer from "../components/footer";
+import HeroSection from "../components/HeroSection";
+import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import { pagesLinksList } from "../utils/PagesLinkList";
+
+const footerUpBoxInfoObj = {
+  head: "Looking for the Right Job ?",
+  para: "Join Anvi to explore ambitious ideas, work with breakthrough technologies, and build a career that creates real impact.",
+  linkLabel: "Browse Openings",
+  link: pagesLinksList.Career_Openings,
+};
 
 const Careers = () => {
   return (
@@ -167,6 +176,12 @@ const Careers = () => {
           />
         </div>
       </section>
+
+      {/* Pravikaya Initiative */}
+      <PravikayaInitiative />
+
+      {/* Footer */}
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>
   );
 };

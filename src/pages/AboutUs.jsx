@@ -1,5 +1,13 @@
-import React from "react";
-import HeroSection from "../components/heroSection";
+import Footer from "../components/footer";
+import HeroSection from "../components/HeroSection";
+import { mainPagesLinksList } from "../utils/PagesLinkList";
+
+const footerUpBoxInfoObj = {
+  head: "Ready to explore the future with Anvi?",
+  para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
+  linkLabel: "Contact Us",
+  link: mainPagesLinksList.ContactUs,
+};
 
 const About = () => {
   return (
@@ -199,11 +207,11 @@ const About = () => {
         </div>
       </div>
 
-      {/*section 5*/}
+      {/*section 4*/}
       <div className="relative w-full py-20 px-6 md:px-20 lg:px-32 font-dm-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
           {/* Section Heading */}
-          <div className="pr-[40px]">
+          <div className="pr-[40px] md:sticky top-[110px]">
             <h2 className="text-4xl font-normal text-[#1E2024] mb-[27px]">
               Our Journey of Innovation
             </h2>
@@ -218,7 +226,9 @@ const About = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-8 top-0 h-full w-1 bg-gray-200"></div>
+            <div className="absolute left-11 rounded-full top-0 h-full w-1 bg-gray-200">
+              <span className="w-2 h-2 bg-blue-600 sticky top-10"></span>
+            </div>
 
             <div className="space-y-12">
               {/* 2020 */}
@@ -297,6 +307,9 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <Footer  footerUpBoxInfo={footerUpBoxInfoObj}/>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { mainPagesLinksList } from "../utils/PagesLinkList";
 import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
+import { useEffect, useState } from "react";
 
 const footerUpBoxInfoObj = {
   head: "Ready to explore the future with Anvi?",
@@ -27,13 +28,84 @@ const nextAtAnvi = {
 };
 
 const Home = () => {
+  const [dimensions, setDimensions] = useState({ width: "100", height: "100" });
+
+  const updateDimensions = () => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
+  // console.log(dimensions);
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  useEffect(() => {
+    // console.log(dimensions);
+  }, [dimensions]);
+
+  const responsiveHeroSvgStyle = (
+    <>
+      {/* desktop svg */}
+      <svg
+        className="w-full h-auto sticky -z-1 max-md:hidden"
+        viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
+        fill="none"
+        style={{ zIndex: -9 }}
+      >
+        <defs>
+          <clipPath id="image-shape1">
+            <path d="M1438 549.5H0V474C44.0961 434.557 71.6097 415.971 124.5 387.5C209.167 335.338 265.558 318.978 363.5 286C458.221 265.486 511.459 254.846 607 240.5L913 204L1024 188.5C1109.08 174.129 1155.31 162.704 1235 136C1288.4 116.053 1315.55 101.964 1360 72L1395 44.5L1438 0V549.5Z" />
+          </clipPath>
+        </defs>
+        <image
+          href="/videos/home-hero-video.webp"
+          xlinkHref="/videos/home-hero-video.webp"
+          x="0"
+          y="0"
+          clipPath="url(#image-shape1)"
+          preserveAspectRatio="xMidYMid slice"
+          className="w-[110vw] h-full object-cover"
+        />
+      </svg>
+      {/* mobile svg */}
+      <svg
+        className="w-screen h-screen sticky -z-1 md:hidden"
+        viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
+        fill="none"
+      >
+        <defs>
+          <clipPath id="image-shape2">
+            <path
+              d="M754.603 894L0 893.195V773.299C0 773.299 44.2928 669.324 133.673 588.224C226.573 503.93 365.55 442.098 412.337 426.163C484.995 402.559 504.103 386.377 573.498 353.796C694.393 266.964 719.033 114.742 754.603 0.5V894Z"
+              fill="#008000"
+            />
+          </clipPath>
+        </defs>
+        <image
+          href="/videos/home-hero-video.webp"
+          xlinkHref="/videos/home-hero-video.webp"
+          x="0"
+          y="0"
+          clipPath="url(#image-shape2)"
+          preserveAspectRatio="xMidYMid slice"
+          className="w-[110vw] h-screen object-cover"
+        />
+      </svg>
+    </>
+  );
+
   return (
     <>
       <main>
         {/* Hero Section */}
-        <section className="w-full h-[calc(100vh-100px)] overflow-hidden flex justify-start align-top relative">
+        <section className="w-full h-[calc(100vh-100px)] m-auto overflow-hidden flex justify-start align-top relative">
           {/* Hero Content */}
-          <div className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
+          <div className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
             <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600]">
               Engineering Your{" "}
               <span className="whitespace-nowrap">
@@ -54,28 +126,8 @@ const Home = () => {
           </div>
 
           {/* Hero Bg */}
-          <div className="w-[110vw] md:scale-105 object-cover bg-center h-auto overflow-hidden absolute -z-5 right-0 md:left-0 bottom-0">
-            <svg
-              className="w-full h-auto sticky -z-1"
-              viewBox="0 0 1438 550"
-              fill="#000"
-              style={{ zIndex: -9 }}
-            >
-              <defs>
-                <clipPath id="image-shape">
-                  <path d="M1438 549.5H0V474C44.0961 434.557 71.6097 415.971 124.5 387.5C209.167 335.338 265.558 318.978 363.5 286C458.221 265.486 511.459 254.846 607 240.5L913 204L1024 188.5C1109.08 174.129 1155.31 162.704 1235 136C1288.4 116.053 1315.55 101.964 1360 72L1395 44.5L1438 0V549.5Z" />
-                </clipPath>
-              </defs>
-              <image
-                href="/videos/home-hero-video.webp"
-                xlinkHref="/videos/home-hero-video.webp"
-                x="0"
-                y="0"
-                clipPath="url(#image-shape)"
-                preserveAspectRatio="xMidYMid slice"
-                className="w-full h-full"
-              />
-            </svg>
+          <div className="home-hero-svg-box w-[100vw] lg:w-[110vw] lg:translate-x-[-80px] xl:translate-x-[-100px] xl:scale-[1.1] 2xl:scale-[1.15] max-md:translate-x-[-60px] max-md:scale-[1.2] md:translate-y-[41%] md:h-screen max-md:translate-y-[100px] scale-100 object-cover bg-center h-auto overflow-hidden absolute -z-5 right-0 md:left-0 bottom-0">
+            {responsiveHeroSvgStyle}
             {/* <img loading="lazy" src="/images/about.png" loading="lazy" alt="about" className="w-screen h-full object" /> */}
           </div>
         </section>
@@ -131,7 +183,7 @@ const Home = () => {
             {Object.keys(nextAtAnvi).map((each) => (
               <div
                 key={nextAtAnvi[each].title}
-                className="w-full h-auto p-3 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 md:grid-cols-2 justify-center align-middle gap-[20px]"
+                className="w-full h-auto p-3 hover:shadow-lg hover:shadow-gray-200 transition-all duration-200 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 md:grid-cols-2 justify-center align-middle gap-[20px]"
               >
                 <div className="w-full max-md:m-auto max-md:max-w-[350px] self-center md:max-w-[300px] lg:max-w-1/2 md:aspect-[4/3] object-cover object-center rounded-[16px]">
                   <img
@@ -151,7 +203,7 @@ const Home = () => {
                   </p>
                   <Link
                     to={nextAtAnvi[each].link}
-                    className="text-[#465455] text-[12px] font-[400] font-[Manrope] hover:font-bold self-start"
+                    className="text-[#465455] text-[14px] max-md:my-3 font-[400] font-[Manrope] hover:font-bold self-start"
                   >
                     Read more
                   </Link>

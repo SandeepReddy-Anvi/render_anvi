@@ -1,4 +1,4 @@
-import HeroSection from "../components/heroSection";
+import HeroSection from "../components/HeroSection";
 
 export const News = () => {
   return (
@@ -12,6 +12,8 @@ export const News = () => {
         buttonLink="#about"
         descriptionWidth="570px"
       />
+
+
     </div>
   );
 };

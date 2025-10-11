@@ -2,13 +2,20 @@ import { Link } from "react-router-dom";
 import { Instagram, Linkedin, MapPin, Mail } from "lucide-react";
 import { mainPagesLinksList } from "../utils/PagesLinkList";
 import { FooterUpBox } from "./FooterUpBox";
+import { FooterUpBox2 } from "./FooterUpBox2";
 
-const Footer = ({footerUpBoxInfo}) => {
+const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
   // console.log('footerUpBoxInfo --------- :', footerUpBoxInfo)
 
   return (
     <>
-      <FooterUpBox info={footerUpBoxInfo} />
+      {footerUpBoxInfo && (
+        <FooterUpBox info={footerUpBoxInfo} />
+      )}
+
+      {footerUpBoxInfo2 && (
+        <FooterUpBox2 info={footerUpBoxInfo2} />
+      )}
 
       <footer className="w-full h-full bg-[#191919] text-white font-manrope">
         {/* Footer Content */}
@@ -37,7 +44,7 @@ const Footer = ({footerUpBoxInfo}) => {
             </div>
 
             {/* Quick Links - Starts from top */}
-            <div className="flex sm:col-span-1 max-sm:w-auto max-sm:mr-auto flex-col gap-[18px] md:mx-auto w-[160px] self-start place-items-center">
+            <div className="flex sm:col-span-1 max-sm:w-auto max-sm:m-auto flex-col gap-[18px] md:mx-auto w-[160px] self-start place-items-center">
               <h4 className="text-[14px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
                 Quick Links
               </h4>
@@ -48,7 +55,7 @@ const Footer = ({footerUpBoxInfo}) => {
                     <li key={pageKey}>
                       <Link
                         to={mainPagesLinksList[pageKey]}
-                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-white transition-colors"
+                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#1E9AB0] transition-colors"
                       >
                         {pageKey}
                       </Link>
@@ -96,7 +103,7 @@ const Footer = ({footerUpBoxInfo}) => {
         </div>
 
         {/* Divider */}
-        <div className="w-full h-[1px] bg-[#333333]"></div>
+        <div className="w-[95%] mx-auto h-[1px] bg-[#333333]"></div>
 
         {/* Bottom Row */}
         <div className="px-[60px] py-[24px] max-md:px-6">

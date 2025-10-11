@@ -44,7 +44,7 @@ export const IndustriesCardsList = {
         link: pagesLinksList.LifeSciences,
         activeCard: false,
     },foundations: {
-        imgUrl: '/images/home/lifesciences.png',
+        imgUrl: '/images/home/foundation.png',
         title: 'Foundations',
         desc: 'Creating impact from the ground up by empowering people, driving innovation, fostering sustainability, shaping communities, and transforming futures.',
         link: pagesLinksList.Foundations,
