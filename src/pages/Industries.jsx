@@ -1,8 +1,67 @@
-import HeroSection from "../components/heroSection";
-import { pagesLinksList } from "../utils/PagesLinkList";
 import Button from "../utils/Button";
+import HeroSection from "../components/HeroSection";
+import { IndustriesCardsList } from "../utils/IndustriesCardsList";
+import { mainPagesLinksList } from "../utils/PagesLinkList";
+import Footer from "../components/footer";
 
-const Industries = () => {
+const footerUpBoxInfoObj = {
+  head: "Ready to Transform Your Industry?",
+  para: "Don't see your industry listed, We work across diverse sectors and can adapt our technologies to meet your specific needs.",
+  linkLabel: "Contact Us",
+  link: mainPagesLinksList.ContactUs,
+};
+
+const IndustryCardHor = (title, desc, link, imgUrl) => (
+  <div className="grid w-full grid-cols-1 md:grid-cols-2 relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
+    <div className="flex flex-col justify-center pl-[21.63px]">
+      <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
+        {title}
+      </p>
+      <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
+        {desc}
+      </p>
+      <div className="self-start">
+        <Button to={link} variant="secondary">
+          Learn More
+        </Button>
+      </div>
+    </div>
+    <div>
+      <img
+        loading="lazy"
+        src={imgUrl}
+        alt="Our Vision"
+        className="w-full max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] rounded-[32px]"
+      />
+    </div>
+  </div>
+);
+
+export const IndustryCardVer = (title, desc, link, imgUrl) => (
+  <div className="relative w-full md:w-[47%] group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
+    <div className="flex flex-col justify-center pl-[21.63px]">
+      <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
+        {title}
+      </p>
+      <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
+        {desc}
+      </p>
+      <div className="self-start pb-[64px]">
+        <Button to={link} variant="secondary">
+          Learn More
+        </Button>
+      </div>
+      <img
+        loading="lazy"
+        src={imgUrl}
+        alt="Our Vision"
+        className="w-full max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] rounded-[32px]"
+      />
+    </div>
+  </div>
+);
+
+export const Industries = () => {
   return (
     <div id="industries" className="w-full">
       {/* Hero Section */}
@@ -17,9 +76,9 @@ const Industries = () => {
       />
 
       {/* Industries */}
-      <section className="relative w-full px-6 sm:px-12 md:px-[80px] py-12 sm:py-16 md:py-[154px] bg-[#F4F3F7] bg-opacity[0.82]">
+      <section className="relative w-full sm:px-2 md:px-[40px] py-12 sm:py-16 md:py-[154px] bg-[#F4F3F7] bg-opacity[0.82]">
         <div className="flex flex-col items-center text-center gap-[17px] mb-20">
-          <h2 className="text-[#282828] font-dm-sans text-[54px] font-normal font-semibold leading-normal tracking-[-0.02em]">
+          <h2 className="text-[#282828] font-dm-sans text-[54px] font-normal leading-normal tracking-[-0.02em]">
             Industries of the Future
           </h2>
           <p className="max-w-[770px] font-dm-sans text-[18px] text-[#465455]">
@@ -28,216 +87,72 @@ const Industries = () => {
             empower societies.
           </p>
         </div>
-        <div className="grid gap-[50px] items-center">
+        <div className="flex flex-wrap max-w-[1000px] mx-auto justify-between w-full place-content-center gap-[30px] lg:gap-[50px] items-center">
           {/* Robotics */}
-          <div className="grid grid-cols-1 md:grid-cols-2 relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-            <div className="flex flex-col justify-center pl-[21.63px]">
-              <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                Robotics
-              </p>
-              <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                Blending intelligence with engineering, our robotics division is
-                built to transform how humans interact with challenging
-                environments on Earth.
-              </p>
-              <div className="self-start">
-                <Button variant="secondary">Learn More</Button>
-              </div>
-            </div>
-            <div>
-              <img
-                loading="lazy"
-                src="/images/robotics.png"
-                alt="Our Vision"
-                className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-              />
-            </div>
-          </div>
+          {IndustryCardHor(
+            IndustriesCardsList.robotics.title,
+            IndustriesCardsList.robotics.desc,
+            IndustriesCardsList.robotics.link,
+            IndustriesCardsList.robotics.imgUrl
+          )}
 
           {/* Space  & Energy*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-stretch">
-            <div className="relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-              <div className="flex flex-col justify-center pl-[21.63px]">
-                <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                  Space
-                </p>
-                <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                  Our mission is to make space safer, smarter, and scalable by
-                  advancing innovation, fostering sustainability, and addressing
-                  global needs.
-                </p>
-                <div className="self-start pb-[64px]">
-                  <Button variant="secondary">Learn More</Button>
-                </div>
-                <img
-                  loading="lazy"
-                  src="/images/robotics.png"
-                  alt="Our Vision"
-                  className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-                />
-              </div>
-            </div>
-            {/* Energy */}
-            <div className="relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-              <div className="flex flex-col justify-center pl-[21.63px]">
-                <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                  Energy
-                </p>
-                <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                  At ANVI, we harness hydrogen fuel cells to power efficient,
-                  scalable, zero-emission systems transforming mobility and
-                  critical infrastructure.
-                </p>
-                <div className="self-start pb-[64px]">
-                  <Button to={pagesLinksList.Energy} variant="secondary">
-                    Learn More
-                  </Button>
-                </div>
-                <img
-                  loading="lazy"
-                  src="/images/robotics.png"
-                  alt="Our Vision"
-                  className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
+          {IndustryCardVer(
+            IndustriesCardsList.space.title,
+            IndustriesCardsList.space.desc,
+            IndustriesCardsList.space.link,
+            IndustriesCardsList.space.imgUrl
+          )}
+          {IndustryCardVer(
+            IndustriesCardsList.energy.title,
+            IndustriesCardsList.energy.desc,
+            IndustriesCardsList.energy.link,
+            IndustriesCardsList.energy.imgUrl
+          )}
 
           {/* Entertainment */}
-          <div className="grid grid-cols-1 md:grid-cols-2 relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-            <div className="flex flex-col justify-center pl-[21.63px]">
-              <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                Entertainment
-              </p>
-              <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                Immersive stories, limitless creativity. Get ready to explore
-                new dimensions of imagination and bring ideas to life like never
-                before.
-              </p>
-              <div className="self-start">
-                <Button to={pagesLinksList.Entertainment} variant="secondary">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div>
-              <img
-                loading="lazy"
-                src="/images/robotics.png"
-                alt="Our Vision"
-                className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-              />
-            </div>
-          </div>
+          {IndustryCardHor(
+            IndustriesCardsList.entertainment.title,
+            IndustriesCardsList.entertainment.desc,
+            IndustriesCardsList.entertainment.link,
+            IndustriesCardsList.entertainment.imgUrl
+          )}
 
           {/* Semiconductors */}
-          <div className="grid grid-cols-1 md:grid-cols-2 relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-            <div className="flex flex-col justify-center pl-[21.63px]">
-              <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                Semiconductors
-              </p>
-              <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                At Anvi, we advance semiconductor technology, creating
-                high-performance materials and chips that power innovation
-                across next-generation electronics.
-              </p>
-              <div className="self-start">
-                <Button to={pagesLinksList.SemiConductors} variant="secondary">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div>
-              <img
-                loading="lazy"
-                src="/images/robotics.png"
-                alt="Our Vision"
-                className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-              />
-            </div>
-          </div>
+          {IndustryCardHor(
+            IndustriesCardsList.SemiConductors.title,
+            IndustriesCardsList.SemiConductors.desc,
+            IndustriesCardsList.SemiConductors.link,
+            IndustriesCardsList.SemiConductors.imgUrl
+          )}
 
           {/* Textiles  & LifeSciences*/}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[48px] items-center">
-            <div className="relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-              <div className="flex flex-col justify-center pl-[21.63px]">
-                <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                  Textiles
-                </p>
-                <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                  Anvi, India’s first AI tailoring platform, merges technology
-                  and tradition to deliver personalized formal and ethnic wear
-                  experiences.
-                </p>
-                <div className="self-start pb-[64px]">
-                  <Button to={pagesLinksList.Textiles} variant="secondary">
-                    Learn More
-                  </Button>
-                </div>
-                <img
-                  loading="lazy"
-                  src="/images/robotics.png"
-                  alt="Our Vision"
-                  className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-                />
-              </div>
-            </div>
-            {/* Life Sciences */}
-            <div className="relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-              <div className="flex flex-col justify-center pl-[21.63px]">
-                <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                  Life Sciences
-                </p>
-                <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                  Pioneering breakthroughs that improve health, empower
-                  communities, inspire innovation, protect the planet, and
-                  create better lives
-                </p>
-                <div className="self-start pb-[64px]">
-                  <Button to={pagesLinksList.LifeSciences} variant="secondary">
-                    Learn More
-                  </Button>
-                </div>
-                <img
-                  loading="lazy"
-                  src="/images/robotics.png"
-                  alt="Our Vision"
-                  className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-                />
-              </div>
-            </div>
-          </div>
+          {IndustryCardVer(
+            IndustriesCardsList.textiles.title,
+            IndustriesCardsList.textiles.desc,
+            IndustriesCardsList.textiles.link,
+            IndustriesCardsList.textiles.imgUrl
+          )}
+          {IndustryCardVer(
+            IndustriesCardsList.lifesciences.title,
+            IndustriesCardsList.lifesciences.desc,
+            IndustriesCardsList.lifesciences.link,
+            IndustriesCardsList.lifesciences.imgUrl
+          )}
 
           {/* Foundation */}
-          <div className="grid grid-cols-1 md:grid-cols-2 relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-            <div className="flex flex-col justify-center pl-[21.63px]">
-              <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
-                Foundation
-              </p>
-              <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-                Creating impact from the ground up by empowering people, driving
-                innovation, fostering sustainability, shaping communities, and
-                transforming futures.
-              </p>
-              <div className="self-start">
-                <Button to={pagesLinksList.Foundations} variant="secondary">
-                  Learn More
-                </Button>
-              </div>
-            </div>
-            <div>
-              <img
-                loading="lazy"
-                src="/images/robotics.png"
-                alt="Our Vision"
-                className="w-full sm:w-[300px] md:w-[444px] max-h-[518px] shadow-lg"
-              />
-            </div>
-          </div>
+          {IndustryCardHor(
+            IndustriesCardsList.foundations.title,
+            IndustriesCardsList.foundations.desc,
+            IndustriesCardsList.foundations.link,
+            IndustriesCardsList.foundations.imgUrl
+          )}
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>
   );
 };
-
-export default Industries;
+ 

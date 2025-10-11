@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import HeroSection from "../components/heroSection";
+import { useState } from "react";
 import { faqs } from "../components/Questions";
+import Footer from "../components/footer";
+import HeroSection from "../components/HeroSection";
 
 export const ContactUs = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -155,6 +156,9 @@ export const ContactUs = () => {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

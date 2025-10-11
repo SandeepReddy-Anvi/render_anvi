@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 export const Entertainment = () => {
   return (
-    <div className="pt-[106px]">
+    <div>
     <IndustryLayout
       backgroundImage="/images/industries/entertainment.png"
       title="Entertainment"
