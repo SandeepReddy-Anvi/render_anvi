@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IndustriesCardsList } from "../../utils/industriesCardsList";
+import { IndustriesCardsList } from "../../utils/IndustriesCardsList";
 import { useState } from "react";
 
 export const HomeIndustriesCard = () => {
@@ -57,13 +57,13 @@ export const HomeIndustriesCard = () => {
                 }}
                 onMouseEnter={() => handleMouseEnter(title)}
                 onMouseLeave={() => handleMouseLeave()}
-                className="active-home-industry-card w-full flex-grow-1 cursor-pointer h-[400px] transition-width duration-300 scale-110 md:min-h-[416px] aspect-[3/4] flex justify-center rounded-[22px] overflow-hidden border-[0.98px] border-solid border-transparent bg-cover bg-no-repeat"
+                className="active-home-industry-card w-full flex-grow-1 cursor-pointer h-[400px] transition-width duration-100 scale-110 md:min-h-[416px] aspect-[3/4] flex justify-center rounded-[22px] overflow-hidden border-[0.98px] border-solid border-transparent bg-cover bg-no-repeat"
               >
                 {/* dark linear bg */}
                 <div className="w-full h-full absolute top-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"></div>
 
                 {/* Content box */}
-                <div className="w-full flex-col p-[25px] pb-[35px] transition-rotate duration-[400ms] font-[manrope] items-center text-left justify-end gap-[7px] self-stretch flex relative">
+                <div className="w-full flex-col p-[25px] pb-[35px] transition-rotate duration-[0ms] font-[manrope] items-center text-left justify-end gap-[7px] self-stretch flex relative">
                   <h3 className="relative self-stretch mt-[-0.94px] font-bold text-white text-[15px] tracking-[0.15px] leading-[normal]">
                     {title}
                   </h3>
@@ -89,7 +89,7 @@ export const HomeIndustriesCard = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="w-full h-full absolute top-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"></div>
-                <div className="mt-[334.2px] w-[68.23px] h-[26px] ml-[0.2px] rotate-[-89.59deg] [font-family:'Manrope-Bold',Helvetica] font-bold text-white text-[18.8px] tracking-[0.19px] leading-[normal]">
+                <div className="mt-[334.2px] w-[68.23px] h-[26px] ml-[0.2px] rotate-[-89.59deg] font-['Manrope-Bold'] font-bold text-white text-[18.8px] tracking-[0.19px] leading-[normal]">
                   {title}
                 </div>
               </div>
