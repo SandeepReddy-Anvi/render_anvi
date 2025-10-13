@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { IndustriesCardsList } from "../../utils/industriesCardsList";
+import { IndustriesCardsList } from "../../utils/IndustriesCardsList";
 import { useState } from "react";
 
 export const HomeIndustriesCard = () => {
