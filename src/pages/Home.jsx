@@ -74,7 +74,7 @@ const Home = () => {
       </svg>
       {/* mobile svg */}
       <svg
-        className="w-screen h-screen sticky -z-1 md:hidden"
+        className="w-screen h-screen sticky -z-1 md:hidden scale-125"
         viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
         fill="none"
       >
@@ -93,7 +93,7 @@ const Home = () => {
           y="0"
           clipPath="url(#image-shape2)"
           preserveAspectRatio="xMidYMid slice"
-          className="w-[110vw] h-screen object-cover"
+          className="w-[100vw] h-screen object-cover"
         />
       </svg>
     </>
@@ -103,7 +103,7 @@ const Home = () => {
     <>
       <main>
         {/* Hero Section */}
-        <section className="w-full h-[calc(100vh-100px)] m-auto overflow-hidden flex justify-start align-top relative">
+        <section className="w-[101vw] h-[calc(101dvh-100px)] m-auto overflow-hidden flex justify-start align-top relative">
           {/* Hero Content */}
           <div className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
             <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600]">
@@ -125,8 +125,14 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Hero Bg */}
-          <div className="home-hero-svg-box w-[100vw] lg:w-[110vw] lg:translate-x-[-80px] xl:translate-x-[-100px] xl:scale-[1.1] 2xl:scale-[1.15] max-md:translate-x-[-60px] max-md:scale-[1.2] md:translate-y-[41%] md:h-screen max-md:translate-y-[100px] scale-100 object-cover bg-center h-auto overflow-hidden absolute -z-5 right-0 md:left-0 bottom-0">
+          {/* Hero Bg Container */}
+          <div className="w-[100vw] scale-100 object-cover bg-center h-auto overflow-hidden absolute bottom-0 -z-5 right-0
+            max-sm:translate-x-[0px] max-sm:translate-y-0
+            max-md:translate-x-[-5%] max-md:scale-[1.1] max-md:translate-y-[10vh]  
+            md:left-0 md:scale-[1.2] md:translate-y-[46%] md:h-screen
+            lg:w-[110vw] lg:translate-x-[-80px]
+            xl:translate-x-[-100px] xl:scale-[1.1]
+            2xl:scale-[1.15]">
             {responsiveHeroSvgStyle}
             {/* <img loading="lazy" src="/images/about.png" loading="lazy" alt="about" className="w-screen h-full object" /> */}
           </div>

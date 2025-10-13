@@ -74,7 +74,7 @@ const FeaturedSolutionsCardBox = () => {
   return (
     <div className="min-h-screen bg-gray-50 font-sans p-2 sm:p-4 flex items-center justify-center">
       <div 
-        style={{background: "linear-gradient(110.89deg, #FFFFFF 0%, #FFFAFF 100%);"}}
+        style={{background: "linear-gradient(110.89deg, #FFFFFF 0%, #FFFAFF 100%)"}}
         className="w-full max-w-7xl bg-white  shadow-2xl shadow-[#0000000D] rounded-3xl sm:p-10 transition-all duration-500">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
 
