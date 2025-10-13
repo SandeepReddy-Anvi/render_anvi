@@ -80,7 +80,7 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
                     strokeWidth={1.5}
                   />
                   <p className="text-[#FFFAFF] text-[16px] font-medium leading-[22.4px] tracking-[-0.32px]">
-                    Profound Buliders, whitefields,
+                    Anvi Robotics, 1st Floor,Profound Buliders, whitefields,
                     <br />
                     Kondapur, Telangana 500081
                   </p>
@@ -112,7 +112,7 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
 
             <div className="flex gap-[20px] justify-start m-auto md:mr-auto md:ml-[40px]">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/anvi_robotics"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -121,7 +121,7 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/anvirobotics"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"

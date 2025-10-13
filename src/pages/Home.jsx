@@ -219,7 +219,7 @@ const Home = () => {
           </div>
           {/* Read All Button */}
           <Link
-            to={mainPagesLinksList.Solutions}
+            to={mainPagesLinksList.News}
             className="font-[Manrope] hover:shadow-sm hover:shadow-[#0D1F21] transition-all duration-150 text-[16px] font-[400] text-[#0D1F21] px-[20px] py-[10px] rounded-[367px] bg-transparent border-[1px] border-[#0D1F21]"
           >
             Read All

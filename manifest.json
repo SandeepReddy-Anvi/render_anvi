@@ -1,0 +1,93 @@
+{
+  "short_name": "Anvi",
+  "name": "Anvi Robotics | Engineering the Future with Deep-Tech & AI",
+  "description": "At Anvi, we engineer the future through robotics, AI, and deep-tech innovation — building intelligent systems that enhance safety, efficiency, and sustainability across industries.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#00A0B0",
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/logos/anvi.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/logos/anvi512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/anvi.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": [
+    "technology",
+    "robotics",
+    "innovation",
+    "ai",
+    "automation",
+    "deep-tech"
+  ],
+  "shortcuts": [
+    {
+      "name": "Robotics",
+      "short_name": "Robotics",
+      "url": "https://www.anvirobotics.com",
+      "icons": [{ "src": "/images/home/robotics.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Space",
+      "short_name": "Space",
+      "url": "https://www.anvispace.co",
+      "icons": [{ "src": "/images/home/space.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Energy",
+      "short_name": "Energy",
+      "url": "/energy",
+      "icons": [{ "src": "/images/home/energy.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Entertainment",
+      "short_name": "Entertainment",
+      "url": "/entertainment",
+      "icons": [{ "src": "/images/home/entertainment.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Textiles",
+      "short_name": "Textiles",
+      "url": "/textiles",
+      "icons": [{ "src": "/images/home/textiles.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Semiconductors",
+      "short_name": "Semiconductors",
+      "url": "/semiconductors",
+      "icons": [
+        { "src": "/images/home/semiconductors.png", "sizes": "192x192" }
+      ]
+    },
+    {
+      "name": "Life Sciences",
+      "short_name": "LifeSciences",
+      "url": "/lifesciences",
+      "icons": [{ "src": "/images/home/lifesciences.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Foundations",
+      "short_name": "Foundations",
+      "url": "/foundations",
+      "icons": [{ "src": "/images/home/foundation.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
+}

@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import { IndustryCardVer } from "../pages/Industries";
+import { IconsObj } from "../utils/Iconify_icons";
 import { IndustriesCardsList } from "../utils/IndustriesCardsList";
 import { mainPagesLinksList } from "../utils/PagesLinkList";
 import Footer from "./footer";
@@ -39,9 +41,9 @@ const IndustryLayout = ({
         <p className="max-w-[616px] text-[#465455] text-[16px] mb-6">
           {comingSoonText}
         </p>
-        <button className="bg-[#1E9AB0] text-white text-[16px] px-5 py-2 rounded-[16px]">
-          Notify Me
-        </button>
+        <Link className="link-bg-icon">
+          Notify Me <i className="rotate-45">{IconsObj.arrow}</i>
+        </Link>
       </section>
 
       {/* Explore Other Industries Section */}
@@ -77,7 +79,6 @@ const IndustryLayout = ({
             )}
           </div>
         </div>
-
       </div>
 
       {/* Footer */}
