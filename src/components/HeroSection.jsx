@@ -9,7 +9,7 @@ const HeroSection = ({
 }) => {
   // console.log(backgroundImage);
   return (
-    <section className="w-[101vw] h-[calc(101dvh-106px)] overflow-hidden flex justify-start items-start relative">
+    <section className="w-[101vw] h-[calc(101vh-106px)] overflow-hidden flex justify-start items-start relative">
       {/* Hero Content */}
       <div className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
         <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600] leading-tight">
