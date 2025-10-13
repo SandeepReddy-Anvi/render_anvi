@@ -28,7 +28,7 @@ const HeroSection = ({
       </div>
 
       {/* Hero Background with Clip Path */}
-      <div className="w-[100vw] scale-125 max-md:scale-[1.8] max-md:translate-y-[-40%] md:scale-100 object-cover bg-center h-auto overflow-hidden absolute -z-5 right-0 md:left-0 bottom-0">
+      <div className="w-[101vw] scale-125 max-md:scale-[1.8] max-md:translate-y-[-40%] md:scale-100 object-cover bg-center overflow-hidden absolute -z-5 right-0 md:left-0 bottom-0">
         <svg
           className="w-full h-full"
           viewBox="0 0 1438 550"

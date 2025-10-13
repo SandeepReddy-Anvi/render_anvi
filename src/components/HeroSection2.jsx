@@ -26,7 +26,7 @@ const HeroSection = ({
     }, []);
   
     useEffect(() => {
-      console.log(dimensions);
+      // console.log(dimensions);
     }, [dimensions]);
   
     const responsiveHeroSvgStyle = (
