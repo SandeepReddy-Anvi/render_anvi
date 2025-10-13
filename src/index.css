@@ -13,17 +13,20 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     max-width: 2400px;
+    max-width: 100%;
     margin: auto;
     height: auto;
-    overflow: hidden auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 main {
     width: 100%;
     overflow-x: hidden !important;
     max-width: 1800px;
+    max-width: 100%;
     margin: auto;
     min-height: calc(100vh - 100px);
     display: flex;
@@ -31,7 +34,7 @@ main {
     justify-content: start;
     align-items: center;
     gap: 0;
-    z-index: -1;
+    z-index: 1;
 }
 
 /* For Chrome, Edge, and Safari */
