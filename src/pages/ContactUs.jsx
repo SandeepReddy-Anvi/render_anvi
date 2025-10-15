@@ -1,29 +1,49 @@
-import { useState } from "react";
-import { faqs } from "../components/Questions";
+import { useCallback } from "react";
+import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
-import { ChevronDown } from "lucide-react";
+import { mainPagesLinksList } from "../data/PagesLinkList";
+import axios from "axios";
+import FAQLayout from "../components/FAQLayout";
 
 export const ContactUs = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  // routes/forms.routes.js (Fix 1)
+  const sendMail = useCallback(async (formData) => {
+    const api = "http://localhost:3000/api/contact";
+    // const api = "http://localhost:3000/contactform";
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+    // FIX: Add await here
+    try {
+      await axios.post(api, formData);
+      // const resp = await axios.post(api, formData);
+      // console.log('Response:', resp.data);
+      // You would typically handle success state here
+    } catch (error) {
+      console.error(
+        "Error sending email:",
+        error.response ? error.response.data : error.message
+      );
+      // You would typically handle error state here
+    }
+  }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
     // Create an object from form values
+    const { name, email, subject, message } = e.target;
     const formData = {
-      name: e.target.name.value,
-      email: e.target.email.value,
-      subject: e.target.subject.value,
-      message: e.target.message.value,
+      name: name.value || "",
+      email: email.value || "",
+      subject: subject.value || "",
+      message: message.value || "",
+      website: "Anvi.Co",
     };
-
     console.table("Form Data:", formData);
-  };
+    if (name.value && email.value && subject.value && message.value) {
+      sendMail(formData);
+      e.target.reset();
+    }
+  }, []);
 
   return (
     <>
@@ -39,10 +59,10 @@ export const ContactUs = () => {
         />
 
         {/* Section2 */}
-        <div className="px-[80px] py-[80px]">
+        <div className="px-[10px] py-[10px] md:px-[30px] md:py-[40px] lg:px-[80px] lg:py-[80px]">
           <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[30px] gap-[30px] font-dm-sans">
             {/* Contact Info */}
-            <div className="p-[60px] bg-[#FFFFFF] rounded-[20px] w-full md:w-[520px] flex-shrink-0">
+            <div className="p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
               <p className="text-[38px] font-normal text-[#333333]">
                 Contact Information
               </p>
@@ -63,10 +83,10 @@ export const ContactUs = () => {
             {/* Form */}
             <form
               onSubmit={(e) => handleSubmit(e)}
-              className="flex-1 flex flex-col gap-4"
+              className="flex-1 flex flex-col gap-4 md:w-1/2 max-w-[600px] flex-shrink-0 place-content-center"
             >
               {/* Name & Email */}
-              <div className="flex flex-col md:flex-row gap-[20px]">
+              <div className="flex flex-col md:flex-row gap-[20px] flex-shrink-0">
                 <label htmlFor="name" className="flex flex-col w-full">
                   <span className="text-[16px] text-[#333333] mb-1.5">
                     Name
@@ -127,7 +147,7 @@ export const ContactUs = () => {
         </div>
 
         {/* Section 3 */}
-        <section className="px-[67px] py-[30px] flex flex-col items-center justify-center text-center gap-[56px]">
+        <section className="w-full max-w-[1000px] px-[10px] py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center text-center gap-[56px]">
           <div className="font-['Wix_Madefor_Display']">
             <p className="text-[48px] font-medium">Visit Our Office</p>
             <p className="text-[16px] text-[#465455] font-normal">
@@ -145,8 +165,7 @@ export const ContactUs = () => {
         </section>
 
         {/*Section 4 Questions */}
-
-        <section className="px-[67px] pt-[30px] pb-[60px] flex flex-col items-center justify-center gap-[64px]">
+        <section className="w-full max-w-[1000px] px-[10px] py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px]">
           <div className="flex flex-col gap-[16px] w-[481px] font-['Wix_Madefor_Display'] text-center">
             <p className="text-[48px]">We’re Here to Help</p>
             <p className="text-[16px] text-[#465455] font-normal">
@@ -155,33 +174,7 @@ export const ContactUs = () => {
             </p>
           </div>
           {/* Question & Answers */}
-          <div className="flex flex-col gap-5 w-full max-w-[800px]">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-white border border-[#E5E7EB] rounded-[12px] overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full flex justify-between items-center px-4 py-4 text-left font-inter text-[16px] font-medium text-[#2B303B] hover:bg-gray-100 transition-colors duration-200"
-                >
-                  {faq.question}
-                  <span
-                    className={`text-2xl transform transition-transform duration-100 ${
-                      openIndex === index ? "rotate-180" : ""
-                    }`}
-                  >
-                    <ChevronDown />
-                  </span>
-                </button>
-                {openIndex === index && (
-                  <div className="px-6 py-4 text-[16px] text-[#465455] font-normal font-dm-sans">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FAQLayout faqs={ContactUsFaqs} />
         </section>
       </main>
 

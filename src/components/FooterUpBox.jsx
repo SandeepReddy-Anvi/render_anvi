@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { IconsObj } from "../utils/Iconify_icons";
+import React from "react";
 
-export const FooterUpBox = ({ info }) => {
+export const FooterUpBox = React.memo(({ info }) => {
   const data = info || {};
   const { head, para, linkLabel, link } = data;
   // console.log("info : ", info);
@@ -26,7 +27,7 @@ export const FooterUpBox = ({ info }) => {
       </p>
       <Link
         to={link}
-        className="link-bg-icon w-max text-[16px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
+        className="link-bg-icon footerUpBox-iconlink w-max text-[16px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
         style={{ color: "#000", background: "white" }}
       >
         {linkLabel}
@@ -34,4 +35,4 @@ export const FooterUpBox = ({ info }) => {
       </Link>
     </section>
   );
-};
+});

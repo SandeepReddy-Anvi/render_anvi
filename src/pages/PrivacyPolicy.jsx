@@ -1,5 +1,5 @@
 import Footer from "../components/footer";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Industry?",

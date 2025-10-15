@@ -1,23 +1,11 @@
-import { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useParams } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import axios from "axios";
 import { IconsObj } from "../utils/Iconify_icons";
 
-//   const formDetailsFormat = {
-//     jobId: "...",
-//     fullName: "...",
-//     phone: "...",
-//     email: "...",
-//     currentLocation: "...",
-//     currentCTC: "...",
-//     expectedCTC: "...",
-//     portfolioURL: "...",
-//     resume: "file",
-//   };
-
-export const JobApplyForm = () => {
+export const JobApplyForm = React.memo(() => {
   const { jobId } = useParams(); // Get jobId from URL
   const [formData, setFormData] = useState({
     fullName: "",
@@ -35,7 +23,7 @@ export const JobApplyForm = () => {
   const [successMsg, setSuccessMsg] = useState("");
 
   // Validation
-  const validate = () => {
+  const validate = useCallback(() => {
     const newErrors = {};
     if (!formData.fullName) newErrors.fullName = "Full Name is required";
     if (!formData.phone) newErrors.phone = "Phone is required";
@@ -58,13 +46,13 @@ export const JobApplyForm = () => {
     if (!formData.resume) newErrors.resume = "Resume is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
-  };
+  }, []);
 
-  const handleFileChange = (e) => {
+  const handleFileChange = useCallback((e) => {
     setFormData((prev) => ({ ...prev, resume: e.target.files[0] }));
-  };
+  }, []);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
     if (!validate()) return;
 
@@ -95,7 +83,7 @@ export const JobApplyForm = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   return (
     <form
@@ -238,4 +226,4 @@ export const JobApplyForm = () => {
       )}
     </form>
   );
-};
+});

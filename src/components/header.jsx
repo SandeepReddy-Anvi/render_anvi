@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 import { Menu, Plus } from "lucide-react";
 import { IconsObj } from "../utils/Iconify_icons";
 
@@ -27,7 +27,7 @@ const Header = () => {
     currentPage.current = location.pathname;
   }, [location.pathname]);
 
-  const handleMobileMenu = () => {
+  const handleMobileMenu = useCallback(() => {
     setMobileMenuOpen((prev) => {
       const isOpening = !prev;
 
@@ -43,7 +43,7 @@ const Header = () => {
 
       return isOpening;
     });
-  };
+  }, []);
 
   return (
     <header

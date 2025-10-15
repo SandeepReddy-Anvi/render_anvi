@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { jobPositions } from "../../data/jobData";
 import Footer from "../../components/footer";
 import { IconsObj } from "../../utils/Iconify_icons";
-import { pagesLinksList } from "../../utils/PagesLinkList";
+import { pagesLinksList } from "../../data/PagesLinkList";
 
 export const CareersJobDesc = () => {
   const { jobId } = useParams();

@@ -10,6 +10,7 @@
 
 * {
     box-sizing: border-box;
+    outline: none;
 }
 
 body {
@@ -139,10 +140,13 @@ body::-webkit-scrollbar-corner {
 .link-bg-icon:hover {
     box-shadow: 0px 8px 20px 0px #1E9AB052;
     transform: scale(1.02);
-
     >i {
         transform: scale(1.15) translateX(3px) rotate(90deg);
     }
+}
+.footerUpBox-iconlink:hover{
+    background-color: #1E9AB0 !important;
+    color: #fff !important;
 }
 
 .next-at-anvi ul::-webkit-scrollbar {

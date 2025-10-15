@@ -1,6 +1,6 @@
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: "Ready to explore the future with Anvi?",
