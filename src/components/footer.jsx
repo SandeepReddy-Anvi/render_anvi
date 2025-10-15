@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, MapPin, Mail } from "lucide-react";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 import { FooterUpBox } from "./FooterUpBox";
 import { FooterUpBox2 } from "./FooterUpBox2";
+import React from "react";
 
-const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
+const Footer = React.memo(({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
   // console.log('footerUpBoxInfo --------- :', footerUpBoxInfo)
 
   return (
     <>
-      {footerUpBoxInfo && (
-        <FooterUpBox info={footerUpBoxInfo} />
-      )}
+      {footerUpBoxInfo && <FooterUpBox info={footerUpBoxInfo} />}
 
-      {footerUpBoxInfo2 && (
-        <FooterUpBox2 info={footerUpBoxInfo2} />
-      )}
+      {footerUpBoxInfo2 && <FooterUpBox2 info={footerUpBoxInfo2} />}
 
       <footer className="w-full h-full bg-[#191919] text-white font-manrope">
         {/* Footer Content */}
@@ -80,7 +77,7 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
                     strokeWidth={1.5}
                   />
                   <p className="text-[#FFFAFF] text-[16px] font-medium leading-[22.4px] tracking-[-0.32px]">
-                    Profound Buliders, whitefields,
+                    Anvi Robotics, 1st Floor,Profound Buliders, whitefields,
                     <br />
                     Kondapur, Telangana 500081
                   </p>
@@ -112,7 +109,7 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
 
             <div className="flex gap-[20px] justify-start m-auto md:mr-auto md:ml-[40px]">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/anvi_robotics"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -121,7 +118,7 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
                 <Instagram size={20} strokeWidth={1.5} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/anvirobotics"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-white transition-colors"
@@ -142,6 +139,6 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
       </footer>
     </>
   );
-};
+});
 
 export default Footer;

@@ -1,6 +1,8 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { jobPositions } from "../../data/jobData";
 import Footer from "../../components/footer";
+import { IconsObj } from "../../utils/Iconify_icons";
+import { pagesLinksList } from "../../data/PagesLinkList";
 
 export const CareersJobDesc = () => {
   const { jobId } = useParams();
@@ -18,7 +20,7 @@ export const CareersJobDesc = () => {
     <div className="w-full font-dm-sans">
       {/* Hero Section */}
       <div
-        className="relative w-full h-[200px] md:h-[453px] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full h-full max-md:py-2 min-h-[250px] md:h-[453px] flex items-center justify-center bg-cover bg-center"
         // style={{ backgroundImage: `url(${job.image})` }}
         style={{ backgroundImage: `url("/images/careers/uiux.jpg")` }}
       >
@@ -27,12 +29,18 @@ export const CareersJobDesc = () => {
 
         {/* Text Content */}
         <div className="relative flex flex-col items-center justify-center text-white text-center px-4">
-          <h1 className="text-[48px] sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold leading-tight">
-            {job.title}
-          </h1>
-          <p className="text-[20px] sm:text-[22px] md:text-[24px] mt-3 font-normal">
+          <p className="text-[20px] sm:text-[22px] md:text-[24px] mt-3 font-[400]">
             {job.type}
           </p>
+          <h1 className="text-[48px] my-2 sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold leading-tight">
+            {job.title}
+          </h1>
+          <Link
+            to={`${pagesLinksList.JobInfo_Apply.replace(":jobId", jobId)}`}
+            className="link-bg-icon mt-6"
+          >
+            Apply Now <i className="rotate-45">{IconsObj.arrow}</i>
+          </Link>
         </div>
       </div>
 
@@ -82,6 +90,13 @@ export const CareersJobDesc = () => {
               <li key={index}>{item}</li>
             ))}
           </ul>
+
+          <Link
+            to={`${pagesLinksList.JobInfo_Apply.replace(":jobId", jobId)}`}
+            className="link-bg-icon mt-6"
+          >
+            Apply Now <i className="rotate-45">{IconsObj.arrow}</i>
+          </Link>
         </div>
       </section>
 

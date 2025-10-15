@@ -1,7 +1,8 @@
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
-import { pagesLinksList } from "../utils/PagesLinkList";
+import SectionWithImage from "../components/SectionWithImage";
+import { pagesLinksList } from "../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: "Looking for the Right Job ?",
@@ -21,10 +22,10 @@ const Careers = () => {
             you to join us in creating the next generation of intelligent systems."
         buttonText="Browse Openings"
         buttonLink={pagesLinksList.Career_Openings}
-        descriptionWidth="656px"
+        descriptionWidth="600px"
       />
 
-      <div className="px-4 sm:px-6 md:px-[118px] py-8 sm:py-12 md:py-[100px]">
+      <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
         <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[76px]">
           <p className="text-[#000000] text-[48px] font-normal">
             Reason to Join in Anvi
@@ -103,54 +104,20 @@ const Careers = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* section 3*/}
-      <section className="relative">
-        {/* Background image */}
-        <div className="absolute inset-0">
-          <img
-            loading="lazy"
-            src="images/careers/career3.1.png"
-            alt="Team working"
-            className="w-full h-full object-cover opacity-80"
-          />
-        </div>
-
-        {/* Content */}
-        <div className="relative z-10 flex flex-col md:flex-row px-[160px] py-[70px] gap-[100px]">
-          {/* Left Box */}
-          <div className="bg-[#0A879EE5] text-white px-[40px] py-[80px] rounded-2xl max-w-md">
-            <h2 className="text-2xl font-bold mb-2">LIFE AT ANVI</h2>
-            <span className="block w-[269px] h-[6px] bg-[#1E9AB0] mb-2"></span>
-            <p className="text-[15px] leading-relaxed">
-              Life at Anvi is about more than work — it’s about purpose, growth,
-              and collaboration. Here, innovation thrives, ambitious ideas take
-              shape, and every individual contributes to meaningful impact. With
-              a culture that values teamwork, learning, and sustainability, Anvi
-              is where talent transforms into progress and the future is
-              engineered together.
-            </p>
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col w-fit font-inter text-[20px] font-normal leading-[20px] justify-center text-white gap-4">
-            <p>Collaborative and innovative work environment</p>
-            <span className="block w-full h-[1px] bg-white"></span>
-
-            <p>Competitive compensation and benefits</p>
-            <span className="block w-full h-[1px] bg-white"></span>
-
-            <p>Professional development opportunities</p>
-            <span className="block w-full h-[1px] bg-white"></span>
-
-            <p>Work-life balance and flexible arrangements</p>
-            <span className="block w-full h-[1px] bg-white"></span>
-
-            <p>Mentorship and career growth programs</p>
-          </div>
-        </div>
-      </section>
+      <SectionWithImage
+        title="Life At Anvi"
+        description="Life at Anvi is about more than work — it’s about purpose, growth, and collaboration. Here, innovation thrives, ambitious ideas take shape, and every individual contributes to meaningful impact. With a culture that values teamwork, learning, and sustainability, Anvi is where talent transforms into progress and the future is engineered together."
+        points={[
+          "Collaborative and innovative work environment",
+          "Competitive compensation and benefits",
+          "Professional development opportunities",
+          "Work-life balance and flexible arrangements",
+          "Mentorship and career growth programs",
+        ]}
+      />
 
       {/* Section 4*/}
       <section className="px-4 sm:px-6 md:px-[123px] py-8 sm:py-12 md:py-[80px]">

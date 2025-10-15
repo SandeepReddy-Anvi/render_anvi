@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import HeroSection from "../../components/heroSection";
+import HeroSection from "../../components/HeroSection";
 import { MapPin, Clock, ChevronDown } from "lucide-react";
 import { jobPositions } from "../../data/jobData";
-import { pagesLinksList } from "../../utils/PagesLinkList";
+import { pagesLinksList } from "../../data/PagesLinkList";
 import Footer from "../../components/footer";
 
 const footerUpBoxInfoObj = {
@@ -59,11 +59,11 @@ const CareersOpenings = () => {
       />
 
       <section className="px-4 sm:px-8 md:px-16 lg:px-[140px] py-12 md:py-20 lg:py-[100px]">
-        <div className="items-center justify-center text-center font-['Wix Madefor Display']">
+        <div className="items-center flex flex-col align-middle gap-[25px] justify-center text-center font-['Wix Madefor Display']">
           <p className="text-3xl sm:text-4xl md:text-[48px] font-medium">
             Open Positions
           </p>
-          <p className="text-sm sm:text-[16px] font-normal mt-2 px-4">
+          <p className="text-sm sm:text-[16px] font-normal px-4">
             Discover opportunities to shape the future with cutting-edge
             technology
           </p>

@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
-import { pagesLinksList } from "../../utils/PagesLinkList";
+import { pagesLinksList } from "../../data/PagesLinkList";
+import React from "react";
 
-export const PravikayaInitiative = () => {
+export const PravikayaInitiative = React.memo(() => {
   return (
-    <section className="relative w-[95vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
+    <section className="relative h-auto max-md:h-[800px] max-lg:h-[600px] w-[95vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
       {/* Content */}
       <div
-        className="w-full max-w-[541px] flex flex-col items-center justify-center self-stretch mx-2"
+        className="w-full max-w-[541px] flex flex-col items-center justify-center align-middle self-stretch mx-2"
         style={{ zIndex: 2 }}
       >
-        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center w-[450.32px] text-white text-[51px]">
+        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center text-white text-[51px]">
           Pravikaya Initiative
         </h1>
         <p className="w-full text-white text-[18px] text-center font-[300]">
           An initiative by Anvi Foundation driving sustainability, education,
-          andcommunity empowerment. We believe technology should not only
+          and community empowerment. We believe technology should not only
           advance industries but also uplift societies.
         </p>
         <Link
@@ -31,7 +32,7 @@ export const PravikayaInitiative = () => {
         aria-hidden="true"
       />
 
-      <div className="w-[20vw] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[40px] xl:bottom-[20px] left-[39px] xl:left-[59px] flex overflow-hidden">
+      <div className="w-[20vw] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[60px] xl:left-[59px] flex overflow-hidden">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init1.png"
@@ -49,7 +50,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="w-[147px] h-[167px] top-[60%] md:top-[55%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden">
+      <div className="w-[147px] h-[167px] top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init3.png"
@@ -59,4 +60,4 @@ export const PravikayaInitiative = () => {
       </div>
     </section>
   );
-};
+});

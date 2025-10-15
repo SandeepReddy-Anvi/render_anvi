@@ -1,7 +1,7 @@
 import Button from "../utils/Button";
 import HeroSection from "../components/HeroSection";
-import { IndustriesCardsList } from "../utils/IndustriesCardsList";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { IndustriesCardsList } from "../data/IndustriesCardsList";
+import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import Footer from "../components/footer";
 
 const footerUpBoxInfoObj = {
@@ -63,96 +63,97 @@ export const IndustryCardVer = (title, desc, link, imgUrl) => (
 
 export const Industries = () => {
   return (
-    <div id="industries" className="w-full">
-      {/* Hero Section */}
-      <HeroSection
-        backgroundImage="/images/industries/hero.png"
-        title="Industries We Transform"
-        description="From Robotics to Space, Anvi transforms industries with intelligent automation 
+    <>
+      <main id="industries" className="w-full">
+        {/* Hero Section */}
+        <HeroSection
+          backgroundImage="/images/industries/hero.png"
+          title="Industries We Transform"
+          description="From Robotics to Space, Anvi transforms industries with intelligent automation 
         and advanced technology."
-        buttonText="About Us"
-        buttonLink="#openings"
-        descriptionWidth="656px"
-      />
+          buttonText="About Us"
+          buttonLink={pagesLinksList.AboutUs}
+          descriptionWidth="656px"
+        />
 
-      {/* Industries */}
-      <section className="relative w-full sm:px-2 md:px-[40px] py-12 sm:py-16 md:py-[154px] bg-[#F4F3F7] bg-opacity[0.82]">
-        <div className="flex flex-col items-center text-center gap-[17px] mb-20">
-          <h2 className="text-[#282828] font-dm-sans text-[54px] font-normal leading-normal tracking-[-0.02em]">
-            Industries of the Future
-          </h2>
-          <p className="max-w-[770px] font-dm-sans text-[18px] text-[#465455]">
-            From intelligent robotics to space exploration, Anvi is shaping
-            tomorrow with deep-tech systems that transform industries and
-            empower societies.
-          </p>
-        </div>
-        <div className="flex flex-wrap max-w-[1000px] mx-auto justify-between w-full place-content-center gap-[30px] lg:gap-[50px] items-center">
-          {/* Robotics */}
-          {IndustryCardHor(
-            IndustriesCardsList.robotics.title,
-            IndustriesCardsList.robotics.desc,
-            IndustriesCardsList.robotics.link,
-            IndustriesCardsList.robotics.imgUrl
-          )}
+        {/* Industries */}
+        <section className="relative w-full sm:px-2 md:px-[40px] py-12 sm:py-16 md:py-[154px] bg-[#F4F3F7] bg-opacity[0.82]">
+          <div className="flex flex-col items-center text-center gap-[17px] mb-20">
+            <h2 className="text-[#282828] font-dm-sans text-[54px] font-normal leading-normal tracking-[-0.02em]">
+              Industries of the Future
+            </h2>
+            <p className="max-w-[770px] font-dm-sans text-[18px] text-[#465455]">
+              From intelligent robotics to space exploration, Anvi is shaping
+              tomorrow with deep-tech systems that transform industries and
+              empower societies.
+            </p>
+          </div>
+          <div className="flex flex-wrap max-w-[1000px] mx-auto justify-between w-full place-content-center gap-[30px] lg:gap-[50px] items-center">
+            {/* Robotics */}
+            {IndustryCardHor(
+              IndustriesCardsList.robotics.title,
+              IndustriesCardsList.robotics.desc,
+              IndustriesCardsList.robotics.link,
+              IndustriesCardsList.robotics.imgUrl
+            )}
 
-          {/* Space  & Energy*/}
-          {IndustryCardVer(
-            IndustriesCardsList.space.title,
-            IndustriesCardsList.space.desc,
-            IndustriesCardsList.space.link,
-            IndustriesCardsList.space.imgUrl
-          )}
-          {IndustryCardVer(
-            IndustriesCardsList.energy.title,
-            IndustriesCardsList.energy.desc,
-            IndustriesCardsList.energy.link,
-            IndustriesCardsList.energy.imgUrl
-          )}
+            {/* Space  & Energy*/}
+            {IndustryCardVer(
+              IndustriesCardsList.space.title,
+              IndustriesCardsList.space.desc,
+              IndustriesCardsList.space.link,
+              IndustriesCardsList.space.imgUrl
+            )}
+            {IndustryCardVer(
+              IndustriesCardsList.energy.title,
+              IndustriesCardsList.energy.desc,
+              IndustriesCardsList.energy.link,
+              IndustriesCardsList.energy.imgUrl
+            )}
 
-          {/* Entertainment */}
-          {IndustryCardHor(
-            IndustriesCardsList.entertainment.title,
-            IndustriesCardsList.entertainment.desc,
-            IndustriesCardsList.entertainment.link,
-            IndustriesCardsList.entertainment.imgUrl
-          )}
+            {/* Entertainment */}
+            {IndustryCardHor(
+              IndustriesCardsList.entertainment.title,
+              IndustriesCardsList.entertainment.desc,
+              IndustriesCardsList.entertainment.link,
+              IndustriesCardsList.entertainment.imgUrl
+            )}
 
-          {/* Semiconductors */}
-          {IndustryCardHor(
-            IndustriesCardsList.SemiConductors.title,
-            IndustriesCardsList.SemiConductors.desc,
-            IndustriesCardsList.SemiConductors.link,
-            IndustriesCardsList.SemiConductors.imgUrl
-          )}
+            {/* Semiconductors */}
+            {IndustryCardHor(
+              IndustriesCardsList.SemiConductors.title,
+              IndustriesCardsList.SemiConductors.desc,
+              IndustriesCardsList.SemiConductors.link,
+              IndustriesCardsList.SemiConductors.imgUrl
+            )}
 
-          {/* Textiles  & LifeSciences*/}
-          {IndustryCardVer(
-            IndustriesCardsList.textiles.title,
-            IndustriesCardsList.textiles.desc,
-            IndustriesCardsList.textiles.link,
-            IndustriesCardsList.textiles.imgUrl
-          )}
-          {IndustryCardVer(
-            IndustriesCardsList.lifesciences.title,
-            IndustriesCardsList.lifesciences.desc,
-            IndustriesCardsList.lifesciences.link,
-            IndustriesCardsList.lifesciences.imgUrl
-          )}
+            {/* Textiles  & LifeSciences*/}
+            {IndustryCardVer(
+              IndustriesCardsList.textiles.title,
+              IndustriesCardsList.textiles.desc,
+              IndustriesCardsList.textiles.link,
+              IndustriesCardsList.textiles.imgUrl
+            )}
+            {IndustryCardVer(
+              IndustriesCardsList.lifesciences.title,
+              IndustriesCardsList.lifesciences.desc,
+              IndustriesCardsList.lifesciences.link,
+              IndustriesCardsList.lifesciences.imgUrl
+            )}
 
-          {/* Foundation */}
-          {IndustryCardHor(
-            IndustriesCardsList.foundations.title,
-            IndustriesCardsList.foundations.desc,
-            IndustriesCardsList.foundations.link,
-            IndustriesCardsList.foundations.imgUrl
-          )}
-        </div>
-      </section>
+            {/* Foundation */}
+            {IndustryCardHor(
+              IndustriesCardsList.foundations.title,
+              IndustriesCardsList.foundations.desc,
+              IndustriesCardsList.foundations.link,
+              IndustriesCardsList.foundations.imgUrl
+            )}
+          </div>
+        </section>
+      </main>
 
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
-    </div>
+    </>
   );
 };
- 

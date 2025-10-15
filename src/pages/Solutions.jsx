@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import FeaturedSolutionsCardBox from "../components/Solutions/FeaturedSolutionsCardBox";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Operations with Anvi",
@@ -24,11 +24,11 @@ export const Solutions = () => {
       />
 
       {/* Featured Solution */}
-      <section className="w-full my-[30px] lg:my-[100px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[102px] font-['Wix_Madefor_Display']">
+      <section className="w-full my-[30px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[50px] font-['Wix_Madefor_Display']">
         <h2 className="text-[48px] mb-[16px] text-[#282828]">
           Featured Solution
         </h2>
-        <p className="text-[16px] w-full md:w-[584px] m-auto text-[#4C4C4C] mb-[64px] font-[400] leading-[24px] text-center">
+        <p className="text-[16px] w-full md:w-[584px] m-auto text-[#4C4C4C] mb-[6px] font-[400] leading-[24px] text-center">
           Discover Anvi’s groundbreaking innovations that solve critical
           challenges and redefine what’s possible through intelligent
           automation.
@@ -40,7 +40,7 @@ export const Solutions = () => {
 
       {/* Why Our Solution Matter */}
       <section className="w-full bg-[#F4F3F7D1] mb-[100px]">
-        <div className="w-full my-[20px] lg:my-[100px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[102px] font-['Wix_Madefor_Display']">
+        <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[102px] font-['Wix_Madefor_Display']">
           <h2 className="text-[48px] mb-[16px] text-[#282828]">
             Why Our Solutions Matter
           </h2>
