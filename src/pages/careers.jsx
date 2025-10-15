@@ -22,7 +22,7 @@ const Careers = () => {
             you to join us in creating the next generation of intelligent systems."
         buttonText="Browse Openings"
         buttonLink={pagesLinksList.Career_Openings}
-        descriptionWidth="656px"
+        descriptionWidth="600px"
       />
 
       <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">

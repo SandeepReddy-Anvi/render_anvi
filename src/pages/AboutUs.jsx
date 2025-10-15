@@ -211,7 +211,7 @@ const About = () => {
 
         {/*section 4*/}
         <div className="relative w-full py-20 px-6 md:px-20 lg:px-32 font-dm-sans">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start relative">
             {/* Section Heading */}
             <div className="pr-[40px] md:sticky top-[110px]">
               <h2 className="text-4xl font-normal text-[#1E2024] mb-[27px]">

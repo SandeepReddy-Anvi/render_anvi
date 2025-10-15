@@ -9,13 +9,14 @@ const HeroSection =
     buttonText,
     buttonLink,
     page = "",
+    descriptionWidth,
   }) => {
     // console.log(backgroundImage);
 
     return (
       <section className="w-full h-[calc(100svh-100px)] m-auto overflow-hidden flex justify-start align-top relative">
         {/* REUSABLE BACKGROUND CONTAINER */}
-        <div className="absolute scale-1 max-md:scale-[1.3] max-md:p-[100px] top-0 left-0 w-full h-full z-1">
+        <div className="absolute scale-1 max-md:scale[1.1] max-md:p-[100px] top-0 left-0 w-full h-full z-1">
           <div className="w-full h-full absolute top-0 left-0 bg-black">
             <img
               loading="eager"
@@ -29,7 +30,9 @@ const HeroSection =
         </div>
 
         {/* Hero Content */}
-        <div className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
+        <div
+          style={{maxWidth: descriptionWidth}}
+        className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
           {page === "home" ? (
             // for Home Page
             <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600]">
@@ -40,12 +43,14 @@ const HeroSection =
             </h1>
           ) : (
             // for Non-Home Pages
-            <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600] leading-tight">
+            <h1 className="text-[48px] w-[80%] lg:w-full md:text-[56px] text-[#282828] font-[600] leading-tight">
               {title}
             </h1>
           )}
 
-          <p className="w-full max-md:w-[85%] max-md:max-w-[600px] text-[16px] font-[400] leading-[24px] text-black max-md:px-2 md:w-auto">
+          <p
+            style={{maxWidth: descriptionWidth}}
+            className="w-full max-md:w-[85%] max-md:max-w-[600px] text-[16px] font-[400] leading-[24px] text-black max-md:px-2 md:w-auto">
             {description}
           </p>
 

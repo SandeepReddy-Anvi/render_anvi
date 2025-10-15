@@ -7,15 +7,15 @@ export const PravikayaInitiative = React.memo(() => {
     <section className="relative h-auto max-md:h-[800px] max-lg:h-[600px] w-[95vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
       {/* Content */}
       <div
-        className="w-full max-w-[541px] flex flex-col items-center justify-center self-stretch mx-2"
+        className="w-full max-w-[541px] flex flex-col items-center justify-center align-middle self-stretch mx-2"
         style={{ zIndex: 2 }}
       >
-        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center w-[450.32px] text-white text-[51px]">
+        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center text-white text-[51px]">
           Pravikaya Initiative
         </h1>
         <p className="w-full text-white text-[18px] text-center font-[300]">
           An initiative by Anvi Foundation driving sustainability, education,
-          andcommunity empowerment. We believe technology should not only
+          and community empowerment. We believe technology should not only
           advance industries but also uplift societies.
         </p>
         <Link
