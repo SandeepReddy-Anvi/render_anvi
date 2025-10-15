@@ -1,21 +1,18 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, MapPin, Mail } from "lucide-react";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 import { FooterUpBox } from "./FooterUpBox";
 import { FooterUpBox2 } from "./FooterUpBox2";
+import React from "react";
 
-const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
+const Footer = React.memo(({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
   // console.log('footerUpBoxInfo --------- :', footerUpBoxInfo)
 
   return (
     <>
-      {footerUpBoxInfo && (
-        <FooterUpBox info={footerUpBoxInfo} />
-      )}
+      {footerUpBoxInfo && <FooterUpBox info={footerUpBoxInfo} />}
 
-      {footerUpBoxInfo2 && (
-        <FooterUpBox2 info={footerUpBoxInfo2} />
-      )}
+      {footerUpBoxInfo2 && <FooterUpBox2 info={footerUpBoxInfo2} />}
 
       <footer className="w-full h-full bg-[#191919] text-white font-manrope">
         {/* Footer Content */}
@@ -142,6 +139,6 @@ const Footer = ({ footerUpBoxInfo={}, footerUpBoxInfo2={} }) => {
       </footer>
     </>
   );
-};
+});
 
 export default Footer;

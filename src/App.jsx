@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { ScrollToTop } from "./hooks/ScrollToTop";
-import { pagesLinksList } from "./utils/PagesLinkList";
+import { pagesLinksList } from "./data/PagesLinkList";
 
 import Header from "./components/header";
 import Home from "./pages/Home";
@@ -28,9 +28,9 @@ import { PrivacyPolicy } from "./pages/PrivacyPolicy";
 const App = () => {
   return (
     <Router>
-      <div className="bg-[#FCFCFC]">
       <ScrollToTop />
       <Header />
+
       <Routes>
         {/* Main Pages */}
         <Route path={pagesLinksList.Home} element={<Home />} />
@@ -78,7 +78,6 @@ const App = () => {
           element={<CareersJobApply />}
         />        
       </Routes>
-      </div>
     </Router>
   );
 };

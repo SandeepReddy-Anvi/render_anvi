@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import HeroSection from "../../components/HeroSection";
 import { MapPin, Clock, ChevronDown } from "lucide-react";
 import { jobPositions } from "../../data/jobData";
-import { pagesLinksList } from "../../utils/PagesLinkList";
+import { pagesLinksList } from "../../data/PagesLinkList";
 import Footer from "../../components/footer";
 
 const footerUpBoxInfoObj = {

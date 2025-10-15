@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import FeaturedSolutionsCardBox from "../components/Solutions/FeaturedSolutionsCardBox";
-import { mainPagesLinksList } from "../utils/PagesLinkList";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Operations with Anvi",
@@ -24,7 +24,7 @@ export const Solutions = () => {
       />
 
       {/* Featured Solution */}
-      <section className="w-full my-[30px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[102px] font-['Wix_Madefor_Display']">
+      <section className="w-full my-[30px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[50px] font-['Wix_Madefor_Display']">
         <h2 className="text-[48px] mb-[16px] text-[#282828]">
           Featured Solution
         </h2>

@@ -1,7 +1,7 @@
 import Button from "../utils/Button";
 import HeroSection from "../components/HeroSection";
-import { IndustriesCardsList } from "../utils/IndustriesCardsList";
-import { mainPagesLinksList, pagesLinksList } from "../utils/PagesLinkList";
+import { IndustriesCardsList } from "../data/IndustriesCardsList";
+import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import Footer from "../components/footer";
 
 const footerUpBoxInfoObj = {

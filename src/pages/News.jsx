@@ -1,12 +1,11 @@
 import HeroSection from "../components/HeroSection";
-import { mainPagesLinksList, pagesLinksList } from "../utils/PagesLinkList";
+import { pagesLinksList } from "../data/PagesLinkList";
 import Footer from "../components/footer";
+import NewsFeeds from "../components/News/NewsFeeds";
 
 const footerUpBoxInfoObj = {
-  head: "Ready to Transform Your Industry?",
-  para: "Don't see your industry listed, We work across diverse sectors and can adapt our technologies to meet your specific needs.",
-  linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  head: "Stay Updated",
+  para: "Get the latest news, updates, and insights delivered directly to your inbox"
 };
 
 export const News = () => {
@@ -24,8 +23,11 @@ export const News = () => {
         />
       </main>
 
+      {/* NewsFeeds Container */}
+      <NewsFeeds />
+
       {/* Footer */}
-      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
+      <Footer footerUpBoxInfo2={footerUpBoxInfoObj} />
     </>
   );
 };
