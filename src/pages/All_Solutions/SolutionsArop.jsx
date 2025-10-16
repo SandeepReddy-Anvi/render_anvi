@@ -1,10 +1,10 @@
-import FAQLayout from "../../components/FAQLayout";
 import Footer from "../../components/footer";
 import HeroSection from "../../components/HeroSection";
-import CarouselSection from "../../components/Solutions/arop/CarouselSection";
 import UseCasesIndia from "../../components/Solutions/arop/UseCasesIndia";
-import BenefitsPage from "../../components/Solutions/benifits";
 import { SolutionAropFaqs } from "../../data/FAQs";
+import FAQLayout from "../../components/FAQLayout";
+import BenefitsPage from "../../components/Solutions/benifits";
+import CarouselSection from "../../components/Solutions/arop/CarouselSection";
 
 export const SolutionsArop = () => {
   return (
@@ -15,7 +15,6 @@ export const SolutionsArop = () => {
         description="Real-time FOD detection, advanced perimeter surveillance, and predictive runway inspection that enhance safety, boost efficiency, and ensure seamless airport operation"
         buttonText="Download White Paper"
         buttonLink=" "
-        descriptionWidth="624px"
       />
 
       {/* Section 2 */}
@@ -82,11 +81,11 @@ export const SolutionsArop = () => {
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 font-inter">
           {/* Left - Image */}
           <div className="relative overflow-hidden rounded-2xl group w-full md:w-[660px]">
-            <div className="w-full h-auto bg-[#E0F1F4]">
+            <div className="w-full h-[350px] bg-[#E0F1F4] rounded-[12px]">
               <img
                 src="/images/solutions/solutionCard-1.png"
                 alt="AROP Robot"
-                className="py-12 w-full h-[426px] object-cover rounded-[12px]"
+                className="w-full h-min object-cover"
               />
             </div>
           </div>
@@ -163,7 +162,7 @@ export const SolutionsArop = () => {
       </section>
 
       {/* Section 4 */}
-      <section className="p-6 md:p-[100px] md:pr-[110px] font-dm-sans">
+      <section className="p-6 md:py-[100px] md:px-[50px] lg:px-[110px] font-dm-sans place-items-center">
         <p className="text-2xl md:text-[32px] mb-4 md:mb-6">Benefits</p>
         <p className="text-base md:text-[18px] font-normal text-[#282828] mb-6 md:mb-8">
           Airports today need more than traditional safety checks—they need
@@ -189,9 +188,10 @@ export const SolutionsArop = () => {
       </section>
 
       {/* Section 6 - FAQ */}
-      <section className="px-4 md:px-[296px] py-12 md:py-[90px] flex flex-col items-center justify-center gap-16 md:gap-[64px] bg-[#F5F4F8]">
+      <section className="px-4 py-12 md:py-[90px] flex flex-col items-center justify-center gap-16 md:gap-[64px] bg-[#F5F4F8]">
+        {/* <div className="flex flex-col gap-4 md:gap-[16px] w-full font-['Wix_Madefor_Display'] text-[#2B303B] text-center"> */}
         <div className="flex flex-col gap-4 md:gap-[16px] w-full font-['Wix_Madefor_Display'] text-[#2B303B] text-center">
-          <p className="text-2xl md:text-[46px] leading-[60px]">
+          <p className="text-[32px] md:text-[46px] leading-[60px]">
             Frequently Asked Questions
           </p>
         </div>

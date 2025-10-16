@@ -12,41 +12,41 @@ const footerUpBoxInfoObj = {
 };
 
 const IndustryCardHor = (title, desc, link, imgUrl) => (
-  <div className="grid w-full grid-cols-1 md:grid-cols-2 relative group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-    <div className="flex flex-col justify-center pl-[21.63px]">
-      <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
+  <div className="grid w-full max-md:w-[98%] mx-auto grid-cols-1 md:grid-cols-2 relative group transition-all duration-300 ease-in-out hover:scale-[1.002] origin-top-left p-[64px] rounded-[32px] bg-white gap-[10px] md:gap-[24px] lg:gap-[64px] hover:shadow-lg hover:shadow-[#1E9AB052]">
+    <div className="flex flex-col justify-center">
+      <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] text-[#1E9AB0] transition-colors duration-300">
         {title}
       </p>
       <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
         {desc}
       </p>
-      <div className="self-start">
+      <div className="self-start max-md:pb-[10px]">
         <Button to={link} variant="secondary">
           Learn More
         </Button>
       </div>
     </div>
-    <div>
+    <div className="max-md:mx-auto">
       <img
         loading="lazy"
         src={imgUrl}
         alt="Our Vision"
-        className="w-full max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] rounded-[32px]"
+        className="w-full max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] group-hover:skew-x-0 group-hover:scale-[1.07] transition-all duration-500 rounded-[32px]"
       />
     </div>
   </div>
 );
 
 export const IndustryCardVer = (title, desc, link, imgUrl) => (
-  <div className="relative w-full md:w-[47%] group transition-transform duration-300 ease-in-out hover:scale-102 origin-top-left p-[64px] rounded-[32px] bg-white gap-6 sm:gap-12 md:gap-[64px]">
-    <div className="flex flex-col justify-center pl-[21.63px]">
-      <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] group-hover:text-cyan-600 transition-colors duration-300">
+  <div className="relative w-[98%] mx-auto md:w-[47%] group transition-transform duration-300 ease-in-out hover:scale-[1.002] origin-top-left p-[54px] lg:p-[64px] rounded-[32px] bg-white gap-[10px] md:gap-[24px] lg:gap-[64px] hover:shadow-lg hover:shadow-[#1E9AB052]">
+    <div className="flex flex-col justify-center">
+      <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] text-[#1E9AB0] transition-colors duration-300">
         {title}
       </p>
       <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
         {desc}
       </p>
-      <div className="self-start pb-[64px]">
+      <div className="self-start pb-[20px] lg:pb-[64px]">
         <Button to={link} variant="secondary">
           Learn More
         </Button>
@@ -55,7 +55,7 @@ export const IndustryCardVer = (title, desc, link, imgUrl) => (
         loading="lazy"
         src={imgUrl}
         alt="Our Vision"
-        className="w-full max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] rounded-[32px]"
+        className="w-full max-md:mx-auto max-md: max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] group-hover:skew-x-0 group-hover:scale-[1.07] transition-all duration-500 rounded-[32px]"
       />
     </div>
   </div>

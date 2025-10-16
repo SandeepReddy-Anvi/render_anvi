@@ -10,13 +10,12 @@ export const ContactUs = () => {
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (formData) => {
     const api = "http://localhost:3000/api/contact";
-    // const api = "http://localhost:3000/contactform";
 
     // FIX: Add await here
     try {
-      await axios.post(api, formData);
-      // const resp = await axios.post(api, formData);
-      // console.log('Response:', resp.data);
+      // await axios.post(api, formData);
+      const resp = await axios.post(api, formData);
+      console.log('Response:', resp.data);
       // You would typically handle success state here
     } catch (error) {
       console.error(
@@ -60,9 +59,9 @@ export const ContactUs = () => {
 
         {/* Section2 */}
         <div className="px-[10px] py-[10px] md:px-[30px] md:py-[40px] lg:px-[80px] lg:py-[80px]">
-          <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[30px] gap-[30px] font-dm-sans">
+          <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] font-dm-sans">
             {/* Contact Info */}
-            <div className="p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
+            <div className="p-[50px] md:p-[30px] lg:p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
               <p className="text-[38px] font-normal text-[#333333]">
                 Contact Information
               </p>
@@ -70,7 +69,7 @@ export const ContactUs = () => {
                 Have a question? Fill out the form below, and we'll get back to
                 you as soon as possible.
               </p>
-              <div className="flex flex-col text-[16px] text-[#757575] font-normal mt-[40px] gap-[26px]">
+              <div className="flex flex-col text-[16px] text-[#757575] font-normal mt-[20px] md:mt-[40px] gap-[15px] md:gap-[26px]">
                 <p>info@anvi.com</p>
                 <p>
                   Anvi Robotics, 1st Floor,Profound Buliders, whitefields,
@@ -83,7 +82,7 @@ export const ContactUs = () => {
             {/* Form */}
             <form
               onSubmit={(e) => handleSubmit(e)}
-              className="flex-1 flex flex-col gap-4 md:w-1/2 max-w-[600px] flex-shrink-0 place-content-center"
+              className="flex-1 flex flex-col gap-4 w-full mx-auto pt-5 py-10 md:py-10 md:w-1/2 max-w-[600px] flex-shrink-0 place-content-center"
             >
               {/* Name & Email */}
               <div className="flex flex-col md:flex-row gap-[20px] flex-shrink-0">
@@ -147,7 +146,7 @@ export const ContactUs = () => {
         </div>
 
         {/* Section 3 */}
-        <section className="w-full max-w-[1000px] px-[10px] py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center text-center gap-[56px]">
+        <section className="w-full max-w-[1000px] px-8 flex flex-col items-center justify-center text-center gap-[56px]">
           <div className="font-['Wix_Madefor_Display']">
             <p className="text-[48px] font-medium">Visit Our Office</p>
             <p className="text-[16px] text-[#465455] font-normal">

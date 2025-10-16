@@ -29,7 +29,7 @@ main {
     max-width: 1800px;
     max-width: 100%;
     margin: auto;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 106px);
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -187,4 +187,10 @@ body::-webkit-scrollbar-corner {
 @keyframes active-industry-card{
     0%{opacity: 0;transform: translateY(10px)}
     100%{opacity: 1;transform: translateY(0px)}
+}
+
+@media screen and (min-width: 768px) {
+  .content-Card-ul li:nth-child(even) {
+    flex-direction: row-reverse !important;
+  }
 }

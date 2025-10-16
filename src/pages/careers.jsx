@@ -4,6 +4,30 @@ import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import SectionWithImage from "../components/SectionWithImage";
 import { pagesLinksList } from "../data/PagesLinkList";
 
+const careerReasons = [
+  {
+    img: "/images/careers/career2.1.png",
+    title: "Innovate with Purpose",
+    desc: `Work on breakthrough robotics and deep-tech innovations that go beyond boundaries, solving real-world challenges across industries and communities. At Anvi, you will explore ambitious ideas, design scalable systems, and collaborate with bright minds. Together, we shape industries of the future while driving safety, efficiency, and sustainability for people, businesses, and the planet.`,
+  },
+  {
+    img: "/images/careers/career2.2.png",
+    title: "Grow Without Limits",
+    desc: `Explore ambitious ideas, embrace challenges, upskill continuously, collaborate with innovators, and build a career that grows, evolves, and scales with your limitless potential.`,
+  },
+  {
+    img: "/images/careers/career2.3.png",
+    title: "Collaborate & Belong",
+    desc: `Be part of a culture that values teamwork, inclusion, respect, and diverse perspectives, where collaboration, creativity, and shared purpose drive excellence and meaningful progress.`,
+  },
+  {
+    img: "/images/careers/career2.4.png",
+    title: "Impact That Matters",
+    desc: `Create solutions that drive industry progress, deliver measurable impact, and at the same time inspire communities while supporting sustainability for a smarter, safer, and better shared future.`,
+  },
+];
+
+
 const footerUpBoxInfoObj = {
   head: "Looking for the Right Job ?",
   para: "Join Anvi to explore ambitious ideas, work with breakthrough technologies, and build a career that creates real impact.",
@@ -25,7 +49,7 @@ const Careers = () => {
         descriptionWidth="600px"
       />
 
-      <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
+      <section className="hidden px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
         <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[76px]">
           <p className="text-[#000000] text-[48px] font-normal">
             Reason to Join in Anvi
@@ -105,8 +129,38 @@ const Careers = () => {
           </div>
         </div>
       </section>
+      {/* Reasons to Join at Anvi  */}
 
-      {/* section 3*/}
+      <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
+  <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[30px] lg:mb-[76px]">
+    <p className="text-[#000000] text-[48px] font-normal">
+      Reason to Join in Anvi
+    </p>
+    <p className="text-black text-[16px] font-normal max-w-[495px]">
+      At Anvi, you’ll find more than a career - you’ll discover purpose,
+      growth, collaboration, and impact
+    </p>
+  </div>
+
+  <ul className="font-dm-sans p-5 font-normal grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-[67.39px]">
+    {careerReasons.map((item, index) => (
+      <li key={index} className="flex flex-col items-start w-full">
+        <img
+          loading="lazy"
+          src={item.img}
+          alt={item.title}
+          className="w-full max-sm:max-w-[200px] object-cover md:w-auto"
+        />
+        <p className="mt-[32px] font-normal text-[24px]">{item.title}</p>
+        <p className="mt-[11px] text-[16px] text-[#484848]">{item.desc}</p>
+      </li>
+    ))}
+  </ul>
+</section>
+
+
+
+      {/* Section 3 Life at Anvi*/}
       <SectionWithImage
         title="Life At Anvi"
         description="Life at Anvi is about more than work — it’s about purpose, growth, and collaboration. Here, innovation thrives, ambitious ideas take shape, and every individual contributes to meaningful impact. With a culture that values teamwork, learning, and sustainability, Anvi is where talent transforms into progress and the future is engineered together."
