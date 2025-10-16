@@ -94,7 +94,7 @@ const Home = () => {
             {Object.keys(nextAtAnvi).map((each) => (
               <div
                 key={nextAtAnvi[each].title}
-                className="w-max mx-auto h-auto px-5 py-10 hover:shadow-lg hover:shadow-gray-200 transition-all duration-200 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 lg:grid-cols-2 justify-center place-items-center align-middle gap-[20px]"
+                className="w-auto mx-auto h-auto px-5 py-10 hover:shadow-lg hover:shadow-gray-200 transition-all duration-200 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 lg:grid-cols-2 justify-center place-items-center align-middle gap-[20px]"
               >
                 <div className="w-full max-md:m-auto max-md:max-w-[350px] self-center md:max-w-[350px] lg:max-w-1/2 aspect-square md:aspect-[4/3] object-cover object-center rounded-[16px]">
                   <img
@@ -104,7 +104,7 @@ const Home = () => {
                     className="bg-cover w-full h-full rounded-[16px] object-cover object-center"
                   />
                 </div>
-                {/* Cotent */}
+                {/* Content */}
                 <div className="flex flex-col w-full max-w-[450px] justify-start align-middle gap-[5px] text-left">
                   <span className="text-[12px] self-auto w-min whitespace-nowrap text-[#0D1F21] font-[400] min-w-[90px] px-[16px] py-[10px] font-[manrope] rounded-[400px] bg-[#EEFCFF]">
                     {nextAtAnvi[each].title}
