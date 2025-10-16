@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { pagesLinksList } from "../../data/PagesLinkList";
 import React from "react";
+import Button from "../../utils/Button";
 
 export const PravikayaInitiative = () => {
   return (
@@ -32,7 +33,7 @@ export const PravikayaInitiative = () => {
         aria-hidden="true"
       />
 
-      <div className="w-[30vw] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
+      <div className="max-sm:w-[30vw] sm:w-[224px] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init1.png"
