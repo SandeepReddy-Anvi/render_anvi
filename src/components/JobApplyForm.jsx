@@ -5,7 +5,7 @@ import "react-phone-input-2/lib/style.css";
 import axios from "axios";
 import { IconsObj } from "../utils/Iconify_icons";
 
-export const JobApplyForm = React.memo(() => {
+export const JobApplyForm = () => {
   const { jobId } = useParams(); // Get jobId from URL
   const [formData, setFormData] = useState({
     fullName: "",
@@ -226,4 +226,4 @@ export const JobApplyForm = React.memo(() => {
       )}
     </form>
   );
-});
+};

@@ -4,6 +4,7 @@ import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
+import Button from "../utils/Button";
 
 const footerUpBoxInfoObj = {
   head: "Ready to explore the future with Anvi?",
@@ -32,7 +33,7 @@ const Home = () => {
     <>
       <main>
         {/* Hero Section */}
-          <HeroSection
+        <HeroSection
           backgroundImage="/videos/home-hero-video.webp"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
@@ -83,9 +84,9 @@ const Home = () => {
         </section>
 
         {/* Next at Anvi */}
-        <section className="next-at-anvi w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[102px] font-['Wix_Madefor_Display']">
+        <section className="next-at-anvi w-full px-5 py-[50px] text-center xl:px-[118px] md:py-[80px] font-['Wix_Madefor_Display']">
           <h2 className="text-[48px] mb-[16px] text-[#282828]">Next At Anvi</h2>
-          <p className="text-[16px] text-[#4C4C4C] mb-[64px] font-[400] leading-[24px] text-center">
+          <p className="text-[16px] text-[#4C4C4C] mb-[30px] md:mb-[64px] font-[400] leading-[24px] text-center">
             At anvi, our engineers don’t work by the clock - they work by
             vision.
           </p>
@@ -93,9 +94,9 @@ const Home = () => {
             {Object.keys(nextAtAnvi).map((each) => (
               <div
                 key={nextAtAnvi[each].title}
-                className="w-full h-auto p-3 hover:shadow-lg hover:shadow-gray-200 transition-all duration-200 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 md:grid-cols-2 justify-center align-middle gap-[20px]"
+                className="w-max mx-auto h-auto px-5 py-10 hover:shadow-lg hover:shadow-gray-200 transition-all duration-200 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 lg:grid-cols-2 justify-center place-items-center align-middle gap-[20px]"
               >
-                <div className="w-full max-md:m-auto max-md:max-w-[350px] self-center md:max-w-[300px] lg:max-w-1/2 md:aspect-[4/3] object-cover object-center rounded-[16px]">
+                <div className="w-full max-md:m-auto max-md:max-w-[350px] self-center md:max-w-[350px] lg:max-w-1/2 aspect-square md:aspect-[4/3] object-cover object-center rounded-[16px]">
                   <img
                     loading="lazy"
                     src={nextAtAnvi[each].imgUrl}
@@ -108,7 +109,7 @@ const Home = () => {
                   <span className="text-[12px] self-auto w-min whitespace-nowrap text-[#0D1F21] font-[400] min-w-[90px] px-[16px] py-[10px] font-[manrope] rounded-[400px] bg-[#EEFCFF]">
                     {nextAtAnvi[each].title}
                   </span>
-                  <p className="font-[Dm sans] w-full text-[24px] font-[500] text-[#0D1F21]">
+                  <p className="font-[Dm sans] w-full text-[20px] font-[500] text-[#0D1F21]">
                     {nextAtAnvi[each].desc}
                   </p>
                   <Link
@@ -122,12 +123,9 @@ const Home = () => {
             ))}
           </div>
           {/* Read All Button */}
-          <Link
-            to={mainPagesLinksList.News}
-            className="font-[Manrope] hover:shadow-sm hover:shadow-[#0D1F21] transition-all duration-150 text-[16px] font-[400] text-[#0D1F21] px-[20px] py-[10px] rounded-[367px] bg-transparent border-[1px] border-[#0D1F21]"
-          >
-            Read All
-          </Link>
+        <Button to={mainPagesLinksList.News} variant="secondary">
+          Read all
+        </Button>
         </section>
 
         {/* Pravikaya Initiative */}

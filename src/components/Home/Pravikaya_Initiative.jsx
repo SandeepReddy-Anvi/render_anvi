@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { pagesLinksList } from "../../data/PagesLinkList";
 import React from "react";
 
-export const PravikayaInitiative = React.memo(() => {
+export const PravikayaInitiative = () => {
   return (
     <section className="relative h-auto max-md:h-[800px] max-lg:h-[600px] w-[95vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
       {/* Content */}
@@ -32,7 +32,7 @@ export const PravikayaInitiative = React.memo(() => {
         aria-hidden="true"
       />
 
-      <div className="w-[20vw] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[60px] xl:left-[59px] flex overflow-hidden">
+      <div className="w-[30vw] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init1.png"
@@ -50,7 +50,7 @@ export const PravikayaInitiative = React.memo(() => {
         />
       </div>
 
-      <div className="w-[147px] h-[167px] top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden">
+      <div className="w-[147px] h-[167px] bottom-[11%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init3.png"
@@ -60,4 +60,4 @@ export const PravikayaInitiative = React.memo(() => {
       </div>
     </section>
   );
-});
+};

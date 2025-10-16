@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { IndustriesCardsList } from "../../data/IndustriesCardsList";
 import React, { useCallback, useState } from "react";
 
-export const HomeIndustriesCard = React.memo(() => {
+export const HomeIndustriesCard = () => {
   const [cardsList, setCardsList] = useState(IndustriesCardsList || {});
 
   const handleMouseEnter = useCallback((title) => {
@@ -99,4 +99,4 @@ export const HomeIndustriesCard = React.memo(() => {
       })}
     </ul>
   );
-});
+};

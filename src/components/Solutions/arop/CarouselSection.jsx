@@ -52,72 +52,77 @@ const CarouselSection = () => {
   };
 
   return (
-    <section className="relative w-full p-[61px]">
-      <h2 className="text-[32px] text-[#FFFFFF] font-medium font-dm-sans text-black mb-8 pl-8">
+    <section className="relative w-full px-4 sm:px-6 md:px-10 lg:px-14 py-12 md:py-16 lg:py-20">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-medium text-black mb-8">
         Feature Highlights: How AROP Transforms Airports
       </h2>
+
       <div
-        className="relative w-full bg-cover font-dm-sans bg-center py-16 px-2 sm:px-4 md:px-10 lg:px-14"
+        className="relative w-full bg-cover bg-center py-12 px-4 sm:px-6 md:px-10 lg:px-14 rounded-lg"
         style={{
           backgroundImage: `url("/images/solutions/arop/background.jpg")`,
         }}
       >
-        <h2 className="text-[32px] text-[#FFFFFF] font-medium text-white mb-8 mt-4">
+        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-white mb-8 text-center lg:text-left">
           AI-powered features for safer, smarter airports.
-        </h2>
+        </h3>
 
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-24">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24">
           {/* Left Content */}
-          <div className="flex-1 text-[#FFFFFF]">
-            <h2 className="text-3xl md:text-4xl lg:text-[26px] font-normal mb-4">
+          <div className="flex-1 text-white">
+            <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-[26px] font-normal mb-4">
               {slides[currentSlide].title}
-            </h2>
-            <p className="text-base md:text-lg lg:text-[18px] leading-[29px]">
+            </h4>
+            <p className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-[22px] md:leading-[29px]">
               {slides[currentSlide].description}
             </p>
           </div>
 
-          {/* Right Image */}
-          <div className="flex-1 flex flex-col items-center lg:items-end gap-4 max-w-[280px]">
+          {/* Right Image & Navigation */}
+          <div className="flex-1 flex flex-col items-center lg:items-end gap-4 w-full lg:max-w-[280px]">
             <img
               src={slides[currentSlide].image}
               alt={`Slide ${currentSlide + 1}`}
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover rounded-md"
             />
 
             {/* Navigation Arrows & Slide Indicators */}
-            <div className="flex items-center gap-6 mt-4 pr-6">
-              {/* Left Arrow */}
-              <button
-                onClick={prevSlide}
-                className="text-white w-6 h-auto aspect-square rounded-full border border-white"
-              >
-                <span className="rotate-[-90deg] inline-block">
-                  {IconsObj.arrow}
-                </span>
-              </button>
+            <div className="flex flex-col sm:flex-row items-center gap-4 mt-4">
+              <div className="flex items-center gap-4">
+                {/* Left Arrow */}
+                <button
+                  onClick={prevSlide}
+                  className="text-white w-8 sm:w-6 h-8 sm:h-6 rounded-full border border-white flex items-center justify-center"
+                >
+                  <span className="rotate-[-90deg] inline-block">
+                    {IconsObj.arrow}
+                  </span>
+                </button>
 
-              {/* Slide Indicators */}
-              <div className="flex items-center gap-2">
-                {slides.map((_, index) => (
-                  <span
-                    key={index}
-                    className={`h-0.5 w-3 rounded-full transition-all ${
-                      index === currentSlide ? "bg-[#1E9AB0]" : "bg-[#1E9AB066]"
-                    }`}
-                  />
-                ))}
+                {/* Slide Indicators */}
+                <div className="flex flex-wrap items-center gap-2">
+                  {slides.map((_, index) => (
+                    <span
+                      key={index}
+                      className={`h-0.5 w-3 rounded-full transition-all ${
+                        index === currentSlide
+                          ? "bg-[#1E9AB0]"
+                          : "bg-[#1E9AB066]"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                {/* Right Arrow */}
+                <button
+                  onClick={nextSlide}
+                  className="text-white w-8 sm:w-6 h-8 sm:h-6 rounded-full border border-white flex items-center justify-center"
+                >
+                  <span className="rotate-[90deg] inline-block">
+                    {IconsObj.arrow}
+                  </span>
+                </button>
               </div>
-
-              {/* Right Arrow */}
-              <button
-                onClick={nextSlide}
-                className="text-white p-0.5 rounded-full border border-white"
-              >
-                <span className="rotate-[90deg] inline-block">
-                  {IconsObj.arrow}
-                </span>
-              </button>
             </div>
           </div>
         </div>

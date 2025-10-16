@@ -1,13 +1,16 @@
 import { Calendar, ChevronDown } from "lucide-react";
-import React from "react";
+import { Link } from "react-router-dom";
 
-const NewsCard = React.memo(({ item }) => {
+const NewsCard = ({ item }) => {
+  if (!item) return null;
   return (
-    <div
-      style={{
-        boxShadow: "0px 1px 2px -1px #73808C1A, 0px 1px 3px 0px #73808C1A",
-      }}
-      className="bg-white rounded-lg border-[1px] border-[#E2E6E980] overflow-hidden transition duration-300 ease-in-out hover:shadow-xl w-full max-w-sm mx-auto"
+    <Link
+      to={item.newsLink}
+      target={item.newsLink ? "_blank" : ""}
+      // style={{
+      //   boxShadow: "0px 1px 2px -1px #73808C1A, 0px 1px 3px 0px #73808C1A",
+      // }}
+      className="w-full bg-white rounded-lg border-[1px] border-[#E2E6E980] overflow-hidden transition duration-300 ease-in-out shadow-md shadow-[#73808C1A] hover:shadow-md hover:shadow-gray-300 hover:scale-[1.006] max-w-md mx-auto"
     >
       {/* Image Container */}
       <div className="h-48">
@@ -42,17 +45,16 @@ const NewsCard = React.memo(({ item }) => {
         </p>
 
         {/* Read More Link */}
-        <a
-          href={item.newsLink || "#"}
-          target="_blank"
-          className="flex justify-center align-middle gap-[12px] items-center text-sm font-medium text-[#2EACB8] hover:text-[#268d96] transition duration-150 ease-in-out"
-        >
+        <span className="flex justify-center align-middle group gap-[5px] items-center text-sm font-medium text-[#2EACB8] hover:text-[#268d96] transition duration-150 ease-in-out">
           Read More
-          <ChevronDown size={20} className="rotate-[-90deg]" />
-        </a>
+          <ChevronDown
+            size={20}
+            className="rotate-[-90deg] mt-[3px] group-hover:animate-pulse"
+          />
+        </span>
       </div>
-    </div>
+    </Link>
   );
-});
+};
 
 export default NewsCard;

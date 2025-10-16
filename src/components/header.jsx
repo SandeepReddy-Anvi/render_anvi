@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { mainPagesLinksList } from "../data/PagesLinkList";
 import { Menu, Plus } from "lucide-react";
@@ -9,13 +9,14 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
   const currentPage = useRef("/");
-
-  let scrollPosition = 0;
+  const scrollYRef = useRef(0);
 
   const handleLinkClick = (link) => {
     currentPage.current = link;
     setMobileMenuOpen(false);
-    document.body.style.position = "relative";
+    document.body.style.position = "";
+    document.body.style.top = "";
+    window.scrollTo(0, scrollYRef.current);
   };
 
   const currentPageStyle = (link) => {
@@ -23,31 +24,36 @@ const Header = () => {
     return location.pathname === link ? "currentPageLink" : "";
   };
 
-  useEffect(() => {
-    currentPage.current = location.pathname;
-  }, [location.pathname]);
-
-  const handleMobileMenu = useCallback(() => {
+  const handleMobileMenu = () => {
     setMobileMenuOpen((prev) => {
       const isOpening = !prev;
 
       if (isOpening) {
-        scrollPosition = window.scrollY;
+        scrollYRef.current = window.scrollY;
         document.body.style.position = "fixed";
-        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.top = `-${scrollYRef.current}px`;
       } else {
         document.body.style.position = "relative";
         document.body.style.top = "";
-        window.scrollTo(0, scrollPosition);
+        window.scrollTo(0, scrollYRef.current);
       }
-
       return isOpening;
     });
-  }, []);
+  };
+
+  useEffect(() => {
+    currentPage.current = location.pathname;
+  }, [location.pathname]);
+
+   useEffect(() => {
+    setMobileMenuOpen(false);
+    document.body.style.position = "";
+    document.body.style.top = "";
+  }, [location]);
 
   return (
     <header
-      className="w-full md:h-[106px] bg-[#FCFCFC] sticky top-0 overflow-hidden flex items-center justify-between gap-5 px-4 sm:px-6 sm:pr-8 md:pl-2 md:pr-3 lg:px-[40px] xl:px-[60px] h-[106px] font-[manrope] text-[16px] max-md:text-xs"
+      className="w-full md:h-[106px] bg-[#fff] sticky top-0 overflow-hidden flex items-center justify-between gap-5 px-4 sm:px-6 sm:pr-8 md:pl-2 md:pr-3 lg:px-[40px] xl:px-[60px] h-[106px] font-[manrope] text-[16px] max-md:text-xs"
       style={{ zIndex: 11 }}
     >
       {/* Logo */}

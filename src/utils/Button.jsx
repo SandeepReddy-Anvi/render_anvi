@@ -13,10 +13,10 @@ const Button = ({ to, children, variant = "primary", className = "" }) => {
         border-2 border-[#1E9AB0] font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px] rounded-[16px] shadow-md inline-flex items-center`,
     
     secondary:
-      `rounded-[32px] border border-gray-200 text-gray-900 px-[23px] py-[11px]
+      `rounded-[32px] border-[1px] border-gray-200 text-gray-900 px-[23px] py-[11px]
         bg-gradient-to-r from-white to-white
         hover:from-[#1E9AB0] hover:to-[#1E9AB0]
-        bg-[length:0%_100%] hover:bg-[length:100%_100%]
+        bg-[length:0%_106%] hover:bg-[length:101%_106%]
         bg-left bg-no-repeat
         transition-[background-size] duration-500 ease-out
         hover:text-white

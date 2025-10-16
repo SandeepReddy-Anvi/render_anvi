@@ -5,7 +5,7 @@ import { FooterUpBox } from "./FooterUpBox";
 import { FooterUpBox2 } from "./FooterUpBox2";
 import React from "react";
 
-const Footer = React.memo(({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
+const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
   // console.log('footerUpBoxInfo --------- :', footerUpBoxInfo)
 
   return (
@@ -139,6 +139,6 @@ const Footer = React.memo(({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
       </footer>
     </>
   );
-});
+};
 
 export default Footer;

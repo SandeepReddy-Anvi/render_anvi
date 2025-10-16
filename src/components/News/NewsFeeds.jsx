@@ -15,7 +15,7 @@ const NewsFeeds = () => {
   }, [activeTab]);
 
   return (
-    <div className="p-4 sm:p-8 md:p-12 lg:p-16 bg-[#fff] min-h-screen">
+    <div className="p-4 sm:p-5 md:p-12 lg:p-16 bg-[#fff] min-h-screen pb-[100px]">
       {/* Tab Navigation */}
       <div className="flex flex-wrap justify-start align-middle gap-[6px] mb-8">
         {newsTabsList.map((tab) => (
@@ -46,7 +46,7 @@ const NewsFeeds = () => {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-5 md:gap-8">
         {filteredData.map((item) => (
           <NewsCard key={item.id} item={item} />
         ))}

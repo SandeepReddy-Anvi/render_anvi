@@ -32,7 +32,7 @@ const HeroSection =
         {/* Hero Content */}
         <div
           style={{maxWidth: descriptionWidth}}
-        className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[60px] lg:ml-[5vw] mt-[50px] md:mt-[60px] lg:mt-[11vh]">
+        className="home-hero-content sticky z-10 w-full md:max-w-[657px] flex flex-col justify-start align-middle gap-[16px] font-[Wix Madefor Display] max-md:px-3 ml-[2vw] md:ml-[30px] lg:ml-[4vw] mt-[50px] md:mt-[40px] lg:mt-[11vh]">
           {page === "home" ? (
             // for Home Page
             <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600]">
@@ -49,8 +49,8 @@ const HeroSection =
           )}
 
           <p
-            style={{maxWidth: descriptionWidth}}
-            className="w-full max-md:w-[85%] max-md:max-w-[600px] text-[16px] font-[400] leading-[24px] text-black max-md:px-2 md:w-auto">
+            style={{ width: window.innerWidth >= 768 ? descriptionWidth : "auto" }}
+            className="w-full max-md:max-w-[600px] text-[16px] font-[400] leading-[24px] text-black max-md:px-2 md:w-auto">
             {description}
           </p>
 

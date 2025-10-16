@@ -4,17 +4,22 @@ export const HeroBackgroundSVG = () => {
   const isMobile = useIsMobile(768);
 
   const nonMobilePath =
-    "M0,0 L1000,0 " +
-    "L1000, 100 " +
-    "C700,780 550, 280 0, 880" +
+    // "M0,0 L1000,0 " +
+    // "L1000, 100 " +
+    // "C700,780 550, 280 0, 880" +
+    // "L0, 0";
+    "M0,0 L1300,0 " +
+    "L950, 0 0, 900" +
     "L0, 0";
 
   const mobilePath =
-    "M0,0 L1000,0" +
-    "L1300, 100,"+
-    "C600, 900 250, 580 0, 880" +
-    "L0,0";
-
+    // "M0,0 L1000,0" +
+    // "L1300, 100,"+
+    // "C600, 900 250, 580 0, 880" +
+    // "L0,0";
+    "M0,0 L1300,0 " +
+    "L1500, 0 0, 950" +
+    "L0, 0";
 
   const pathData = isMobile ? mobilePath : nonMobilePath;
   // const pathData = nonMobilePath;
