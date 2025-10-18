@@ -40,7 +40,7 @@ const About = () => {
         advantage through breakthrough products, deep-tech systems, and future-proof solutions."
         buttonText="Explore Careers"
         buttonLink="#careers"
-        descriptionWidth="700px"
+        descriptionWidth="450px"
       />
 
       {/* section 2 */}

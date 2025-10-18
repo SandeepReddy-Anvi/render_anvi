@@ -4,29 +4,6 @@ import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import SectionWithImage from "../components/SectionWithImage";
 import { pagesLinksList } from "../data/PagesLinkList";
 
-const careerReasons = [
-  {
-    img: "/images/careers/career2.1.png",
-    title: "Innovate with Purpose",
-    desc: `Work on breakthrough robotics and deep-tech innovations that go beyond boundaries, solving real-world challenges across industries and communities. At Anvi, you will explore ambitious ideas, design scalable systems, and collaborate with bright minds. Together, we shape industries of the future while driving safety, efficiency, and sustainability for people, businesses, and the planet.`,
-  },
-  {
-    img: "/images/careers/career2.2.png",
-    title: "Grow Without Limits",
-    desc: `Explore ambitious ideas, embrace challenges, upskill continuously, collaborate with innovators, and build a career that grows, evolves, and scales with your limitless potential.`,
-  },
-  {
-    img: "/images/careers/career2.3.png",
-    title: "Collaborate & Belong",
-    desc: `Be part of a culture that values teamwork, inclusion, respect, and diverse perspectives, where collaboration, creativity, and shared purpose drive excellence and meaningful progress.`,
-  },
-  {
-    img: "/images/careers/career2.4.png",
-    title: "Impact That Matters",
-    desc: `Create solutions that drive industry progress, deliver measurable impact, and at the same time inspire communities while supporting sustainability for a smarter, safer, and better shared future.`,
-  },
-];
-
 
 const footerUpBoxInfoObj = {
   head: "Looking for the Right Job ?",
@@ -46,118 +23,104 @@ const Careers = () => {
             you to join us in creating the next generation of intelligent systems."
         buttonText="Browse Openings"
         buttonLink={pagesLinksList.Career_Openings}
-        descriptionWidth="600px"
+        descriptionWidth="750px"
       />
 
-      <section className="hidden px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
-        <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[76px]">
-          <p className="text-[#000000] text-[48px] font-normal">
-            Reason to Join in Anvi
-          </p>
-          <p className="text-blak text-[16px] font-normal max-w-[495px]">
-            At Anvi, you’ll find more than a career - you’ll discover purpose,
-            growth, collaboration, and impact
-          </p>
-        </div>
-        <div className="font-dm-sans font-normal grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-[67.39px]">
-          <div>
+      <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
+      <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[76px]">
+        <p className="text-[#000000] text-[48px] font-normal">
+          Reason to Join in Anvi
+        </p>
+        <p className="text-black text-[16px] font-normal max-w-[495px]">
+          At Anvi, you'll find more than a career - you'll discover purpose,
+          growth, collaboration, and impact
+        </p>
+      </div>
+      <div className="font-dm-sans font-normal grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-[67.39px]">
+        {/* Card 1 */}
+        <div>
+          <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
               src="/images/careers/career2.1.png"
               alt="Team"
-              className="w-"
+              className="w-full h-full object-cover"
             />
-            <p className="mt-[32px] font-normal text-[24px]">
-              Innovate with Purpose
-            </p>
-            <p className="mt-[11px] text-[16px] text-[#484848]">
-              Work on breakthrough robotics and deep-tech innovations that go
-              beyond boundaries, solving real-world challenges across industries
-              and communities. At Anvi, you will explore ambitious ideas, design
-              scalable systems, and collaborate with bright minds. Together, we
-              shape industries of the future while driving safety, efficiency,
-              and sustainability for people, businesses, and the planet.
-            </p>
           </div>
-          <div>
+          <p className="mt-[32px] font-normal text-[24px]">
+            Innovate with Purpose
+          </p>
+          <p className="mt-[11px] text-[16px] text-[#484848]">
+            Work on breakthrough robotics and deep-tech innovations that go
+            beyond boundaries, solving real-world challenges across industries
+            and communities. At Anvi, you will explore ambitious ideas, design
+            scalable systems, and collaborate with bright minds. Together, we
+            shape industries of the future while driving safety, efficiency,
+            and sustainability for people, businesses, and the planet.
+          </p>
+        </div>
+
+        {/* Card 2 */}
+        <div>
+          <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
               src="/images/careers/career2.2.png"
               alt="Team"
-              className="w-full sm:w-[300px] md:w-auto"
+              className="w-full h-full object-cover"
             />
-            <p className="mt-[32px] font-normal text-[24px]">
-              Grow Without Limits
-            </p>
-            <p className="mt-[11px] text-[16px] text-[#484848]">
-              Explore ambitious ideas, embrace challenges, upskill continuously,
-              collaborate with innovators, and build a career that grows,
-              evolves, and scales with your limitless potential.
-            </p>
           </div>
-          <div>
+          <p className="mt-[32px] font-normal text-[24px]">
+            Grow Without Limits
+          </p>
+          <p className="mt-[11px] text-[16px] text-[#484848]">
+            Explore ambitious ideas, embrace challenges, upskill continuously,
+            collaborate with innovators, and build a career that grows,
+            evolves, and scales with your limitless potential.
+          </p>
+        </div>
+
+        {/* Card 3 */}
+        <div>
+          <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
               src="/images/careers/career2.3.png"
               alt="Team"
-              className="w-"
+              className="w-full h-full object-cover"
             />
-            <p className="mt-[32px] font-normal text-[24px]">
-              Collaborate & Belong
-            </p>
-            <p className="mt-[11px] text-[16px] text-[#484848]">
-              Be part of a culture that values teamwork, inclusion, respect, and
-              diverse perspectives, where collaboration, creativity, and shared
-              purpose drive excellence and meaningful progress.
-            </p>
           </div>
-          <div>
+          <p className="mt-[32px] font-normal text-[24px]">
+            Collaborate & Belong
+          </p>
+          <p className="mt-[11px] text-[16px] text-[#484848]">
+            Be part of a culture that values teamwork, inclusion, respect, and
+            diverse perspectives, where collaboration, creativity, and shared
+            purpose drive excellence and meaningful progress.
+          </p>
+        </div>
+
+        {/* Card 4 */}
+        <div>
+          <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
               src="/images/careers/career2.4.png"
               alt="Team"
-              className="w-"
+              className="w-full h-full object-cover"
             />
-            <p className="mt-[32px] font-normal text-[24px]">
-              Impact That Matters
-            </p>
-            <p className="mt-[11px] text-[16px] text-[#484848]">
-              Create solutions that drive industry progress, deliver measurable
-              impact, and at the same time inspire communities while supporting
-              sustainability for a smarter, safer, and better shared future.
-            </p>
           </div>
+          <p className="mt-[32px] font-normal text-[24px]">
+            Impact That Matters
+          </p>
+          <p className="mt-[11px] text-[16px] text-[#484848]">
+            Create solutions that drive industry progress, deliver measurable
+            impact, and at the same time inspire communities while supporting
+            sustainability for a smarter, safer, and better shared future.
+          </p>
         </div>
-      </section>
-      {/* Reasons to Join at Anvi  */}
-
-      <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
-  <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[30px] lg:mb-[76px]">
-    <p className="text-[#000000] text-[48px] font-normal">
-      Reason to Join in Anvi
-    </p>
-    <p className="text-black text-[16px] font-normal max-w-[495px]">
-      At Anvi, you’ll find more than a career - you’ll discover purpose,
-      growth, collaboration, and impact
-    </p>
-  </div>
-
-  <ul className="font-dm-sans p-5 font-normal grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-[67.39px]">
-    {careerReasons.map((item, index) => (
-      <li key={index} className="flex flex-col items-start w-full">
-        <img
-          loading="lazy"
-          src={item.img}
-          alt={item.title}
-          className="w-full max-sm:max-w-[200px] object-cover md:w-auto"
-        />
-        <p className="mt-[32px] font-normal text-[24px]">{item.title}</p>
-        <p className="mt-[11px] text-[16px] text-[#484848]">{item.desc}</p>
-      </li>
-    ))}
-  </ul>
-</section>
-
+      </div>
+    </section>
 
 
       {/* Section 3 Life at Anvi*/}

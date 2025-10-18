@@ -4,8 +4,8 @@ const SectionWithImage = ({
   title,
   description,
   points = [],
-  backgroundImage = "images/careers/career3.1.png",
-  subtitleLineColor = "#1E9AB0",
+  backgroundImage = "/images/careers/career3.1.png",
+  subtitleLineColor = "white",
 }) => {
   return (
     <div className="relative w-screen max-w-[1600px] mx-auto font-inter">
@@ -20,7 +20,7 @@ const SectionWithImage = ({
       </div>
 
       {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-black bg-opacity-20 rounded-2xl"></div>
+      <div className="absolute inset-0 bg-[#02102DCC] rounded-2xl"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center max-md:place-items-center md:flex-row px-[15px] md:px-[25px] lg:px-[50px] py-[70px] gap-[100px] max-lg:gap-[20px]">
@@ -49,6 +49,7 @@ const SectionWithImage = ({
         )}
       </div>
     </div>
+
   );
 };
 

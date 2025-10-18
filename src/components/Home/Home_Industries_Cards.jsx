@@ -89,7 +89,7 @@ export const HomeIndustriesCard = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <div className="w-full h-full absolute top-0 left-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,rgba(0,0,0,1)_100%)]"></div>
-                <div className="mt-[334.2px] w-[68.23px] h-[26px] ml-[0.2px] rotate-[-89.59deg] font-[Manrope] font-bold text-white text-[18.8px] tracking-[0.19px] leading-[normal]">
+                <div className="mt-[334.2px] w-[68.23px] h-[26px] ml-[0.2px] rotate-[-89.59deg] font-[Manrope] font-bold text-white text-[18.8px] tracking-[0.19px] leading-[normal] whitespace-nowrap">
                   {title}
                 </div>
               </div>

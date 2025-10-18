@@ -12,8 +12,6 @@ export const SolutionsSewage = () => {
         backgroundImage="/images/solutions/solutionCard-2.png"
         title="Sewage Cleaning Robot"
         description="Revolutionizing urban sanitation through robotics, AI, and predictive intelligence for a smarter, safer future"
-        buttonText="Download White Paper"
-        buttonLink=" "
         descriptionWidth="100%"
       />
 

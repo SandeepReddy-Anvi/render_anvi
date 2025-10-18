@@ -94,8 +94,7 @@ const Header = () => {
         {/* Contact Us Button (Desktop) */}
         <Link
           to={mainPagesLinksList["ContactUs"]}
-          className="max-md:hidden md:ml-2 lg:ml-5 link-bg-icon"
-          style={{ boxShadow: "0px 8px 20px 0px #1E9AB052" }}
+          className="max-md:hidden md:ml-2 lg:ml-5 link-bg-icon hover:shadow-[0px_4px_12px_rgba(0,0,0,0.3)]"
         >
           Contact <i className="rotate-45">{IconsObj.arrow}</i>
         </Link>

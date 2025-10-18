@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { pagesLinksList } from "../../data/PagesLinkList";
 import React from "react";
-import Button from "../../utils/Button";
 
 export const PravikayaInitiative = () => {
   return (
@@ -12,7 +11,7 @@ export const PravikayaInitiative = () => {
         style={{ zIndex: 2 }}
       >
         <h1 className="font-[Dm sans] font-[500] flex items-center justify-center text-white text-[51px]">
-          Pravikaya Initiative
+          Pravikya Initiative
         </h1>
         <p className="w-full text-white text-[18px] text-center font-[300]">
           An initiative by Anvi Foundation driving sustainability, education,
@@ -28,10 +27,14 @@ export const PravikayaInitiative = () => {
       </div>
 
       {/* Bg Images */}
-      <div
-        className="absolute w-full max-w-28 rounded-[5px] aspect-square left-0 top-20 lg:max-w-[200px] lg:top-[147px] lg:h-[227px] bg-[#FF8C60] bg-[100% 100%]"
-        aria-hidden="true"
-      />
+      <div className="absolute w-full max-w-28 rounded-[5px] aspect-square left-0 top-20 lg:max-w-[200px] lg:top-[147px] lg:h-[227px] bg-[#FF8C60] bg-[100% 100%]">
+        <img
+          loading="lazy"
+          src="/images/home/Pravikaya Init.jpg"
+          alt="Student studying"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
 
       <div className="max-sm:w-[30vw] sm:w-[224px] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
         <img
@@ -54,7 +57,7 @@ export const PravikayaInitiative = () => {
       <div className="w-[147px] h-[167px] bottom-[11%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden">
         <img
           loading="lazy"
-          src="/images/home/Pravikaya Init3.png"
+          src="/images/home/Pravikaya Init3.jpg"
           alt="Studio office environment"
           className="w-full h-full object-cover object-center"
         />

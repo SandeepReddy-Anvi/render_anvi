@@ -64,7 +64,7 @@ const CarouselSection = () => {
         }}
       >
         <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-white mb-8 text-center lg:text-left">
-          AI-powered features for safer, smarter airports.
+          AI-powered Features For Safer & Smarter Airports.
         </h3>
 
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start gap-12 lg:gap-24">

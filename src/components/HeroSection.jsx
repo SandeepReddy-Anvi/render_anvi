@@ -6,8 +6,6 @@ const HeroSection =
     backgroundImage,
     title,
     description,
-    buttonText,
-    buttonLink,
     page = "",
     descriptionWidth,
   }) => {
@@ -22,7 +20,7 @@ const HeroSection =
               loading="eager"
               src={backgroundImage}
               alt="Hero Background"
-              className="w-full h-full object-center sm:object-left-top md:object-center object-cover max-md:scale-[1.2] translate-y-[50px]"
+              className="w-full h-full object-center sm:object-left-top md:object-center object-cover max-md:scale-[1.2]"
             />
           </div>
           {/* 2. The Reusable White Curve Component */}
@@ -53,15 +51,6 @@ const HeroSection =
             className="w-full max-md:max-w-[600px] text-[16px] font-[400] leading-[24px] text-black max-md:px-2 md:w-auto">
             {description}
           </p>
-
-          {buttonText && buttonLink && (
-            <Link
-              to={buttonLink}
-              className="link-round-mid mt-[8px] max-md:px-2"
-            >
-              {buttonText}
-            </Link>
-          )}
         </div>
       </section>
     );

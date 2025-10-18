@@ -10,11 +10,11 @@ export const SolutionsArop = () => {
   return (
     <div className="w-full">
       <HeroSection
-        backgroundImage="/images/solutions/solutionCard-1.png"
+        backgroundImage="/images/solutions/solutions.webp"
         title="AROP - Autonomous Runway Operations"
         description="Real-time FOD detection, advanced perimeter surveillance, and predictive runway inspection that enhance safety, boost efficiency, and ensure seamless airport operation"
         buttonText="Download White Paper"
-        buttonLink=" "
+        descriptionWidth="450px"
       />
 
       {/* Section 2 */}

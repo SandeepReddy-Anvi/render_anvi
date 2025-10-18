@@ -3,6 +3,7 @@ import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import { mainPagesLinksList } from "../data/PagesLinkList";
+import { MapPin, Mail, Clock } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
 
@@ -52,9 +53,7 @@ export const ContactUs = () => {
           title="Let's Build the Future Together"
           description="Have a question, partnership idea, or project in mind? Get in touch with our team of
                 innovation experts and let's create something extraordinary."
-          buttonText="About Us"
-          buttonLink={mainPagesLinksList.AboutUs}
-          descriptionWidth="656px"
+          descriptionWidth="800px"
         />
 
         {/* Section2 */}
@@ -70,12 +69,30 @@ export const ContactUs = () => {
                 you as soon as possible.
               </p>
               <div className="flex flex-col text-[16px] text-[#757575] font-normal mt-[20px] md:mt-[40px] gap-[15px] md:gap-[26px]">
-                <p>info@anvi.com</p>
-                <p>
-                  Anvi Robotics, 1st Floor,Profound Buliders, whitefields,
-                  Kondapur, Telangana 500081
-                </p>
-                <p>Monday - Friday 09:30AM - 6:30PM</p>
+                <div className="flex items-center gap-[12px]">
+                  <Mail
+                  className="w-[18px] h-[18px] flex-shrink-0"
+                  strokeWidth={1.5}
+                  />
+                  <p>info@anvi.com</p>
+                </div>
+                <div className="flex items-start gap-[12px]">
+                  <MapPin
+                  className="w-[18px] h-[18px] flex-shrink-0"
+                  strokeWidth={1.5}
+                  />
+                  <p>
+                    Anvi Robotics, 1st Floor,Profound Buliders, whitefields,
+                    Kondapur, Telangana 500081
+                  </p>
+                </div>
+                <div className="flex items-start gap-[12px]">
+                  <Clock
+                  className="w-[18px] h-[18px] flex-shrink-0"
+                  strokeWidth={1.5}
+                  />
+                  <p>Monday - Friday 09:30AM - 6:30PM</p>
+                </div>
               </div>
             </div>
 
@@ -163,18 +180,25 @@ export const ContactUs = () => {
           ></iframe>
         </section>
 
-        {/*Section 4 Questions */}
-        <section className="w-full max-w-[1000px] px-[10px] py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px]">
-          <div className="flex flex-col gap-[16px] w-[481px] font-['Wix_Madefor_Display'] text-center">
-            <p className="text-[48px]">We’re Here to Help</p>
-            <p className="text-[16px] text-[#465455] font-normal">
-              Find quick answers to common questions. Still need help? Our team
-              is here to support you anytime.
-            </p>
-          </div>
-          {/* Question & Answers */}
-          <FAQLayout faqs={ContactUsFaqs} />
-        </section>
+        {/* Section 4 — Questions */}
+<section className="w-full px-5 py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px] font-['Wix_Madefor_Display'] text-center">
+  {/* Heading */}
+  <div className="flex flex-col gap-[16px] w-full max-w-[480px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] px-4">
+    <p className="text-[48px] leading-tight">
+      We’re Here to Help
+    </p>
+    <p className="text-[15px] sm:text-[16px] text-[#465455] font-normal leading-relaxed">
+      Find quick answers to common questions. Still need help? Our team is here
+      to support you anytime.
+    </p>
+  </div>
+
+  {/* FAQ Section */}
+  <div className="w-full max-w-[1000px] px-2 sm:px-4 md:px-6">
+    <FAQLayout faqs={ContactUsFaqs} />
+  </div>
+</section>
+
       </main>
 
       {/* Footer */}

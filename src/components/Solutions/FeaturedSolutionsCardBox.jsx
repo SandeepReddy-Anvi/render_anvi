@@ -112,7 +112,7 @@ const FeaturedSolutionsCardBox = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left Content Area (Col 1-5 on large screens) */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left  gap-[25px]">
-            <h1 className="text-[36px] tracking-[-0.9px] font-[Dm sans] font-[500] text-gray-900transition-opacity duration-500 ease-in-out">
+            <h1 className="text-[36px] tracking-[-0.9px] font-[Dm sans] font-[500] text-gray-900 transition-opacity duration-500 ease-in-out">
               {currentSlide.title}
             </h1>
             <p className="text-[#626263] text-[18px] font-[400] leading-[30px] transition-opacity duration-500 ease-in-out">
@@ -123,7 +123,7 @@ const FeaturedSolutionsCardBox = () => {
             <ul className="space-y-3 transition-opacity duration-500 ease-in-out">
               {currentSlide.points.map((point, index) => (
                 <li key={index} className="flex items-start">
-                  <span className="flex-shrink-0 w-2 h-2 mt-2 mr-3 rounded-full bg-[#1E9AB0]"></span>
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 mr-3 rounded-full bg-black"></span>
                   <span className="text-[#353535] font-[400] text-[16px]">
                     {point}
                   </span>

@@ -21,7 +21,7 @@ export const Solutions = () => {
         description="From Robotics to Space, Anvi transforms industries with intelligent automation and advanced technology."
         buttonText="About Us"
         buttonLink={mainPagesLinksList.AboutUs}
-        descriptionWidth="700px"
+        descriptionWidth="450px"
       />
 
       {/* Featured Solution */}
@@ -63,7 +63,7 @@ export const Solutions = () => {
             "Compliance – Meeting standards, exceeding expectations.",
             "Innovation – Driving progress through new ideas.",
           ]}
-          backgroundImage="images/careers/career3.1.png"
+          backgroundImage="/images/careers/career3.1.png"
         />
       </section>
 

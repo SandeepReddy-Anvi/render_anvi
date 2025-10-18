@@ -37,40 +37,33 @@ const Home = () => {
           backgroundImage="/videos/home-hero-video.webp"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
-          buttonText="Explore Solutions"
-          buttonLink={mainPagesLinksList.Solutions}
           descriptionWidth="700px"
           page="home"
         />
 
         {/* We Build */}
-        <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[102px] font-['Wix_Madefor_Display']">
-          <h2 className="text-[48px] mb-[16px] text-[#282828]">
-            Pioneering the Future of Deep-Tech
-          </h2>
-          <p className="text-[16px] text-[#4C4C4C] mb-[64px] font-[400] leading-[24px] text-center">
-            At Anvi, we don't just build robots - we build the future. Our
-            vision is to redefine{" "}
-            <span className="hidden md:block h-0">
-              <br />
-            </span>{" "}
-            industries with breakthrough innovations, deep-tech systems, and
-            future-proof solutions across multiple sectors.
-          </p>
+        <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[150px] font-['Wix_Madefor_Display']">
           <img
             loading="lazy"
             src="/images/home/we-build.png"
             className="w-full h-auto"
             alt="we_build_img"
           />
+          <p className="text-[22px] text-[#4C4C4C] mt-[25px] font-[400] leading-[24px] text-center">
+            Every leap forward begins with a bold idea. At ANVI, we don't just imagine the future {" "}
+            <span className="hidden md:block h-0">
+              <br />
+            </span>{" "}
+            we engineer it. Across every frontier, we build what tomorrow is made of.
+          </p>
         </section>
 
-        {/* Transforming Industries */}
+        {/* Industries */}
         <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
           <h2 className="text-[48px] mb-[16px] text-[#282828]">
-            Transforming Industries
+            Industries
           </h2>
-          <p className="text-[16px] text-[#4C4C4C] mb-[64px] font-[400] leading-[24px] text-center">
+          <p className="text-[18px] text-[#4C4C4C] mb-[64px] font-[400] leading-[24px] text-center">
             From robotics to space exploration, we’re creating advanced
             solutions that
             <span className="hidden md:block h-0">
@@ -84,44 +77,49 @@ const Home = () => {
         </section>
 
         {/* Next at Anvi */}
-        <section className="next-at-anvi w-full px-5 py-[50px] text-center xl:px-[118px] md:py-[80px] font-['Wix_Madefor_Display']">
-          <h2 className="text-[48px] mb-[16px] text-[#282828]">Next At Anvi</h2>
-          <p className="text-[16px] text-[#4C4C4C] mb-[30px] md:mb-[64px] font-[400] leading-[24px] text-center">
+        <section className="next-at-anvi w-full px-5 py-[50px] text-center xl:px-[118px] md:py-[80px]">
+          <h2 className="text-[48px] mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
+            <span className="text-[53px] font-bauhaus">
+              anvi
+            </span>
+          </h2>
+          <p className="text-[18px] text-[#4C4C4C] mb-[30px] md:mb-[64px] font-[400] leading-[24px] text-center font-['Wix_Madefor_Display']">
             At anvi, our engineers don’t work by the clock - they work by
             vision.
           </p>
-          <div className="w-full m-auto mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 max-lg:flex-col justify-center align-middle gap-[50px] py-4">
+          
+          <div className="px-10 w-full m-auto mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4">
             {Object.keys(nextAtAnvi).map((each) => (
               <div
                 key={nextAtAnvi[each].title}
-                className="w-auto mx-auto h-auto px-5 py-10 hover:shadow-lg hover:shadow-gray-200 transition-all duration-200 max-w-[750px] bg-[#F4F3F7] rounded-[16px] grid sm:grid-cols-1 lg:grid-cols-2 justify-center place-items-center align-middle gap-[20px]"
+                className="relative w-full max-w-[480px] group mx-auto overflow-hidden"
               >
-                <div className="w-full max-md:m-auto max-md:max-w-[350px] self-center md:max-w-[350px] lg:max-w-1/2 aspect-square md:aspect-[4/3] object-cover object-center rounded-[16px]">
-                  <img
-                    loading="lazy"
-                    src={nextAtAnvi[each].imgUrl}
-                    alt={nextAtAnvi[each].title + nextAtAnvi[each].imgUrl}
-                    className="bg-cover w-full h-full rounded-[16px] object-cover object-center"
-                  />
-                </div>
-                {/* Content */}
-                <div className="flex flex-col w-full max-w-[450px] justify-start align-middle gap-[5px] text-left">
-                  <span className="text-[12px] self-auto w-min whitespace-nowrap text-[#0D1F21] font-[400] min-w-[90px] px-[16px] py-[10px] font-[manrope] rounded-[400px] bg-[#EEFCFF]">
+                {/* Image */}
+                <img
+                  src={nextAtAnvi[each].imgUrl}
+                  alt={nextAtAnvi[each].title}
+                  className="w-full h-[320px] md:h-[500px] object-cover object-"
+                />
+
+                <div className="absolute inset-0 bg-transparent group-hover:bg-[linear-gradient(179.68deg,rgba(0,0,0,0.33)_0.32%,rgba(0,0,0,0.94)_69.93%)] transition-all duration-300"></div>
+
+                {/* Overlay container */}
+                <div className="absolute bottom-0 left-0 w-full px-5 pb-5 flex flex-col items-start">
+                  {/* Title (always visible) */}
+                  <span className="text-white text-[22px] font-semibold font-dm-sans block">
                     {nextAtAnvi[each].title}
                   </span>
-                  <p className="font-[Dm sans] w-full text-[20px] font-[500] text-[#0D1F21]">
+
+                  {/* Description (hidden initially, slides down on hover) */}
+                  <p className="text-[#FFFFFFE5] text-[22px] font-medium font-dm-sans max-h-0 overflow-hidden transition-all duration-300 group-hover:max-h-40 mt-2 text-left">
                     {nextAtAnvi[each].desc}
                   </p>
-                  <Link
-                    to={nextAtAnvi[each].link}
-                    className="text-[#465455] text-[14px] max-md:my-3 font-[400] font-[Manrope] hover:font-bold self-start"
-                  >
-                    Read more
-                  </Link>
                 </div>
               </div>
             ))}
           </div>
+
+
           {/* Read All Button */}
         <Button to={mainPagesLinksList.News} variant="secondary">
           Read all
@@ -129,6 +127,11 @@ const Home = () => {
         </section>
 
         {/* Pravikaya Initiative */}
+        <div className="font-['Wix_Madefor_Display'] text-center mb-12">
+          <p className="text-[48px]">
+            <span className="font-bauhaus">anvi</span> social responsibility</p>
+          <p className="text-[18px] text-[#4C4C4C]">Empowering young innovators through learning, <br/> fellowship, and real-world opportunities</p>
+        </div>
         <PravikayaInitiative />
       </main>
 
