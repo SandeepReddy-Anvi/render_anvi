@@ -2,6 +2,7 @@ import Button from "../utils/Button";
 import HeroSection from "../components/HeroSection";
 import { IndustriesCardsList } from "../data/IndustriesCardsList";
 import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
+import { renderLink } from "../utils/renderLink";
 import Footer from "../components/footer";
 
 const footerUpBoxInfoObj = {
@@ -21,9 +22,20 @@ const IndustryCardHor = (title, desc, link, imgUrl) => (
         {desc}
       </p>
       <div className="self-start max-md:pb-[10px]">
-        <Button to={link} variant="secondary">
-          Learn More
-        </Button>
+        {renderLink(
+          "Learn More",
+          link,
+          `rounded-[32px] border-[1px] border-gray-200 text-gray-900 px-[23px] py-[11px]
+        bg-gradient-to-r from-white to-white
+        hover:from-[#1E9AB0] hover:to-[#1E9AB0]
+        bg-[length:0%_106%] hover:bg-[length:101%_106%]
+        bg-left bg-no-repeat
+        transition-[background-size] duration-500 ease-out
+        hover:text-white
+        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+        inline-flex items-center`
+        )}
+
       </div>
     </div>
     <div className="max-md:mx-auto">
@@ -47,9 +59,19 @@ export const IndustryCardVer = (title, desc, link, imgUrl) => (
         {desc}
       </p>
       <div className="self-start pb-[20px] lg:pb-[64px]">
-        <Button to={link} variant="secondary">
-          Learn More
-        </Button>
+        {renderLink(
+          "Learn More",
+          link,
+          `rounded-[32px] border-[1px] border-gray-200 text-gray-900 px-[23px] py-[11px]
+        bg-gradient-to-r from-white to-white
+        hover:from-[#1E9AB0] hover:to-[#1E9AB0]
+        bg-[length:0%_106%] hover:bg-[length:101%_106%]
+        bg-left bg-no-repeat
+        transition-[background-size] duration-500 ease-out
+        hover:text-white
+        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+        inline-flex items-center`
+        )}
       </div>
       <img
         loading="lazy"

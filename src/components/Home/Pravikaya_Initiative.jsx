@@ -54,7 +54,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="w-[147px] h-[167px] bottom-[11%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden">
+      <div className="w-[147px] h-[167px] bottom-[11%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px]">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init3.jpg"

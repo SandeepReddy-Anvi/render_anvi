@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IndustriesCardsList } from "../../data/IndustriesCardsList";
+import { renderLink } from "../../utils/renderLink";
 import React, { useCallback, useState } from "react";
 
 export const HomeIndustriesCard = () => {
@@ -71,13 +72,14 @@ export const HomeIndustriesCard = () => {
                   <p className="relative self-stretch font-[Manrope] font-normal text-white text-[11.3px] tracking-[0.11px] leading-[normal]">
                     {desc}
                   </p>
+                  
+                  {/* render link for new tab*/}
+                  {renderLink(
+                    `Explore ${title}`,
+                    link,
+                    "w-full text-[#FFFAFF] text-[13px] font-[600] mt-[7px] text-center px-[18px] py-[10px] flex-[0_0_auto] bg-[#1e9ab0] rounded-[9.56px]"
+                  )}
 
-                  <Link
-                    to={link}
-                    className="w-full text-[#FFFAFF] text-[13px] font-[600] mt-[7px] text-center px-[18px] py-[10px] flex-[0_0_auto] bg-[#1e9ab0] rounded-[9.56px]"
-                  >
-                    Explore {title}
-                  </Link>
                 </div>
               </div>
             ) : (

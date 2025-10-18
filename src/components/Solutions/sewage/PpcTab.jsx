@@ -80,7 +80,7 @@ const PpcTab = () => {
             className={`flex-1 flex items-center justify-center md:justify-start px-3 sm:px-4 md:px-5 py-2 sm:py-3 md:py-5 text-sm sm:text-base md:text-lg lg:text-[21px] font-medium text-left transition-all duration-200
               ${
                 activeTab === tab.id
-                  ? "bg-[#0097B2] text-white"
+                  ? "bg-[#383838] text-white"
                   : "bg-white text-[#000000] hover:bg-gray-100"
               }
               ${index !== tabs.length - 1 ? "border-b md:border-b border-gray-200 md:border-b-0 md:border-b" : ""}

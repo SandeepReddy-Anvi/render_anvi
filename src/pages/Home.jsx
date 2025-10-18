@@ -128,8 +128,8 @@ const Home = () => {
 
         {/* Pravikaya Initiative */}
         <div className="font-['Wix_Madefor_Display'] text-center mb-12">
-          <p className="text-[48px]">
-            <span className="font-bauhaus">anvi</span> social responsibility</p>
+          <p className="text-[46px]">
+            <span className="text-[48px] font-bauhaus">anvi</span> social responsibility</p>
           <p className="text-[18px] text-[#4C4C4C]">Empowering young innovators through learning, <br/> fellowship, and real-world opportunities</p>
         </div>
         <PravikayaInitiative />
