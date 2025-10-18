@@ -30,5 +30,8 @@
     "tailwindcss": "^3.4.1",
     "tailwindcss-cli": "^0.1.2",
     "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=20.19.0"
   }
 }
