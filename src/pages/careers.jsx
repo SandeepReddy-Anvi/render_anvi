@@ -124,6 +124,7 @@ const Careers = () => {
 
 
       {/* Section 3 Life at Anvi*/}
+      <div className="mb-10">
       <SectionWithImage
         title="Life At Anvi"
         description="Life at Anvi is about more than work — it’s about purpose, growth, and collaboration. Here, innovation thrives, ambitious ideas take shape, and every individual contributes to meaningful impact. With a culture that values teamwork, learning, and sustainability, Anvi is where talent transforms into progress and the future is engineered together."
@@ -135,7 +136,8 @@ const Careers = () => {
           "Mentorship and career growth programs",
         ]}
       />
-      
+      </div>
+      {/*
       <section className="px-4 sm:px-6 md:px-[123px] py-8 sm:py-12 md:py-[80px]">
         
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-[80px] mb-8 sm:mb-10 md:mb-[60px]">
@@ -160,8 +162,8 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Pravikaya Initiative */}
-      <PravikayaInitiative />
+      {/* Pravikaya Initiative 
+      <PravikayaInitiative />*/}
 
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
