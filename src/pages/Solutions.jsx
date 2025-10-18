@@ -16,7 +16,7 @@ export const Solutions = () => {
     <div id="solutions" className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/images/solutions/solutions.webp"
+        backgroundImage="/videos/hero3.mp4"
         title="Our Solutions"
         description="From Robotics to Space, Anvi transforms industries with intelligent automation and advanced technology."
         buttonText="About Us"

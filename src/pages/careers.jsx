@@ -17,13 +17,13 @@ const Careers = () => {
     <div id="careers" className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/images/careers/hero.png"
+        backgroundImage="/videos/hero5.mp4"
         title="Engineer the Future With Us"
         description="At Anvi, we're building tomorrow's technology today - and we want visionaries like 
             you to join us in creating the next generation of intelligent systems."
         buttonText="Browse Openings"
         buttonLink={pagesLinksList.Career_Openings}
-        descriptionWidth="750px"
+        descriptionWidth="680px"
       />
 
       <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
@@ -135,10 +135,9 @@ const Careers = () => {
           "Mentorship and career growth programs",
         ]}
       />
-
-      {/* Section 4*/}
+      
       <section className="px-4 sm:px-6 md:px-[123px] py-8 sm:py-12 md:py-[80px]">
-        {/* Text Section */}
+        
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-[80px] mb-8 sm:mb-10 md:mb-[60px]">
           <p className="text-[46px] leading-[56px] text-[#121212] font-['Wix_Madefor_Display'] font-medium text-center md:text-left">
             Great Team <br /> Build Great Things
@@ -148,9 +147,9 @@ const Careers = () => {
             Driven by passion and purpose, our people transform bold ideas into
             deep-tech innovations that shape industries and communities.
           </p>
-        </div>
+        </div> 
 
-        {/* Image Section */}
+        
         <div className="w-full">
           <img
             loading="lazy"

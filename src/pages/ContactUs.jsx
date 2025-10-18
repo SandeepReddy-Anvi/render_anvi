@@ -49,11 +49,11 @@ export const ContactUs = () => {
     <>
       <main className="w-full">
         <HeroSection
-          backgroundImage="/images/contactus/hero.jpg"
+          backgroundImage="/videos/hero4.mp4"
           title="Let's Build the Future Together"
           description="Have a question, partnership idea, or project in mind? Get in touch with our team of
                 innovation experts and let's create something extraordinary."
-          descriptionWidth="800px"
+          descriptionWidth="650px"
         />
 
         {/* Section2 */}

@@ -50,7 +50,7 @@ const CareersOpenings = () => {
   return (
     <div className="w-full">
       <HeroSection
-        backgroundImage="/images/careers/hero2.1.png"
+        backgroundImage="/videos/hero6.mp4"
         title="Looking for the Right Job "
         description="Join Anvi to explore ambitious ideas, work with breakthrough technologies, and build a career that creates real impact."
         buttonText="About Us"
