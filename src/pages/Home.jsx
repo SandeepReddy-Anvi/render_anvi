@@ -34,7 +34,7 @@ const Home = () => {
       <main>
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/videos/home-hero-video.webp"
+          backgroundImage="/videos/hero.mp4"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
           descriptionWidth="700px"
