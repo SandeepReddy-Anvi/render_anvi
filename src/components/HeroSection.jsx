@@ -59,13 +59,9 @@ const HeroSection = ({
 
   <p
     style={{
-    width: window.innerWidth >= 768 
-      ? descriptionWidth 
-      : window.innerWidth < 440 
-        ? "300px" // or specific width like "300px"
-        : "auto",
-  }}
-    className="max-md:max-w-[600px] max-md:w-auto text-base font-normal leading-6 text-black max-md:px-2 sm:pr-[58px]"
+      width: window.innerWidth >= 768 ? descriptionWidth : "auto",
+    }}
+    className="max-md:max-w-[600px] max-md:w-auto text-base font-normal leading-6 text-black max-md:px-2 max-sm:pr-16"
   >
     {description}
   </p>
