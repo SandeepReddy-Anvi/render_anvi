@@ -1,4 +1,5 @@
 import Footer from "../../components/footer";
+import { pagesLinksList } from "../../data/PagesLinkList";
 import HeroSection from "../../components/HeroSection";
 import UseCasesIndia from "../../components/Solutions/arop/UseCasesIndia";
 import { SolutionAropFaqs } from "../../data/FAQs";
@@ -6,12 +7,19 @@ import FAQLayout from "../../components/FAQLayout";
 import BenefitsPage from "../../components/Solutions/benifits";
 import CarouselSection from "../../components/Solutions/arop/CarouselSection";
 
+const footerUpBoxInfoObj = {
+  head: "Ready to Transform Your Operations with anvi",
+  para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
+  linkLabel: "Contact Us",
+  link: pagesLinksList.ContactUs,
+};
+
 export const SolutionsArop = () => {
   return (
     <div className="w-full">
       <HeroSection
-        backgroundImage="/images/solutions/solutions.webp"
-        title="AROP - Autonomous Runway Operations"
+        backgroundImage="/images/solutions/arop/arop4.2.png"
+        title="Autonomous Runway Operations"
         description="Real-time FOD detection, advanced perimeter surveillance, and predictive runway inspection that enhance safety, boost efficiency, and ensure seamless airport operation"
         buttonText="Download White Paper"
         descriptionWidth="450px"
@@ -55,114 +63,74 @@ export const SolutionsArop = () => {
         </div>
       </section>
 
-      {/* Section 3 */}
-      <section className="bg-[#F5F4F8] p-6 md:p-[90px]">
-        <div className="font-dm-sans mb-6 md:mb-10">
-          <p className="text-2xl md:text-[32px] font-semibold mb-2 md:mb-4">
-            Solution Overview
+      {/* Section 3 - Solution Overview */}
+      <section className="bg-[#F5F4F8] p-8 md:p-[90px] font-dm-sans">
+        <div className="mb-10">
+          <p className="text-[32px] font-semibold mb-4">Solution Overview</p>
+          <p className="text-[18px] text-[#282828] leading-[29.25px] mb-4">
+            Airports operate in one of the most demanding environments in the world, where even small oversights can lead to major consequences. Challenges such as Foreign Object Debris (FOD), wildlife intrusions near flight paths, and runway surface defects continue to pose risks every day.
           </p>
-          <p className="text-base md:text-[18px] text-[#282828] leading-relaxed md:leading-[29.25px] mb-2 md:mb-4">
-            Airports operate in one of the most demanding environments in the
-            world, where even small oversights can lead to major consequences.
-            Challenges such as Foreign Object Debris (FOD) on runways, wildlife
-            intrusions near flight paths, and runway surface defects continue to
-            pose risks every day. These hazards can cause flight delays, costly
-            repairs, passenger inconvenience, and in extreme cases, safety
-            incidents.
-          </p>
-          <p className="text-base md:text-[18px] text-[#282828] leading-relaxed md:leading-[29.25px]">
-            Anvi Runway Ops (AROP) is designed to directly address these
-            challenges. It is a comprehensive, AI-powered and autonomous
-            platform that combines three critical safety and inspection
-            functions into a single, unified system:
+          <p className="text-[18px] text-[#282828] leading-[29.25px]">
+            Anvi Runway Ops (AROP) is designed to directly address these challenges. It is a comprehensive, AI-powered and autonomous platform that combines three critical safety and inspection functions into a single, unified system:
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 md:gap-16 font-inter">
-          {/* Left - Image */}
-          <div className="relative overflow-hidden rounded-2xl group w-full md:w-[660px]">
-            <div className="w-full h-[350px] bg-[#E0F1F4] rounded-[12px]">
-              <img
-                src="/images/solutions/solutionCard-1.png"
-                alt="AROP Robot"
-                className="w-full h-min object-cover"
-              />
-            </div>
+        <div className="flex flex-col md:flex-row gap-16 font-inter">
+          {/* Image */}
+          <div className="relative overflow-hidden rounded-2xl group w-full md:w-[660px] bg-[#E0F1F4]">
+            <img
+              src="/images/solutions/solutionCard-1.png"
+              alt="AROP Robot"
+              className="py-[50px] w-full h-[426px] object-cover rounded-[12px]"
+            />
           </div>
 
-          {/* Right - Content Cards */}
-          <div className="md:w-1/2 flex flex-col gap-6 items-center md:items-start justify-center w-full">
-            {/* Card 1 - FOD Detection */}
-            <div className="px-4 md:px-6 py-3 bg-white rounded-xl transition-all duration-300 hover:-translate-y-1 group/card w-full">
-              <div className="flex items-start gap-4 mb-2">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#DBF4FF] text-black rounded-full border border-black flex items-center justify-center text-xl font-bold">
-                  1
+          {/* Cards */}
+          <div className="md:w-1/2 flex flex-col gap-6 items-center justify-center">
+            {[
+              {
+                num: 1,
+                title: "Autonomous FOD Detection & Removal",
+                desc: "Using high-resolution imaging, LiDAR scanning, and AI-based analysis, AROP detects even the smallest cracks, rubber deposits, or faulty lighting systems before they escalate into serious problems.",
+              },
+              {
+                num: 2,
+                title: "Perimeter Surveillance",
+                desc: "AROP's perimeter surveillance units operate 24/7, detecting potential threats, differentiating between low- and high-risk intrusions, and sending instant alerts to airport operations teams for quick response.",
+              },
+              {
+                num: 3,
+                title: "Runway Inspection",
+                desc: "Comprehensive automated runway condition assessment with detailed reporting and anomaly detection systems ensures optimal runway conditions for safe aircraft operations.",
+              },
+            ].map((card, i) => (
+              <div
+                key={i}
+                className="px-6 py-3 bg-white rounded-xl transition-all duration-300 hover:-translate-y-1 group/card"
+              >
+                <div className="flex items-start gap-4 mb-2">
+                  <div className="flex-shrink-0 w-10 h-10 bg-[#DBF4FF] text-black rounded-full border border-black flex items-center justify-center text-xl font-bold">
+                    {card.num}
+                  </div>
+                  <h3 className="text-[19px] font-semibold text-black mt-2">
+                    {card.title}
+                  </h3>
                 </div>
-                <h3 className="text-[19px] font-semibold text-black mt-2">
-                  Autonomous FOD Detection & Removal
-                </h3>
+                <p className="text-[#000000BF] leading-[22px] ml-16 text-[14px] max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover/card:max-h-40 group-hover/card:opacity-100 group-hover/card:mt-2">
+                  {card.desc}
+                </p>
               </div>
-              <p className="text-[#000000BF] leading-[22px] ml-14 text-[14px] max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover/card:max-h-40 group-hover/card:opacity-100 group-hover/card:mt-2">
-                Using high-resolution imaging, LiDAR scanning, and AI-based
-                analysis, AROP detects even the smallest cracks, rubber
-                deposits, or faulty lighting systems before they escalate into
-                serious problems. This ensures predictive maintenance, extending
-                runway life while keeping operations uninterrupted.
-              </p>
-            </div>
-
-            {/* Card 2 - Perimeter Surveillance */}
-            <div className="px-4 md:px-6 py-3 bg-white rounded-xl transition-all duration-300 hover:-translate-y-1 group/card w-full">
-              <div className="flex items-start gap-4 mb-2">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#DBF4FF] text-black rounded-full border border-black flex items-center justify-center text-xl font-bold">
-                  2
-                </div>
-                <h3 className="text-[19px] font-semibold text-black mt-2">
-                  Perimeter Surveillance
-                </h3>
-              </div>
-              <p className="text-[#000000BF] leading-[22px] ml-14 text-[14px] max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover/card:max-h-40 group-hover/card:opacity-100 group-hover/card:mt-2">
-                Airports often span vast areas, making them vulnerable to
-                wildlife intrusions, unauthorized access, and fencing damage.
-                AROP's perimeter surveillance units operate 24/7, detecting
-                potential threats, differentiating between low- and high-risk
-                intrusions, and sending instant alerts to airport operations
-                teams for quick response.
-              </p>
-            </div>
-
-            {/* Card 3 - Runway Inspection */}
-            <div className="px-4 md:px-6 py-3 bg-white rounded-xl transition-all duration-300 hover:-translate-y-1 group/card w-full">
-              <div className="flex items-start gap-4 mb-2">
-                <div className="flex-shrink-0 w-10 h-10 bg-[#DBF4FF] text-black rounded-full border border-black flex items-center justify-center text-xl font-bold">
-                  3
-                </div>
-                <h3 className="text-[19px] font-semibold text-black mt-2">
-                  Runway Inspection
-                </h3>
-              </div>
-              <p className="text-[#000000BF] leading-[22px] ml-14 text-[14px] max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover/card:max-h-40 group-hover/card:opacity-100 group-hover/card:mt-2">
-                Comprehensive automated runway condition assessment with
-                detailed reporting and anomaly detection systems. AROP conducts
-                thorough inspections to identify surface defects, drainage
-                issues, and structural concerns, ensuring optimal runway
-                conditions for safe aircraft operations.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
-        <p className="pt-6 md:pt-14 text-[16px] md:text-[18px] leading-relaxed md:leading-[29.25px] pr-0 md:pr-[110px]">
-          By unifying these capabilities, AROP transforms airport operations
-          from reactive and manual checks into a proactive, always-on safety
-          system. The result is a platform that not only enhances safety and
-          operational efficiency, but also significantly reduces costs and
-          ensures compliance with global aviation regulations (ICAO, FAA, DGCA).
+        <p className="pt-[56px] text-[18px] leading-[29.25px] md:pr-[110px]">
+          By unifying these capabilities, AROP transforms airport operations from reactive and manual checks into a proactive, always-on safety system. The result is a platform that enhances safety, efficiency, reduces costs, and ensures compliance with global aviation regulations (ICAO, FAA, DGCA).
         </p>
       </section>
 
       {/* Section 4 */}
-      <section className="p-6 md:py-[100px] md:px-[50px] lg:px-[110px] font-dm-sans place-items-center">
+      <section className="p-6 md:py-[100px] md:px-[50px] lg:px-[110px] font-dm-sans">
         <p className="text-2xl md:text-[32px] mb-4 md:mb-6">Benefits</p>
         <p className="text-base md:text-[18px] font-normal text-[#282828] mb-6 md:mb-8">
           Airports today need more than traditional safety checks—they need
@@ -198,7 +166,7 @@ export const SolutionsArop = () => {
         <FAQLayout faqs={SolutionAropFaqs} />
       </section>
 
-      <Footer />
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>
   );
 };

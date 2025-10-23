@@ -84,7 +84,7 @@ const Header = () => {
                   )}`}
                 >
                   <Link to={link} className="hover:text-cyan-500">
-                    {pageKey}
+                    {pageKey.replace(/([A-Z])/g, " $1").trim()}
                   </Link>
                 </li>
               );
@@ -96,7 +96,7 @@ const Header = () => {
           to={mainPagesLinksList["ContactUs"]}
           className="max-md:hidden md:ml-2 lg:ml-5 link-bg-icon hover:shadow-[0px_4px_12px_rgba(0,0,0,0.3)]"
         >
-          Contact <i className="rotate-45">{IconsObj.arrow}</i>
+          Contact Us <i className="rotate-45">{IconsObj.arrow}</i>
         </Link>
 
         {/* Mobile Menu Button */}

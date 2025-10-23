@@ -101,7 +101,7 @@ const Home = () => {
                   className="w-full h-[320px] md:h-[500px] object-cover object-"
                 />
 
-                <div className="absolute inset-0 bg-transparent group-hover:bg-[linear-gradient(179.68deg,rgba(0,0,0,0.33)_0.32%,rgba(0,0,0,0.94)_69.93%)] transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(179.68deg,rgba(0,0,0,0.33)_0.32%,rgba(0,0,0,0.94)_69.93%)] transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100"></div>
 
                 {/* Overlay container */}
                 <div className="absolute bottom-0 left-0 w-full px-5 pb-5 flex flex-col items-start">
@@ -119,11 +119,10 @@ const Home = () => {
             ))}
           </div>
 
-
-          {/* Read All Button */}
+          {/* Read All Button 
         <Button to={mainPagesLinksList.News} variant="secondary">
           Read all
-        </Button>
+        </Button>*/}
         </section>
 
         {/* Pravikaya Initiative */}

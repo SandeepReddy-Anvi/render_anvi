@@ -44,7 +44,7 @@ const Careers = () => {
               loading="lazy"
               src="/images/careers/career2.1.png"
               alt="Team"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
           </div>
           <p className="mt-[32px] font-normal text-[24px]">
@@ -67,7 +67,7 @@ const Careers = () => {
               loading="lazy"
               src="/images/careers/career2.2.png"
               alt="Team"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
           </div>
           <p className="mt-[32px] font-normal text-[24px]">
@@ -87,7 +87,7 @@ const Careers = () => {
               loading="lazy"
               src="/images/careers/career2.3.png"
               alt="Team"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
           </div>
           <p className="mt-[32px] font-normal text-[24px]">
@@ -107,7 +107,7 @@ const Careers = () => {
               loading="lazy"
               src="/images/careers/career2.4.png"
               alt="Team"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
           </div>
           <p className="mt-[32px] font-normal text-[24px]">

@@ -36,7 +36,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="max-sm:w-[30vw] sm:w-[224px] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[25px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
+      <div className="max-sm:w-[30vw] sm:w-[224px] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[20px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init1.png"
@@ -54,7 +54,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="w-[147px] h-[167px] bottom-[11%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px]">
+      <div className="w-[147px] h-[167px] bottom-[6%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px]">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init3.jpg"

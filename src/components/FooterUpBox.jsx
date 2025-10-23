@@ -18,9 +18,9 @@ export const FooterUpBox = ({ info }) => {
         style={{ backgroundImage: "url(/images/footer.jpg)" }}
       ></div>
       <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div>
-      <h2 className="text-[48px] text-[#FFFFFF] sticky z-3">{head}</h2>
+      <h2 className="text-[28px] md:text-[48px] text-[#FFFFFF] sticky z-3">{head}</h2>
       <p
-        className="text-[16px] max-w-[612px] text-[#fff] font-[400] leading-[24px] text-center mx-auto sticky z-3"
+        className="text-[14px] md:text-[16px] max-w-[612px] text-[#fff] font-[400] leading-[24px] text-center mx-auto sticky z-3"
         style={{ fontFamily: '"Wix Madefor Display", sans-serif' }}
       >
         {para}

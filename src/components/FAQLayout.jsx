@@ -17,7 +17,7 @@ const FAQLayout = ({ faqs }) => {
         >
           <button
             onClick={() => toggleFAQ(index)}
-            className="w-full flex justify-between items-center px-4 py-4 text-left font-inter text-[16px] font-medium text-[#2B303B] hover:bg-gray-100 transition-colors duration-200"
+            className="w-full flex justify-between items-center px-4 py-6 text-left font-inter text-[16px] font-medium text-[#2B303B]"
           >
             {faq.question}
             <span
@@ -30,7 +30,7 @@ const FAQLayout = ({ faqs }) => {
           </button>
 
           {openIndex === index && (
-            <div className="px-6 py-4 text-[16px] text-[#465455] font-normal font-dm-sans border-t border-[#E5E7EB] bg-[#FAFAFA]">
+            <div className="px-6 pb-4 text-[16px] text-[#465455] font-normal font-dm-sans bg-white">
               {faq.answer}
             </div>
           )}

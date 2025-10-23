@@ -1,8 +1,16 @@
 import Footer from "../../components/footer";
+import { pagesLinksList } from "../../data/PagesLinkList";
 import HeroSection from "../../components/HeroSection";
 import KeyFeaturesSection from "../../components/Solutions/sewage/KeyFeaturesSection";
 import PpcTab from "../../components/Solutions/sewage/PpcTab";
 import { Shield, Zap, Leaf, TrendingUp, Bot, Brain, Map } from "lucide-react";
+
+const footerUpBoxInfoObj = {
+  head: "Ready to Transform Your Operations with anvi",
+  para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
+  linkLabel: "Contact Us",
+  link: pagesLinksList.ContactUs,
+};
 
 export const SolutionsSewage = () => {
   return (
@@ -69,7 +77,8 @@ export const SolutionsSewage = () => {
       </section>
 
       {/* Section 3 - About */}
-      <section className="bg-[#0E181E] py-8 md:py-16 lg:py-[100px]">
+      <section className="bg-[#0E181E] py-7 md:py-14 lg:py-[100px]">
+        <p className="text-white text-[48px] text-center font-bold md:mb-16 font-">What is the Sewage Cleaning Robot?</p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <div className="flex flex-col gap-6 md:gap-8">
             <p className="text-sm md:text-base lg:text-[18px] text-white leading-relaxed md:leading-[24px] lg:leading-[26px] pl-6">
@@ -194,7 +203,7 @@ export const SolutionsSewage = () => {
             A comprehensive system integrating robotics, artificial
             intelligence, and geographic information Systems.
           </p>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left Column */}
             <div className="space-y-6 md:space-y-8 lg:space-y-10 pl-0 sm:pl-4 lg:pl-6">
               <div>
@@ -228,8 +237,7 @@ export const SolutionsSewage = () => {
             </div>
 
             {/* Right Column - Icon Cards */}
-            {/* Right Column - Icon Cards */}
-            <div className="bg-blue-100 rounded-xl w-full lg:w-[500px] h-auto lg:h-[250px] flex flex-col justify-center items-center p-6 md:p-8 lg:p-10">
+            <div className="bg-blue-100 border border-[#2986FF33] rounded-xl w-full lg:w-[500px] h-auto lg:h-[250px] flex flex-col justify-center items-center p-6 md:p-8 lg:p-10">
               {/* First row: two icons with larger gap */}
               <div className="w-full flex justify-center gap-16 md:gap-32 mb-6">
                 <div className="flex flex-col items-center gap-2">
@@ -373,7 +381,7 @@ export const SolutionsSewage = () => {
         </div>
       </section>
 
-      <Footer />
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>
   );
 };

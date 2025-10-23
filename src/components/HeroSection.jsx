@@ -40,33 +40,31 @@ const HeroSection = ({
       </div>
 
       {/* Hero Content */}
-      {/* Hero Content */}
-<div
-  className="home-hero-content sticky z-10 w-full flex flex-col justify-start align-middle gap-[16px] font-['Wix_Madefor_Display'] max-md:px-3 ml-[2vw] md:ml-[30px] lg:ml-[4vw] mt-[50px] md:mt-[40px] lg:mt-[11vh]"
->
-  {page === "home" ? (
-    <h1 className="text-[48px] md:text-[56px] text-[#282828] font-[600]">
-      Engineering Your{" "}
-      <span className="whitespace-nowrap">
-        Edge <span className="-ml-3 max-md:px-1">™</span>
-      </span>
-    </h1>
-  ) : (
-    <h1 className="text-[48px] w-[80%] lg:w-full md:text-[56px] text-[#282828] font-[600] leading-tight">
-      {title}
-    </h1>
-  )}
+      <div
+        className="home-hero-content sticky z-10 w-full flex flex-col justify-start align-middle gap-[16px] font-['Wix_Madefor_Display'] max-md:p-3 ml-[2vw] md:ml-[30px] lg:ml-[4vw] mt-[30px] md:mt-[40px] lg:mt-[11vh]"
+      >
+        {page === "home" ? (
+          <h1 className="text-[36px] md:text-[56px] text-[#282828] font-[600]">
+            Engineering Your{" "}
+            <span className="whitespace-nowrap">
+              Edge <span className="-ml-3 max-md:px-1">™</span>
+            </span>
+          </h1>
+        ) : (
+          <h1 className="text-[36px] w-[80%] lg:w-full lg:text-[56px] text-[#282828] font-[600] leading-tight">
+            {title}
+          </h1>
+        )}
 
-  <p
-    style={{
-      width: window.innerWidth >= 768 ? descriptionWidth : "auto",
-    }}
-    className="max-md:max-w-[600px] text-[16px] font-[400] leading-[24px] text-black max-md:px-2 md:w-auto"
-  >
-    {description}
-  </p>
-</div>
-
+        <p
+          style={{
+            width: window.innerWidth >= 768 ? descriptionWidth : "auto",
+          }}
+          className="max-md:max-w-[600px] max-md:w-auto text-base font-normal leading-6 text-black pr-2"
+        >
+          {description}
+        </p>
+      </div>
     </section>
   );
 };

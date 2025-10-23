@@ -1,7 +1,8 @@
 import { useIsMobile } from "../hooks/useScreenSize";
 
 export const HeroBackgroundSVG = () => {
-  const isMobile = useIsMobile(768);
+  const isMobile = useIsMobile(708);
+  const isTablet = useIsMobile(1023);
 
   const nonMobilePath =
     // "M0,0 L1000,0 " +
@@ -17,11 +18,26 @@ export const HeroBackgroundSVG = () => {
     // "L1300, 100,"+
     // "C600, 900 250, 580 0, 880" +
     // "L0,0";
-    "M0,0 L1300,0 " +
-    "L1500, 0 0, 950" +
-    "L0, 0";
+    "M0,0 " +       // top-left
+    "L1500,0 " +     // top-right 
+    "L2280,0 " +    // bottom-right
+    "L0,700 " +       // bottom-left
+    "L0,0";  
+    
+  // Tablet (md) path
+  const tabletPath =
+    "M0,0 L1400,0 " +
+    "L1400,0 0,800 " +
+    "L0,0";
 
-  const pathData = isMobile ? mobilePath : nonMobilePath;
+  let pathData;
+  if (isMobile) {
+    pathData = mobilePath;
+  } else if (isTablet) {
+    pathData = tabletPath;
+  } else {
+    pathData = nonMobilePath;
+  }
   // const pathData = nonMobilePath;
 
   return (

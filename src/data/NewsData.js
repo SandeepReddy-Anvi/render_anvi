@@ -4,7 +4,7 @@ export const newsDataList = [
     date: '11 March 2025',
     title: 'SLBC tunnel rescue efforts get robotic support by Anvi robotics',
     info: 'ANVI Robotics deployed robots with cameras, infrared sensors aiding SLBC tunnel rescue to overcome challenging conditions.',
-    category: 'News',
+    category: 'Press Releases',
     imageUrl: '/images/news/SLBC tunnel.png', // Placeholder for the actual image path
     newsLink: "https://telanganatoday.com/slbc-tunnel-rescue-efforts-get-robotic-support",
   },
@@ -13,7 +13,7 @@ export const newsDataList = [
     date: 'April 17, 2025',
     title: 'With its revolutionary robo-tech, Anvi Robotics dives into danger zones.',
     info: 'Anvi Robotics’ AI-powered robots aided SLBC rescue, proving technology’s vital role in dangerous, life-saving missions.',
-    category: 'News',
+    category: 'Press Releases',
     imageUrl: '/images/news/robot-tech.jpg', // Placeholder for the actual image path
     newsLink: "https://www.newindianexpress.com/cities/hyderabad/2025/Apr/17/with-its-revolutionary-robo-tech-anvi-robotics-dives-into-danger-zones"
   },
@@ -22,7 +22,7 @@ export const newsDataList = [
     date: 'June 30, 2025',
     title: 'Witness the global launch of Anvi’s Surveillance Robot on 30 June 2025.',
     info: 'Step into the future of intelligent security as Anvi unveils its revolutionary Surveillance Robot to the world.',
-    category: 'Press Releases',
+    category: 'Next at Anvi',
     imageUrl: '/images/home/robo_img.jpg', // Placeholder for the actual image path
     newsLink: "",
   },

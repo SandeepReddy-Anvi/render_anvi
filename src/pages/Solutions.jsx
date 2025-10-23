@@ -26,7 +26,7 @@ export const Solutions = () => {
 
       {/* Featured Solution */}
       <section className="w-full mt-[30px] px-5 pt-[50px] text-center xl:px-[118px] md:pt-[60px] lg:pt-[50px] font-['Wix_Madefor_Display']">
-        <h2 className="text-[48px] mb-[16px] text-[#282828]">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">
           Featured Solution
         </h2>
         <p className="text-[16px] w-full md:w-[584px] m-auto text-[#4C4C4C] mb-[6px] font-[400] leading-[24px] text-center">
