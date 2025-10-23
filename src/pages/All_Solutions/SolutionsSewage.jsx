@@ -78,7 +78,7 @@ export const SolutionsSewage = () => {
 
       {/* Section 3 - About */}
       <section className="bg-[#0E181E] py-7 md:py-14 lg:py-[100px]">
-        <p className="text-white text-[48px] text-center font-bold md:mb-16 font-">What is the Sewage Cleaning Robot?</p>
+        <p className="text-white text-3xl sm:text-3xl md:text-4xl lg:text-[48px] text-center font-bold md:mb-16 font-">What is the Sewage Cleaning Robot?</p>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-0 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <div className="flex flex-col gap-6 md:gap-8">
             <p className="text-sm md:text-base lg:text-[18px] text-white leading-relaxed md:leading-[24px] lg:leading-[26px] pl-6">

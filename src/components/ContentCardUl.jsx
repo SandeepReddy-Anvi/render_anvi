@@ -8,7 +8,7 @@ export const ContentCardUl = ({ infoList }) => {
         >
           <div className="md:w-1/2">
             {item.index && <i>0.{index + 1}</i>}
-            <h2 className="text-[48px] font-normal leading-[61.6px] tracking-[-1px] text-[#0D1F21] mb-[32px]">
+            <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] font-normal leading-[61.6px] tracking-[-1px] text-[#0D1F21] mb-[32px]">
               {item.title}
             </h2>
             <p className="text-[#0D1F21] text-[18px] font-normal">

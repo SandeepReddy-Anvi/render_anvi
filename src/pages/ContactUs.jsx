@@ -61,7 +61,7 @@ export const ContactUs = () => {
           <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] font-dm-sans">
             {/* Contact Info */}
             <div className="p-[50px] md:p-[30px] lg:p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
-              <p className="text-[38px] font-normal text-[#333333]">
+              <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[38px] font-normal text-[#333333]">
                 Contact Information
               </p>
               <p className="text-[18px] text-[#757575] font-normal mt-2">
@@ -165,7 +165,7 @@ export const ContactUs = () => {
         {/* Section 3 */}
         <section className="w-full max-w-[1000px] px-8 flex flex-col items-center justify-center text-center gap-[56px]">
           <div className="font-['Wix_Madefor_Display']">
-            <p className="text-[48px] font-medium">Visit Our Office</p>
+            <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium">Visit Our Office</p>
             <p className="text-[16px] text-[#465455] font-normal">
               Located in the heart of Hyderabad's tech corridor
             </p>
@@ -184,7 +184,7 @@ export const ContactUs = () => {
 <section className="w-full px-5 py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px] font-['Wix_Madefor_Display'] text-center">
   {/* Heading */}
   <div className="flex flex-col gap-[16px] w-full max-w-[480px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] px-4">
-    <p className="text-[48px] leading-tight">
+    <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] leading-tight">
       We’re Here to Help
     </p>
     <p className="text-[15px] sm:text-[16px] text-[#465455] font-normal leading-relaxed">

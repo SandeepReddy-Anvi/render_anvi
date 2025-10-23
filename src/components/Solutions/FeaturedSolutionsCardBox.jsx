@@ -112,7 +112,7 @@ const FeaturedSolutionsCardBox = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left Content Area (Col 1-5 on large screens) */}
           <div className="lg:col-span-6 flex flex-col justify-center text-left  gap-[25px]">
-            <h1 className="text-[36px] tracking-[-0.9px] font-[Dm sans] font-[500] text-gray-900 transition-opacity duration-500 ease-in-out">
+            <h1 className="text-[26px] sm:text-[36px] tracking-[-0.9px] font-[Dm sans] font-[500] text-gray-900 transition-opacity duration-500 ease-in-out">
               {currentSlide.title}
             </h1>
             <p className="text-[#626263] text-[18px] font-[400] leading-[30px] transition-opacity duration-500 ease-in-out">

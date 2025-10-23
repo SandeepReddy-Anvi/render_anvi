@@ -60,7 +60,7 @@ const Home = () => {
 
         {/* Industries */}
         <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
-          <h2 className="text-[48px] mb-[16px] text-[#282828]">
+          <h2 className="text-[38px] sm:text-[48px] mb-[16px] text-[#282828]">
             Industries
           </h2>
           <p className="text-[18px] text-[#4C4C4C] mb-[64px] font-[400] leading-[24px] text-center">
@@ -78,8 +78,8 @@ const Home = () => {
 
         {/* Next at Anvi */}
         <section className="next-at-anvi w-full px-5 py-[50px] text-center xl:px-[118px] md:py-[80px]">
-          <h2 className="text-[48px] mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
-            <span className="text-[53px] font-bauhaus">
+          <h2 className="text-[38px] sm:text-[48px] mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
+            <span className="text-[43px] sm:text-[53px] font-bauhaus">
               anvi
             </span>
           </h2>
@@ -88,7 +88,7 @@ const Home = () => {
             vision.
           </p>
           
-          <div className="px-10 w-full m-auto mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4">
+          <div className="w-full m-auto mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4">
             {Object.keys(nextAtAnvi).map((each) => (
               <div
                 key={nextAtAnvi[each].title}
@@ -127,8 +127,8 @@ const Home = () => {
 
         {/* Pravikaya Initiative */}
         <div className="font-['Wix_Madefor_Display'] text-center mb-12">
-          <p className="text-[46px]">
-            <span className="text-[48px] font-bauhaus">anvi</span> social responsibility</p>
+          <p className="text-[38px] sm:text-[46px]">
+            <span className="text-[38px] sm:text-[48px] font-bauhaus">anvi</span> social responsibility</p>
           <p className="text-[18px] text-[#4C4C4C]">Empowering young innovators through learning, <br/> fellowship, and real-world opportunities</p>
         </div>
         <PravikayaInitiative />

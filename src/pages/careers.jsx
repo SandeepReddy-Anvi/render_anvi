@@ -28,7 +28,7 @@ const Careers = () => {
 
       <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
       <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[76px]">
-        <p className="text-[#000000] text-[48px] font-normal">
+        <p className="text-[#000000] text-3xl sm:text-3xl md:text-4xl lg:text-[48px] font-normal">
           Reason to Join in Anvi
         </p>
         <p className="text-black text-[16px] font-normal max-w-[495px]">

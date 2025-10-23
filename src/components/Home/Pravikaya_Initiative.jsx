@@ -10,10 +10,10 @@ export const PravikayaInitiative = () => {
         className="w-full max-w-[541px] flex flex-col items-center justify-center align-middle self-stretch mx-2"
         style={{ zIndex: 2 }}
       >
-        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center text-white text-[51px]">
+        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center text-white text-[40px] sm:text-[51px]">
           Pravikya Initiative
         </h1>
-        <p className="w-full text-white text-[18px] text-center font-[300]">
+        <p className="w-full text-white text-[16px] sm:text-[18px] text-center font-[300]">
           An initiative by Anvi Foundation driving sustainability, education,
           and community empowerment. We believe technology should not only
           advance industries but also uplift societies.
@@ -45,7 +45,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="w-[293px] h-[205px] absolute right-0 top-[-30px] md:right-[-30px] lg:top-[30px] xl:top-[74px] object-cover overflow-hidden aspect-video">
+      <div className="w-[250px] h-[130px] md:w-[293px] md:h-[205px] absolute right-0 md:right-[-30px] lg:top-[30px] xl:top-[74px] object-cover overflow-hidden aspect-video">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init2.png"

@@ -54,7 +54,7 @@ const About = () => {
         {/* Heading Section */}
         <div className="flex-col sm:flex-row justify-center font-dm-sans">
           <div className="flex max-md:flex-col flex-row gap-6 md:pl-[33px] max-w-[1161px] flex-wrap place-items-center">
-            <p className="w-full max-md:text-center md:w-1/2 max-w-[583px] text-[#121212] font-normal leading-[50.569px] text-[42px]">
+            <p className="w-full max-md:text-center md:w-1/2 max-w-[583px] text-[#121212] font-normal leading-[50.569px] text-3xl sm:text-3xl md:text-4xl lg:text-[42px]">
               Where <br /> Innovation Meets Purpose
             </p>
             <p className="w-full max-md:text-center md:w-1/2 md:max-w-[50%] flex-1 text-[#465455] font-normal leading-[28px] text-[16px]">

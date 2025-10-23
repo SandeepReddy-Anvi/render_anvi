@@ -66,7 +66,7 @@ export const SolutionsArop = () => {
       {/* Section 3 - Solution Overview */}
       <section className="bg-[#F5F4F8] p-8 md:p-[90px] font-dm-sans">
         <div className="mb-10">
-          <p className="text-[32px] font-semibold mb-4">Solution Overview</p>
+          <p className="text-[26px] sm:text-[32px] font-semibold mb-4">Solution Overview</p>
           <p className="text-[18px] text-[#282828] leading-[29.25px] mb-4">
             Airports operate in one of the most demanding environments in the world, where even small oversights can lead to major consequences. Challenges such as Foreign Object Debris (FOD), wildlife intrusions near flight paths, and runway surface defects continue to pose risks every day.
           </p>
@@ -131,7 +131,7 @@ export const SolutionsArop = () => {
 
       {/* Section 4 */}
       <section className="p-6 md:py-[100px] md:px-[50px] lg:px-[110px] font-dm-sans">
-        <p className="text-2xl md:text-[32px] mb-4 md:mb-6">Benefits</p>
+        <p className="text-[28px] sm:text-[32px] mb-4 md:mb-6">Benefits</p>
         <p className="text-base md:text-[18px] font-normal text-[#282828] mb-6 md:mb-8">
           Airports today need more than traditional safety checks—they need
           intelligent, continuous, and proactive solutions. Anvi Runway Ops
@@ -159,7 +159,7 @@ export const SolutionsArop = () => {
       <section className="px-4 py-12 md:py-[90px] flex flex-col items-center justify-center gap-16 md:gap-[64px] bg-[#F5F4F8]">
         {/* <div className="flex flex-col gap-4 md:gap-[16px] w-full font-['Wix_Madefor_Display'] text-[#2B303B] text-center"> */}
         <div className="flex flex-col gap-4 md:gap-[16px] w-full font-['Wix_Madefor_Display'] text-[#2B303B] text-center">
-          <p className="text-[32px] md:text-[46px] leading-[60px]">
+          <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[46px] leading-[60px]">
             Frequently Asked Questions
           </p>
         </div>
