@@ -99,7 +99,7 @@ export const Industries = () => {
         {/* Industries */}
         <section className="relative w-full sm:px-2 md:px-[40px] py-12 sm:py-16 md:py-[154px] bg-[#F4F3F7] bg-opacity[0.82]">
           <div className="flex flex-col items-center text-center gap-[17px] mb-20">
-            <h2 className="text-[#282828] font-dm-sans text-[54px] font-normal leading-normal tracking-[-0.02em]">
+            <h2 className="text-[#282828] font-dm-sans text-4xl sm:text-4xl md:text-4xl lg:text-[54px] font-normal leading-normal tracking-[-0.02em]">
               Industries of the Future
             </h2>
             <p className="max-w-[770px] font-dm-sans text-[18px] text-[#465455]">

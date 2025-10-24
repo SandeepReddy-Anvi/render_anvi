@@ -7,7 +7,7 @@ import HeroSection from "../components/HeroSection";
 import Button from "../utils/Button";
 
 const footerUpBoxInfoObj = {
-  head: "Ready to explore the future with Anvi?",
+  head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
   linkLabel: "Contact Us",
   link: mainPagesLinksList.ContactUs,
@@ -127,9 +127,9 @@ const Home = () => {
 
         {/* Pravikaya Initiative */}
         <div className="font-['Wix_Madefor_Display'] text-center mb-12">
-          <p className="text-[38px] sm:text-[46px]">
-            <span className="text-[38px] sm:text-[48px] font-bauhaus">anvi</span> social responsibility</p>
-          <p className="text-[18px] text-[#4C4C4C]">Empowering young innovators through learning, <br/> fellowship, and real-world opportunities</p>
+          <p className="text-[38px] sm:text-[46px] mb-2">
+            <span className="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span> social responsibility</p>
+          <p className="text-[16px] sm:text-[18px] text-[#4C4C4C]">Empowering young innovators through learning, <br/> fellowship, and real-world opportunities</p>
         </div>
         <PravikayaInitiative />
       </main>

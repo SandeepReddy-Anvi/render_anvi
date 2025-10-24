@@ -60,7 +60,7 @@ export const ContactUs = () => {
         <div className="px-[10px] py-[10px] md:px-[30px] md:py-[40px] lg:px-[80px] lg:py-[80px]">
           <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] font-dm-sans">
             {/* Contact Info */}
-            <div className="p-[50px] md:p-[30px] lg:p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
+            <div className="p-[20px] md:p-[30px] lg:p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
               <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[38px] font-normal text-[#333333]">
                 Contact Information
               </p>
@@ -82,7 +82,7 @@ export const ContactUs = () => {
                   strokeWidth={1.5}
                   />
                   <p>
-                    Anvi Robotics, 1st Floor,Profound Buliders, whitefields,
+                    Anvi Robotics, 1st Floor, Profound Buliders, whitefields,
                     Kondapur, Telangana 500081
                   </p>
                 </div>

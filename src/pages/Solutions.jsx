@@ -5,7 +5,7 @@ import { mainPagesLinksList } from "../data/PagesLinkList";
 import SectionWithImage from "../components/SectionWithImage";
 
 const footerUpBoxInfoObj = {
-  head: "Ready to Transform Your Operations with Anvi",
+  head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
   linkLabel: "Contact Us",
   link: mainPagesLinksList.ContactUs,
@@ -26,7 +26,7 @@ export const Solutions = () => {
 
       {/* Featured Solution */}
       <section className="w-full mt-[30px] px-5 pt-[50px] text-center xl:px-[118px] md:pt-[60px] lg:pt-[50px] font-['Wix_Madefor_Display']">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">
+        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">
           Featured Solution
         </h2>
         <p className="text-[16px] w-full md:w-[584px] m-auto text-[#4C4C4C] mb-[6px] font-[400] leading-[24px] text-center">

@@ -6,7 +6,7 @@ import PpcTab from "../../components/Solutions/sewage/PpcTab";
 import { Shield, Zap, Leaf, TrendingUp, Bot, Brain, Map } from "lucide-react";
 
 const footerUpBoxInfoObj = {
-  head: "Ready to Transform Your Operations with anvi",
+  head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
   linkLabel: "Contact Us",
   link: pagesLinksList.ContactUs,
