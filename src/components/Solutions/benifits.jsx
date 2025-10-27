@@ -78,7 +78,7 @@ const BenefitsPage = () => {
           >
             <div
               className={`flex flex-col ${
-                benefit.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
+                benefit.reverse ? "md:flex-row-reverse" : "md:flex-row"
               } items-center justify-between w-full gap-8 md:gap-12`}
             >
               {/* Text Content */}
@@ -86,10 +86,10 @@ const BenefitsPage = () => {
                 <p className="text-[16px] md:text-[18px] font-medium text-[#333333] mb-2">
                   0.{benefit.id}
                 </p>
-                <h2 className="text-[32px] sm:text-[38px] md:text-[44px] font-normal text-[#333333] mb-4">
+                <h2 className="text-[32px] md:text-[44px] md:text-[32px] font-normal text-[#333333] mb-4">
                   {benefit.title}
                 </h2>
-                <p className="text-[16px] sm:text-[18px] text-[#282828] font-normal leading-[24px] sm:leading-[28px] md:leading-[29px]">
+                <p className="text-[16px] sm:text-[18px] md:text-[16px] text-[#282828] font-normal leading-[24px] sm:leading-[28px] md:leading-[29px]">
                   {benefit.description}
                 </p>
               </div>

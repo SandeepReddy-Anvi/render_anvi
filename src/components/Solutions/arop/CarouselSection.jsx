@@ -72,7 +72,7 @@ const CarouselSection = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="flex flex-col lg:flex-row items-start gap-12 lg:gap-24 flex-shrink-0 w-full bg-transparent text-white"
+                className="flex flex-col md:flex-row items-start gap-12 lg:gap-24 flex-shrink-0 w-full bg-transparent text-white"
                 style={{
                   minWidth: "100%",
                   transform: "translateZ(0)",
@@ -89,8 +89,8 @@ const CarouselSection = () => {
                 </div>
 
                 {/* RIGHT IMAGE + NAVIGATION */}
-                <div className="flex-1 flex flex-col items-center lg:items-end gap-4 w-full lg:max-w-[280px]">
-                  <div className="w-full overflow-hidden rounded-tr-3xl rounded-bl-3xl">
+                <div className="flex-1 flex flex-col items-center lg:items-end gap-4 w-full">
+                  <div className="w-full lg:max-w-[280px] overflow-hidden rounded-tr-3xl rounded-bl-3xl">
                     <img
                       src={slide.image}
                       alt={slide.title}

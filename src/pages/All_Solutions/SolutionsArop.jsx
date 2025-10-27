@@ -29,7 +29,7 @@ export const SolutionsArop = () => {
       <section className="flex flex-col md:flex-row gap-10 font-dm-sans p-6 md:p-24">
         {/* Left content */}
         <div className="flex-1 flex flex-col gap-4 md:gap-6 max-w-[620px]">
-          <h2 className="text-xl md:text-3xl font-semibold mb-2 md:mb-3">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 md:mb-3">
             Introduction to Anvi Runway Ops (AROP)
           </h2>
           <p className="text-gray-800 text-base md:text-lg leading-relaxed">
@@ -67,10 +67,10 @@ export const SolutionsArop = () => {
       <section className="bg-[#F5F4F8] p-8 md:p-[90px] font-dm-sans">
         <div className="mb-10">
           <p className="text-[26px] sm:text-[32px] font-semibold mb-4">Solution Overview</p>
-          <p className="text-[18px] text-[#282828] leading-[29.25px] mb-4">
+          <p className="text-[16px] sm:text-[18px] text-[#282828] leading-[29.25px] mb-4">
             Airports operate in one of the most demanding environments in the world, where even small oversights can lead to major consequences. Challenges such as Foreign Object Debris (FOD), wildlife intrusions near flight paths, and runway surface defects continue to pose risks every day.
           </p>
-          <p className="text-[18px] text-[#282828] leading-[29.25px]">
+          <p className="text-[16px] sm:text-[18px] text-[#282828] leading-[29.25px]">
             Anvi Runway Ops (AROP) is designed to directly address these challenges. It is a comprehensive, AI-powered and autonomous platform that combines three critical safety and inspection functions into a single, unified system:
           </p>
         </div>
@@ -109,10 +109,10 @@ export const SolutionsArop = () => {
                 className="px-6 py-3 bg-white rounded-xl transition-all duration-300 hover:-translate-y-1 group/card"
               >
                 <div className="flex items-start gap-4 mb-2">
-                  <div className="flex-shrink-0 w-10 h-10 bg-[#DBF4FF] text-black rounded-full border border-black flex items-center justify-center text-xl font-bold">
+                  <div className="flex-shrink-0 w-8 sm:w-10 h-8 sm:h-10 bg-[#DBF4FF] text-black rounded-full border border-black flex items-center justify-center text-xl font-bold">
                     {card.num}
                   </div>
-                  <h3 className="text-[19px] font-semibold text-black mt-2">
+                  <h3 className="text-[17px] sm:text-[19px]  font-semibold text-black mt-2">
                     {card.title}
                   </h3>
                 </div>
@@ -124,7 +124,7 @@ export const SolutionsArop = () => {
           </div>
         </div>
 
-        <p className="pt-[56px] text-[18px] leading-[29.25px] md:pr-[110px]">
+        <p className="pt-[56px] text-[16px] sm:text-[18px] leading-[29.25px] md:pr-[110px]">
           By unifying these capabilities, AROP transforms airport operations from reactive and manual checks into a proactive, always-on safety system. The result is a platform that enhances safety, efficiency, reduces costs, and ensures compliance with global aviation regulations (ICAO, FAA, DGCA).
         </p>
       </section>
