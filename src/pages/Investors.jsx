@@ -5,10 +5,10 @@ export const Investors = () => {
     <>
       <main className="w-full">
         <section className="w-full h-full min-h-[calc(100vh-110px)] flex items-center justify-center">
-          <h3 className="font-[Manrope] text-2xl font-[500] text-center mt-[-50px]">
+          <h3 className="font-[Manrope] hidden text-2xl font-[500] text-center mt-[-50px]">
             Coming Soon
           </h3>
-          <div className="w-full hidden max-w-sm font-dm-sans text-center">
+          <div className="w-full max-w-sm font-dm-sans text-center">
             {/* Heading */}
             <h1 className=" w-full text-[24px] md:text-[31.25px] font-medium text-black mb-6">
               Sign in to Investor Access

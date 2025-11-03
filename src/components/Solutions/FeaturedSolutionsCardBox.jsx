@@ -11,7 +11,7 @@ const IconsObj = {
 
 const pagesLinksList = {
   Solutions_AROP: "/solutions/arop",
-  Solutions_Sewage: "/solutions/sewage"
+  Solutions_Sewage: "/solutions/sewage-cleaning"
 };
 
 // Slides data

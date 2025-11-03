@@ -4,7 +4,7 @@ export const pagesLinksList = {
   // Main Pages
   Home: "/",
   AboutUs: "/aboutus",
-  InvestorsDesk: "/investors",
+  Investors: "/investors",
   News: "/news",
   ContactUs: "/contactus",
   PrivacyPolicy: "/privacy-policy",
@@ -42,6 +42,6 @@ export const mainPagesLinksList = {
   Industries: "/industries",
   News: "/news",
   Careers: "/careers",
-  InvestorsDesk: "/investors",
+  Investors: "/investors",
   ContactUs: "/contactus",
 }
