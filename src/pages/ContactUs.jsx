@@ -49,7 +49,7 @@ export const ContactUs = () => {
     <>
       <main className="w-full">
         <HeroSection
-          backgroundImage="/videos/hero4.mp4"
+          backgroundImage="/videos/Heroo5_compr.mp4"
           title="Let's Build the Future Together"
           description="Have a question, partnership idea, or project in mind? Get in touch with our team of
                 innovation experts and let's create something extraordinary."
@@ -83,7 +83,7 @@ export const ContactUs = () => {
                   />
                   <p>
                     Anvi Robotics, 1st Floor, Profound Buliders, whitefields,
-                    Kondapur, Telangana 500081
+                    Kondapur, Telangana 500084
                   </p>
                 </div>
                 <div className="flex items-start gap-[12px]">
@@ -181,24 +181,23 @@ export const ContactUs = () => {
         </section>
 
         {/* Section 4 — Questions */}
-<section className="w-full px-5 py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px] font-['Wix_Madefor_Display'] text-center">
-  {/* Heading */}
-  <div className="flex flex-col gap-[16px] w-full max-w-[480px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] px-4">
-    <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] leading-tight">
-      We’re Here to Help
-    </p>
-    <p className="text-[15px] sm:text-[16px] text-[#465455] font-normal leading-relaxed">
-      Find quick answers to common questions. Still need help? Our team is here
-      to support you anytime.
-    </p>
-  </div>
+        <section className="w-full px-5 py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px] font-['Wix_Madefor_Display'] text-center">
+          {/* Heading */}
+          <div className="flex flex-col gap-[16px] w-full max-w-[480px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] px-4">
+            <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] leading-tight">
+              We’re Here to Help
+            </p>
+            <p className="text-[15px] sm:text-[16px] text-[#465455] font-normal leading-relaxed">
+              Find quick answers to common questions. Still need help? Our team is here
+              to support you anytime.
+            </p>
+          </div>
 
-  {/* FAQ Section */}
-  <div className="w-full max-w-[1000px] px-2 sm:px-4 md:px-6">
-    <FAQLayout faqs={ContactUsFaqs} />
-  </div>
-</section>
-
+          {/* FAQ Section */}
+          <div className="w-full max-w-[1000px] px-2 sm:px-4 md:px-6 text-left">
+            <FAQLayout faqs={ContactUsFaqs} />
+          </div>
+        </section>
       </main>
 
       {/* Footer */}

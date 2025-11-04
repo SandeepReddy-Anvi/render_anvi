@@ -89,7 +89,7 @@ export const Industries = () => {
       <main id="industries" className="w-full">
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/videos/hero4.mp4"
+          backgroundImage="/videos/Heroo4_compr.mp4"
           title="Industries We Transform"
           description="From Robotics to Space, Anvi transforms industries with intelligent automation 
         and advanced technology."

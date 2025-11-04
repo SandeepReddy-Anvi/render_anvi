@@ -17,7 +17,7 @@ const Careers = () => {
     <div id="careers" className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/videos/hero5.mp4"
+        backgroundImage="/videos/Heroo5_compr.mp4"
         title="Engineer the Future With Us"
         description="At Anvi, we're building tomorrow's technology today - and we want visionaries like 
             you to join us in creating the next generation of intelligent systems."

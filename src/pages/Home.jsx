@@ -34,7 +34,7 @@ const Home = () => {
       <main>
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/videos/hero.mp4"
+          backgroundImage="/videos/Heroo_compr.mp4"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
           descriptionWidth="680px"

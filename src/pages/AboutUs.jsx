@@ -34,7 +34,7 @@ const About = () => {
     <div id="about" className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/videos/hero2.mp4"
+        backgroundImage="/videos/Heroo2_compr.mp4"
         title="We Engineer It."
         description="At Anvi, we don’t just build robots - we build the future. Our mission is to deliver strategic 
         advantage through breakthrough products, deep-tech systems, and future-proof solutions."
