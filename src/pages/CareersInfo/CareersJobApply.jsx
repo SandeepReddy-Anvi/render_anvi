@@ -31,7 +31,6 @@ export const CareersJobApply = () => {
         <div className="relative flex flex-col items-center justify-center text-white text-center px-4">
           <p className="text-[20px] sm:text-[22px] md:text-[24px] mt-3 font-[400]">
             {job.type}
-            Scroll Down To Fill The Form
           </p>
           <h1 className="text-[48px] my-2 sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold leading-tight">
             {job.title}
