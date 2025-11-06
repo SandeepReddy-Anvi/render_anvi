@@ -1,11 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 export const FooterUpBox2 = ({ info }) => {
   const data = info || {};
   const { head, para } = data;
-  // console.log("info : ", info);
+
+  const [email, setEmail] = useState("");
+  const [status, setStatus] = useState({ type: "", message: "" });
 
   if (!head) return null;
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setStatus({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    try {
+      setStatus({ type: "loading", message: "Subscribing..." });
+
+      const subcribeapi = "http://localhost:3000/api/subscribe";
+      // console.log(subcribeapi)
+      const res = await axios.post(subcribeapi, {
+        website: window.location.hostname || "anvi.co",
+        email: email,
+      });
+
+      if (res.data.status === "Success") {
+        setStatus({ type: "success", message: "Subscribed successfully!" });
+        setEmail("");
+      } else {
+        setStatus({
+          type: "error",
+          message: "Subscription failed. Try again.",
+        });
+      }
+    } catch (err) {
+      console.error("Subscription error:", err);
+      setStatus({
+        type: "error",
+        message: "Something went wrong. Please try again later.",
+      });
+    }
+  };
+
   return (
     <section
       className="w-full min-h-[376px] font-[manrope] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
@@ -25,17 +66,41 @@ export const FooterUpBox2 = ({ info }) => {
         {para}
       </p>
 
-      <div className="sticky z-3 flex justify-center align-middle gap-[12px] mt-[40px]">
-        <input type="text" id="subscribe-email" name="subscribe-email" placeholder="Enter your email address"
-            className="border-[1px] border-[#E8EBEE] bg-[#fff] w-full max-w-[337px] rounded-[10px] font-[inter] font-[400] text-[14px] text-[#73808C] px-[13px] py-[11px]"
+      {/* Subscribe Input */}
+      <div className="sticky z-3 flex justify-center align-middle gap-[12px] mt-[40px] flex-wrap px-4">
+        <input
+          type="email"
+          id="subscribe-email"
+          name="subscribe-email"
+          placeholder="Enter your email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="border-[1px] border-[#E8EBEE] bg-[#fff] w-full max-w-[337px] rounded-[10px] font-[inter] font-[400] text-[14px] text-[#73808C] px-[13px] py-[11px] focus:outline-none focus:border-[#2EACB8]"
         />
-        <button type="button" className="link-bg-icon footerUpBox-iconlink w-[100px] text-[14px]"
-          onClick={() => console.log('Subscribed..... from News footerUpBox2')}
-          style={{ color: "#fff", background: "#2EACB8", borderRadius: '10px' }}
+        <button
+          type="button"
+          className="link-bg-icon footerUpBox-iconlink w-[100px] text-[14px]"
+          onClick={handleSubscribe}
+          style={{ color: "#fff", background: "#2EACB8", borderRadius: "10px" }}
         >
-          Subscribe
+          {status.type === "loading" ? "..." : "Subscribe"}
         </button>
       </div>
+
+      {/* Status Message */}
+      {status.message && (
+        <p
+          className={`text-[14px] self-center absolute bottom-[5%] sm:bottom-[10%] ${
+            status.type === "success"
+              ? "text-green-400"
+              : status.type === "error"
+              ? "text-red-400"
+              : "text-gray-300"
+          }`}
+        >
+          {status.message}
+        </p>
+      )}
     </section>
   );
 };

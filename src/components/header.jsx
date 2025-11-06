@@ -67,7 +67,7 @@ const Header = () => {
         />
 
       </Link>
-      <link rel="preload" as="image" href="/logos/anvi logo 4k.png" />
+      <link rel="preload" as="image" href="/logos/anvi logo.png" />
 
       {/* Nav Bar & Buttons (right side) */}
       <nav className="flex flex-1 justify-end align-middle">

@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
@@ -8,42 +8,80 @@ import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
 
 export const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [feedback, setFeedback] = useState({ type: "", message: "" });
+
+  // Validate email format
+  const isValidEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // Handle input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   // routes/forms.routes.js (Fix 1)
-  const sendMail = useCallback(async (formData) => {
-    const api = "http://localhost:3000/api/contact";
+  const sendMail = useCallback(async (data) => {
+    const api = import.meta.env.VITE_MAIL_API_CONTACT;
+    setLoading(true);
+    setFeedback({ type: "", message: "" });
 
     // FIX: Add await here
     try {
       // await axios.post(api, formData);
-      const resp = await axios.post(api, formData);
+      const resp = await axios.post(api, data);
       console.log('Response:', resp.data);
+      setFeedback({
+        type: "success",
+        message: "✅ Message sent successfully!",
+      });
       // You would typically handle success state here
     } catch (error) {
       console.error(
         "Error sending email:",
         error.response ? error.response.data : error.message
       );
+      setFeedback({
+        type: "error",
+        message: "❌ Failed to send message. Please try again later.",
+      });
       // You would typically handle error state here
+    }finally {
+      setLoading(false);
     }
   }, []);
 
-  const handleSubmit = useCallback((e) => {
+  // Handle form submit
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Create an object from form values
-    const { name, email, subject, message } = e.target;
-    const formData = {
-      name: name.value || "",
-      email: email.value || "",
-      subject: subject.value || "",
-      message: message.value || "",
-      website: "Anvi.Co",
-    };
-    console.table("Form Data:", formData);
-    if (name.value && email.value && subject.value && message.value) {
-      sendMail(formData);
-      e.target.reset();
+    const { name, email, subject, message } = formData;
+
+    // Validation logic
+    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
+      setFeedback({ type: "error", message: "⚠️ All fields are required." });
+      return;
     }
-  }, []);
+
+    if (!isValidEmail(email)) {
+      setFeedback({ type: "error", message: "⚠️ Please enter a valid email." });
+      return;
+    }
+
+    // All good → send
+    sendMail({
+      ...formData,
+      website: "Anvi.Co",
+    });
+
+    setFormData({ name: "", email: "", subject: "", message: "" });
+  };
 
   return (
     <>
@@ -98,9 +136,22 @@ export const ContactUs = () => {
 
             {/* Form */}
             <form
-              onSubmit={(e) => handleSubmit(e)}
+              onSubmit={handleSubmit}
               className="flex-1 flex flex-col gap-4 w-full mx-auto pt-5 py-10 md:py-10 md:w-1/2 max-w-[600px] flex-shrink-0 place-content-center"
             >
+              {/* Feedback Message */}
+              {feedback.message && (
+                <div
+                  className={`p-3 rounded-md text-center text-[15px] ${
+                    feedback.type === "error"
+                      ? "bg-red-100 text-red-600"
+                      : "bg-green-100 text-green-700"
+                  }`}
+                >
+                  {feedback.message}
+                </div>
+              )}
+
               {/* Name & Email */}
               <div className="flex flex-col md:flex-row gap-[20px] flex-shrink-0">
                 <label htmlFor="name" className="flex flex-col w-full">
@@ -109,8 +160,9 @@ export const ContactUs = () => {
                   </span>
                   <input
                     type="text"
-                    id="name"
                     name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     placeholder="Enter your name"
                     className="border rounded-[12px] px-3 py-2 w-full"
                   />
@@ -120,8 +172,9 @@ export const ContactUs = () => {
                   <span className="text-[16px] text-[#333333] mb-1">Email</span>
                   <input
                     type="email"
-                    id="email"
                     name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     placeholder="Enter your email"
                     className="border rounded-[12px] px-3 py-2 w-full"
                   />
@@ -133,8 +186,9 @@ export const ContactUs = () => {
                 <span className="text-[16px] text-[#333333] mb-1">Subject</span>
                 <input
                   type="text"
-                  id="subject"
                   name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
                   placeholder="Enter subject"
                   className="border rounded-[12px] px-3 py-2 w-full"
                 />
@@ -146,6 +200,8 @@ export const ContactUs = () => {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleChange}
                   placeholder="Enter your message"
                   className="border rounded-[12px] px-3 py-2 w-full h-[150px]"
                 />
@@ -154,9 +210,14 @@ export const ContactUs = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="mt-4 px-6 py-3 bg-[#1E9AB0] text-white rounded-[12px] font-medium"
+                disabled={loading}
+                className={`mt-4 px-6 py-3 bg-[#1E9AB0] text-white rounded-[12px] font-medium ${
+                  loading
+                    ? "bg-gray-400 cursor-not-allowed"
+                    : "bg-[#1E9AB0] hover:bg-[#167f93]"
+                }`}
               >
-                Send a Message
+                {loading ? "Sending..." : "Send a Message"}
               </button>
             </form>
           </div>
