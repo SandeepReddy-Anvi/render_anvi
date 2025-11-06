@@ -2,7 +2,6 @@ import { useCallback, useState } from "react";
 import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
-import { mainPagesLinksList } from "../data/PagesLinkList";
 import { MapPin, Mail, Clock } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
@@ -29,14 +28,17 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
-    const api = import.meta.env.VITE_MAIL_API_CONTACT;
+    const api = "https://anvi-mail-backend-fast.onrender.com/contact";
     setLoading(true);
     setFeedback({ type: "", message: "" });
 
     // FIX: Add await here
     try {
-      // await axios.post(api, formData);
-      const resp = await axios.post(api, data);
+      const resp = await axios.post(api, data, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
       console.log('Response:', resp.data);
       setFeedback({
         type: "success",

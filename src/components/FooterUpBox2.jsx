@@ -22,11 +22,16 @@ export const FooterUpBox2 = ({ info }) => {
     try {
       setStatus({ type: "loading", message: "Subscribing..." });
 
-      const subcribeapi = "http://localhost:3000/api/subscribe";
+      const subcribeapi = "https://anvi-mail-backend-fast.onrender.com/subscribe";
       // console.log(subcribeapi)
-      const res = await axios.post(subcribeapi, {
-        website: window.location.hostname || "anvi.co",
-        email: email,
+      const formData = new FormData();
+      formData.append("website", "ANVI.CO") //  || window.location.hostname ||);
+      formData.append("email", email);
+
+      const res = await axios.post(subcribeapi, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
       });
 
       if (res.data.status === "Success") {

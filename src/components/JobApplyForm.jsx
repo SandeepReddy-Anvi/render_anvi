@@ -10,13 +10,13 @@ export const JobApplyForm = () => {
 
   const initialForm = useMemo(
     () => ({
-      fullName: "pk",
-      phone: "+917981046860",
-      email: "das@gmai.com",
-      currentLocation: "hyd",
-      currentCTC: "40",
-      expectedCTC: "400",
-      portfolioURL: "https://praveend.netlify.app/",
+      fullName: "",
+      phone: "",
+      email: "",
+      currentLocation: "",
+      currentCTC: "",
+      expectedCTC: "",
+      portfolioURL: "",
       resume: null,
     }),
     []
@@ -115,7 +115,7 @@ export const JobApplyForm = () => {
       try {
         setLoading(true);
         console.log("🧾 Validating:", data);
-        const jobApplyApi = "http://localhost:3000/api/apply";
+        const jobApplyApi = "https://anvi-mail-backend-fast.onrender.com/apply";
         const response = await axios.post(jobApplyApi, data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
