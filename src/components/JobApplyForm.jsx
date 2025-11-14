@@ -4,6 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import axios from "axios";
 import { IconsObj } from "../utils/Iconify_icons";
+import { mailBackendUrl } from "../data/MailBackendUrl";
 
 export const JobApplyForm = () => {
   const { jobId } = useParams();
@@ -115,7 +116,7 @@ export const JobApplyForm = () => {
       try {
         setLoading(true);
         console.log("🧾 Validating:", data);
-        const jobApplyApi = "https://anvi-mail-backend-fast.onrender.com/apply";
+        const jobApplyApi = mailBackendUrl.jobApply;
         const response = await axios.post(jobApplyApi, data, {
           headers: { "Content-Type": "multipart/form-data" },
         });
