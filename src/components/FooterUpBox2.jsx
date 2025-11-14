@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { mailBackendUrl } from "../data/MailBackendUrl";
 
 export const FooterUpBox2 = ({ info }) => {
   const data = info || {};
@@ -22,7 +23,7 @@ export const FooterUpBox2 = ({ info }) => {
     try {
       setStatus({ type: "loading", message: "Subscribing..." });
 
-      const subcribeapi = "https://anvi-mail-backend-fast.onrender.com/subscribe";
+      const subcribeapi = mailBackendUrl.subscribe;
       // console.log(subcribeapi)
       const formData = new FormData();
       formData.append("website", "ANVI.CO") //  || window.location.hostname ||);

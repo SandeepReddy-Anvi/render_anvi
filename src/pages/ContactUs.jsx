@@ -5,6 +5,7 @@ import HeroSection from "../components/HeroSection";
 import { MapPin, Mail, Clock } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
+import { mailBackendUrl } from "../data/MailBackendUrl";
 
 export const ContactUs = () => {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
-    const api = "https://anvi-mail-backend-fast.onrender.com/contact";
+    const api = mailBackendUrl.contact;
     setLoading(true);
     setFeedback({ type: "", message: "" });
 
