@@ -17,7 +17,7 @@ const Careers = () => {
     <div id="careers" className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/videos/Heroo5_compr.mp4"
+        backgroundImage="/videos/Heroo5_org.mp4"
         title="Engineer the Future With Us"
         description="At Anvi, we're building tomorrow's technology today - and we want visionaries like 
             you to join us in creating the next generation of intelligent systems."
@@ -42,7 +42,7 @@ const Careers = () => {
           <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
-              src="/images/careers/career2.1.png"
+              src="/images/careers/career2.1.webp"
               alt="Team"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
@@ -65,7 +65,8 @@ const Careers = () => {
           <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
-              src="/images/careers/career2.2.png"
+              src="/images/careers/career2.2.webp
+              "
               alt="Team"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
@@ -85,7 +86,7 @@ const Careers = () => {
           <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
-              src="/images/careers/career2.3.png"
+              src="/images/careers/career2.3.webp"
               alt="Team"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />
@@ -105,7 +106,7 @@ const Careers = () => {
           <div className="w-full h-[200px] sm:h-[250px] md:w-[500px] md:h-[310px] overflow-hidden rounded-lg bg-gray-100">
             <img
               loading="lazy"
-              src="/images/careers/career2.4.png"
+              src="/images/careers/career2.4.webp"
               alt="Team"
               className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
             />

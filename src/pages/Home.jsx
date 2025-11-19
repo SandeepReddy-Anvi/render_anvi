@@ -21,7 +21,7 @@ const nextAtAnvi = {
     link: mainPagesLinksList.Robotics,
   },
   space: {
-    imgUrl: "/images/home/space.png",
+    imgUrl: "/images/home/space.webp",
     title: "Anvi Space",
     desc: "At Anvi Space, we design technologies expanding humanity’s reach.",
     link: mainPagesLinksList.Space,
@@ -34,7 +34,7 @@ const Home = () => {
       <main>
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/videos/Heroo_compr.mp4"
+          backgroundImage="/videos/Heroo_org.mp4"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
           descriptionWidth="680px"

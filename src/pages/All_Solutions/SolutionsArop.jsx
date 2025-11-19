@@ -18,7 +18,7 @@ export const SolutionsArop = () => {
   return (
     <div className="w-full">
       <HeroSection
-        backgroundImage="/images/solutions/arop/arop4.2.png"
+        backgroundImage="/images/solutions/arop/arop4.2.webp"
         title="Autonomous Runway Operations"
         description="Real-time FOD detection, advanced perimeter surveillance, and predictive runway inspection that enhance safety, boost efficiency, and ensure seamless airport operation"
         buttonText="Download White Paper"
@@ -56,7 +56,7 @@ export const SolutionsArop = () => {
         {/* Right image */}
         <div className="flex-1 flex justify-center md:justify-end mt-6 md:mt-0">
           <img
-            src="/images/solutions/arop/arop2.png"
+            src="/images/solutions/arop/arop2.webp"
             alt="AROP Overview"
             className="w-full max-w-[694px] h-auto object-cover rounded-lg"
           />
@@ -79,9 +79,9 @@ export const SolutionsArop = () => {
           {/* Image */}
           <div className="relative overflow-hidden rounded-2xl group w-full md:w-[660px] bg-[#E0F1F4]">
             <img
-              src="/images/solutions/solutionCard-1.png"
+              src="/images/solutions/solutionCard-1.webp"
               alt="AROP Robot"
-              className="py-[50px] w-full h-[426px] object-cover rounded-[12px]"
+              className="py-[50px] w-full h-[456px] object-cover rounded-[12px]"
             />
           </div>
 

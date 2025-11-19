@@ -5,7 +5,7 @@ export const Entertainment = () => {
   return (
     <main>
       <IndustryLayout
-        backgroundImage="/images/industries/entertainment.png"
+        backgroundImage="/images/industries/entertainment.webp"
         title="Entertainment"
         description="From vision to experience, we turn imagination into reality. Where immersion meets boundless creativity, stories come alive."
         buttonText="About Us"

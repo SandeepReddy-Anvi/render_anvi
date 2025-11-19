@@ -14,7 +14,7 @@ export const News = () => {
       <main id="news" className="w-full">
         {/* Hero Section */}
         <HeroSection
-          backgroundImage="/videos/Heroo2_compr.mp4"
+          backgroundImage="/videos/Heroo2_org.mp4"
           title="News & Updates"
           description="Stay informed with Anvi latest announcements, official press releases, and exciting new opportunities."
           buttonText="About Us"

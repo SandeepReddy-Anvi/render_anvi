@@ -161,7 +161,7 @@ body::-webkit-scrollbar-corner {
 }
 
 .home-industry-cards-ul{
-    width: 1200px;
+    width: 1600px;
     padding: 50px;
     padding-right: 80px;
     overflow-x: auto;
@@ -184,7 +184,8 @@ body::-webkit-scrollbar-corner {
     }
 }
 
-.active-home-industry-card{
+ 
+.active-home-industry-card {
     >div:nth-child(2) {
         animation: active-industry-card 0.5s ease-in-out 0s 1 forwards;
         transition: opacity 1s ease-in-out;
@@ -201,3 +202,6 @@ body::-webkit-scrollbar-corner {
     flex-direction: row-reverse !important;
   }
 }
+
+ 
+ 

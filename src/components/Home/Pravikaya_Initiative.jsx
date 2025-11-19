@@ -39,7 +39,7 @@ export const PravikayaInitiative = () => {
       <div className="max-sm:w-[30vw] sm:w-[224px] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[20px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
         <img
           loading="lazy"
-          src="/images/home/Pravikaya Init1.png"
+          src="/images/home/Pravikaya Init1.webp"
           alt="Office team collaboration"
           className="h-full w-full flex-1 object-cover object-center"
         />
@@ -48,7 +48,7 @@ export const PravikayaInitiative = () => {
       <div className="w-[250px] h-[130px] md:w-[293px] md:h-[205px] absolute right-0 md:right-[-30px] lg:top-[30px] xl:top-[74px] object-cover overflow-hidden aspect-video">
         <img
           loading="lazy"
-          src="/images/home/Pravikaya Init2.png"
+          src="/images/home/Pravikaya Init2.webp"
           alt="Kitchen candid moments"
           className="w-full h-full object-cover object-center"
         />
@@ -57,7 +57,7 @@ export const PravikayaInitiative = () => {
       <div className="w-[147px] h-[167px] bottom-[6%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px]">
         <img
           loading="lazy"
-          src="/images/home/Pravikaya Init3.jpg"
+          src="/images/home/Pravikaya Init3.webp"
           alt="Studio office environment"
           className="w-full h-full object-cover object-center"
         />

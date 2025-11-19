@@ -3,7 +3,7 @@ import React, { useCallback, useState } from "react";
 // Mock data and components
 const IconsObj = {
   arrow: (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+    <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
       <path d="M1 15L15 1M15 1H1M15 1V15" stroke="currentColor" strokeWidth="2"/>
     </svg>
   )
@@ -26,7 +26,7 @@ const slides = [
       "₹40+ Cr annual ROI for major airports",
       "24/7 autonomous operation",
     ],
-    imageUrl: "/images/solutions/solutionCard-1.png",
+    imageUrl: "/images/solutions/solutionCard-1.webp",
     link: pagesLinksList.Solutions_AROP,
   },
   {
@@ -163,30 +163,33 @@ const FeaturedSolutionsCardBox = () => {
                       ))}
                     </ul>
 
-                    <a
-                      href={slide.link || "#"}
-                      className="link-bg-icon w-min whitespace-nowrap"
-                      aria-label={`Action for ${slide.title}`}
-                    >
-                      Learn More
-                      <i className="rotate-45">{IconsObj.arrow}</i>
-                    </a>
+            <a
+  href={slide.link || "#"}
+  className="link-bg-icon w-min whitespace-nowrap group" 
+  aria-label={`Action for ${slide.title}`}
+>
+  Learn More 
+  <i className="transform rotate-0 transition-transform duration-300 group-hover:rotate-45">
+    {IconsObj.arrow}
+  </i>
+</a>
+
                   </div>
 
                   {/* Right Image */}
-                  <div className="lg:col-span-6 flex flex-col">
-                    <div className="relative overflow-hidden w-full max-w-[567px] aspect-video rounded-2xl shadow-xl">
+                  <div className="lg:col-span-6 flex flex-col justify-center ">
+                  <div className="  relative    overflow-hidden w-full max-w-[567px] aspect-video rounded-2xl shadow-xl">
                       <img
                         src={slide.imageUrl}
                         alt={slide.title}
-                        className="w-full h-auto aspect-video object-cover transform scale-100 hover:scale-[1.01] transition-transform duration-500"
+                        className="w-full h-full aspect-video object-cover transform scale-100 hover:scale-[1.01] transition-transform duration-500 "
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.src =
                             "https://placehold.co/600x400/e2e8f0/0f172a?text=Image+Unavailable";
                         }}
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent"></div>
+                      {/* <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent "></div> */}
                     </div>
 
                     <div className="flex justify-end items-center mt-6 space-x-4">

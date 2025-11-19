@@ -14,19 +14,19 @@ export const IndustriesCardsList = {
         link: pagesLinksList.Space,
         activeCard: false,
     },energy: {
-        imgUrl: '/images/industries/energy.jpg',
+        imgUrl: '/images/industries/energy.webp',
         title: 'Energy',
         desc: 'At ANVI, we harness hydrogen fuel cells to power efficient, scalable, zero-emission systems transforming mobility and critical infrastructure.',
         link: pagesLinksList.Energy,
         activeCard: false,
     },entertainment: {
-        imgUrl: '/images/industries/entertainment.png',
+        imgUrl: '/images/industries/entertainment.webp',
         title: 'Entertainment',
         desc: 'Immersive stories, limitless creativity. Get ready to explore new dimensions of imagination and bring ideas to life like never before.',
         link: pagesLinksList.Entertainment,
         activeCard: false,
     },textiles: {
-        imgUrl: '/images/industries/textiles.jpg',
+        imgUrl: '/images/industries/textiles.webp',
         title: 'Textiles',
         desc: 'Anvi, India’s first AI tailoring platform, merges technology and tradition to deliver personalized formal and ethnic wear experiences.',
         link: pagesLinksList.Textiles,

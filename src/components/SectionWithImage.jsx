@@ -4,7 +4,7 @@ const SectionWithImage = ({
   title,
   description,
   points = [],
-  backgroundImage = "/images/careers/career3.1.png",
+  backgroundImage = "images/careers/career3.1.webp",
   subtitleLineColor = "white",
 }) => {
   return (
@@ -15,7 +15,7 @@ const SectionWithImage = ({
           loading="lazy"
           src={backgroundImage}
           alt={`${title} background`}
-          className="w-full h-full object-cover opacity-80"
+          className="w-full h-full object-cover opacity-80  rounded-[15px]"
         />
       </div>
 
@@ -23,7 +23,7 @@ const SectionWithImage = ({
       <div className="absolute inset-0 bg-[#02102DCC] rounded-2xl"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center max-md:place-items-center md:flex-row px-[15px] md:px-[25px] lg:px-[50px] py-[70px] gap-[100px] max-lg:gap-[20px]">
+      <div className="relative z-10 flex flex-col  rounded-[15px] justify-center max-md:place-items-center md:flex-row px-[15px] md:px-[25px] lg:px-[50px] py-[70px] gap-[100px] max-lg:gap-[20px]">
         {/* Left Box */}
         <div className="bg-[#00000080] text-white px-[40px] py-[80px] rounded-2xl max-w-full md:max-w-md">
           <h2 className="text-2xl font-bold mb-2 uppercase">{title}</h2>
