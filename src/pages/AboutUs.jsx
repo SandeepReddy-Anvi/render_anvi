@@ -15,17 +15,17 @@ const aboutCardList = [
   {
     title: "Our Vision",
     desc: "At Anvi, our vision is to redefine industries through deep-tech innovation. We aim to build robotics and intelligent systems that not only enhance safety and efficiency but also ensure long-term sustainability. By blending advanced technologies with real-world applications, we aspire to shape a future where industries and communities thrive together.",
-    imgUrl: "/images/about/about2.1.png",
+    imgUrl: "/images/about/about2.1.webp",
   },
   {
     title: "Our Mission",
     desc: "Our mission is to bridge traditional practices with advanced technologies. We design scalable solutions that empower industries to overcome critical challenges, improve operational efficiency, and deliver measurable impact. Every project we build is focused on creating value for businesses, protecting people, and enabling sustainable growth for future generation",
-    imgUrl: "/images/about/mission.png",
+    imgUrl: "/images/about/mission.webp",
   },
   {
     title: "Our Value",
     desc: "At the heart of Anvi are values that guide everything we do. We believe in Innovation First, always pushing boundaries to deliver new possibilities. Our work is Impact Driven, ensuring real benefits for industries and communities. With Integrity as our foundation, we uphold transparency and responsibility in every solution. Our commitment to Sustainability ensures that our technologies protect both people and the planet, while Collaboration reminds us that progress is best achieved together.",
-    imgUrl: "/images/about/value.png",
+    imgUrl: "/images/about/value.webp",
   },
 ];
 
@@ -34,7 +34,7 @@ const About = () => {
     <div id="about" className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/videos/Heroo2_compr.mp4"
+        backgroundImage="/videos/Heroo2_org.mp4"
         title="We Engineer It."
         description="At Anvi, we don’t just build robots - we build the future. Our mission is to deliver strategic 
         advantage through breakthrough products, deep-tech systems, and future-proof solutions."
@@ -73,7 +73,7 @@ const About = () => {
             <div className="relative group overflow-hidden rounded-2xl shadow-lg h-[351px]">
               <img
                 loading="lazy"
-                src="/images/about/about3.1.png"
+                src="/images/about/about3.1.webp"
                 alt="Technological Excellence"
                 className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
               />
@@ -92,7 +92,7 @@ const About = () => {
             <div className="relative z-10 overflow-hidden rounded-2xl group shadow-lg h-[351px]">
               <img
                 loading="lazy"
-                src="/images/about/about3.2.png"
+                src="/images/about/about3.2.webp"
                 alt="Strategic Focus"
                 className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
               />
@@ -114,7 +114,7 @@ const About = () => {
             <div className="relative overflow-hidden rounded-2xl group shadow-lg h-[351px]">
               <img
                 loading="lazy"
-                src="/images/about/about3.3.png"
+                src="/images/about/about3.3.webp"
                 alt="Collaborative Approach"
                 className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
               />
@@ -133,7 +133,7 @@ const About = () => {
             <div className="relative overflow-hidden group rounded-2xl shadow-lg h-[351px]">
               <img
                 loading="lazy"
-                src="/images/about/about3.4.png"
+                src="/images/about/about3.4.webp"
                 alt="Impact-Driven Solutions"
                 className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
               />

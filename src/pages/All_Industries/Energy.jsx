@@ -5,7 +5,7 @@ export const Energy = () => {
   return (
     <main>
       <IndustryLayout
-        backgroundImage="/images/industries/energy.jpg"
+        backgroundImage="/images/industries/energy.webp"
         title="Energy"
         description="Blending innovation with sustainability, our energy solutions are designed to transform how industries power a smarter, cleaner, and more resilient future."
         buttonText="About Us"

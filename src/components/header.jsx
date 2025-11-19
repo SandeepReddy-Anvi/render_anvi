@@ -61,13 +61,13 @@ const Header = () => {
         {/* Wrap logo in Link for easy navigation to home */}
         <img
           loading="lazy"
-          src="/logos/anvi logo.png"
+          src="/logos/anvi logo.webp"
           alt="anvi-logo"
           className="w-full h-auto max-w-[100px] lg:max-w-[130px] xl:max-w-[150px] max-md:max-h-[60px] object-cover sticky z-[51]"
         />
 
       </Link>
-      <link rel="preload" as="image" href="/logos/anvi logo.png" />
+      <link rel="preload" as="image" href="/logos/anvi logo.webp" />
 
       {/* Nav Bar & Buttons (right side) */}
       <nav className="flex flex-1 justify-end align-middle">

@@ -9,7 +9,7 @@ const TimelineSection = () => {
       year: "2022",
       title: "First Surveillance Robot Launch",
       desc: "Deployed intelligent surveillance systems across multiple installations, enabling real-time monitoring, threat detection, and faster response.",
-      img: "/images/about/about5.jpg",
+      img: "/images/about/about5.webp",
     },
     {
       year: "2023",

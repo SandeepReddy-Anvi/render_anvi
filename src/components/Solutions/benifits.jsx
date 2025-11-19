@@ -9,7 +9,7 @@ const BenefitsPage = () => {
       intrusions. AROP works like a 24/7 guardian, constantly scanning runways and perimeters. By detecting 
       and removing threats instantly, it prevents accidents before they happen. This means safer flights, 
       protected aircraft, and greater passenger confidence`,
-      image: "/images/solutions/arop/arop4.1.png",
+      image: "/images/solutions/arop/arop4.1.webp",
       reverse: false,
     },
     {
@@ -18,7 +18,7 @@ const BenefitsPage = () => {
       description: `Manual runway checks often mean flight delays, partial closures, or limited visibility inspections. With AROP, 
       airports move from time-bound checks to continuous monitoring. Inspections that used to take hours can now be done in minutes, 
       without halting runway activity. This ensures higher runway availability, faster turnarounds, and smoother passenger experiences.`,
-      image: "/images/solutions/arop/arop4.2.png",
+      image: "/images/solutions/arop/arop4.2.webp",
       reverse: true,
     },
     {
@@ -27,7 +27,7 @@ const BenefitsPage = () => {
       description: `Every FOD incident, wildlife strike, or emergency repair costs airports and airlines crores of rupees. For example, a single engine 
       damage can exceed ₹10 crore. AROP reduces such risks drastically, while predictive maintenance ensures that runways last longer. The result? 
       Immediate savings from avoided incidents and long-term savings from extended infrastructure lif`,
-      image: "/images/solutions/arop/arop4.3.png",
+      image: "/images/solutions/arop/arop4.3.webp",
       reverse: false,
     },
     {
@@ -36,7 +36,7 @@ const BenefitsPage = () => {
       description: `Airports must follow global safety standards (ICAO Annex 14, FAA Part 139, DGCA requirements). 
       AROP makes this simple by automatically recording all inspections, hazards, and responses. This creates a digital 
       log that can be used for audits, safety reviews, and regulatory approvals, removing paperwork stress and reducing chances of non-compliance`,
-      image: "/images/solutions/arop/arop4.4.png",
+      image: "/images/solutions/arop/arop4.4.webp",
       reverse: true,
     },
     {
@@ -45,7 +45,7 @@ const BenefitsPage = () => {
       description: `Airports are under pressure to reduce their carbon footprint. AROP supports this goal by operating on 
       electric platforms instead of fuel-based vehicles. By avoiding emergency repairs and heavy machinery use, it also cuts 
       down on unnecessary emissions. Over time, this leads to greener, cleaner, and more sustainable airport operations.`,
-      image: "/images/solutions/arop/arop4.5.png",
+      image: "/images/solutions/arop/arop4.5.webp",
       reverse: false,
     },
     {
@@ -54,7 +54,7 @@ const BenefitsPage = () => {
       description: `Whether it is a large international hub like Delhi or a smaller regional airport, AROP is modular and scalable. 
       It can be customized based on the airport’s environment handling high traffic in metros, monsoon conditions in coastal 
       cities, or wildlife intrusions in regional airports. This flexibility makes it valuable for the entire aviation ecosystem`,
-      image: "/images/solutions/arop/arop4.6.png",
+      image: "/images/solutions/arop/arop4.6.webp",
       reverse: true,
     },
     {
@@ -63,7 +63,7 @@ const BenefitsPage = () => {
       description: `With AI, machine learning, and robotics at its core, AROP is designed for the future of aviation. Its predictive 
       analytics help airports plan maintenance in advance, while its integration-first design ensures that one system manages all safety 
       functions together. This makes AROP not just a solution for today, but a strategic investment for tomorrow.`,
-      image: "/images/solutions/arop/arop4.7.png",
+      image: "/images/solutions/arop/arop4.7.webp",
       reverse: false,
     },
   ];

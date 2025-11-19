@@ -91,7 +91,7 @@ export const SolutionsSewage = () => {
               real-time robotic cleaning operations.
             </p>
             <img
-              src="/images/solutions/sewage/sewage3.1.png"
+              src="/images/solutions/sewage/sewage3.1.webp"
               alt="Sewage Analytics Dashboard"
               className="w-full h-56 sm:h-64 md:h-64 lg:h-[600px] object-cover rounded-lg"
             />

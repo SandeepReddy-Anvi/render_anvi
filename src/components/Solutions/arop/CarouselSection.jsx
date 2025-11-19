@@ -7,37 +7,37 @@ const CarouselSection = () => {
       title: "Autonomous FOD Detection & Removal",
       description:
         "Foreign Object Debris (FOD) is one of the most common yet dangerous risks on runways. AROP uses AI-powered cameras, sensors, and autonomous mobility platforms to constantly scan runways and taxiways. Any object detected—like loose bolts, stones, or metal pieces—is instantly identified, classified by risk level, and removed without disrupting flight operations. This ensures real-time protection against costly accidents.",
-      image: "/images/solutions/arop/slide1.png",
+      image: "/images/solutions/arop/slide1.webp",
     },
     {
       title: "24/7 Perimeter Surveillance",
       description:
         "Airport perimeters are vast and vulnerable to threats like wildlife intrusions, unauthorized access, and fencing damage. AROP deploys smart surveillance robots that operate continuously, day and night. Using AI-based classification, the system can tell the difference between harmless movements and serious risks, sending instant alerts to the Airport Operations Control Center (AOCC). This reduces wildlife strikes and strengthens airport security.",
-      image: "/images/solutions/arop/slide2.png",
+      image: "/images/solutions/arop/slide2.webp",
     },
     {
       title: "AI-Driven Runway Inspection",
       description:
         "Traditional runway inspections often miss small cracks or early damage. AROP solves this with high-resolution imaging, LiDAR scanning, and AI analysis. It can detect even the smallest surface cracks, rubber deposits from aircraft tires, or faulty runway lighting before they become dangerous. This enables predictive maintenance, helping airports extend runway life and reduce repair costs.",
-      image: "/images/solutions/arop/slide3.png",
+      image: "/images/solutions/arop/arop2.webp",
     },
     {
       title: "Real-Time Data & Alerts",
       description:
         "AROP is built on an edge computing architecture, meaning all data is processed locally instead of relying on remote servers. This ensures instant detection with minimal delay. Whenever a hazard is detected, AROP automatically classifies it, attaches GPS coordinates, and sends real-time alerts with images and severity levels to the AOCC. This allows airport staff to act immediately.",
-      image: "/images/solutions/arop/slide4.png",
+      image: "/images/solutions/arop/slide4.webp",
     },
     {
       title: "Seamless Compliance Reporting",
       description:
         "Every inspection, detection, and response action taken by AROP is automatically logged into a structured digital record. These logs can be directly used for ICAO, FAA, and DGCA safety audits, reducing paperwork and ensuring complete transparency. This not only helps airports stay compliant but also builds a digital audit trail for long-term safety analysis.",
-      image: "/images/solutions/arop/slide5.png",
+      image: "/images/solutions/arop/slide5.webp",
     },
     {
       title: "Sustainable Operations",
       description:
         "AROP runs on electric-powered mobility platforms, replacing traditional diesel inspection vehicles. This reduces CO₂ emissions by 65–80 tonnes annually in large airports. By minimizing emergency heavy repair work, AROP also supports green airport practices, making operations more sustainable and eco-friendly.",
-      image: "/images/solutions/arop/slide6.png",
+      image: "/images/solutions/arop/arop4.5.webp",
     },
   ];
 

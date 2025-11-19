@@ -5,7 +5,7 @@ export const Textiles = () => {
   return (
     <main>
       <IndustryLayout
-        backgroundImage="/images/industries/textiles.jpg"
+        backgroundImage="/images/industries/textiles.webp"
         title="textiles"
         description="Anvi, India’s first AI tailoring platform, merges technology and tradition to deliver personalized formal and ethnic wear experiences."
         buttonText="About Us"

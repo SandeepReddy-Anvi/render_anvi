@@ -47,7 +47,7 @@
       "name": "Space",
       "short_name": "Space",
       "url": "https://www.anvispace.co",
-      "icons": [{ "src": "/images/home/space.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/home/space.webp", "sizes": "192x192" }]
     },
     {
       "name": "Energy",
@@ -65,7 +65,7 @@
       "name": "Textiles",
       "short_name": "Textiles",
       "url": "/textiles",
-      "icons": [{ "src": "/images/home/textiles.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/home/textiles.webp", "sizes": "192x192" }]
     },
     {
       "name": "Semiconductors",
