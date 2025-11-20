@@ -19,8 +19,7 @@ export const Solutions = () => {
         backgroundImage="/videos/Heroo3_org.mp4"
         title="Our Solutions"
         description="From Robotics to Space, Anvi transforms industries with intelligent automation and advanced technology."
-        buttonText="About Us"
-        buttonLink={mainPagesLinksList.AboutUs}
+
         descriptionWidth="450px"
       />
 

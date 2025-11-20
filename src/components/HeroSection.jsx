@@ -1,15 +1,20 @@
 import { Link } from "react-router-dom";
 import { HeroBackgroundSVG } from "./HeroBackgroundSVG";
+import React from "react";
+import { IconsObj } from "../utils/Iconify_icons";
 
 const HeroSection = ({
   backgroundImage,
   title,
   description,
   page = "",
+  buttonText,
+  buttonLink,
   descriptionWidth,
 }) => {
   // Detect if background is a video
   const isVideo = backgroundImage?.endsWith(".mp4");
+  // const [button]
 
   return (
     <section className="w-full h-[calc(100svh-100px)] m-auto overflow-hidden flex justify-start align-top relative">
@@ -64,6 +69,19 @@ const HeroSection = ({
         >
           {description}
         </p>
+        {buttonText && buttonLink && (
+          <Link
+            to={buttonLink} 
+            className="link-bg-icon hero-section-button w-max text-[16px] min-w-[170px] mt-[16px]"
+            
+          >
+            
+            {buttonText}
+             <i className="rotate-45">{IconsObj.arrow}</i>
+          </Link>
+        )}
+
+         
       </div>
     </section>
   );

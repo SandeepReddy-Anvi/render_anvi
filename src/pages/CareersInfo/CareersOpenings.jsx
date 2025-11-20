@@ -4,6 +4,7 @@ import HeroSection from "../../components/HeroSection";
 import { MapPin, Clock, ChevronDown } from "lucide-react";
 import { jobPositions } from "../../data/jobData";
 import { pagesLinksList } from "../../data/PagesLinkList";
+ 
 import Footer from "../../components/footer";
 
 const footerUpBoxInfoObj = {
@@ -12,8 +13,10 @@ const footerUpBoxInfoObj = {
   linkLabel: "Send Resume",
   link: '#',
 };
+ 
 
 const CareersOpenings = () => {
+  
   const navigate = useNavigate();
   const [filters, setFilters] = useState({
     department: "All Departments",
@@ -53,13 +56,12 @@ const CareersOpenings = () => {
         backgroundImage="/videos/Heroo4_org.mp4"
         title="Looking for the Right Job "
         description="Join Anvi to explore ambitious ideas, work with breakthrough technologies, and build a career that creates real impact."
-        buttonText="About Us"
-        buttonLink="#about"
+        
         descriptionWidth="656px"
       />
 
-      <section className="px-4 sm:px-8 md:px-16 lg:px-[140px] py-12 md:py-20 lg:py-[100px]">
-        <div className="items-center flex flex-col align-middle gap-[25px] justify-center text-center font-['Wix Madefor Display']">
+      <section id="job-openings-container" className="px-4 sm:px-8 md:px-16 lg:px-[140px] py-12 md:py-20 lg:py-[100px]">
+        <div  className="items-center flex flex-col align-middle gap-[25px] justify-center text-center font-['Wix Madefor Display']">
           <p className="text-3xl sm:text-4xl md:text-[48px] font-medium">
             Open Positions
           </p>
@@ -167,7 +169,7 @@ const CareersOpenings = () => {
                     e.stopPropagation();
                     handleApplyNow(job.id);
                   }}
-                  className="px-3 sm:px-4 py-1.5 sm:py-2 border border-[#0097B2] text-[#0097B2] rounded-lg hover:bg-blue-50 transition-colors text-xs sm:text-sm font-medium w-full sm:w-auto"
+                  className="px-3 sm:px-4 py-1.5 sm:py-2 border border-[#0097B2] text-[#0097B2] rounded-lg hover:bg-[#1197B2] hover:text-white transition-colors-white text-xs sm:text-sm font-medium w-full sm:w-auto"
                 >
                   Apply Now
                 </button>
