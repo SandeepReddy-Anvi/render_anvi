@@ -19,7 +19,7 @@ export const HomeIndustriesCard = () => {
   }, []);
 
   return (
-    <ul className="home-industry-cards-ul w-full  h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] m-0 lg:mx-auto  ">
+    <ul className="home-industry-cards-ul w-full  h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] m-0 lg:mx-auto   ">
       {Object.keys(cardsList).map((eachIndustry, index) => {
         const { imgUrl, title, desc, link, activeCard } =
           cardsList[eachIndustry];
@@ -90,3 +90,8 @@ export const HomeIndustriesCard = () => {
     </ul>
   );
 };
+
+
+
+
+ 

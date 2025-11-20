@@ -59,7 +59,7 @@ const Home = () => {
         </section>
 
         {/* Industries */}
-        <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
+        <section className="w-full  px-5 py-[100px] text-center xl:px-[118px] md:py-[102px]  font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
           <h2 className="text-[38px] sm:text-[48px] mb-[16px] text-[#282828]">
             Industries
           </h2>

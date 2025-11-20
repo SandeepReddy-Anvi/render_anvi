@@ -38,8 +38,7 @@ const About = () => {
         title="We Engineer It."
         description="At Anvi, we don’t just build robots - we build the future. Our mission is to deliver strategic 
         advantage through breakthrough products, deep-tech systems, and future-proof solutions."
-        buttonText="Explore Careers"
-        buttonLink="#careers"
+        
         descriptionWidth="450px"
       />
 

@@ -17,8 +17,7 @@ export const News = () => {
           backgroundImage="/videos/Heroo2_org.mp4"
           title="News & Updates"
           description="Stay informed with Anvi latest announcements, official press releases, and exciting new opportunities."
-          buttonText="About Us"
-          buttonLink={pagesLinksList.AboutUs}
+   
           descriptionWidth="570px"
         />
       </main>
