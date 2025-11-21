@@ -1,7 +1,7 @@
 import React from "react";
 import IndustryLayout from "../../components/IndustryLayout";
 
-export const SemiConductors = () => {
+const SemiConductors = () => {
   return (
     <main>
     <IndustryLayout
@@ -14,3 +14,5 @@ export const SemiConductors = () => {
     </main>
   );
 };
+
+export default SemiConductors;

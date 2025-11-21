@@ -1,7 +1,7 @@
 import React from "react";
 import IndustryLayout from "../../components/IndustryLayout";
 
-export const Foundations = () => {
+const Foundations = () => {
   return (
     <main>
       <IndustryLayout
@@ -14,3 +14,5 @@ export const Foundations = () => {
     </main>
   );
 };
+
+export default Foundations;

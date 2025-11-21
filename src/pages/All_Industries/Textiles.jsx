@@ -1,7 +1,7 @@
 import React from "react";
 import IndustryLayout from "../../components/IndustryLayout";
 
-export const Textiles = () => {
+const Textiles = () => {
   return (
     <main>
       <IndustryLayout
@@ -14,3 +14,5 @@ export const Textiles = () => {
     </main>
   );
 };
+
+export default Textiles;

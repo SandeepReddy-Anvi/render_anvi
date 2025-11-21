@@ -3,7 +3,7 @@ import { jobPositions } from "../../data/jobData";
 import Footer from "../../components/footer";
 import { JobApplyForm } from "../../components/JobApplyForm";
 
-export const CareersJobApply = () => {
+const CareersJobApply = () => {
   const { jobId } = useParams();
   const job = jobPositions.find((job) => job.id === parseInt(jobId));
   //   console.log(job);
@@ -51,3 +51,6 @@ export const CareersJobApply = () => {
     </div>
   );
 };
+
+
+export default CareersJobApply;
