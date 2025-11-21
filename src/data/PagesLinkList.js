@@ -27,7 +27,7 @@ export const pagesLinksList = {
 
   //  Careers
   Careers: "/careers",
-  Career_Openings: "/careers/openings",
+  Career_Openings: "/careers/job-openings",
   // Dynamic Career Routes (examples)
   JobInfo: "/careers/job-info/:jobId",
   Job_Apply: "/careers/job-info/apply",
