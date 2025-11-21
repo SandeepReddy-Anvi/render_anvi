@@ -4,20 +4,30 @@ import { Instagram, Linkedin, MapPin, Mail } from "lucide-react";
 import { mainPagesLinksList } from "../data/PagesLinkList";
 import { FooterUpBox } from "./FooterUpBox";
 import { FooterUpBox2 } from "./FooterUpBox2";
+import { motion } from "framer-motion";
 
 const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
   return (
     <>
-      {/* Optional Top Boxes */}
-      {footerUpBoxInfo && <FooterUpBox info={footerUpBoxInfo} />}
-      {footerUpBoxInfo2 && <FooterUpBox2 info={footerUpBoxInfo2} />}
+      <motion.footer
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{  amount: 0.20, margin: "-10% 0px" }}
+        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+        className="bg-[#0B0B0B] text-white font-manrope"
+      >
+        {/* Optional Top Boxes */}
+        {footerUpBoxInfo && Object.keys(footerUpBoxInfo).length > 0 && (
+          <FooterUpBox info={footerUpBoxInfo} />
+        )}
+        {footerUpBoxInfo2 && Object.keys(footerUpBoxInfo2).length > 0 && (
+          <FooterUpBox2 info={footerUpBoxInfo2} />
+        )}
 
-      {/* Main Footer */}
-      <footer className="bg-[#0B0B0B] text-white font-manrope">
+        {/* Main Footer */}
         <div className="max-md:px-[25px] lg:px-[50px] py-[80px] lg:pt-[64px] lg:pb-[48px] h-full min-h-[300px]">
           {/* Parent Grid */}
           <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[17px] mx-auto items-start">
-            
             {/* Logo + Description */}
             <div className="col-span-full md:col-span-2 items-center gap-[45px] self-center">
               <div className="flex max-sm:flex-col max-sm:place-items-center justify-around lg:justify-center gap-[10px] md:gap-[30px] align-middle">
@@ -44,7 +54,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                 Quick Links
               </h4>
               <ul className="flex flex-col gap-[12px]">
-                {Object.keys(mainPagesLinksList)
+                {Object.keys(mainPagesLinksList || {})
                   .slice(1, -1)
                   .map((pageKey) => (
                     <li key={pageKey}>
@@ -67,6 +77,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                 <a
                   href="https://maps.app.goo.gl/rqWRRaMvyspAxSQKA"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-start gap-[12px]"
                 >
                   <MapPin
@@ -102,7 +113,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                   Quick Links
                 </h4>
                 <ul className="flex flex-col gap-[8px]">
-                  {Object.keys(mainPagesLinksList)
+                  {Object.keys(mainPagesLinksList || {})
                     .slice(1, -1)
                     .map((pageKey) => (
                       <li key={pageKey}>
@@ -126,6 +137,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                   <a
                     href="https://maps.app.goo.gl/rqWRRaMvyspAxSQKA"
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-start gap-[8px]"
                   >
                     <MapPin className="w-[16px] h-[16px]" strokeWidth={1.5} />
@@ -147,12 +159,11 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                 </div>
               </div>
             </div>
-
           </div>
         </div>
 
         {/* Divider */}
-        <div className="w-[95%] mx-auto h-[1px] bg-[#333333]"></div>
+        <div className="w-[95%] mx-auto h-[1px] bg-[#333333]" />
 
         {/* Bottom Row */}
         <div className="px-[60px] py-[24px] max-md:px-6">
@@ -188,7 +199,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
             </Link>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </>
   );
 };

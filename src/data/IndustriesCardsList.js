@@ -20,7 +20,7 @@ export const IndustriesCardsList = {
         link: pagesLinksList.Energy,
         activeCard: false,
     },entertainment: {
-        imgUrl: '/images/industries/entertainment.webp',
+        imgUrl: '/images/industries/entertainment.jpg',
         title: 'Entertainment',
         desc: 'Immersive stories, limitless creativity. Get ready to explore new dimensions of imagination and bring ideas to life like never before.',
         link: pagesLinksList.Entertainment,
