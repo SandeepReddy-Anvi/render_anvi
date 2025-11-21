@@ -28,14 +28,14 @@ export const FooterUpBox = ({ info }) => {
       >
         {para}
       </p>
-      <Link
+      {/* <Link
         to={link}
         className="link-bg-icon footerUpBox-iconlink w-max text-[16px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
         style={{ color: "#000", background: "white" }}
       >
         {linkLabel}
         <i className="rotate-45">{IconsObj.arrow}</i>
-      </Link>
+      </Link> */}
     </section>
   );
 };

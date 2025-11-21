@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { mailBackendUrl } from "../data/MailBackendUrl";
 
+import { motion } from "framer-motion";
+
 export const FooterUpBox2 = ({ info }) => {
   const data = info || {};
   const { head, para } = data;
@@ -54,7 +56,7 @@ export const FooterUpBox2 = ({ info }) => {
   };
 
   return (
-    <section
+    < section  
       className="w-full min-h-[376px] font-[manrope] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImag: "url(/images/footer.jpg)" }}
     >
@@ -107,6 +109,6 @@ export const FooterUpBox2 = ({ info }) => {
           {status.message}
         </p>
       )}
-    </section>
+    </section >
   );
 };

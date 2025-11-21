@@ -10,8 +10,8 @@ import Footer from "../../components/footer";
 const footerUpBoxInfoObj = {
   head: "Didn't find the right role?",
   para: "Send us your resume and we'll keep in touch for future opportunities that match your skills and interests.",
-  linkLabel: "Send Resume",
-  link: '#',
+  // linkLabel: "Send Resume",
+  // link: '#',
 };
  
 
