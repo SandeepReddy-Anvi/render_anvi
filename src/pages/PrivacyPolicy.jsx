@@ -8,7 +8,7 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
-export const PrivacyPolicy = () => {
+const PrivacyPolicy = () => {
   return (
     <>
       <main id="news" className="w-full">
@@ -20,3 +20,5 @@ export const PrivacyPolicy = () => {
     </>
   );
 };
+
+export default PrivacyPolicy;

@@ -1,7 +1,7 @@
 import React from "react";
 import IndustryLayout from "../../components/IndustryLayout";
 
-export const Energy = () => {
+const Energy = () => {
   return (
     <main>
       <IndustryLayout
@@ -14,3 +14,5 @@ export const Energy = () => {
     </main>
   );
 };
+
+export default Energy;

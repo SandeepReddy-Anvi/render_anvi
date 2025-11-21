@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 import { IconsObj } from "../../utils/Iconify_icons";
 import { pagesLinksList } from "../../data/PagesLinkList";
 
-export const CareersJobDesc = () => {
+const CareersJobDesc = () => {
   const { jobId } = useParams();
   const job = jobPositions.find((job) => job.id === parseInt(jobId));
 
@@ -105,3 +105,6 @@ export const CareersJobDesc = () => {
     </div>
   );
 };
+
+
+export default CareersJobDesc;

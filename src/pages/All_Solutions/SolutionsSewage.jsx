@@ -12,7 +12,7 @@ const footerUpBoxInfoObj = {
   link: pagesLinksList.ContactUs,
 };
 
-export const SolutionsSewage = () => {
+const SolutionsSewage = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -385,3 +385,6 @@ export const SolutionsSewage = () => {
     </div>
   );
 };
+
+
+export default SolutionsSewage;

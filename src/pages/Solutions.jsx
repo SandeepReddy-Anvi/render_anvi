@@ -11,7 +11,7 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
-export const Solutions = () => {
+const Solutions = () => {
   return (
     <div id="solutions" className="w-full">
       {/* Hero Section */}
@@ -71,3 +71,6 @@ export const Solutions = () => {
     </div>
   );
 };
+
+
+export default Solutions;

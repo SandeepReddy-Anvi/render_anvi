@@ -14,7 +14,7 @@ const footerUpBoxInfoObj = {
   link: pagesLinksList.ContactUs,
 };
 
-export const SolutionsArop = () => {
+const SolutionsArop = () => {
   return (
     <div className="w-full">
       <HeroSection
@@ -170,3 +170,5 @@ export const SolutionsArop = () => {
     </div>
   );
 };
+
+export default SolutionsArop;
