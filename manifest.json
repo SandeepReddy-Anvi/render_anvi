@@ -1,7 +1,7 @@
 {
   "short_name": "Anvi",
-  "name": "Anvi Robotics | Engineering the Future with Deep-Tech & AI",
-  "description": "At Anvi, we engineer the future through robotics, AI, and deep-tech innovation — building intelligent systems that enhance safety, efficiency, and sustainability across industries.",
+  "name": "Anvi | Engineering the Future with Deep-Tech & AI",
+  "description": "Anvi engineers robotics, AI, and deep-tech systems for industrial, environmental, and societal innovation.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -10,14 +10,10 @@
   "theme_color": "#00A0B0",
   "lang": "en",
   "dir": "ltr",
+
   "icons": [
     {
-      "src": "/logos/anvi.png",
-      "sizes": "192x192",
-      "type": "image/png"
-    },
-    {
-      "src": "/logos/anvi512.png",
+      "src": "/favicon/512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
@@ -28,66 +24,60 @@
       "purpose": "any maskable"
     }
   ],
-  "categories": [
-    "technology",
-    "robotics",
-    "innovation",
-    "ai",
-    "automation",
-    "deep-tech"
-  ],
+
+  "categories": ["robotics","space","energy","entertainment","textiles","semiconductors","lifesciences","foundation","technology","innovation","ai","automation","deep-tech"],
+
   "shortcuts": [
     {
       "name": "Robotics",
       "short_name": "Robotics",
-      "url": "https://www.anvirobotics.com",
-      "icons": [{ "src": "/images/home/robotics.png", "sizes": "192x192" }]
+      "url": "/solutions/robotics",
+      "icons": [{ "src": "/images/industries/robotics.jpg", "sizes": "192x192" }]
     },
     {
       "name": "Space",
       "short_name": "Space",
       "url": "https://www.anvispace.co",
-      "icons": [{ "src": "/images/home/space.webp", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/home/space.png", "sizes": "192x192" }]
     },
     {
       "name": "Energy",
       "short_name": "Energy",
       "url": "/energy",
-      "icons": [{ "src": "/images/home/energy.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/industries/energy.webp", "sizes": "192x192" }]
     },
     {
       "name": "Entertainment",
       "short_name": "Entertainment",
       "url": "/entertainment",
-      "icons": [{ "src": "/images/home/entertainment.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/industries/entertainment.webp", "sizes": "192x192" }]
     },
     {
       "name": "Textiles",
       "short_name": "Textiles",
       "url": "/textiles",
-      "icons": [{ "src": "/images/home/textiles.webp", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/industries/textiles.webp", "sizes": "192x192" }]
     },
     {
       "name": "Semiconductors",
       "short_name": "Semiconductors",
       "url": "/semiconductors",
-      "icons": [
-        { "src": "/images/home/semiconductors.png", "sizes": "192x192" }
-      ]
+      "icons": [{ "src": "/images/industries/semiconductors.jpg", "sizes": "192x192" }]
     },
     {
       "name": "Life Sciences",
       "short_name": "LifeSciences",
       "url": "/lifesciences",
-      "icons": [{ "src": "/images/home/lifesciences.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/industries/lifesciences.jpg", "sizes": "192x192" }]
     },
     {
       "name": "Foundations",
       "short_name": "Foundations",
       "url": "/foundations",
-      "icons": [{ "src": "/images/home/foundation.png", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/industries/foundation.jpg", "sizes": "192x192" }]
     }
   ],
+
   "related_applications": [],
   "prefer_related_applications": false
 }

@@ -6,7 +6,7 @@ import { pagesLinksList } from "./data/PagesLinkList";
 import Header from "./components/header";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
-import {Industries} from "./pages/Industries";
+import { Industries } from "./pages/Industries";
 import { Investors } from "./pages/Investors";
 import { ContactUs } from "./pages/ContactUs";
 import { Solutions } from "./pages/Solutions";
@@ -38,7 +38,10 @@ const App = () => {
         <Route path={pagesLinksList.Investors} element={<Investors />} />
         <Route path={pagesLinksList.News} element={<News />} />
         <Route path={pagesLinksList.ContactUs} element={<ContactUs />} />
-        <Route path={pagesLinksList.PrivacyPolicy} element={<PrivacyPolicy />} />
+        <Route
+          path={pagesLinksList.PrivacyPolicy}
+          element={<PrivacyPolicy />}
+        />
 
         {/* Solutions */}
         <Route path={pagesLinksList.Solutions} element={<Solutions />} />
@@ -76,7 +79,7 @@ const App = () => {
         <Route
           path={pagesLinksList.JobInfo_Apply}
           element={<CareersJobApply />}
-        />        
+        />
       </Routes>
     </Router>
   );
