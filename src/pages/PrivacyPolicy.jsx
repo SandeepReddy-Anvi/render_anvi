@@ -12,12 +12,12 @@ const footerUpBoxInfoObj = {
 const PrivacyPolicy = () => {
   return (
     <>
-      <main id="news" className="w-full h-full mb-40 bg-white    font-dm-sans ">
+      <main   className="w-full h-full mb-40 bg-white    font-dm-sans ">
         <h1 className=" text-black  font-semibold    text-[35px] gap-1 " >Privacy Policy</h1>
-<section className="ml-4 md:w-[600px] lg:w-[1000px]  self-center ">
+<section className="ml-4 w-full md:w-[600px] lg:w-[1000px]  self-center text-gray-500 ">
 
         <h3 className="" >
-          Last Updated : [24/11/2025]
+          Last Updated : 24/11/2025
         </h3>  
         <div className=" mt-58 w-full ">
                   <p className=" mt-6 ">Anvi is committed to protecting the privacy of visitors to our website
