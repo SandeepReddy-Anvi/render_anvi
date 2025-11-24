@@ -30,18 +30,28 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
+    const contactFormData = new FormData();
+    contactFormData.append("FullName", data.Name);
+    contactFormData.append("Email", data.Email);
+    contactFormData.append("Subject", data.Subject);
+    contactFormData.append("Message", data.Message);
+    contactFormData.append("Website", "Anvi.co");
+    // console.log("data : ", contactFormData, data)
+
+    // url
     const api = mailBackendUrl.contact;
+    // console.log('api : ', api )
     setLoading(true);
     setFeedback({ type: "", message: "" });
 
     // FIX: Add await here
     try {
-      await axios.post(api, data, {
+      const resp = await axios.post(api, contactFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      // console.log('Response:', resp.data);
+      console.log("Response:", resp.data);
       setFeedback({
         type: "success",
         message: "✅ Message sent successfully!",
@@ -80,14 +90,7 @@ export const ContactUs = () => {
     }
 
     // All good → send
-    sendMail({
-      ...formData,
-      Website: "Anvi.Co",
-    });
-
-    () => {
-      
-    }
+    sendMail(formData);
   };
 
   return (
