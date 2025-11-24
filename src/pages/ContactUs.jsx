@@ -7,14 +7,15 @@ import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
 import { mailBackendUrl } from "../data/MailBackendUrl";
 
-export const ContactUs = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+const initialFormData = {
+  Name: "",
+  Email: "",
+  Subject: "",
+  Message: "",
+};
 
+export const ContactUs = () => {
+  const [formData, setFormData] = useState(initialFormData || {});
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState({ type: "", message: "" });
 
@@ -29,18 +30,28 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
+    const contactFormData = new FormData();
+    contactFormData.append("FullName", data.Name);
+    contactFormData.append("Email", data.Email);
+    contactFormData.append("Subject", data.Subject);
+    contactFormData.append("Message", data.Message);
+    contactFormData.append("Website", "Anvi.co");
+    // console.log("data : ", contactFormData, data)
+
+    // url
     const api = mailBackendUrl.contact;
+    // console.log('api : ', api )
     setLoading(true);
     setFeedback({ type: "", message: "" });
 
     // FIX: Add await here
     try {
-      const resp = await axios.post(api, data, {
+      const resp = await axios.post(api, contactFormData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
-      console.log('Response:', resp.data);
+      console.log("Response:", resp.data);
       setFeedback({
         type: "success",
         message: "✅ Message sent successfully!",
@@ -56,34 +67,30 @@ export const ContactUs = () => {
         message: "❌ Failed to send message. Please try again later.",
       });
       // You would typically handle error state here
-    }finally {
+    } finally {
       setLoading(false);
+      setFormData(initialFormData);
     }
   }, []);
 
   // Handle form submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, subject, message } = formData;
+    const { Name, Email, Subject, Message } = formData;
 
     // Validation logic
-    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
+    if (!Name.trim() || !Email.trim() || !Subject.trim() || !Message.trim()) {
       setFeedback({ type: "error", message: "⚠️ All fields are required." });
       return;
     }
 
-    if (!isValidEmail(email)) {
+    if (!isValidEmail(Email)) {
       setFeedback({ type: "error", message: "⚠️ Please enter a valid email." });
       return;
     }
 
     // All good → send
-    sendMail({
-      ...formData,
-      website: "Anvi.Co",
-    });
-
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    sendMail(formData);
   };
 
   return (
@@ -112,15 +119,15 @@ export const ContactUs = () => {
               <div className="flex flex-col text-[16px] text-[#757575] font-normal mt-[20px] md:mt-[40px] gap-[15px] md:gap-[26px]">
                 <div className="flex items-center gap-[12px]">
                   <Mail
-                  className="w-[18px] h-[18px] flex-shrink-0"
-                  strokeWidth={1.5}
+                    className="w-[18px] h-[18px] flex-shrink-0"
+                    strokeWidth={1.5}
                   />
                   <p>info@anvi.com</p>
                 </div>
                 <div className="flex items-start gap-[12px]">
                   <MapPin
-                  className="w-[18px] h-[18px] flex-shrink-0"
-                  strokeWidth={1.5}
+                    className="w-[18px] h-[18px] flex-shrink-0"
+                    strokeWidth={1.5}
                   />
                   <p>
                     Anvi Robotics, 1st Floor, Profound Buliders, whitefields,
@@ -129,8 +136,8 @@ export const ContactUs = () => {
                 </div>
                 <div className="flex items-start gap-[12px]">
                   <Clock
-                  className="w-[18px] h-[18px] flex-shrink-0"
-                  strokeWidth={1.5}
+                    className="w-[18px] h-[18px] flex-shrink-0"
+                    strokeWidth={1.5}
                   />
                   <p>Monday - Friday 09:30AM - 6:30PM</p>
                 </div>
@@ -163,8 +170,8 @@ export const ContactUs = () => {
                   </span>
                   <input
                     type="text"
-                    name="name"
-                    value={formData.name}
+                    name="Name"
+                    value={formData.Name}
                     onChange={handleChange}
                     placeholder="Enter your name"
                     className="border rounded-[12px] px-3 py-2 w-full"
@@ -175,8 +182,8 @@ export const ContactUs = () => {
                   <span className="text-[16px] text-[#333333] mb-1">Email</span>
                   <input
                     type="email"
-                    name="email"
-                    value={formData.email}
+                    name="Email"
+                    value={formData.Email}
                     onChange={handleChange}
                     placeholder="Enter your email"
                     className="border rounded-[12px] px-3 py-2 w-full"
@@ -189,8 +196,8 @@ export const ContactUs = () => {
                 <span className="text-[16px] text-[#333333] mb-1">Subject</span>
                 <input
                   type="text"
-                  name="subject"
-                  value={formData.subject}
+                  name="Subject"
+                  value={formData.Subject}
                   onChange={handleChange}
                   placeholder="Enter subject"
                   className="border rounded-[12px] px-3 py-2 w-full"
@@ -202,8 +209,8 @@ export const ContactUs = () => {
                 <span className="text-[16px] text-[#333333] mb-1">Message</span>
                 <textarea
                   id="message"
-                  name="message"
-                  value={formData.message}
+                  name="Message"
+                  value={formData.Message}
                   onChange={handleChange}
                   placeholder="Enter your message"
                   className="border rounded-[12px] px-3 py-2 w-full h-[150px]"
@@ -229,7 +236,9 @@ export const ContactUs = () => {
         {/* Section 3 */}
         <section className="w-full max-w-[1000px] px-8 flex flex-col items-center justify-center text-center gap-[56px]">
           <div className="font-['Wix_Madefor_Display']">
-            <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium">Visit Our Office</p>
+            <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium">
+              Visit Our Office
+            </p>
             <p className="text-[16px] text-[#465455] font-normal">
               Located in the heart of Hyderabad's tech corridor
             </p>
@@ -252,8 +261,8 @@ export const ContactUs = () => {
               We’re Here to Help
             </p>
             <p className="text-[15px] sm:text-[16px] text-[#465455] font-normal leading-relaxed">
-              Find quick answers to common questions. Still need help? Our team is here
-              to support you anytime.
+              Find quick answers to common questions. Still need help? Our team
+              is here to support you anytime.
             </p>
           </div>
 
