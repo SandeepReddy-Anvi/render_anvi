@@ -4,7 +4,6 @@ import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
-import Button from "../utils/Button";
 
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
