@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { mailBackendUrl } from "../data/MailBackendUrl";
 
-import { motion } from "framer-motion";
-
 export const FooterUpBox2 = ({ info }) => {
   const data = info || {};
   const { head, para } = data;
@@ -28,8 +26,8 @@ export const FooterUpBox2 = ({ info }) => {
       const subcribeapi = mailBackendUrl.subscribe;
       // console.log(subcribeapi)
       const formData = new FormData();
-      formData.append("website", "ANVI.CO") //  || window.location.hostname ||);
-      formData.append("email", email);
+      formData.append("Website", "ANVI.CO") //  || window.location.hostname ||);
+      formData.append("Email", email);
 
       const res = await axios.post(subcribeapi, formData, {
         headers: {
