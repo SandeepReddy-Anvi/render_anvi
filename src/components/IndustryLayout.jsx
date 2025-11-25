@@ -14,6 +14,7 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
+
 const IndustryLayout = ({
   backgroundImage,
   title,
@@ -42,9 +43,9 @@ const IndustryLayout = ({
         <p className="max-w-[616px] text-[#465455] text-[16px] mb-6">
           {comingSoonText}
         </p>
-        <Link className="link-bg-icon">
+        {/* <Link className="link-bg-icon">
           Notify Me <i className="rotate-45">{IconsObj.arrow}</i>
-        </Link>
+        </Link> */}
       </section>
 
       {/* Explore Other Industries Section */}
