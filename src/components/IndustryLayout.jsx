@@ -14,6 +14,7 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
+
 const IndustryLayout = ({
   backgroundImage,
   title,
