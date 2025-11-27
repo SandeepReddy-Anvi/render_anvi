@@ -4,7 +4,7 @@ import React from "react";
 
 export const PravikayaInitiative = () => {
   return (
-    <section className="relative h-auto max-md:h-[800px] max-lg:h-[600px] w-[95vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
+    <section className="relative h-auto max-md:h-[800px] max-lg:h-[600px] w-[90vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
       {/* Content */}
       <div
         className="w-full max-w-[541px] flex flex-col items-center justify-center align-middle self-stretch mx-2"
@@ -45,7 +45,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="w-[250px] h-[130px] md:w-[293px] md:h-[205px] absolute right-0 md:right-[-30px] lg:top-[30px] xl:top-[74px] object-cover overflow-hidden aspect-video">
+      <div className="w-[250px] h-[130px] md:w-[293px] md:h-[205px] absolute right-0 md:right-[-50px] lg:top-[30px] xl:top-[74px] object-cover overflow-hidden aspect-video">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init2.webp"
@@ -54,7 +54,7 @@ export const PravikayaInitiative = () => {
         />
       </div>
 
-      <div className="w-[147px] h-[167px] bottom-[6%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[8%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px]">
+      <div className="w-[147px] h-[167px] bottom-[6%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[5%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px] md:translate-x-[40px]">
         <img
           loading="lazy"
           src="/images/home/Pravikaya Init3.webp"

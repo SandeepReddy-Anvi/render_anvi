@@ -12,16 +12,16 @@ export const FooterUpBox2 = ({ info }) => {
   if (!head) return null;
 
   const handleSubscribe = async () => {
-    if (!email) {
-      setStatus({
-        type: "error",
-        message: "Please enter a valid email address.",
-      });
-      return;
-    }
+  if (!email) {
+    setStatus({
+      type: "error",
+      message: "Please enter a valid email address.",
+    });
+    return;
+  }
 
-    try {
-      setStatus({ type: "loading", message: "Subscribing..." });
+  try {
+    setStatus({ type: "loading", message: "Subscribing..." });
 
       const subcribeapi = mailBackendUrl.subscribe;
       // console.log(subcribeapi)
@@ -35,23 +35,23 @@ export const FooterUpBox2 = ({ info }) => {
         },
       });
 
-      if (res.data.status === "Success") {
-        setStatus({ type: "success", message: "Subscribed successfully!" });
-        setEmail("");
-      } else {
-        setStatus({
-          type: "error",
-          message: "Subscription failed. Try again.",
-        });
-      }
-    } catch (err) {
-      console.error("Subscription error:", err);
+    if (res.data.status === "Success") {
+      setStatus({ type: "success", message: "Subscribed successfully!" });
+      setEmail("");
+    } else {
       setStatus({
         type: "error",
-        message: "Something went wrong. Please try again later.",
+        message: "Subscription failed. Try again.",
       });
     }
-  };
+  } catch (err) {
+    console.error("Subscription error:", err);
+    setStatus({
+      type: "error",
+      message: "Something went wrong. Please try again later.",
+    });
+  }
+};
 
   return (
     < section  

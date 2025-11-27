@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 import { MapPin, Mail, Clock } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
@@ -30,28 +31,16 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
-    const contactFormData = new FormData();
-    contactFormData.append("FullName", data.Name);
-    contactFormData.append("Email", data.Email);
-    contactFormData.append("Subject", data.Subject);
-    contactFormData.append("Message", data.Message);
-    contactFormData.append("Website", "Anvi.co");
-    // console.log("data : ", contactFormData, data)
-
-    // url
-    const api = mailBackendUrl.contact;
-    // console.log('api : ', api )
+    const api = import.meta.env.VITE_MAIL_API_CONTACT;
+    console.log("Contact API:", api);
     setLoading(true);
     setFeedback({ type: "", message: "" });
 
     // FIX: Add await here
     try {
-      const resp = await axios.post(api, contactFormData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      console.log("Response:", resp.data);
+      // await axios.post(api, formData);
+      const resp = await axios.post(api, data);
+      console.log('Response:', resp.data);
       setFeedback({
         type: "success",
         message: "✅ Message sent successfully!",
