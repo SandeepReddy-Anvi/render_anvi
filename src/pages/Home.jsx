@@ -123,8 +123,8 @@ const Home = () => {
 
             {/* Right stacked cards */}
             <div className="grid grid-rows-2 gap-[20px]">
-              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start">
-                <div className="grid grid-cols-2 items-center">
+              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start ">
+                <div className="grid grid-cols-2 items-center ">
                   <p className="text-[39px] font-medium font-inter text-start">02</p>
                   <a 
                     href={pagesLinksList.Space}
@@ -142,11 +142,14 @@ const Home = () => {
                     and future-ready infrastructure.
                   </p>
                 </div>
-                <img
+                <div className="w-full bg-black rounded-lg mt-2"> <img
                   src="/images/home/galactica.png"
                   alt="Anvi Space"
-                  className="w-[528px] h-[211px] object-cover rounded-xl mt-3"
+                  className="w-full h-[211px] object-contain rounded-xl mt-3"
                 />
+
+                </div>
+               
               </div>
 
               <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start">
@@ -167,7 +170,7 @@ const Home = () => {
                 <img
                   src="/images/solutions/solutionCard-2.png"
                   alt="Project Shudhi"
-                  className="w-[528px] h-[211px] object-cover rounded-xl mt-3"
+                  className="w-full h-[211px] object-cover rounded-xl mt-3"
                 />
               </div>
             </div>

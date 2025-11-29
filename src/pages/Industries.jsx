@@ -2,8 +2,10 @@ import Button from "../utils/Button";
 import HeroSection from "../components/HeroSection";
 import { IndustriesCardsList } from "../data/IndustriesCardsList";
 import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
+import GradientText from "../components/GradientText";
 import { renderLink } from "../utils/renderLink";
 import Footer from "../components/footer";
+import { Link } from "react-router-dom";
 
 const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Industry?",
@@ -12,81 +14,56 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
-const IndustryCardHor = (title, desc, link, imgUrl) => (
-  <div className="grid w-full max-md:w-[98%] mx-auto grid-cols-1 md:grid-cols-2 relative group transition-all duration-300 ease-in-out hover:scale-[1.002] origin-top-left p-[64px] rounded-[32px] bg-white gap-[10px] md:gap-[24px] lg:gap-[64px] hover:shadow-lg hover:shadow-[#1E9AB052]">
-    <div className="flex flex-col justify-center">
-      <p className="font-normal text-[32px] mb-[15.59px] leading-normal tracking-[-0.02em] text-[#0D1F21] transition-colors duration-300">
+export const IndustryCard = ({ title, desc, link, imgUrl }) => (
+  <div className="relative group overflow-hidden transition-all duration-300">
+    <img 
+      src={imgUrl}
+      alt={title}
+      className="w-full h-[343px] object-cover group-hover:scale-110 transition-all duration-300"
+    />
+
+    <div className="absolute inset-0 text-center bg-black/0 group-hover:bg-black/70 transition-all duration-500 flex flex-col justify-center items-center">
+      <p className="font-['Wix_Madefor_Display'] font-bold text-[30px] text-[#FFFFFF] mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
         {title}
       </p>
-      <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
+      <p className="font-dm-sans text-[14px] font-medium text-[#FFFFFF] px-8 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
         {desc}
       </p>
-      <div className="self-start max-md:pb-[10px]">
-        {renderLink(
+       <div className="self-center max-md:pb-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
+        {/* {renderLink(
           "Learn More",
           link,
-          `rounded-[32px] border-[1px] border-gray-200 text-gray-900 px-[23px] py-[11px]
-        bg-gradient-to-r from-white to-white
-        hover:from-[#1E9AB0] hover:to-[#1E9AB0]
-        bg-[length:0%_106%] hover:bg-[length:101%_106%]
-        bg-left bg-no-repeat
-        transition-[background-size] duration-500 ease-out
-        hover:text-white
-        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
-        inline-flex items-center`
-        )}
-
-      </div>
-    </div>
-    <div className="max-md:mx-auto">
-      <img
-        loading="lazy"
-        src={imgUrl}
-        alt="Our Vision"
-        className="w-full max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] group-hover:skew-x-0 group-hover:scale-[1.07] transition-all duration-500 rounded-[32px]"
-      />
+          `rounded-xl border-[1px] text-[#FFFFFF] px-[23px] py-[11px]
+           border-gray-200 hover:border-[#1E9AB0]
+           bg-gradient-to-r from-white to-white
+           hover:from-[#1E9AB0] hover:to-[#1E9AB0]
+           bg-[length:0%_106%] hover:bg-[length:101%_106%]
+           bg-left bg-no-repeat
+           transition-[background-size] duration-500 ease-out
+           hover:text-white
+           font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+           inline-flex items-center`
+        )} */}
+          <Link to={link} target="_blank" className="rounded-xl border-[1px] text-[#FFFFFF] px-[23px] py-[11px]
+           border-gray-200 hover:border-[#1E9AB0]
+           bg-gradient-to-r from-white to-white
+           hover:from-[#1E9AB0] hover:to-[#1E9AB0]
+           bg-[length:0%_106%] hover:bg-[length:101%_106%]
+           bg-left bg-no-repeat
+           transition-[background-size] duration-500 ease-out
+           hover:text-white
+           font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+           inline-flex items-center">Learn More</Link>
+      </div> 
     </div>
   </div>
 );
 
-export const IndustryCardVer = (title, desc, link, imgUrl) => (
-  <div className="relative w-[98%] mx-auto md:w-[47%] group transition-transform duration-300 ease-in-out hover:scale-[1.002] origin-top-left p-[54px] lg:p-[64px] rounded-[32px] bg-white gap-[10px] md:gap-[24px] lg:gap-[64px] hover:shadow-lg hover:shadow-[#1E9AB052]">
-    <div className="flex flex-col justify-center">
-      <p className="font-normal text-[32px] mb-[14px] leading-normal tracking-[-0.02em] text-[#0D1F21] transition-colors duration-300">
-        {title}
-      </p>
-      <p className="font-manrope text-gray-700 leading-relaxed mb-[32px]">
-        {desc}
-      </p>
-      <div className="self-start pb-[20px] lg:pb-[64px]">
-        {renderLink(
-          "Learn More",
-          link,
-          `rounded-[32px] border-[1px] border-gray-200 text-gray-900 px-[23px] py-[11px]
-        bg-gradient-to-r from-white to-white
-        hover:from-[#1E9AB0] hover:to-[#1E9AB0]
-        bg-[length:0%_106%] hover:bg-[length:101%_106%]
-        bg-left bg-no-repeat
-        transition-[background-size] duration-500 ease-out
-        hover:text-white
-        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
-        inline-flex items-center`
-        )}
-      </div>
-      <img
-        loading="lazy"
-        src={imgUrl}
-        alt="Our Vision"
-        className="w-full max-md:mx-auto max-md: max-w-[425px] h-full aspect-[4/3] object-cover -skew-x-[5deg] group-hover:skew-x-0 group-hover:scale-[1.07] transition-all duration-500 rounded-[32px]"
-      />
-    </div>
-  </div>
-);
 
 export const Industries = () => {
   return (
     <>
-      <main id="industries" className="w-full">
+      <main id="industries" className="w-full bg-[#FCFCFC]">
         {/* Hero Section */}
         <HeroSection
           backgroundImage="/videos/Heroo4_org.mp4"
@@ -96,78 +73,23 @@ export const Industries = () => {
           descriptionWidth="656px"
         />
 
+         <GradientText
+            ourTitle="Our Industries"
+            gradientTitle="Where Innovation Meets Every Industry."
+            ourDescription="From robotics and space to life sciences and semiconductors, Anvi’s technologies are reshaping how industries think, build, and evolve. We design intelligent systems that bring safety, efficiency, and sustainability to every sector we touch - creating innovation with purpose."
+          />
+
         {/* Industries */}
-        <section className="relative w-full sm:px-2 md:px-[40px] py-12 sm:py-16 md:py-[154px] bg-[#F4F3F7] bg-opacity[0.82]">
-          <div className="flex flex-col items-center text-center gap-[17px] mb-20">
-            <h2 className="text-[#282828] font-dm-sans text-4xl sm:text-4xl md:text-4xl lg:text-[54px] font-normal leading-normal tracking-[-0.02em]">
-              Industries of the Future
-            </h2>
-            <p className="max-w-[770px] font-dm-sans text-[18px] text-[#465455]">
-              From intelligent robotics to space exploration, Anvi is shaping
-              tomorrow with deep-tech systems that transform industries and
-              empower societies.
-            </p>
-          </div>
-          <div className="flex flex-wrap max-w-[1000px] mx-auto justify-between w-full place-content-center gap-[30px] lg:gap-[50px] items-center">
-            {/* Robotics */}
-            {IndustryCardHor(
-              IndustriesCardsList.robotics.title,
-              IndustriesCardsList.robotics.desc,
-              IndustriesCardsList.robotics.link,
-              IndustriesCardsList.robotics.imgUrl
-            )}
-
-            {/* Space  & Energy*/}
-            {IndustryCardVer(
-              IndustriesCardsList.space.title,
-              IndustriesCardsList.space.desc,
-              IndustriesCardsList.space.link,
-              IndustriesCardsList.space.imgUrl
-            )}
-            {IndustryCardVer(
-              IndustriesCardsList.energy.title,
-              IndustriesCardsList.energy.desc,
-              IndustriesCardsList.energy.link,
-              IndustriesCardsList.energy.imgUrl
-            )}
-
-            {/* Entertainment */}
-            {IndustryCardHor(
-              IndustriesCardsList.entertainment.title,
-              IndustriesCardsList.entertainment.desc,
-              IndustriesCardsList.entertainment.link,
-              IndustriesCardsList.entertainment.imgUrl
-            )}
-
-            {/* Semiconductors */}
-            {IndustryCardHor(
-              IndustriesCardsList.SemiConductors.title,
-              IndustriesCardsList.SemiConductors.desc,
-              IndustriesCardsList.SemiConductors.link,
-              IndustriesCardsList.SemiConductors.imgUrl
-            )}
-
-            {/* Textiles  & LifeSciences*/}
-            {IndustryCardVer(
-              IndustriesCardsList.textiles.title,
-              IndustriesCardsList.textiles.desc,
-              IndustriesCardsList.textiles.link,
-              IndustriesCardsList.textiles.imgUrl
-            )}
-            {IndustryCardVer(
-              IndustriesCardsList.lifesciences.title,
-              IndustriesCardsList.lifesciences.desc,
-              IndustriesCardsList.lifesciences.link,
-              IndustriesCardsList.lifesciences.imgUrl
-            )}
-
-            {/* Foundation */}
-            {IndustryCardHor(
-              IndustriesCardsList.foundations.title,
-              IndustriesCardsList.foundations.desc,
-              IndustriesCardsList.foundations.link,
-              IndustriesCardsList.foundations.imgUrl
-            )}
+        <section className="relative w-full px-6 md:px-[60px] pb-12 sm:pb-16 md:pb-[50px] lg:pb-[80px] bg-[#FCFCFC] bg-opacity[0.82]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] max-w-[1200px] mx-auto w-full py-6">
+            <IndustryCard {...IndustriesCardsList.robotics} />
+            <IndustryCard {...IndustriesCardsList.space} />
+            <IndustryCard {...IndustriesCardsList.energy} />
+            <IndustryCard {...IndustriesCardsList.entertainment} />
+            <IndustryCard {...IndustriesCardsList.SemiConductors} />
+            <IndustryCard {...IndustriesCardsList.textiles} />
+            <IndustryCard {...IndustriesCardsList.lifesciences} />
+            <IndustryCard {...IndustriesCardsList.foundations} />
           </div>
         </section>
       </main>

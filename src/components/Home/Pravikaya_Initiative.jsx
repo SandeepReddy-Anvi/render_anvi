@@ -20,7 +20,15 @@ export const PravikayaInitiative = () => {
         </p>
         <Link
           to={pagesLinksList.Foundations}
-          className="px-[23px] py-[10px] mt-[20px] rounded-[400px] border-[1px] border-[#E4E6E6] font-normal text-white text-[17px] leading-[26px] whitespace-nowrap hover:text-black hover:bg-white transition-colors duration-500"
+          className="rounded-[32px] border-[1px] border-gray-200 text-gray-100 px-[23px] py-[11px]
+        bg-gradient-to-r from-[#1E9AB0] to-[#1E9AB0]
+        hover:from-[#1E9AB0] hover:to-[#1E9AB0] 
+        bg-[length:0%_106%] hover:bg-[length:101%_106%]
+        bg-left bg-no-repeat
+        transition-[background-size] duration-500 ease-out
+        hover:text-white
+        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+        inline-flex items-center"
         >
           Learn More
         </Link>

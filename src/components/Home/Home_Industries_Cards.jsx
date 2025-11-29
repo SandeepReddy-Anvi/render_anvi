@@ -20,7 +20,7 @@ export const HomeIndustriesCard = () => {
 
   return (
  
-    <ul className="home-industry-cards-ul w-full  h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] m-0 lg:mx-auto   ">
+    // <ul className="home-industry-cards-ul w-full  h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] m-0 lg:mx-auto   ">
  
     <ul className="home-industry-cards-ul w-full h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] lg:mx-auto px-0 md:px-0 ml-[-10px]">
  
@@ -85,7 +85,6 @@ export const HomeIndustriesCard = () => {
           </li>
         );
       })}
-    </ul>
     </ul>
   );
 };

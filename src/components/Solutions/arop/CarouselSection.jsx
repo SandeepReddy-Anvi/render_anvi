@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { IconsObj } from "../../../utils/Iconify_icons";
+import { IconsObj  } from "../../../utils/Iconify_icons";
 
 const CarouselSection = () => {
   const slides = [
     {
       title: "Autonomous FOD Detection & Removal",
       description:
-        "Foreign Object Debris (FOD) is one of the most common yet dangerous risks on runways. AROP uses AI-powered cameras, sensors, and autonomous mobility platforms to constantly scan runways and taxiways. Any object detected—like loose bolts, stones, or metal pieces—is instantly identified, classified by risk level, and removed without disrupting flight operations. This ensures real-time protection against costly accidents.",
+        "Foreign Object Debris (FOD) is one of the most common yet dangerous risks on runways. AROP uses AI powered cameras, sensors, and autonomous mobility platforms to constantly scan runways and taxiways. Any object detected like loose bolts, stones, or metal pieces is instantly identified, classified by risk level, and removed without disrupting flight operations. This ensures real-time protection against costly accidents.",
       image: "/images/solutions/arop/slide1.webp",
     },
     {
@@ -47,21 +47,30 @@ const CarouselSection = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <section className="relative w-full px-4 sm:px-6 md:px-10 lg:px-14 py-12 md:py-16 lg:py-20 overflow-hidden">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-medium text-black mb-8">
-        Feature Highlights: How AROP Transforms Airports
-      </h2>
+    <section className="relative w-full  sm:px-6 md:px-10 lg:px-14 py-12 md:py-16 lg:py-20 overflow-hidden ">
+    <div className="mb-8 md:w-[800px] mx-auto text-center flex flex-col items-center">
+  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[32px] font-medium text-black mb-2">
+    Feature Highlights: How AROP Transforms Airports
+  </h2>
+
+  <h4>
+    AI-driven automation delivering safety, speed, and sustainability across every 
+    layer of airport operations — from FOD detection and runway inspection to 
+    perimeter surveillance and predictive maintenance.
+  </h4>
+</div>
+
+     
 
       <div
-        className="relative w-full bg-cover bg-center py-12 px-4 sm:px-6 md:px-10 lg:px-14 rounded-lg"
+        className="relative w-full bg-cover bg-center py-12 px-4 sm:px-6 md:px-10 lg:px-14 rounded-3xl"
         style={{ backgroundImage: `url("/images/solutions/arop/background.jpg")` }}
       >
-        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-medium text-white mb-8 text-center lg:text-left">
-          AI-powered Features For Safer & Smarter Airports.
-        </h3>
+        
 
         {/* SLIDER WRAPPER */}
-        <div className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl">
+        <div className="relative max-w-7xl mx-auto overflow-hidden rounded-3xl ">
+          
           <div
             className="flex transition-transform duration-700 ease-in-out will-change-transform"
             style={{
@@ -72,71 +81,95 @@ const CarouselSection = () => {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row items-start gap-12 lg:gap-24 flex-shrink-0 w-full bg-transparent text-white"
+                className="flex flex-col md:flex-row items-start gap-5   lg:gap-5  flex-shrink-0 w-full bg-transparent text-white"
                 style={{
                   minWidth: "100%",
                   transform: "translateZ(0)",
                 }}
               >
-                {/* LEFT TEXT */}
-                <div className="flex-1">
-                  <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-[26px] font-normal mb-4">
-                    {slide.title}
-                  </h4>
-                  <p className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-[22px] md:leading-[29px]">
-                    {slide.description}
-                  </p>
-                </div>
-
-                {/* RIGHT IMAGE + NAVIGATION */}
-                <div className="flex-1 flex flex-col items-center lg:items-end gap-4 w-full">
-                  <div className="w-full lg:max-w-[280px] overflow-hidden rounded-tr-3xl rounded-bl-3xl">
+                                {/* left IMAGE + NAVIGATION */}
+                <div className="flex-1 flex flex-col  lg:items-start ">
+                  <div className="w-full lg:max-w-[280px] overflow-hidden rounded-3xl ">
                     <img
                       src={slide.image}
                       alt={slide.title}
                       className="w-full h-auto object-cover block select-none"
                       style={{ display: "block" }}
                     />
+                 
                   </div>
 
-                  {/* Navigation */}
-                  <div className="flex flex-col sm:flex-row items-center gap-4 mt-4 pr-3">
-                    <div className="flex items-center gap-4">
+                
+                </div>
+                  {/* right TEXT */}
+                  <div className="flex-1 w-full ">
+                    <h4 className="text-2xl sm:text-3xl md:text-4xl lg:text-[26px] font-normal mb-4 ">
+                      {slide.title}
+                    </h4>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-[22px] md:leading-[29px]">
+                      {slide.description}
+                    </p>
+
+ 
+                  </div>
+                  
+                  
+
+              </div>
+              
+            ))}
+          </div>
+            <div className="  flex-wrap  ">
+  {/* Navigation */}
+                  <div className="flex flex-col sm:flex-row items-center gap-4 pr-3">
+                                                    {/* Slide Indicators */}
+<div className="flex items-center gap-3  ml-5 ">
+  {slides.map((_, i) => (
+    <div key={i} className="flex items-center gap-2">
+      {/* Number */}
+      <span
+        className={`text-sm tracking-wide  ${
+          i === currentSlide ? "font-bold text-white" : "text-[#CCCCCC]"
+        }`}
+      >
+        {String(i + 1).padStart(2,"0")}
+      </span>
+
+      {/* Line only for active slide */}
+      {i === currentSlide && (
+        <span className="w-12 h-[2px] bg-white inline-block"></span>
+      )}
+    </div>
+  ))}
+</div>
+                  </div>
+
+                         <div className="flex  gap-5  justify-end left-[300px] max-w-full mb-0.5 object-cover mr-7">
                       {/* Prev Arrow */}
                       <button
+                      
                         onClick={prevSlide}
-                        className="text-white w-8 sm:w-6 h-8 sm:h-6 rounded-full border border-white flex items-center justify-center"
+                        className="w-8 sm:w-6 bg-transparent h-8 sm:h-6  flex items-center justify-center"
                         aria-label="Previous Slide"
                       >
-                        <span className="rotate-[-90deg] inline-block">{IconsObj.arrow}</span>
+                        <div className="rotate-[-180deg] inline-block text-white ">{IconsObj.arrowc}</div>
                       </button>
 
-                      {/* Slide Indicators */}
-                      <div className="flex flex-wrap items-center gap-2">
-                        {slides.map((_, i) => (
-                          <span
-                            key={i}
-                            className={`h-0.5 w-3 rounded-full transition-all ${
-                              i === currentSlide ? "bg-[#1E9AB0]" : "bg-[#1E9AB066]"
-                            }`}
-                          />
-                        ))}
-                      </div>
+        
 
                       {/* Next Arrow */}
                       <button
                         onClick={nextSlide}
-                        className="text-white w-8 sm:w-6 h-8 sm:h-6 rounded-full border border-white flex items-center justify-center"
+                        className=" bg-transparent w-8 sm:w-6 h-8 sm:h-6    flex items-center justify-center"
                         aria-label="Next Slide"
                       >
-                        <span className="rotate-[90deg] inline-block">{IconsObj.arrow}</span>
+                        <div className="rotate-[0deg] inline-block text-white">{IconsObj.arrowc}</div>
                       </button>
                     </div>
+
                   </div>
-                </div>
-              </div>
-            ))}
-          </div>
+                    
+                  
         </div>
       </div>
     </section>
