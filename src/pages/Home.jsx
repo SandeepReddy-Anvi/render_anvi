@@ -83,7 +83,7 @@ const Home = () => {
         </section>
 
         {/* Next at Anvi */}
-        <section className="next-at-anvi w-full px-5 md:px-[60px] py-[50px] text-center xl:px-[100px] md:py-[80px]">
+        <section className="next-at-anvi max-w-[2000px] w-full px-5 md:px-[60px] py-[50px] text-center xl:px-[100px] md:py-[80px]">
           <h2 className="text-[38px] sm:text-[48px] mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
             <span className="text-[43px] sm:text-[53px] font-bauhaus">
               anvi
@@ -117,13 +117,13 @@ const Home = () => {
               <img
                 src="/images/home/robo_img.jpg"
                 alt="Surveillance Robot"
-                className="w-full h-[400px] md:h-full object-cover rounded-xl mt-3"
+                className="w-full max-md:h-[211px] h-[400px]  md:h-full object-cover rounded-xl mt-3 sm:h-auto"
               />
             </div>
 
             {/* Right stacked cards */}
-            <div className="grid grid-rows-2 gap-[20px]">
-              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start ">
+            <div className="grid grid-rows-auto gap-[20px] h-auto">
+              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col  text-start ">
                 <div className="grid grid-cols-2 items-center ">
                   <p className="text-[39px] font-medium font-inter text-start">02</p>
                   <a 
@@ -142,10 +142,10 @@ const Home = () => {
                     and future-ready infrastructure.
                   </p>
                 </div>
-                <div className="w-full bg-black rounded-lg mt-2"> <img
+                <div className="w-full bg-black rounded-lg mt-2 min-h-[211px] max-h-[300px] overflow-hidden h-auto"> <img
                   src="/images/home/galactica.png"
                   alt="Anvi Space"
-                  className="w-full h-[211px] object-contain rounded-xl mt-3"
+                  className="w-full h-auto  rounded-xl mt-3"
                 />
 
                 </div>
@@ -170,7 +170,7 @@ const Home = () => {
                 <img
                   src="/images/solutions/solutionCard-2.png"
                   alt="Project Shudhi"
-                  className="w-full h-[211px] object-cover rounded-xl mt-3"
+                  className="w-full h-auto object-cover rounded-xl mt-3"
                 />
               </div>
             </div>

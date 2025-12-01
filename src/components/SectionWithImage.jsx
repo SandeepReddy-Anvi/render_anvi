@@ -8,7 +8,7 @@ const SectionWithImage = ({
   subtitleLineColor = "white",
 }) => {
   return (
-    <div className="relative w-screen max-w-[1600px] max-h-[600px] mx-auto rounded-[15px] overflow-hidden font-inter">
+    <div className="relative w-screen max-w-[1600px] max-h-[600px] mx-auto   overflow-hidden font-inter">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img

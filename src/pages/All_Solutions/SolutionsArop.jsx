@@ -156,30 +156,14 @@ By unifying these capabilities, AROP transforms airport operations from reactive
                     In Delhi, AROP reduced runway inspection time from 2 hours to 15 minutes. In Mumbai, it continues to operate seamlessly during heavy monsoons and low visibility. In Nagpur, it prevents bird and animal intrusions. AROP proves its reliability, adaptability, and efficiency across diverse operational and environmental conditions.
 
         </p>
-        <UseCasesIndia  />
+        <UseCasesIndia className="min-w" />
       </section>
 
       {/* Section 6 - FAQ */}
- <section className="px-4 py-12 md:py-[90px] bg-[#F5F4F8] ">
-  <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-16 md:gap-[64px]">
-    
-    {/* LEFT TEXT */}
-    <div className="flex flex-col gap-4 md:gap-[16px] w-full md:w-[400px] font-['Wix_Madefor_Display'] text-[#2B303B] ml-5">
-      <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[46px] leading-[60px]">
-        Frequently Asked Questions ??
-      </p>
-      <p>
-        Find quick answers to common questions about AROP and its capabilities.
-      </p>
-    </div>
-
-    {/* RIGHT FAQ */}
-    <div className="w-full md:w-[900px]">
-      <FAQLayout faqs={SolutionAropFaqs} />
-    </div>
-
-  </div>
-</section>
+ {/* Section 6 - FAQ */}
+      <div >
+        <FAQLayout faqs={SolutionAropFaqs} />
+      </div>
 
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>

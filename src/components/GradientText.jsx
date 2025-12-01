@@ -9,7 +9,7 @@ const GradientText = (props) => {
   } = props;
 
     return (
-        <div className={`flex flex-col font-['Wix_Madefor_Display'] gap-[17px] py-8 md:py-14 py:mb-20 px-0 md:px-[80px] ${className}`}>
+        <div className={`flex flex-col font-['Wix_Madefor_Display'] gap-[17px] py-8 md:py-14 py:mb-20 px-4 md:px-[80px] ${className}`}>
       
             {/* Normal Title */}
             {ourTitle && (

@@ -12,7 +12,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
       <motion.footer
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{  amount: 0.20, margin: "-10% 0px" }}
+        viewport={{  amount: 0.20, margin: " 0px" }}
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
         className="bg-[#0B0B0B] text-white font-manrope"
       >
