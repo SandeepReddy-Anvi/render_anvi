@@ -255,26 +255,57 @@ const Careers = () => {
           gradientTitle="The People Behind the Innovation."
           ourDescription="At Anvi, our team powers every breakthrough. Engineers, designers, and creators turn bold ideas into intelligent systems, advancing cities, learning together, pushing limits, and shaping the future as one team."
         />
+<div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16">
 
-        <div className="relative w-full min-h-[70vh] md:min-h-[80vh] lg:min-h-[90vh] py-5 md:py-8 lg:py-16">
-          {/* Background Image */}
-          <div className="absolute inset-0">
-            <img 
-              src="/images/careers/team.jpg"
-              className="h-full w-full object-cover rounded-[20px] md:rounded-[30px]"
-              alt="Our Team"
-            />
-          </div>
+  {/* Background Image */}
+  <div className="absolute inset-0 overflow-hidden z-0">
+    <img
+      src="/images/careers/team.jpg"
+      alt="Our Team"
+      className="
+        w-full h-full object-cover
+        rounded-[16px]
+        sm:rounded-[20px]
+        md:rounded-[28px]
+        lg:rounded-[32px]
+        max-md:object-contain
+      "
+      draggable={false}
+    />
+  </div>
 
-          {/* Overlay Card */}
-          <div className="absolute inset-0 flex items-end justify-center md:translate-y-8 lg:translate-y-12">
-            <div className="bg-white rounded-3xl shadow-md px-6 py-6 md:px-24 md:py-10 max-w-[700px] w-[90%] text-center">
-              <p className="text-2xl md:text-3xl lg:text-4xl text-[#222222] font-['Wix_Madefor_Display'] font-medium leading-snug">
-                The Core Values That Shape Everything We Do
-              </p>
-            </div>
-          </div>
-        </div>
+  {/* Overlay Card */}
+  <div className="absolute inset-0 flex items-end justify-center z-10">
+    <div
+      className="
+        w-[90%]
+        sm:w-[85%]
+
+        md:w-[70%]
+        lg:w-[60%]
+
+        bg-white/95 backdrop-blur-sm
+        rounded-2xl sm:rounded-3xl lg:rounded-[32px]
+
+        px-5 py-6 
+        sm:px-8 sm:py-7
+        md:px-12 md:py-9
+        lg:px-16 lg:py-12
+
+        translate-y-3
+        sm:translate-y-5
+        md:translate-y-10
+      "
+    >
+      <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#222]  text-center font-['Wix_Madefor_Display'] font-medium leading-tight">
+        The Core Values That Shape Everything We Do
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
       </section>
 
 
