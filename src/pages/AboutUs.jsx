@@ -1,5 +1,6 @@
 import { ContentCardUl } from "../components/ContentCardUl";
 import Footer from "../components/footer";
+import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
 import TimelineSection from "../components/TimelineSection";
 import { mainPagesLinksList } from "../data/PagesLinkList";
@@ -41,22 +42,33 @@ const About = () => {
         
         descriptionWidth="450px"
       />
+      <div className=" items-center justify-center content-center"> 
+       
+
+        <GradientText
+         ourTitle="About Us"
+        gradientTitle="Engineering Tomorrow. Empowering Today."
+        ourDescription=" Every leap forward begins with a bold idea. At Anvi, we don’t just imagine the future - we engineer it. We build intelligent systems that make cities smarter, safer, and more connected. For us, innovation isn’t just about what’s next - it’s about creating impact today."
+    At
+        />    
+      </div>
+  
 
       {/* section 2 */}
       {/* Vision, Mission, Value Section */}
-      <section className="relative w-full px-8 sm:px-10 lg:px-[100px] py-[80px] sm:py-[100px] bg-[#FCFCFC] font-dm-sans from-white to-gray-50">
+      <section className="relative w-screen h-full   bg-[#FCFCFC] font-dm-sans from-white to-gray-50">
         <ContentCardUl infoList={aboutCardList} />
       </section>
 
       {/* section 3 */}
       <section className="w-full bg-gradient-to-b from-[#F4F3F7] to-[#FCFCFC] px-8 lg:px-20 py-[100px]">
         {/* Heading Section */}
-        <div className="flex-col sm:flex-row justify-center font-dm-sans">
-          <div className="flex max-md:flex-col flex-row gap-6 md:pl-[33px] max-w-[1161px] flex-wrap place-items-center">
-            <p className="w-full max-md:text-center md:w-1/2 max-w-[583px] text-[#121212] font-normal leading-[50.569px] text-3xl sm:text-3xl md:text-4xl lg:text-[42px]">
-              Where <br /> Innovation Meets Purpose
+        <div className="  sm:flex-row md:flex-row items-center justify-center   font-dm-sans text-clip">
+          <div className="   max-w-[1161px] ">
+            <p className="w-full max-md:text-center  text-center text-[#121212] font-normal leading-[50.569px] text-3xl sm:text-3xl md:text-4xl lg:text-[42px]">
+              Where Innovation Meets Purpose
             </p>
-            <p className="w-full max-md:text-center md:w-1/2 md:max-w-[50%] flex-1 text-[#465455] font-normal leading-[28px] text-[16px]">
+            <p className="w-full  text-center justify-center ">
               At Anvi, transforming bold ideas into impactful technologies that
               empower industries, inspire communities, and create a sustainable
               future.
@@ -67,14 +79,14 @@ const About = () => {
         {/* Image Grid Section */}
         <div className="flex flex-col gap-6 mt-[50px] lg:mt-[107.03px]">
           {/* Row 1: Large + Small */}
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-6">
             {/* Large Card */}
             <div className="relative group overflow-hidden rounded-2xl shadow-lg h-[351px]">
               <img
                 loading="lazy"
                 src="/images/about/about3.1.webp"
                 alt="Technological Excellence"
-                className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
+                className="w-full h-full object-cover   transition-all duration-300"
               />
               <div className="absolute inset-0 group-hover:bg-[#1E1E1E99] transition-all duration-300 bg-[#1E1E1EE5] flex flex-col justify-end p-8 text-white">
                 <h3 className="text-[30px] font-dm-sans font-normal mb-2">
@@ -108,7 +120,7 @@ const About = () => {
           </div>
 
           {/* Row 2: Small + Large */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_1.5fr] gap-6">
             {/* Small Card */}
             <div className="relative overflow-hidden rounded-2xl group shadow-lg h-[351px]">
               <img

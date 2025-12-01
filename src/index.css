@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
 
 @font-face {
-  font-family: 'Bauhaus';
-  src: url('/fonts/BauhausRegular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Bauhaus';
+    src: url('/fonts/BauhausRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @tailwind base;
@@ -25,14 +25,14 @@ body {
     max-width: 2400px;
     max-width: 100%;
     margin: auto;
-    height: auto;
+    min-height: auto;
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 main {
     width: 100%;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     max-width: 1800px;
     max-width: 100%;
     margin: auto;
@@ -47,36 +47,39 @@ main {
 
 /* For Chrome, Edge, and Safari */
 body {
-    scrollbar-width: thin;
-    scrollbar-color: #1E9AB0 transparent;
+    --sb-track-color: transparent;
+    --sb-thumb-color: gray;
+    --sb-size: 5px;
 }
 
 body::-webkit-scrollbar {
-    width: 10px;
-    height: 6px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: #1E9AB0;
-    border-radius: 10px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background-color: #1E9AB0;
+    width: var(--sb-size)
 }
 
 body::-webkit-scrollbar-track {
-    background: transparent;
+    background: var(--sb-track-color);
+    border-radius: 10px;
 }
-body::-webkit-scrollbar-corner {
-    background: transparent;
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 10px;
+
 }
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
 /* Header */
 .currentPageLink {
     color: #1E9AB0 !important;
     font-weight: 500 !important;
     transform: scale(1.1) !important;
 }
+
 @media screen and (max-width: 768px) {
     .footer-contact {
         margin-inline: auto !important;
@@ -147,11 +150,13 @@ body::-webkit-scrollbar-corner {
 .link-bg-icon:hover {
     box-shadow: 0px 8px 20px 0px #1E9AB052;
     transform: scale(1.02);
+
     >i {
         transform: scale(1.15) translateX(3px) rotate(90deg);
     }
 }
-.footerUpBox-iconlink:hover{
+
+.footerUpBox-iconlink:hover {
     background-color: #1E9AB0 !important;
     color: #fff !important;
 }
@@ -160,7 +165,7 @@ body::-webkit-scrollbar-corner {
     width: 0px;
 }
 
-.home-industry-cards-ul{
+.home-industry-cards-ul {
     width: 1600px;
     padding: 50px;
     padding-right: 80px;
@@ -168,6 +173,7 @@ body::-webkit-scrollbar-corner {
     overflow-y: hidden;
     scrollbar-width: none;
 }
+
 @media screen and (max-width: 1100px) {
     .home-industry-cards-ul {
         width: 100vw;
@@ -178,13 +184,13 @@ body::-webkit-scrollbar-corner {
 @media screen and (min-width: 1100px) {
     .home-industry-cards-ul {
         transform: translateX(0px);
-        padding-right:0 !important;
+        padding-right: 0 !important;
         width: 1080px !important;
         margin: auto !important;
     }
 }
 
- 
+
 .active-home-industry-card {
     >div:nth-child(2) {
         animation: active-industry-card 0.5s ease-in-out 0s 1 forwards;
@@ -192,16 +198,21 @@ body::-webkit-scrollbar-corner {
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
     }
 }
-@keyframes active-industry-card{
-    0%{opacity: 0;transform: translateY(10px)}
-    100%{opacity: 1;transform: translateY(0px)}
+
+@keyframes active-industry-card {
+    0% {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px)
+    }
 }
 
 @media screen and (min-width: 768px) {
-  .content-Card-ul li:nth-child(even) {
-    flex-direction: row-reverse !important;
-  }
+    .content-Card-ul li:nth-child(even) {
+        flex-direction: row-reverse !important;
+    }
 }
-
- 
- 
