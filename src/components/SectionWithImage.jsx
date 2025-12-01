@@ -8,27 +8,28 @@ const SectionWithImage = ({
   subtitleLineColor = "white",
 }) => {
   return (
-    <div className="relative w-screen max-w-[1600px] mx-auto font-inter">
+    <div className="relative w-screen max-w-[1600px] max-h-max lg:max-h-[600px] mx-auto rounded-[15px] overflow-hidden font-inter">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           loading="lazy"
           src={backgroundImage}
           alt={`${title} background`}
-          className="w-full h-full object-cover opacity-80  rounded-[15px]"
+          className="w-full h-full object-cover opacity-80"
         />
       </div>
 
       {/* Overlay for better text visibility */}
-      <div className="absolute inset-0 bg-[#02102DCC] rounded-2xl"></div>
+      <div className="absolute inset-0 bg-[rgba(0,0,0,0.60)] bg-blend-multiply"></div>
+      <div className="absolute z-1 inset-0 bg-[#02102DCC] opacity-60 bg-blend-multiply"></div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col  rounded-[15px] justify-center max-md:place-items-center md:flex-row px-[15px] md:px-[25px] lg:px-[50px] py-[70px] gap-[100px] max-lg:gap-[20px]">
+      <div className="relative z-10 flex flex-col justify-center max-md:place-items-center md:flex-row px-[15px] md:px-[25px] lg:px-[50px] py-[70px] gap-[100px] max-lg:gap-[20px]">
         {/* Left Box */}
-        <div className="bg-[#00000080] text-white px-[40px] py-[80px] rounded-2xl max-w-full md:max-w-md">
-          <h2 className="text-2xl font-bold mb-2 uppercase">{title}</h2>
+        <div className="bg-[#00000080] text-white px-[40px] py-[80px] rounded-2xl max-w-full md:max-w-md flex flex-col justify-start align-middle gap-[20px]">
+          <h2 className="text-2xl font-bold uppercase">{title}</h2>
           <span
-            className="block w-[269px] h-[6px] mb-2"
+            className="block w-full max-w-[269px] h-[6px]"
             style={{ backgroundColor: subtitleLineColor }}
           ></span>
           <p className="text-[15px] leading-relaxed">{description}</p>
@@ -36,12 +37,12 @@ const SectionWithImage = ({
 
         {/* Right Column */}
         {points.length > 0 && (
-          <div className="flex flex-col w-fit max-md:w-[80%] text-[18px] font-normal leading-[20px] justify-center text-white gap-4">
+          <div className="flex flex-col w-fit max-md:w-[80%] text-[18px] font-normal leading-[20px] justify-evenly text-white gap-4">
             {points.map((point, index) => (
               <React.Fragment key={index}>
                 <p>{point}</p>
                 {index !== points.length - 1 && (
-                  <span className="block w-full h-[1px] overflow-hidden bg-white"></span>
+                  <span className="block w-full h-[0.5px] overflow-hidden bg-white"></span>
                 )}
               </React.Fragment>
             ))}
@@ -49,7 +50,6 @@ const SectionWithImage = ({
         )}
       </div>
     </div>
-
   );
 };
 

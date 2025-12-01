@@ -54,7 +54,7 @@ const SolutionsArop = () => {
         </div>
 
         {/* Right image */}
-        <div className="flex-1 flex justify-center md:justify-end mt-6 md:mt-0">
+        <div className="flex-1 flex justify-center md:justify-end mt-6 md:mt-0 object-cover lg:object-cover">
           <img
             src="/images/solutions/arop/arop2.webp"
             alt="AROP Overview"
@@ -125,13 +125,12 @@ const SolutionsArop = () => {
         </div>
 
         <p className="pt-[56px] text-[16px] sm:text-[18px] leading-[29.25px] md:pr-[110px]">
-          By unifying these capabilities, AROP transforms airport operations from reactive and manual checks into a proactive, always-on safety system. The result is a platform that enhances safety, efficiency, reduces costs, and ensures compliance with global aviation regulations (ICAO, FAA, DGCA).
-        </p>
+By unifying these capabilities, AROP transforms airport operations from reactive and manual checks into a proactive, always-on safety system. The result is a platform that not only enhances safety and operational efficiency, but also significantly reduces costs and ensures compliance with global aviation regulations (ICAO, FAA, DGCA).        </p>
       </section>
 
       {/* Section 4 */}
       <section className="p-6 md:py-[100px] md:px-[50px] lg:px-[110px] font-dm-sans">
-        <p className="text-[28px] sm:text-[32px] mb-4 md:mb-6">Benefits</p>
+        <p className="text-[48px] font-wix font-medium   sm:text-[32px] mb-4 md:mb-6">Benefits Of AROP</p>
         <p className="text-base md:text-[18px] font-normal text-[#282828] mb-6 md:mb-8">
           Airports today need more than traditional safety checks—they need
           intelligent, continuous, and proactive solutions. Anvi Runway Ops
@@ -148,23 +147,23 @@ const SolutionsArop = () => {
       <CarouselSection />
 
       {/* Section 5 - Use Cases */}
-      <section className="px-6 md:px-[114px] py-12 md:py-[90px] bg-[#F3F4F64D] text-center font-dm-sans">
-        <p className="text-3xl md:text-[48px] font-normal mb-12 md:mb-[47px]">
+      <section className=" md:px-[50px]  md:py-[60px]   bg-[#F3F4F64D]  text-start font-dm-sans p-10">
+        <p className="text-3xl md:text-[48px] font-normal mb-4 md:mb-[27px]">
           Use Cases Across India
+
         </p>
-        <UseCasesIndia />
+        <p className=" font-dm-sans text-justify   font-normal mb-12 ]">
+                    In Delhi, AROP reduced runway inspection time from 2 hours to 15 minutes. In Mumbai, it continues to operate seamlessly during heavy monsoons and low visibility. In Nagpur, it prevents bird and animal intrusions. AROP proves its reliability, adaptability, and efficiency across diverse operational and environmental conditions.
+
+        </p>
+        <UseCasesIndia className="min-w" />
       </section>
 
       {/* Section 6 - FAQ */}
-      <section className="px-4 py-12 md:py-[90px] flex flex-col items-center justify-center gap-16 md:gap-[64px] bg-[#F5F4F8]">
-        {/* <div className="flex flex-col gap-4 md:gap-[16px] w-full font-['Wix_Madefor_Display'] text-[#2B303B] text-center"> */}
-        <div className="flex flex-col gap-4 md:gap-[16px] w-full font-['Wix_Madefor_Display'] text-[#2B303B] text-center">
-          <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[46px] leading-[60px]">
-            Frequently Asked Questions
-          </p>
-        </div>
+ {/* Section 6 - FAQ */}
+      <div >
         <FAQLayout faqs={SolutionAropFaqs} />
-      </section>
+      </div>
 
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </div>

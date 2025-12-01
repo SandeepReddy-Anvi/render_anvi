@@ -2,9 +2,12 @@ import { useCallback, useState } from "react";
 import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
+import { mainPagesLinksList } from "../data/PagesLinkList";
 import { MapPin, Mail, Clock } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
+import GradientText from "../components/GradientText";
+import { IconsObj } from "../utils/Iconify_icons";
 import { mailBackendUrl } from "../data/MailBackendUrl";
 
 const initialFormData = {
@@ -30,28 +33,16 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
-    const contactFormData = new FormData();
-    contactFormData.append("FullName", data.Name);
-    contactFormData.append("Email", data.Email);
-    contactFormData.append("Subject", data.Subject);
-    contactFormData.append("Message", data.Message);
-    contactFormData.append("Website", "Anvi.co");
-    // console.log("data : ", contactFormData, data)
-
-    // url
-    const api = mailBackendUrl.contact;
-    // console.log('api : ', api )
+    const api = import.meta.env.VITE_MAIL_API_CONTACT;
+    console.log("Contact API:", api);
     setLoading(true);
     setFeedback({ type: "", message: "" });
 
     // FIX: Add await here
     try {
-      const resp = await axios.post(api, contactFormData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      console.log("Response:", resp.data);
+      // await axios.post(api, formData);
+      const resp = await axios.post(api, data);
+      console.log('Response:', resp.data);
       setFeedback({
         type: "success",
         message: "✅ Message sent successfully!",
@@ -104,11 +95,17 @@ export const ContactUs = () => {
           descriptionWidth="650px"
         />
 
-        {/* Section2 */}
-        <div className="px-[10px] py-[10px] md:px-[30px] md:py-[40px] lg:px-[80px] lg:py-[80px]">
+        <GradientText
+          ourTitle = "Connect With Anvi"
+          gradientTitle = "Let’s Build What’s Next, Together."
+          ourDescription ="Whether you’re exploring solutions, seeking partnerships, or want to know how our technology fits your needs  our team is ready to connect. Let’s build the future together, solve meaningful problems, and create lasting impact."
+        />
+
+        {/* Section3 */}
+        <div className="w-full px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] ">
           <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] font-dm-sans">
             {/* Contact Info */}
-            <div className="p-[20px] md:p-[30px] lg:p-[60px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[520px] flex-shrink-0">
+            <div className="p-[20px] md:p-[30px] lg:p-[50px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[500px] flex-shrink-0">
               <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[38px] font-normal text-[#333333]">
                 Contact Information
               </p>
@@ -147,7 +144,7 @@ export const ContactUs = () => {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="flex-1 flex flex-col gap-4 w-full mx-auto pt-5 py-10 md:py-10 md:w-1/2 max-w-[600px] flex-shrink-0 place-content-center"
+              className="flex-1 flex flex-col gap-4 w-full mx-auto md:w-1/2 max-w-[600px] flex-shrink-0 place-content-center"
             >
               {/* Feedback Message */}
               {feedback.message && (
@@ -221,20 +218,24 @@ export const ContactUs = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`mt-4 px-6 py-3 bg-[#1E9AB0] text-white rounded-[12px] font-medium ${
+                className={`group link-bg-icon w-[200px] ${
                   loading
                     ? "bg-gray-400 cursor-not-allowed"
-                    : "bg-[#1E9AB0] hover:bg-[#167f93]"
+                    : "link-bg-icon"
                 }`}
               >
-                {loading ? "Sending..." : "Send a Message"}
+                {loading ? ("Sending...") : 
+                  (<span className="flex items-center gap-2 ">
+                    Send a Message <i className="rotate-45 transform rotate-0 transition-transform duration-300 group-hover:rotate-90">{IconsObj.arrow}</i>
+                  </span>)
+                }
               </button>
             </form>
           </div>
         </div>
 
-        {/* Section 3 */}
-        <section className="w-full max-w-[1000px] px-8 flex flex-col items-center justify-center text-center gap-[56px]">
+        {/* Section 4 */}
+        <section className="w-full px-[20px] md:px-[40px] lg:px-[60px] py-4 md:py-[20px] lg:py-[40px] flex flex-col items-start justify-center gap-[35px]">
           <div className="font-['Wix_Madefor_Display']">
             <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] font-medium">
               Visit Our Office
@@ -245,7 +246,7 @@ export const ContactUs = () => {
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.053305362681!2d78.36793007385417!3d17.45716258344194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93cf9bc32c83%3A0x1e85e5cc49998439!2sProfound%20Builders!5e0!3m2!1sen!2sin!4v1760070770156!5m2!1sen!2sin"
-            className="w-full h-[450px] rounded-[12px] shadow-lg"
+            className="w-full h-[450px] rounded-[12px]"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
@@ -253,24 +254,12 @@ export const ContactUs = () => {
           ></iframe>
         </section>
 
-        {/* Section 4 — Questions */}
-        <section className="w-full px-5 py-[60px] md:px-[30px] lg:px-[80px] lg:py-[80px] flex flex-col items-center justify-center gap-[64px] font-['Wix_Madefor_Display'] text-center">
-          {/* Heading */}
-          <div className="flex flex-col gap-[16px] w-full max-w-[480px] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] px-4">
-            <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] leading-tight">
-              We’re Here to Help
-            </p>
-            <p className="text-[15px] sm:text-[16px] text-[#465455] font-normal leading-relaxed">
-              Find quick answers to common questions. Still need help? Our team
-              is here to support you anytime.
-            </p>
-          </div>
-
-          {/* FAQ Section */}
-          <div className="w-full max-w-[1000px] px-2 sm:px-4 md:px-6 text-left">
-            <FAQLayout faqs={ContactUsFaqs} />
-          </div>
+        {/* Section 5 — Questions */}
+        <section className="w-full">
+          <FAQLayout faqs={ContactUsFaqs} />
         </section>
+        
+      
       </main>
 
       {/* Footer */}

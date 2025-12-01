@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { SquareArrowOutUpRight } from 'lucide-react';
+import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
@@ -15,14 +16,20 @@ const footerUpBoxInfoObj = {
 const nextAtAnvi = {
   robotics: {
     imgUrl: "/images/home/robo_img.jpg",
-    title: "Anvi Robotics",
-    desc: "Witness the global launch of Anvi's Surveillance Robot on 30 June 2025...",
+    title: "Surveillance Robot",
+    desc: "Witness the global launch of Anvi’s Surveillance Robot, an advanced innovation under Anvi Robots, engineered to deliver intelligent security, autonomous monitoring, and precision performance. Launching on 26 January 2026.",
     link: mainPagesLinksList.Robotics,
+  },
+  Sewage: {
+    imgUrl: "/images/solutions/solutionCard-2.png",
+    title: "Sewage Cleaning Robot",
+    desc: "Introducing Anvi’s Sewage Cleaning Robot under Bot Factory — an AI-powered system that predicts, prevents, and cures blockages through robotic automation, ensuring safe, efficient, and sustainable urban sanitation for smart cities.",
+    link: mainPagesLinksList.Solutions,
   },
   space: {
     imgUrl: "/images/home/space.webp",
     title: "Anvi Space",
-    desc: "At Anvi Space, we design technologies expanding humanity’s reach.",
+    desc: "Anvi Space is pioneering advanced space robotics and intelligent satellite systems to ensure sustainable orbital operations, extend mission lifetimes, reduce debris, and build a self-reliant future space ecosystem.",
     link: mainPagesLinksList.Space,
   },
 };
@@ -30,7 +37,7 @@ const nextAtAnvi = {
 const Home = () => {
   return (
     <>
-      <main>
+      <main> 
         {/* Hero Section */}
         <HeroSection
           backgroundImage="/videos/Heroo_org.mp4"
@@ -58,7 +65,7 @@ const Home = () => {
         </section>
 
         {/* Industries */}
-        <section className="w-full  px-5 py-[100px] text-center xl:px-[118px] md:py-[102px]  font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
+        <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
           <h2 className="text-[38px] sm:text-[48px] mb-[16px] text-[#282828]">
             Industries
           </h2>
@@ -76,47 +83,99 @@ const Home = () => {
         </section>
 
         {/* Next at Anvi */}
-        <section className="next-at-anvi w-full px-5 py-[50px] text-center xl:px-[118px] md:py-[80px]">
+        <section className="next-at-anvi max-w-[2000px] w-full px-5 md:px-[60px] py-[50px] text-center xl:px-[100px] md:py-[80px]">
           <h2 className="text-[38px] sm:text-[48px] mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
             <span className="text-[43px] sm:text-[53px] font-bauhaus">
               anvi
             </span>
           </h2>
           <p className="text-[18px] text-[#4C4C4C] mb-[30px] md:mb-[64px] font-[400] leading-[24px] text-center font-['Wix_Madefor_Display']">
-            At anvi, our engineers don’t work by the clock - they work by
-            vision.
+            At anvi, our engineers don’t work by the clock - they work by vision. Relentlessly innovating, designing, and building what’s next. 'Next at anvi' is where tomorrow’s breakthroughs begin - and the future takes shape.
           </p>
           
-          <div className="w-full m-auto mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4">
-            {Object.keys(nextAtAnvi).map((each) => (
-              <div
-                key={nextAtAnvi[each].title}
-                className="relative w-full max-w-[480px] group mx-auto overflow-hidden"
-              >
-                {/* Image */}
-                <img
-                  src={nextAtAnvi[each].imgUrl}
-                  alt={nextAtAnvi[each].title}
-                  className="w-full h-[320px] md:h-[500px] object-cover object-"
-                />
+          <div className="w-full m-auto md:mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4">
+            {/* Left big card */}
+            <div className="flex flex-col justify-between h-full md:row-span-2 bg-[#F4F3F7] shadow rounded-2xl p-4 text-start">
+              <div className="grid grid-cols-2 items-center">
+                <p className="text-[39px] font-medium font-inter text-start">01</p>
+                <a 
+                  href={pagesLinksList.Robotics}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <SquareArrowOutUpRight className="justify-self-end" />
+                </a>
+              </div>
+              <span className="h-[2px] bg-[#00000066] my-1"></span>
+              <div>
+                <p className="font-semibold text-[19px] mt-2 font-['Wix_Madefor_Display']">Surveillance Robot</p>
+                <p className="text-[#000000] mt-1 font-inter">
+                  Anvi’s Surveillance Robot delivers intelligent security, autonomous monitoring,
+                  and precision performance launching 30 June 2025.
+                </p>
+              </div>
+              <img
+                src="/images/home/robo_img.jpg"
+                alt="Surveillance Robot"
+                className="w-full max-md:h-[211px] h-[400px]  md:h-full object-cover rounded-xl mt-3 sm:h-auto"
+              />
+            </div>
 
-                <div className="absolute inset-0 bg-[linear-gradient(179.68deg,rgba(0,0,0,0.33)_0.32%,rgba(0,0,0,0.94)_69.93%)] transform scale-y-0 origin-bottom transition-transform duration-500 group-hover:scale-y-100"></div>
-
-                {/* Overlay container */}
-                <div className="absolute bottom-0 left-0 w-full px-5 pb-5 flex flex-col items-start">
-                  {/* Title (always visible) */}
-                  <span className="text-white text-[22px] font-semibold font-dm-sans block">
-                    {nextAtAnvi[each].title}
-                  </span>
-
-                  {/* Description (hidden initially, slides down on hover) */}
-                  <p className="text-[#FFFFFFE5] text-[22px] font-medium font-dm-sans max-h-0 overflow-hidden transition-all duration-300 group-hover:max-h-40 mt-2 text-left">
-                    {nextAtAnvi[each].desc}
+            {/* Right stacked cards */}
+            <div className="grid grid-rows-auto gap-[20px] h-auto">
+              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col  text-start ">
+                <div className="grid grid-cols-2 items-center ">
+                  <p className="text-[39px] font-medium font-inter text-start">02</p>
+                  <a 
+                    href={pagesLinksList.Space}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <SquareArrowOutUpRight className="justify-self-end" />
+                  </a>
+                </div>
+                <span className="h-[2px] bg-[#00000066] my-1"></span>
+                <div>
+                  <p className="font-semibold text-[19px] mt-2 font-['Wix_Madefor_Display']">Anvi Space</p>
+                  <p className="text-[#000000] mt-1 font-inter">
+                    Anvi’s Galactica builds sustainable space systems through debris removal, recycling,
+                    and future-ready infrastructure.
                   </p>
                 </div>
+                <div className="w-full bg-black rounded-lg mt-2 min-h-[211px] max-h-[300px] overflow-hidden h-auto"> <img
+                  src="/images/home/galactica.png"
+                  alt="Anvi Space"
+                  className="w-full h-auto  rounded-xl mt-3"
+                />
+
+                </div>
+               
               </div>
-            ))}
+
+              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start">
+                <div className="grid grid-cols-2 items-center">
+                  <p className="text-[39px] font-medium font-inter text-start">03</p>
+                  <Link to={pagesLinksList.Solutions_Sewage}>
+                    <SquareArrowOutUpRight className="justify-self-end" />
+                  </Link>
+                </div>
+                <span className="h-[2px] bg-[#00000066] my-1"></span>
+                <div>
+                  <p className="font-semibold text-[19px] mt-2 font-['Wix_Madefor_Display']">Project Shudhi</p>
+                  <p className="text-[#000000] mt-1 font-inter">
+                    Project SHUDHI revolutionizes urban sanitation through AI-powered, autonomous,
+                    and sustainable robotic cleaning systems.
+                  </p>
+                </div>
+                <img
+                  src="/images/solutions/solutionCard-2.png"
+                  alt="Project Shudhi"
+                  className="w-full h-auto object-cover rounded-xl mt-3"
+                />
+              </div>
+            </div>
           </div>
+
 
           {/* Read All Button 
         <Button to={mainPagesLinksList.News} variant="secondary">

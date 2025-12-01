@@ -1,118 +1,158 @@
-import React from "react";
+ 
+import React, { useState } from "react";
+ 
 
 const BenefitsPage = () => {
+  const [activeTabs ,setactiveTabs] = useState(0);
+
   const benefits = [
     {
       id: 1,
       title: "Enhanced Safety",
-      description: `Airports face hidden dangers every single day - from a loose bolt on the runway to sudden bird 
-      intrusions. AROP works like a 24/7 guardian, constantly scanning runways and perimeters. By detecting 
-      and removing threats instantly, it prevents accidents before they happen. This means safer flights, 
-      protected aircraft, and greater passenger confidence`,
+      description: `Airports face unseen dangers every day — from a loose bolt on the runway to sudden bird 
+      intrusions that can endanger lives and cause costly damage. AROP acts as a 24/7 intelligent guardian, constantly monitoring every inch of the runway and its perimeter. Its advanced sensors and AI models detect and remove hazards instantly, minimizing the possibility of accidents before they happen. This continuous vigilance ensures
+       safer flights, protects multi-crore aircraft assets, and builds greater passenger trust in the airport’s operational integrity.`,
       image: "/images/solutions/arop/arop4.1.webp",
       reverse: false,
     },
     {
       id: 2,
       title: "Seamless Efficiency",
-      description: `Manual runway checks often mean flight delays, partial closures, or limited visibility inspections. With AROP, 
-      airports move from time-bound checks to continuous monitoring. Inspections that used to take hours can now be done in minutes, 
-      without halting runway activity. This ensures higher runway availability, faster turnarounds, and smoother passenger experiences.`,
+      description: `Manual runway checks often result in flight delays,
+       partial closures, and limited visibility inspections, especially during peak operations. These time-bound processes slow airport efficiency and increase downtime. With Anvi Runway Ops (AROP), airports shift to continuous, automated monitoring powered by AI and sensors that scan runways in real time without interruptions. Inspections that once took hours are now completed in minutes, ensuring greater runway 
+      availability, faster aircraft turnarounds, and smoother passenger experiences while maintaining consistent safety and reliability.`,
       image: "/images/solutions/arop/arop4.2.webp",
       reverse: true,
     },
     {
       id: 3,
       title: "Substantial Cost Savings",
-      description: `Every FOD incident, wildlife strike, or emergency repair costs airports and airlines crores of rupees. For example, a single engine 
-      damage can exceed ₹10 crore. AROP reduces such risks drastically, while predictive maintenance ensures that runways last longer. The result? 
-      Immediate savings from avoided incidents and long-term savings from extended infrastructure lif`,
+      description: `Every FOD incident, wildlife strike, or emergency runway repair costs airports and 
+      airlines crores of rupees. A single engine damage alone can exceed ₹10 crore. Anvi Runway Ops (AROP) minimizes these risks through continuous monitoring and early detection, preventing costly accidents and delays. Its predictive maintenance system extends runway life, reduces unplanned repairs, and lowers operational expenses. The result is immediate financial 
+      savings from avoided incidents and long-term value through improved asset durability and optimized maintenance cycles.`,
       image: "/images/solutions/arop/arop4.3.webp",
-      reverse: false,
+    
     },
     {
       id: 4,
       title: "Streamlined Compliance",
-      description: `Airports must follow global safety standards (ICAO Annex 14, FAA Part 139, DGCA requirements). 
-      AROP makes this simple by automatically recording all inspections, hazards, and responses. This creates a digital 
-      log that can be used for audits, safety reviews, and regulatory approvals, removing paperwork stress and reducing chances of non-compliance`,
+      description: `Airports must adhere to strict global safety standards such as ICAO Annex 14, 
+      FAA Part 139, and DGCA requirements. Anvi Runway Ops (AROP) simplifies this process through automated recording of all inspections, detections, and corrective actions. Each event is stored in a structured digital log that can be instantly accessed for audits, safety reviews, and regulatory submissions. This automation eliminates paperwork, minimizes human error, and significantly reduces the
+       risk of non-compliance while ensuring complete transparency and accountability in airport operations.`,
       image: "/images/solutions/arop/arop4.4.webp",
-      reverse: true,
+ 
     },
     {
       id: 5,
       title: "Eco-Friendly Efficiency",
-      description: `Airports are under pressure to reduce their carbon footprint. AROP supports this goal by operating on 
-      electric platforms instead of fuel-based vehicles. By avoiding emergency repairs and heavy machinery use, it also cuts 
-      down on unnecessary emissions. Over time, this leads to greener, cleaner, and more sustainable airport operations.`,
+      description: `Airports worldwide are increasingly focused on reducing their carbon footprint and operating more sustainably. 
+      Anvi Runway Ops (AROP) contributes to this mission by using electric-powered platforms in place of conventional fuel-based vehicles. Its predictive maintenance approach prevents emergency repairs and limits heavy equipment usage, cutting unnecessary emissions. Over time, AROP helps create cleaner, greener, and more energy-efficient
+       airport operations, aligning perfectly with global sustainability goals and next-generation environmental standards.`,
       image: "/images/solutions/arop/arop4.5.webp",
-      reverse: false,
+  
     },
     {
       id: 6,
       title: "Universal Adaptability",
-      description: `Whether it is a large international hub like Delhi or a smaller regional airport, AROP is modular and scalable. 
-      It can be customized based on the airport’s environment handling high traffic in metros, monsoon conditions in coastal 
-      cities, or wildlife intrusions in regional airports. This flexibility makes it valuable for the entire aviation ecosystem`,
+      description: `Whether it’s a large international hub like Delhi or a smaller regional airport, Anvi Runway Ops (AROP) is designed to be fully modular and scalable. The system can be customized to match specific airport conditions — handling heavy traffic in metros, monsoon challenges in coastal regions, or wildlife activity in regional zones. This adaptability ensures that AROP delivers 
+      consistent safety, efficiency, and reliability, making it an essential solution across the entire aviation ecosystem.`,
       image: "/images/solutions/arop/arop4.6.webp",
-      reverse: true,
+     
     },
     {
       id: 7,
       title: "Future-Ready Technology",
-      description: `With AI, machine learning, and robotics at its core, AROP is designed for the future of aviation. Its predictive 
-      analytics help airports plan maintenance in advance, while its integration-first design ensures that one system manages all safety 
-      functions together. This makes AROP not just a solution for today, but a strategic investment for tomorrow.`,
+      description: `With AI, machine learning, and robotics at its foundation, Anvi Runway Ops
+       (AROP) represents the next era of intelligent airport management. Its advanced predictive analytics enable airports to anticipate and plan maintenance well in advance, preventing costly disruptions. Designed with an integration-first architecture, AROP unifies all safety operations—FOD detection, inspection, and surveillance—into a single smart system. This makes AROP not only a
+      cutting-edge solution for today’s challenges but also a strategic, future-ready investment for the evolving aviation industry.`,
       image: "/images/solutions/arop/arop4.7.webp",
-      reverse: false,
+  
     },
   ];
 
   return (
-    <div className="min-h-screen">
-      <div className="max-w-6xl mx-auto space-y-24 py-[64px] font-dm-sans">
-        {benefits.map((benefit) => (
-          <div
-            key={benefit.id}
-            className="flex flex-col items-center gap-12 lg:gap-0"
-          >
-            <div
-              className={`flex flex-col ${
-                benefit.reverse ? "md:flex-row-reverse" : "md:flex-row"
-              } items-center justify-between w-full gap-8 md:gap-12`}
-            >
-              {/* Text Content */}
-              <div className="flex-1 max-w-full md:max-w-[500px] px-4 md:px-0">
-                <p className="text-[16px] md:text-[18px] font-medium text-[#333333] mb-2">
-                  0.{benefit.id}
-                </p>
-                <h2 className="text-[32px] md:text-[44px] md:text-[32px] font-normal text-[#333333] mb-4">
-                  {benefit.title}
-                </h2>
-                <p className="text-[16px] sm:text-[18px] md:text-[16px] text-[#282828] font-normal leading-[24px] sm:leading-[28px] md:leading-[29px]">
-                  {benefit.description}
-                </p>
-              </div>
 
-              {/* Image */}
-              <div
-                className={`flex-1 flex w-full ${
-                  benefit.reverse ? "justify-start" : "justify-end"
-                }`}
-              >
-                <div className="rounded-[16px] overflow-hidden w-full sm:w-[350px] md:w-[450px] h-[350px] sm:h-[400px] md:h-[450px]">
-                  <img
-                    src={benefit.image}
-                    alt={benefit.title}
-                    className="w-full h-full object-cover scale-110"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className="">
+            
+    {/* MOBILE VERSION — ONLY shown below sm */}
+<div className="block sm:hidden w-full">
+  {benefits.map((Ben, i) => (
+    <div
+      key={i}
+      onClick={() => setactiveTabs(i)}
+      className="bg-[#F5F5F5] rounded-xl p-4 mb-3 cursor-pointer"
+    >
+      {/* Title */}
+      <h3 className="text-lg font-semibold">{Ben.title}</h3>
+
+      {/* Content when active */}
+      {activeTabs === i && (
+        <div className="mt-3">
+          <p className="text-[15px] text-gray-700 leading-6">
+            {Ben.description}
+          </p>
+
+          <img
+            src={Ben.image}
+            alt={Ben.title}
+            className="rounded-xl w-full h-auto mt-4"
+          />
+        </div>
+      )}
+    </div>
+  ))}
+</div>
+
+    <div className="hidden sm:flex flex-col md:grid-cols-1  md:flex-row bg-white p-8 rounded-2xl shadow gap-6 w-full ">
+      
+     
+     
+      {/* LEFT BUTTONS */}
+      <div className="flex flex-col gap-3 w-full md:w-1/4 lg:w-auto ">
+        {benefits.map((Ben, index) => (
+          <button
+            key={index}
+            onClick={() => setactiveTabs(index)}
+            className={`w-full text-left px-6 py-4 rounded-2xl transition-all
+              ${
+                activeTabs === index
+                  ? "bg-black text-white font-semibold shadow-lg"
+                  : "bg-[#F5F5F5] text-black"
+              }
+            `}
+          >
+            {Ben.title}
+          </button>
         ))}
       </div>
+
+         {/* RIGHT CONTENT */}
+      <div className="flex-1 bg-[#F9F9F9] p-8 rounded-2xl flex flex-col-1 gap-4 w-full  items-center justify-center content-center  flex-col sm:flex-row md:flex-row lg:w-full">
+<div className="w-full  sm:w-1/2 md:w-1/2 lg:w-1/2 ">
+   <h2 className="text-2xl font-semibold ">
+          {benefits[activeTabs].title}
+        </h2>
+
+        <p className="text-[14px] text-gray-700 leading-7 font-dm-sans h-auto mt-2">
+          {benefits[activeTabs].description}
+        </p>
+
+
+</div>
+       <div className="w-full sm:w-1/2  md:w-1/2   lg:w-1/2 "  >
+          <img
+          src={benefits[activeTabs].image}
+          className="rounded-2xl  h-auto   justify-center items-center  "
+          alt={benefits[activeTabs].image}
+        />
+
+       </div>
+      
+      </div>
+ 
     </div>
+          
+    </section>
   );
 };
 

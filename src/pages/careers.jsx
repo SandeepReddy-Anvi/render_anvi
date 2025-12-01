@@ -1,9 +1,11 @@
- 
+import { Link } from "react-router-dom";
+import { IconsObj } from "../utils/Iconify_icons";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import SectionWithImage from "../components/SectionWithImage";
 import { pagesLinksList } from "../data/PagesLinkList";
+import GradientText from "../components/GradientText";
  
 
  
@@ -49,15 +51,11 @@ const Careers = () => {
         title="Engineer the Future With Us"
         description="At Anvi, we're building tomorrow's technology today - and we want visionaries like 
             you to join us in creating the next generation of intelligent systems."
-        buttonText={footerUpBoxInfoObj.linkLabel}
-        buttonLink={footerUpBoxInfoObj.link}
         descriptionWidth="680px"
  
       />
 
-    
-
-      <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
+      {/* <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
         <div className="flex flex-col items-center text-center gap-[16px] font-['Wix_Madefor_Display'] mb-[76px]">
           <p className="text-[#000000] text-4xl sm:text-4xl md:text-4xl lg:text-[48px] font-normal">
             {cards.title}
@@ -161,13 +159,54 @@ const Careers = () => {
           <p className="mt-[11px] text-[16px] text-[#484848] text-justify">
             {cards[3].desc}
           </p>
-        </div> */}
+        </div> /} //commment
 
+        </div>
+      </section> */}
+
+      {/* Section 2 */}
+      <section className="relative w-full h-[100vh]">
+        <div className="absolute inset-0">
+          <img
+            src="/images/careers/career.png"
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* background overlay */}
+        <div className="absolute inset-0 bg-[rgba(0,0,0,0.62)] w-full h-full" />
+
+        {/* Content */}
+        <div className="absolute inset-0 flex items-center p-[20px] md:p-[30px] lg:p-[50px]">
+          <div className="p-6 sm:p-8 md:p-10 pr-10 lg:pr-[180px] bg-white max-w-[680px] rounded-lg">
+            <p className="font-arial text-[19px] text-[#5C5D5E]">ANVI CAREERS</p>
+
+            <h2 className="text-[#282828] font-['Wix_Madefor_Display'] font-medium text-[28px] md:text-[38px] lg:text-[44px]">
+              Together, We Build What’s Next
+            </h2>
+
+            <div className="h-[2px] lg:h-[4px] w-10 bg-[#282828]"></div>
+
+            <p className="my-6 text-[14px] text-[#282828] font-dm-sans font-regular">
+              At Anvi, innovation starts with people. We build intelligent systems
+              for smarter, safer cities and sustainability. Join us to create
+              technology that empowers lives and shapes tomorrow.
+            </p>
+
+            <Link to={pagesLinksList.Career_Openings} className="w-[220px] link-bg-icon">
+              Browse Openings <i className="rotate-45">{IconsObj.arrow}</i>
+            </Link>
+          </div>
         </div>
       </section>
 
+      <GradientText 
+        ourTitle ="Our Culture"
+        gradientTitle ="Driven by Purpose. United by Passion."
+        ourDescription = "At Anvi, culture is driven by curiosity, collaboration, and care. Diverse minds build meaningful innovation. Every voice matters as we create technology that improves lives and protects our planet."
+      />
 
-      {/* Section 3 Life at Anvi*/}
+      {/* Section 4 Life at Anvi*/}
       <div className="mb-10">
         <SectionWithImage
           title="Life At Anvi"
@@ -208,6 +247,85 @@ const Careers = () => {
 
       {/* Pravikaya Initiative 
       <PravikayaInitiative />*/}
+      
+      <section className="px-10 lg:px-[60px] overflow-hidden">
+
+        <GradientText 
+          ourTitle="Our Team"
+          gradientTitle="The People Behind the Innovation."
+          ourDescription="At Anvi, our team powers every breakthrough. Engineers, designers, and creators turn bold ideas into intelligent systems, advancing cities, learning together, pushing limits, and shaping the future as one team."
+        />
+<div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 overflow-hidden z-0">
+    <img
+      src="/images/careers/team.jpg"
+      alt="Our Team"
+      className="
+        w-full h-full object-cover
+        rounded-[16px]
+        sm:rounded-[20px]
+        md:rounded-[28px]
+        lg:rounded-[32px]
+        max-md:object-contain
+      "
+      draggable={false}
+    />
+  </div>
+
+  {/* Overlay Card */}
+  <div className="absolute inset-0 flex items-end justify-center z-10">
+    <div
+      className="
+        w-[90%]
+        sm:w-[85%]
+
+        md:w-[70%]
+        lg:w-[60%]
+
+        bg-white/95 backdrop-blur-sm
+        rounded-2xl sm:rounded-3xl lg:rounded-[32px]
+
+        px-5 py-6 
+        sm:px-8 sm:py-7
+        md:px-12 md:py-9
+        lg:px-16 lg:py-12
+
+        translate-y-3
+        sm:translate-y-5
+        md:translate-y-10
+      "
+    >
+      <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#222]  text-center font-['Wix_Madefor_Display'] font-medium leading-tight">
+        The Core Values That Shape Everything We Do
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+      </section>
+
+
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-6 md:gap-28 p-6 md:p-20 lg:p-24 font-['Wix_Madefor_Display']">
+        <div className="flex flex-col gap-4 text-[#282828] font-normal p-2">
+          <h2 className="text-[26px] md:pr-8 lg:pr-10">Innovate with Purpose</h2>
+          <p className="text-[14.4px]">We believe innovation should create real impact. At Anvi, every idea starts with purpose designing intelligent systems that make cities safer, smarter, and more sustainable.</p>
+        </div>
+
+        <div className="flex flex-col gap-4 text-[#282828] font-normal p-2">
+          <h2 className="text-[26px] md:pr-8 lg:pr-10">Collaborate to Grow</h2>
+          <p className="text-[14.4px]">Great ideas grow stronger together. Our people bring diverse skills and perspectives that fuel creativity, teamwork, and progress helping us build better, together.</p>
+        </div>          
+
+        <div className="flex flex-col gap-4 text-[#282828] font-normal p-2">
+          <h2 className="text-[26px] md:pr-8 lg:pr-16">Lead with Integrity</h2>
+          <p className="text-[14.4px]">Integrity is at the heart of everything we do. We act with honesty, responsibility, and transparency earning trust through every action and decision.</p>
+        </div>
+      </div>
+
 
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />

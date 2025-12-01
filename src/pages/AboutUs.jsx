@@ -1,8 +1,12 @@
 import { ContentCardUl } from "../components/ContentCardUl";
+import CareerAndGrowth from "../components/CareersAndGrowth";
+import Initiatives from "../components/Initiatives";
 import Footer from "../components/footer";
+import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
 import TimelineSection from "../components/TimelineSection";
 import { mainPagesLinksList } from "../data/PagesLinkList";
+ 
 
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
@@ -41,22 +45,33 @@ const About = () => {
         
         descriptionWidth="450px"
       />
+      <div className=" items-center justify-center content-center"> 
+       
+
+        <GradientText
+         ourTitle="About Us"
+        gradientTitle="Engineering Tomorrow. Empowering Today."
+        ourDescription=" Every leap forward begins with a bold idea. At Anvi, we don’t just imagine the future - we engineer it. We build intelligent systems that make cities smarter, safer, and more connected. For us, innovation isn’t just about what’s next - it’s about creating impact today."
+    At
+        />    
+      </div>
+  
 
       {/* section 2 */}
       {/* Vision, Mission, Value Section */}
-      <section className="relative w-full px-8 sm:px-10 lg:px-[100px] py-[80px] sm:py-[100px] bg-[#FCFCFC] font-dm-sans from-white to-gray-50">
+      <section className="relative w-screen h-full   bg-[#FCFCFC] font-dm-sans from-white to-gray-50">
         <ContentCardUl infoList={aboutCardList} />
       </section>
 
       {/* section 3 */}
       <section className="w-full bg-gradient-to-b from-[#F4F3F7] to-[#FCFCFC] px-8 lg:px-20 py-[100px]">
         {/* Heading Section */}
-        <div className="flex-col sm:flex-row justify-center font-dm-sans">
-          <div className="flex max-md:flex-col flex-row gap-6 md:pl-[33px] max-w-[1161px] flex-wrap place-items-center">
-            <p className="w-full max-md:text-center md:w-1/2 max-w-[583px] text-[#121212] font-normal leading-[50.569px] text-3xl sm:text-3xl md:text-4xl lg:text-[42px]">
-              Where <br /> Innovation Meets Purpose
+        <div className="  sm:flex-row md:flex-row items-center justify-center   font-dm-sans text-clip">
+          <div className="   max-w-[1161px] text-center mx-auto ">
+            <p className="w-full max-md:text-center  text-center text-[#121212] font-normal leading-[50.569px] text-3xl sm:text-3xl md:text-4xl lg:text-[42px]">
+              Where Innovation Meets Purpose
             </p>
-            <p className="w-full max-md:text-center md:w-1/2 md:max-w-[50%] flex-1 text-[#465455] font-normal leading-[28px] text-[16px]">
+            <p className="w-full  text-center justify-center ">
               At Anvi, transforming bold ideas into impactful technologies that
               empower industries, inspire communities, and create a sustainable
               future.
@@ -64,92 +79,102 @@ const About = () => {
           </div>
         </div>
 
-        {/* Image Grid Section */}
+        {/* Image Grid Section   */}
         <div className="flex flex-col gap-6 mt-[50px] lg:mt-[107.03px]">
           {/* Row 1: Large + Small */}
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr] gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-6">
             {/* Large Card */}
-            <div className="relative group overflow-hidden rounded-2xl shadow-lg h-[351px]">
-              <img
-                loading="lazy"
-                src="/images/about/about3.1.webp"
-                alt="Technological Excellence"
-                className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
-              />
-              <div className="absolute inset-0 group-hover:bg-[#1E1E1E99] transition-all duration-300 bg-[#1E1E1EE5] flex flex-col justify-end p-8 text-white">
-                <h3 className="text-[30px] font-dm-sans font-normal mb-2">
-                  Technological Excellence
+             <div className="relative group  p-2 overflow-hidden rounded-2xl shadow-xl h-[351px]  content-center  ">
+               <h3 className="text-[30px] font-dm-sans font-normal  text-center">
+                Technological Excellence
                 </h3>
-                <p className="text-sm font-urbanist max-w-[340px]">
-                  We engineer robotics and deep-tech solutions with precision,
-                  innovation, and future-readiness at the core
-                </p>
-              </div>
+                <p className="text-sm font-urbanist font-light text-center mb-3">
+Robotics engineered with precision and innovation                </p>
+        <div className="md:object-cover sm:mx-20  md:mx-10 content-center  ">
+                  <img
+                loading="lazy"
+     src="/images/about/about3.1.webp"
+                alt="Strategic Focus"
+                 className=" rounded-3xl object-cover h-[240px]  w-full content-center  "
+              />
+
+                </div>
+                  
+              
             </div>
 
             {/* Small Card */}
-            <div className="relative z-10 overflow-hidden rounded-2xl group shadow-lg h-[351px]">
-              <img
+       <div className="relative group  p-2 overflow-hidden rounded-2xl shadow-xl h-[351px]  content-center  ">
+               <h3 className="text-[30px] font-dm-sans font-normal  text-center">
+                  Strategic Focus
+                </h3>
+                <p className="text-sm font-urbanist font-light text-center mb-3">
+                 Solutions addressing real challenges with impact and scalability
+                </p>
+        <div className="md:object-cover sm:mx-20  md:mx-10 content-center  ">
+                  <img
                 loading="lazy"
                 src="/images/about/about3.2.webp"
                 alt="Strategic Focus"
-                className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
+                 className=" rounded-3xl object-cover h-[240px]  w-full content-center  "
               />
-              <div className="absolute inset-0 group-hover:bg-[#1E1E1E99] transition-all duration-300 bg-[#1E1E1EE5] flex flex-col justify-end p-8 text-white">
-                <h3 className="text-[30px] font-dm-sans font-normal mb-2">
-                  Strategic Focus
-                </h3>
-                <p className="text-sm font-urbanist font-light">
-                  Our solutions are aligned with real industry challenges,
-                  ensuring meaningful impact and scalability.
-                </p>
-              </div>
+
+                </div>
+                  
+             
             </div>
           </div>
 
           {/* Row 2: Small + Large */}
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_1.5fr] gap-6">
             {/* Small Card */}
-            <div className="relative overflow-hidden rounded-2xl group shadow-lg h-[351px]">
-              <img
-                loading="lazy"
-                src="/images/about/about3.3.webp"
-                alt="Collaborative Approach"
-                className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
-              />
-              <div className="absolute inset-0 group-hover:bg-[#1E1E1E99] transition-all duration-300 bg-[#1E1E1EE5] flex flex-col justify-end p-8 text-white">
-                <h3 className="text-[30px] font-dm-sans font-normal mb-2">
-                  Collaborative Approach
+    <div className="relative group  p-2 overflow-hidden rounded-2xl shadow-xl h-[351px]  content-center  ">
+               <h3 className="text-[30px] font-dm-sans font-normal  text-center">
+        Collaborative Approach
                 </h3>
-                <p className="text-sm font-urbanist font-light">
-                  We believe progress comes through partnerships, uniting
-                  visionaries, industries, and communities.
+                <p className="text-sm font-urbanist font-light text-center mb-3">
+             Progress through partnerships driving collective growth
                 </p>
-              </div>
+        <div className="md:object-cover sm:mx-20  md:mx-10 content-center  ">
+                  <img
+                loading="lazy"
+             src="/images/about/about3.3.webp"
+                alt="Strategic Focus"
+                 className=" rounded-3xl object-cover h-[240px]  w-full content-center  "
+              />
+
+                </div>
+                  
+             
             </div>
 
-            {/* Large Card */}
-            <div className="relative overflow-hidden group rounded-2xl shadow-lg h-[351px]">
-              <img
-                loading="lazy"
-                src="/images/about/about3.4.webp"
-                alt="Impact-Driven Solutions"
-                className="w-full h-full object-cover group-hover:scale-[1.05] transition-all duration-300"
-              />
-              <div className="absolute inset-0 group-hover:bg-[#1E1E1E99] transition-all duration-300 bg-[#1E1E1EE5] flex flex-col justify-end p-8 text-white">
-                <h3 className="text-[30px] max-w-[337px] font-dm-sans font-normal mb-2">
-                  Impact-Driven Solutions
+            {/* Large Card          */}
+            <div className="relative group  p-2 overflow-hidden rounded-2xl shadow-xl h-[351px]  content-center  ">
+               <h3 className="text-[30px] font-dm-sans font-normal  text-center">
+                Impact-Driven 
+Solutions
                 </h3>
-                <p className="text-sm max-w-[337px] font-urbanist font-light">
-                  Every system we design delivers measurable outcomes - safety,
-                  efficiency, and sustainability.
+                <p className="text-sm font-urbanist font-light text-center mb-3">
+            Designing systems for measurable impact
                 </p>
-              </div>
+        <div className="md:object-cover sm:mx-20  md:mx-10 content-center  ">
+                  <img
+                loading="lazy"
+              src="/images/about/about3.4.webp" 
+                alt="Strategic Focus"
+                 className=" rounded-3xl object-cover h-[240px]  w-full content-center  "
+              />
+
+                </div>
+                  
+              
             </div>
           </div>
         </div>
       </section>
-
+{/* careers and growth */}
+<CareerAndGrowth/>
+ <Initiatives/>
       {/*section 4*/}
       <div className="relative w-full py-20 px-8 md:px-20 lg:px-32 font-dm-sans">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
