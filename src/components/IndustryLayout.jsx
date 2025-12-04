@@ -1,12 +1,10 @@
 import { Link } from "react-router-dom";
 import { IndustryCard } from "../pages/Industries";
-import { IconsObj } from "../utils/Iconify_icons";
 import { IndustriesCardsList } from "../data/IndustriesCardsList";
 import GradientText from "./GradientText";
 import { mainPagesLinksList } from "../data/PagesLinkList";
 import Footer from "./footer";
 import HeroSection from "./HeroSection";
-import React from "react";
 
 const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Industry?",

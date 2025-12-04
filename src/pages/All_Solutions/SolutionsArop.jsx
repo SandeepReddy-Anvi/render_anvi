@@ -66,7 +66,7 @@ const SolutionsArop = () => {
       {/* Section 3 - Solution Overview */}
       <section className="bg-[#F5F4F8] p-8 md:p-[90px] font-dm-sans">
         <div className="mb-10">
-          <p className="text-[26px] sm:text-[32px] font-semibold mb-4">Solution Overview</p>
+          <p className="text-[26px] sm:text-[32px] md:text-[46px] font-semibold mb-4">Solution Overview</p>
           <p className="text-[16px] sm:text-[18px] text-[#282828] leading-[29.25px] mb-4">
             Airports operate in one of the most demanding environments in the world, where even small oversights can lead to major consequences. Challenges such as Foreign Object Debris (FOD), wildlife intrusions near flight paths, and runway surface defects continue to pose risks every day.
           </p>

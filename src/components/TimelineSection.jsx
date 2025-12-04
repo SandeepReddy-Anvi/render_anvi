@@ -38,7 +38,7 @@ const TimelineSection = () => {
 
           {/* Content */}
           <div className="flex-1 pl-8 mt-2">
-            <h3 className="text-[22px] font-normal text-[#1E2024]">{item.title}</h3>
+            <h3 className="text-[20px] md:text-[24px] font-normal text-[#1E2024]">{item.title}</h3>
             <p className="text-[#7B828E] text-[14px] font-normal mt-1">
               {item.desc}
             </p>

@@ -25,7 +25,7 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => (
       <p className="font-['Wix_Madefor_Display'] font-bold text-[30px] text-[#FFFFFF] mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
         {title}
       </p>
-      <p className="font-dm-sans text-[14px] font-medium text-[#FFFFFF] px-8 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+      <p className="font-dm-sans text-[14px] font-medium text-[#FFFFFF] px-8 2xl:px-28 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
         {desc}
       </p>
       <div className="self-center max-md:pb-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -59,7 +59,7 @@ export const Industries = () => {
           backgroundImage="/videos/Heroo4_org.mp4"
           title="Industries We Transform"
           description="From Robotics to Space, Anvi transforms industries with intelligent automation 
-        and advanced technology."
+          and advanced technology."
           descriptionWidth="656px"
         />
 
@@ -70,8 +70,8 @@ export const Industries = () => {
         />
 
         {/* Industries */}
-        <section className="relative w-full px-6 md:px-[60px] pb-12 sm:pb-16 md:pb-[50px] lg:pb-[80px] bg-[#FCFCFC] bg-opacity[0.82]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] max-w-[1200px] mx-auto w-full py-6">
+        <section className="relative w-full px-5 md:px-[60px] pb-12 sm:pb-16 md:pb-[50px] lg:pb-[80px] bg-[#FCFCFC] bg-opacity[0.82]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px] w-full py-6">
             <IndustryCard {...IndustriesCardsList.robotics} />
             <IndustryCard {...IndustriesCardsList.space} />
             <IndustryCard {...IndustriesCardsList.energy} />

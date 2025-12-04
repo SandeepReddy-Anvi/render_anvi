@@ -10,11 +10,11 @@ const GradientText = (props) => {
 
   return (
     <div
-      className={`w-full max-w-[1600px] mx-auto flex flex-col justify-start font-['Wix_Madefor_Display'] gap-[30px] py-8 md:py-14 py:mb-20 px-[20px] md:px-[30px] 2xl:px-[80px] ${className}`}
+      className={`w-full flex flex-col justify-start font-['Wix_Madefor_Display'] gap-[30px] py-14 md:py-[100px] py:mb-20 px-[20px] md:px-[60px] 2xl:px-[100px] ${className}`}
     >
       {/* Normal Title */}
       {ourTitle && (
-        <h4 className="text-[#000000] text-[20px] md:text-[24px] lg:text-[26px] font-[600] leading-normal tracking-[-0.02em]">
+        <h4 className="text-[#000000] text-[20px] md:text-[24px] lg:text-[26px] font-bold leading-normal tracking-[-0.02em]">
           {ourTitle}
         </h4>
       )}
@@ -28,7 +28,7 @@ const GradientText = (props) => {
 
       {/* Description */}
       {ourDescription && (
-        <p className="max-w-[1204px] text-[18px] md:text-[20px] leading-[36px] text-[#000000]">
+        <p className="text-[20px] md:text-[26px] font-regular leading-[34px] text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px]">
           {ourDescription}
         </p>
       )}

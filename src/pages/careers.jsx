@@ -165,7 +165,7 @@ const Careers = () => {
       </section> */}
 
       {/* Section 2 */}
-      <section className="relative w-full h-[100vh]">
+      <section className="relative w-full h-[100vh] md:max-h-[600px]">
         <div className="absolute inset-0">
           <img
             src="/images/careers/career.png"
@@ -210,7 +210,7 @@ const Careers = () => {
       <div className="mb-10">
         <SectionWithImage
           title="Life At Anvi"
-          description="Life at Anvi is about more than work — it’s about purpose, growth, and collaboration. Here, innovation thrives, ambitious ideas take shape, and every individual contributes to meaningful impact. With a culture that values teamwork, learning, and sustainability, Anvi is where talent transforms into progress and the future is engineered together."
+          description="Life at Anvi is about more than work - it’s about purpose, growth, and collaboration. Here, innovation thrives, ambitious ideas take shape, and every individual contributes to meaningful impact. With a culture that values teamwork, learning, and sustainability, Anvi is where talent transforms into progress and the future is engineered together."
           points={[
             "Collaborative and innovative work environment",
             "Competitive compensation and benefits",
@@ -247,14 +247,13 @@ const Careers = () => {
 
       {/* Pravikaya Initiative 
       <PravikayaInitiative />*/}
-      
-      <section className="px-10 lg:px-[60px] overflow-hidden">
-
-        <GradientText 
+      <GradientText 
           ourTitle="Our Team"
           gradientTitle="The People Behind the Innovation."
           ourDescription="At Anvi, our team powers every breakthrough. Engineers, designers, and creators turn bold ideas into intelligent systems, advancing cities, learning together, pushing limits, and shaping the future as one team."
         />
+        
+      <section className="px-10 lg:px-[60px] overflow-hidden">
 <div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16">
 
   {/* Background Image */}

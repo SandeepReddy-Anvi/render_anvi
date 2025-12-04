@@ -1,46 +1,64 @@
 import React from "react";
 
-const SectionWithImage = ({
+export default function SectionWithImage({
   title,
   description,
   points = [],
   backgroundImage = "images/careers/career3.1.webp",
   subtitleLineColor = "white",
-}) => {
+}) {
   return (
-    <div className="relative w-screen max-w-[1600px] max-h-max lg:max-h-[600px] mx-auto rounded-[15px] overflow-hidden font-inter">
+    <section className="relative w-full mx-auto font-inter overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           loading="lazy"
           src={backgroundImage}
-          alt={`${title} background`}
+          alt={title}
           className="w-full h-full object-cover opacity-80"
         />
       </div>
 
-      {/* Overlay for better text visibility */}
+      {/* Dark overlays */}
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.60)] bg-blend-multiply"></div>
       <div className="absolute z-1 inset-0 bg-[#02102DCC] opacity-60 bg-blend-multiply"></div>
 
-      {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center max-md:place-items-center md:flex-row px-[15px] md:px-[25px] lg:px-[50px] py-[70px] gap-[100px] max-lg:gap-[20px]">
-        {/* Left Box */}
-        <div className="bg-[#00000080] text-white px-[40px] py-[80px] rounded-2xl max-w-full md:max-w-md flex flex-col justify-start align-middle gap-[20px]">
-          <h2 className="text-2xl font-bold uppercase">{title}</h2>
+      {/* CONTENT GRID */}
+      <div className="
+        relative z-10
+        grid grid-cols-1 lg:grid-cols-12
+        gap-10 lg:gap-20
+        px-6 sm:px-10 lg:px-16
+        py-14 sm:py-20
+        mx-auto
+      ">
+        {/* Left BOX */}
+        <div className="lg:col-span-6 bg-black/40 text-[#FFFFFF] px-6 sm:px-10 py-10 sm:py-16 rounded-2xl flex flex-col gap-6 max-w-[600px]">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase">
+            {title}
+          </h2>
+
           <span
-            className="block w-full max-w-[269px] h-[6px]"
+            className="block w-full max-w-[240px] h-[5px]"
             style={{ backgroundColor: subtitleLineColor }}
-          ></span>
-          <p className="text-[15px] leading-relaxed">{description}</p>
+          />
+
+          <p className="text-[16px] leading-relaxed ">
+            {description}
+          </p>
         </div>
 
-        {/* Right Column */}
+        {/* RIGHT POINTS COLUMN (Responsive) */}
         {points.length > 0 && (
-          <div className="flex flex-col w-fit max-md:w-[80%] text-[18px] font-normal leading-[20px] justify-evenly text-white gap-4">
+          <div className="
+            lg:col-span-6 
+            flex flex-col max-w-[600px]
+            text-[16px] md:text-[18px] font-semibold leading-[20px] justify-evenly text-white gap-4
+          ">
             {points.map((point, index) => (
               <React.Fragment key={index}>
-                <p>{point}</p>
+                <p className="max-w-xl">{point}</p>
+
                 {index !== points.length - 1 && (
                   <span className="block w-full h-[0.5px] overflow-hidden bg-white"></span>
                 )}
@@ -49,8 +67,6 @@ const SectionWithImage = ({
           </div>
         )}
       </div>
-    </div>
+    </section>
   );
-};
-
-export default SectionWithImage;
+}

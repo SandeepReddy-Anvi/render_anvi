@@ -47,11 +47,11 @@ const Solutions = () => {
 
       {/* Why Our Solution Matter */}
       <section className="w-full bg-[#F4F3F7D1] mb-[100px]">
-        <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[65px] font-['Wix_Madefor_Display']">
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">
+        <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[65px] font-dm-sans">
+          <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828]">
             Why Our Solutions Matter
           </h2>
-          <p className="text-[16px] w-full md:w-[752px] mx-auto text-[#4C4C4C] font-[400] leading-[24px] text-center">
+          <p className="text-[16px] w-full md:w-[752px] mx-auto text-[#465455] font-[400] leading-[24px] text-center">
             Our solutions address critical global challenges, empowering
             industries to innovate, enabling societies to thrive, and shaping a
             smarter, sustainable future.

@@ -4,17 +4,14 @@ import React from "react";
 const ImpactSolutions = () => {
   return (
     // Main container with max width and padding
-    <div className="impact-sols-container w-full max-w-[2400px] mx-auto py-[100px] px-[20px] bg-white">
+    <div className="impact-sols-container w-full py-[100px] px-10 md:px-[80px] bg-[#FFFFFF]">
       {/* Box 1 */}
       <div className="w-full flex max-md:flex-col justify-center align-middle gap-[20px] md:gap-[90px] font-['Wix Madefor Display']">
         <div className="md:w-1/2 mx-auto flex flex-col justify-start align-middle">
-          <h2 className="text-[36px] lg:text-[48px] leading-[71.68px] tracking-[-1.2px] text-[#0D1F21]">
-            How Our Solutions
+          <h2 className="text-[36px] lg:text-[48px] leading-tight md:leading-[69px] tracking-[-1.2px] text-[#0D1F21]">
+            How Our Solutions <br/> Create Real Impact
           </h2>
-          <h2 className="text-[36px] lg:text-[48px] mt-[-10px] leading-[71.68px] tracking-[-1.2px] text-[#0D1F21]">
-            Create Real Impact
-          </h2>
-          <p className="text-[18px] w-full max-w-[752px] mt-[20px] mx-auto text-[#465455] font-[400] leading-[27.6px]">
+          <p className="text-[18px] w-full mt-[20px] mx-auto text-[#465455] font-[400] leading-[27.6px]">
             Our intelligent systems deliver measurable improvements across
             safety, efficiency, and sustainability, helping organizations
             operate smarter and more reliably. Here’s the impact our technology

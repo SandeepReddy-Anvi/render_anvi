@@ -19,15 +19,27 @@ export default function CareersGrowthComponent({
 
   return (
     <section className="   bg-black ">
-  <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center px-10 py-10">
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-10">
+
+          {/* Background Full Image */}
+          <div className="absolute inset-0">
+          <img
+            aria-hidden
+            src="/images/about/careerGrowth2.png"
+            alt="background"
+            className="absolute inset-0 w-full h-full object-cover -z-20 mix-blend-multiply opacity-45"
+          />
+          </div>
+
+          <div className="absolute inset-0 bg-[rgba(0,0,0,0.60)] w-full h-full"/>
 
           {/* Left - Text */}
-          <div className="lg:col-span-7 z-10">
-            <h2 className="text-white text-3xl sm:text-4xl font-semibold leading-tight">
+          <div className="lg:col-span-7 z-10 px-5 md:px-[60px]">
+            <h2 className="text-[#FFFFFF] text-[32px] md:text-[46px] font-medium leading-tight">
               {title}
             </h2>
 
-            <p className="mt-6 text-gray-200/90 max-w-2xl text-sm sm:text-base leading-relaxed">
+            <p className="mt-6 text-[#FFFFFF] max-w-2xl text-[16px] md:text-[18px] leading-relaxed">
               {body}
             </p>
 
@@ -52,7 +64,7 @@ export default function CareersGrowthComponent({
                   <img
                     src={imageSrc}
                     alt="Careers and Growth"
-                    className="w-full h-[120px] sm:h-[300px] md:h-[420px] lg:h-[460px] object-cover rounded-3xl"
+                    className="w-full h-[120px] sm:h-[300px] md:h-[420px] lg:h-[460px] object-cover"
                     draggable={false}
                   />
                 ) : (
@@ -61,25 +73,15 @@ export default function CareersGrowthComponent({
                   </div>
                 )}
 
-                {/* subtle overlay to match the screenshot mood */}
+                {/* {/* subtle overlay to match the screenshot mood /}
                 <div className="absolute inset-0 pointer-events-none bg-gradient-to-r from-black/40 via-transparent to-transparent" />
 
-                {/* decorative rounded cut on top-right to mimic screenshot */}
-                <div className="absolute -top-6 -right-6 w-28 h-28 bg-gradient-to-br from-white/6 to-white/3 rounded-br-3xl rounded-tl-3xl opacity-50 mix-blend-screen" />
+                {/* decorative rounded cut on top-right to mimic screenshot /}
+                <div className="absolute -top-6 -right-6 w-28 h-28 bg-gradient-to-br from-white/6 to-white/3 rounded-br-3xl rounded-tl-3xl opacity-50 mix-blend-screen" /> */}
               </div>
             </div>
           </div>
-
-          {/* Background Full Image */}
-<img
-  aria-hidden
-  src="/images/about/careerGrowth2.png"
-  alt="background"
-  className="absolute inset-0 w-full h-full object-cover -z-20 mix-blend-multiply opacity-45"
-/>
-  
         </div>
-    
     </section>
   );
 }

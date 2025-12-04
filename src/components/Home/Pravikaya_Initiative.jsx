@@ -4,7 +4,8 @@ import React from "react";
 
 export const PravikayaInitiative = () => {
   return (
-    <section className="relative h-auto max-md:h-[800px] max-lg:h-[600px] w-[90vw] max-w-[1318px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
+    <section className="px-5 md:px-[60px] w-full">
+    <div className="relative h-auto max-md:h-[800px] max-lg:h-[600px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
       {/* Content */}
       <div
         className="w-full max-w-[541px] flex flex-col items-center justify-center align-middle self-stretch mx-2"
@@ -70,6 +71,7 @@ export const PravikayaInitiative = () => {
           className="w-full h-full object-cover object-center"
         />
       </div>
+    </div>
     </section>
   );
 };
