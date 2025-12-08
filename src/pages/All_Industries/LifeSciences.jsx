@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 const LifeSciences = () => {
   return (
-    <main>
+    <section>
       <IndustryLayout
         backgroundImage="/images/industries/lifesciences.jpg"
         title="Life Sciences"
@@ -15,7 +15,7 @@ const LifeSciences = () => {
         gradientTitle="Innovating for Healthier Futures."
         ourDescription="We pioneer breakthroughs that improve health, empower communities, and advance technology shaping a future where science protects both people and the planet for generations to come globally worldwide."
       />
-    </main>
+    </section>
   );
 };
 

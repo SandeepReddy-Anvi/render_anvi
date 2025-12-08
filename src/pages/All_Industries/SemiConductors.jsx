@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 const SemiConductors = () => {
   return (
-    <main>
+    <section>
     <IndustryLayout
         backgroundImage="/images/industries/semiconductors.jpg"
         title="Semiconductors"
@@ -15,7 +15,7 @@ const SemiConductors = () => {
         gradientTitle="Building the Core of Modern Technology."
         ourDescription="At Anvi, we advance semiconductor technology by developing high-performance materials and chips that drive innovation across next-generation electronics and intelligent systems worldwide for industries, researchers, and future-ready global applications."
       />
-    </main>
+    </section>
   );
 };
 

@@ -108,12 +108,12 @@ const BenefitsPage = () => {
      
      
       {/* LEFT BUTTONS */}
-      <div className="flex flex-col gap-3 w-full md:w-1/4 lg:w-auto ">
+      <div className="flex flex-col gap-3 w-full md:w-1/4 lg:w-auto  lg:items-center lg:justify-center  ">
         {benefits.map((Ben, index) => (
           <button
             key={index}
             onClick={() => setactiveTabs(index)}
-            className={`w-full text-left px-6 py-4 rounded-2xl transition-all
+            className={`w-full text-left px-6 py-4 rounded-2xl transition-all 
               ${
                 activeTabs === index
                   ? "bg-black text-white font-semibold shadow-lg"
