@@ -12,7 +12,7 @@ export const pagesLinksList = {
   // Solutions
   Solutions: "/solutions",
   Solutions_AROP: "/solutions/arop",
-  Solutions_Sewage: "/solutions/sewage-cleaning",
+  Solutions_Sewage: "/solutions/sewage",
 
   // Industries
   Industries: "/industries",
@@ -42,6 +42,6 @@ export const mainPagesLinksList = {
   Industries: "/industries",
   News: "/news",
   Careers: "/careers",
-  Investors: "/investors",
+  InvestorsDesk: "/investors",
   ContactUs: "/contactus",
 }

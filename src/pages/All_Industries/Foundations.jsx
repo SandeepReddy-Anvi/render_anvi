@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 const Foundations = () => {
   return (
-    <main>
+    <section>
       <IndustryLayout
         backgroundImage="/images/industries/foundation.jpg"
         title="Socila Impact"
@@ -15,7 +15,7 @@ const Foundations = () => {
         gradientTitle="Impact That Starts at the Ground Level."
         ourDescription="Creating impact from the ground up by empowering people, driving innovation, fostering sustainability, shaping communities, and building a future that benefits everyone across generations and societies worldwide."
       />
-    </main>
+    </section>
   );
 };
 

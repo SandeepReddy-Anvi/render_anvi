@@ -40,9 +40,11 @@ const ImpactSolutions = () => {
         </div>
 
         <div className="md:w-1/2 mx-auto flex flex-col justify-start align-middle gap-[20px]">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="flex flex-col gap-8 sm:flex-row sm:flex-wrap md:grid md:grid-cols-2">
+
             {/* Stat Card 1: Reduced Effort */}
-            <div className="rounded-xl flex flex-col justify-around align-middle gap-[10px] font-manrope bg-[#F3F7F4]  text-[#465455] py-5 px-6 lg:p-[50px]">
+
+            <div className="rounded-xl flex flex-col justify-around align-middle gap-[10px] font-manrope bg-[#F3F7F4]  text-[#465455] py-5 px-6 lg:p-[50px] sm:flex">
               {/* py-[50px] pr-[5px] pl-[40px]"> */}
               <p className="text-6xl font-bold text-[#477379] font-inter">
                 60%

@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 const Textiles = () => {
   return (
-    <main>
+    <section>
       <IndustryLayout
         backgroundImage="/images/industries/textiles.webp"
         title="Textiles"
@@ -15,7 +15,7 @@ const Textiles = () => {
         gradientTitle="Tradition Tailored. Technology Perfected."
         ourDescription="Anvi, India’s first AI tailoring platform, transforms fashion by merging heritage craftsmanship with intelligent design systems  - delivering personalized clothing experiences built for fit, culture, and individuality."
       />
-    </main>
+    </section>
   );
 };
 

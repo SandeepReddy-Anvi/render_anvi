@@ -117,7 +117,7 @@ const Home = () => {
               <img
                 src="/images/home/robo_img.jpg"
                 alt="Surveillance Robot"
-                className="w-full max-md:h-[211px] h-[400px]  md:h-full object-cover rounded-xl mt-3 sm:h-auto"
+                className="w-full max-md:h-[211px] h-[400px]  md:h-full object-cover rounded-xl mt-3 sm:h-auto "
               />
             </div>
 
@@ -142,10 +142,10 @@ const Home = () => {
                     and future-ready infrastructure.
                   </p>
                 </div>
-                <div className="w-full bg-black rounded-lg mt-2 min-h-[211px] max-h-[300px] overflow-hidden h-auto"> <img
+                <div className="w-full bg-black rounded-lg mt-2 min-h-[211px] max-h-[300px] overflow-hidden h-auto  "> <img
                   src="/images/home/galactica.png"
                   alt="Anvi Space"
-                  className="w-full h-auto  rounded-xl mt-3"
+                  className="w-full h-auto   rounded-xl mt-3  "
                 />
 
                 </div>

@@ -3,7 +3,7 @@ import IndustryLayout from "../../components/IndustryLayout";
 
 const Energy = () => {
   return (
-    <main>
+    <section>
       <IndustryLayout
         backgroundImage="/images/industries/energy.webp"
         title="Energy"
@@ -14,7 +14,7 @@ const Energy = () => {
         gradientTitle="Powering Tomorrow. Sustaining Today."
         ourDescription="Energy shapes the foundation of every modern industry. At Anvi, we build intelligent, sustainable energy solutions that improve efficiency, reduce environmental impact, and power a future that’s cleaner, smarter, and more resilient."
       />
-    </main>
+    </section>
   );
 };
 
