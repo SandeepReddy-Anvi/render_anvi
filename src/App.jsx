@@ -14,11 +14,8 @@ const Industries = React.lazy(() =>
     default: module.Industries
   }))
 );
-const Investors = React.lazy(() =>
-  import("./pages/Investors").then((module) => ({
-    default: module.Investors
-  }))
-);
+const Investors = React.lazy(() => import("./pages/Investors"));
+
 const ContactUs = React.lazy(() =>
   import("./pages/ContactUs").then((module) => ({
     default: module.ContactUs
@@ -65,7 +62,7 @@ const App = () => {
           {/* Main Pages */}
           <Route path={pagesLinksList.Home} element={<Home />} />
           <Route path={pagesLinksList.AboutUs} element={<AboutUs />} />
-          <Route path={pagesLinksList.Investors} element={<Investors />} />
+          <Route path={pagesLinksList.Investors + "/*"} element={<Investors />} />
           <Route path={pagesLinksList.News} element={<News />} />
           <Route path={pagesLinksList.ContactUs} element={<ContactUs />} />
           <Route path={pagesLinksList.PrivacyPolicy} element={<PrivacyPolicy />} />

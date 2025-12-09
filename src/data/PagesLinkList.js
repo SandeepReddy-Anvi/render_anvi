@@ -1,6 +1,15 @@
 // Total 20 pages and links
 // =================================
+// Investors nested pages
+export const investorsLinksList = {
+  Login: "/investors/login",
+  OTP: "/investors/otp",
+  SetPassword: "/investors/set-password",
+  Dashboard: "/investors/dashboard",
+};
+
 export const pagesLinksList = {
+  
   // Main Pages
   Home: "/",
   AboutUs: "/aboutus",
