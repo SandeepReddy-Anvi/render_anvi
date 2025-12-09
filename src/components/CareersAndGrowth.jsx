@@ -7,8 +7,8 @@ export default function CareersGrowthComponent({
   body = `At Anvi, growth is about more than a job — it’s about solving real challenges, building deep-tech innovations, and shaping a sustainable future. Driven by purpose and inspired by our mission, our team explores ambitious ideas, works with breakthrough technologies, and creates impact across industries and communities. If you’re ready to grow and be part of a future engineered by innovation, your next role could start here.`,
   buttonLabel = "Explore Careers",
   buttonAriaLabel = "Explore Careers and Growth",
-  onExplore = null,
-  imageSrc = "images/about/careerGrowth1.png", // pass a string url or import
+  onExplore = null, // function or link
+  imageSrc = "images/about/careerGrowth1.webp", // pass a string url or import
 }) {
   // If onExplore is not provided, default to a no-op that logs; you can replace with react-router navigation.
   const handleExplore = (e) => {
@@ -25,7 +25,7 @@ export default function CareersGrowthComponent({
           <div className="absolute inset-0">
           <img
             aria-hidden
-            src="/images/about/careerGrowth2.png"
+            src="/images/about/careerGrowth2.webp"
             alt="background"
             className="absolute inset-0 w-full h-full object-cover -z-20 mix-blend-multiply opacity-45"
           />
@@ -44,6 +44,7 @@ export default function CareersGrowthComponent({
             </p>
 
             <div className="mt-8">
+      
               <button
                 onClick={handleExplore}
                 aria-label={buttonAriaLabel}

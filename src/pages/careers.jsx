@@ -18,28 +18,28 @@ const footerUpBoxInfoObj = {
 };
  
      
-const cards = [
-  {
-    img: "/images/careers/career2.1.webp",
-    title: "Innovate with Purpose",
-    desc: "Work on breakthrough robotics and deep-tech innovations that go beyond boundaries, solving real-world challenges across industries and communities. At Anvi, you will explore ambitious ideas, design scalable systems, and collaborate with bright minds. Together, we shape industries of the future while driving safety, efficiency, and sustainability for people, businesses, and the planet.",
-  },
-  {
-    img: "/images/careers/career2.2.webp",
-    title: "Grow Without Limits",
-    desc: "Explore ambitious ideas, embrace challenges, upskill continuously, collaborate with innovators, and build a career that grows, evolves, and scales with your limitless potential.",
-  },
-  {
-    img: "/images/careers/career2.3.webp",
-    title: "Collaborate & Belong",
-    desc: "Be part of a culture that values teamwork, inclusion, respect, and diverse perspectives, where collaboration, creativity, and shared purpose drive excellence and meaningful progress.",
-  },
-  {
-    img: "/images/careers/career2.4.webp",
-    title: "Impact That Matters",
-    desc: "Create solutions that drive industry progress, deliver measurable impact, and at the same time inspire communities while supporting sustainability for a smarter, safer, and better shared future.",
-  },
-];
+// const cards = [
+//   {
+//     img: "/images/careers/career2.1.webp",
+//     title: "Innovate with Purpose",
+//     desc: "Work on breakthrough robotics and deep-tech innovations that go beyond boundaries, solving real-world challenges across industries and communities. At Anvi, you will explore ambitious ideas, design scalable systems, and collaborate with bright minds. Together, we shape industries of the future while driving safety, efficiency, and sustainability for people, businesses, and the planet.",
+//   },
+//   {
+//     img: "/images/careers/career2.2.webp",
+//     title: "Grow Without Limits",
+//     desc: "Explore ambitious ideas, embrace challenges, upskill continuously, collaborate with innovators, and build a career that grows, evolves, and scales with your limitless potential.",
+//   },
+//   {
+//     img: "/images/careers/career2.3.webp",
+//     title: "Collaborate & Belong",
+//     desc: "Be part of a culture that values teamwork, inclusion, respect, and diverse perspectives, where collaboration, creativity, and shared purpose drive excellence and meaningful progress.",
+//   },
+//   {
+//     img: "/images/careers/career2.4.webp",
+//     title: "Impact That Matters",
+//     desc: "Create solutions that drive industry progress, deliver measurable impact, and at the same time inspire communities while supporting sustainability for a smarter, safer, and better shared future.",
+//   },
+// ];
  
 
 const Careers = () => {
@@ -168,7 +168,7 @@ const Careers = () => {
       <section className="relative w-full h-[100vh] md:max-h-[600px]">
         <div className="absolute inset-0">
           <img
-            src="/images/careers/career.png"
+            src="/images/careers/career.webp"
             className="w-full h-full object-cover"
           />
         </div>

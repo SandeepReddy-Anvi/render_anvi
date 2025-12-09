@@ -103,7 +103,7 @@ export const ContactUs = () => {
 
         {/* Section3 */}
         <div className="w-full px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] ">
-          <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] font-dm-sans justify-center">
+          <div className="flex flex-col md:flex-row bg-[#F5F4F8] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] lg:gap-[40px] xl:gap-[80px]  font-dm-sans justify-center">
             {/* Contact Info */}
             <div className="p-[20px] md:p-[30px] lg:p-[50px] bg-[#FFFFFF] rounded-[20px] md:w-1/2 md:max-w-[500px] flex-shrink-0">
               <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[38px] font-normal text-[#333333]">

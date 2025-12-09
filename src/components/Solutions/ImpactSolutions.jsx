@@ -22,7 +22,7 @@ const ImpactSolutions = () => {
 
         <div className="aspect-[5/3] w-full md:w-1/2 max-w-[616px] mx-auto rounded-[16px] h-auto overflow-hidden bg-gray-200">
           <img
-            src="/images/solutions/aocc.png" // **Replace with the actual image path**
+            src="/images/solutions/aocc.webp" // **Replace with the actual image path**
             alt="Autonomous system on a city street"
             className="w-full object-cover object-[50% 70%]"
           />
@@ -33,7 +33,7 @@ const ImpactSolutions = () => {
       <div className="w-full flex max-md:flex-col justify-center align-middle gap-[20px] lg:gap-[0px] mt-[60px] font-wix">
         <div className="w-full md:w-1/2 md:max-w-[516px] aspect-[4/5] mx-auto rounded-[16px] overflow-hidden">
           <img
-            src="/images/solutions/sewage/sewage3.2.png" // **Replace with the actual image path**
+            src="/images/solutions/sewage/sewage3.2.webp" // **Replace with the actual image path**
             alt="Autonomous system on a city street"
             className="w-full h-auto object-cover aspect-[4/5] object-center"
           />

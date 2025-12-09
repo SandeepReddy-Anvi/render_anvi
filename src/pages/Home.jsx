@@ -142,15 +142,14 @@ const Home = () => {
                     and future-ready infrastructure.
                   </p>
                 </div>
-                <div className="w-full bg-black rounded-lg mt-2 min-h-[211px] max-h-[300px] overflow-hidden h-auto  "> <img
-                  src="/images/home/galactica.png"
-                  alt="Anvi Space"
-                  className="w-full h-auto   rounded-xl mt-3  "
-                />
-
-                </div>
-               
-              </div>
+            {/* Centered by default (mobile), but aligned top on larger screens (sm:items-start) */}
+<div className="w-full bg-black rounded-lg mt-2 min-h-[221px] max-h-[350px] overflow-hidden flex items-center justify-center">
+  <img
+    src="/images/home/galactica.png"
+    alt="Anvi Space"
+    className="w-full rounded-xl object-cover" 
+  />
+</div>      </div>
 
               <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start">
                 <div className="grid grid-cols-2 items-center">
@@ -168,7 +167,7 @@ const Home = () => {
                   </p>
                 </div>
                 <img
-                  src="/images/solutions/solutionCard-2.png"
+                  src="/images/solutions/solutionCard-2.webp"
                   alt="Project Shudhi"
                   className="w-full h-auto object-cover rounded-xl mt-3"
                 />
