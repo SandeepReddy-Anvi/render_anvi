@@ -17,7 +17,7 @@ const SolutionsSewage = () => {
     <div className="w-full">
       {/* Hero Section */}
       <HeroSection
-        backgroundImage="/images/solutions/solutionCard-2.png"
+        backgroundImage="/images/solutions/solutionCard-2.webp"
         title="Sewage Cleaning Robot"
         description="Revolutionizing urban sanitation through robotics, AI, and predictive intelligence for a smarter, safer future"
         descriptionWidth="450px"
@@ -98,7 +98,7 @@ const SolutionsSewage = () => {
           </div>
           <div className="flex flex-col gap-6 md:gap-8">
             <img
-              src="/images/solutions/sewage/sewage3.2.png"
+              src="/images/solutions/sewage/sewage3.2.webp"
               alt="Sewage Cleaning Robot"
               className="w-full h-56 sm:h-64 md:h-[500px] lg:h-[600px] object-cover rounded-lg"
             />

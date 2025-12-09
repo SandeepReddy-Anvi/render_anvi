@@ -38,7 +38,7 @@ const KeyFeaturesSection = () => {
 
       {/* Image */}
       <img
-        src="/images/solutions/sewage/sewage6.webp"
+        src="/images/about/project_shudh.webp"
         alt="Sewage Management"
         className="w-full h-full object-cover rounded-2xl mb-10"
       />

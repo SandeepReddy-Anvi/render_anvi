@@ -29,7 +29,7 @@ const featuredSolutionsList = [
       "Autonomous Robotic Cleaning",
       "Zero Manual Scavenging",
     ],
-    imageUrl: "/images/solutions/solutionCard-2.png",
+    imageUrl: "/images/solutions/solutionCard-2.webp",
     link: pagesLinksList.Solutions_Sewage,
   },
 ];

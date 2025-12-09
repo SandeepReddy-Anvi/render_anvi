@@ -2,9 +2,9 @@ import React from "react";
  
 export default function InitiativesSection({
   title = "Initiatives",
-  mainImage = "/images/about/surveillance.png",
+  mainImage = "/images/about/surveillance.webp",
   topLogo = "/images/about/galactica.jpg",
-  rightSmallImg = "/images/about/project_shudh.png",
+  rightSmallImg = "/images/about/project_shudh.webp",
 }) {
   return (
     <section className="bg-gray-50 py-12 font-['Wix_Madefor_Display']">
@@ -19,7 +19,7 @@ export default function InitiativesSection({
               <img
                 src={mainImage}
                 alt="Main initiative - large"
-                className="w-full h-auto h-full object-cover"
+                className="w-full  h-full object-cover"
                 draggable={false}
               />
             </div>
@@ -39,11 +39,11 @@ export default function InitiativesSection({
 
             {/* Card 1 */}
             <div className="flex flex-col space-y-3">
-              <div className="w-full h-[230px] md:h-[218px] flex items-center">
+              <div className="w-full h-[230px] md:h-[218px] lg:h-[220px] xl:h-[260px] flex items-center justify-center">
                 <img
                   src={topLogo}
                   alt="Galactica logo"
-                  className="w-full h-auto h-full object-cover"
+                  className="w-full   h-full object-cover"
                   draggable={false}
                 />
               </div>
@@ -61,7 +61,7 @@ export default function InitiativesSection({
                 <img
                   src={rightSmallImg}
                   alt="Project SHUDH"
-                  className="w-full h-auto h-full object-cover"
+                  className="w-full h-full object-cover"
                   draggable={false}
                 />
               </div>
