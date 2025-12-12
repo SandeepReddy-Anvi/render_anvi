@@ -119,7 +119,7 @@ export const ContactUs = () => {
                     className="w-[18px] h-[18px] flex-shrink-0"
                     strokeWidth={1.5}
                   />
-                  <p>info@anvi.com</p>
+                  <p>info@anvi.co</p>
                 </div>
                 <div className="flex items-start gap-[12px]">
                   <MapPin
