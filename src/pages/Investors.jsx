@@ -1,59 +1,91 @@
-import { Link } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
-export const Investors = () => {
+import InvestorLogin from "./InvestorsPages/InvestorLogin";
+import InvestorOTP from "./InvestorsPages/InvestorOTP";
+import InvestorDashboard from "./InvestorsPages/InvestorDashboard";
+
+export function Investors() {
+
+  const [accessTokens, setAccessTokens] = useState({
+    email: localStorage.getItem("investorEmail"),
+    loginToken: localStorage.getItem("investorToken"),
+    sessionToken: sessionStorage.getItem("investorSessionToken"),
+  });
+
+  // Update helpers
+  const updateEmail = (value) => {
+    if (value) localStorage.setItem("investorEmail", value);
+    else localStorage.removeItem("investorEmail");
+
+    setAccessTokens(prev => ({ ...prev, email: value }));
+  };
+
+  const updateLoginToken = (value) => {
+    if (value) localStorage.setItem("investorToken", value);
+    else localStorage.removeItem("investorToken");
+
+    setAccessTokens(prev => ({ ...prev, loginToken: value }));
+  };
+
+  const updateSessionToken = (value) => {
+    if (value) sessionStorage.setItem("investorSessionToken", value);
+    else sessionStorage.removeItem("investorSessionToken");
+
+    setAccessTokens(prev => ({ ...prev, sessionToken: value }));
+  };
+
+  const { email, loginToken, sessionToken } = accessTokens;
+
   return (
-    <>
-      <main className="w-full">
-        <section className="w-full h-full min-h-[calc(100vh-110px)] flex items-center justify-center">
-          <h3 className="font-[Manrope] hidden text-2xl font-[500] text-center mt-[-50px]">
-            Coming Soon
-          </h3>
-          <div className="w-full max-w-sm font-dm-sans text-center">
-            {/* Heading */}
-            <h1 className=" w-full text-[24px] md:text-[31.25px] font-medium text-black mb-6">
-              Sign in to Investor Access
-            </h1>
+    <Routes>
 
-            {/* Form */}
-            <form className="flex flex-col gap-4">
-              {/* Email */}
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-3 border rounded-md bg-[#00000014]"
-              />
+      <Route path="/" element={<Navigate to="login" />} />
 
-              {/* Password */}
-              <input
-                type="password"
-                placeholder="Password"
-                className="w-full px-4 py-3 border rounded-md bg-[#00000014]"
-              />
+      {/* LOGIN */}
+      <Route
+        path="login"
+        element={
+          sessionToken ? (
+            <Navigate to="/investors/dashboard" replace />
+          ) : email && loginToken ? (
+            <Navigate to="/investors/otp" replace />
+          ) : (
+            <InvestorLogin
+              emailFun={updateEmail}
+              loginFun={updateLoginToken}
+            />
+          )
+        }
+      />
 
-              {/* Log In Button */}
-              <button
-                type="submit"
-                className="w-full bg-cyan-600 text-white py-3 rounded-md hover:bg-cyan-700 transition-colors"
-              >
-                Log in
-              </button>
-            </form>
+      {/* OTP */}
+      <Route
+        path="otp"
+        element={
+          email && loginToken ? (
+            <InvestorOTP
+              emailFun={updateEmail}
+              loginFun={updateLoginToken}
+              sessionFun={updateSessionToken}
+            />
+          ) : (
+            <Navigate to="/investors/login" replace />
+          )
+        }
+      />
 
-            {/* Links */}
-            <div className="flex flex-col items-center mt-4 text-sm text-cyan-600">
-              <Link to="" className="mb-1 hover:underline">
-                Reset password
-              </Link>
-              <span>
-                No account?{" "}
-                <Link to="" className="hover:underline">
-                  Create one
-                </Link>
-              </span>
-            </div>
-          </div>
-        </section>
-      </main>
-    </>
+      {/* DASHBOARD */}
+      <Route
+        path="dashboard"
+        element={
+          sessionToken ? (
+            <InvestorDashboard sessionFun={updateSessionToken} />
+          ) : (
+            <Navigate to="/investors/login" replace />
+          )
+        }
+      />
+    </Routes>
   );
-};
+}
