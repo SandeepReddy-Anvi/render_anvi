@@ -33,8 +33,8 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
               <div className="flex max-sm:flex-col max-sm:place-items-center justify-around lg:justify-center gap-[10px] md:gap-[30px] align-middle">
                 <img
                   loading="lazy"
-                  src="/logos/anvi_white.png"
-                  alt="Anvi Logo"
+                  src="/logos/anvi_logo.svg"
+                  alt="Anvilogo"
                   className="w-full max-sm:max-w-full max-w-[366px] lg:max-w-[50%] xl:max-w-[366px] object-contain"
                 />
                 <p
@@ -60,7 +60,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                     <li key={pageKey}>
                       <Link
                         to={mainPagesLinksList[pageKey]}
-                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#1E9AB0] transition-colors"
+                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#d10000] transition-colors"
                       >
                         {pageKey}
                       </Link>

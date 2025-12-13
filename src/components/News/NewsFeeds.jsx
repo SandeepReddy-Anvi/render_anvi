@@ -26,7 +26,7 @@ const NewsFeeds = () => {
               py-[14px] px-[16px] mr-2 mb-2 sm:mb-0 text-sm font-[400] rounded-[10px] border-[1px] transition-all duration-300
               ${
                 activeTab === tab.name
-                  ? "bg-[#1E9AB0] text-white scale-[1.02] shadow-md shadow-[#00000040] border-transparent"
+                  ? "bg-[#d10000] text-white scale-[1.02] shadow-md shadow-[#00000040] border-transparent"
                   : "bg-white text-[#000] hover:bg-gray-100 border-[#E8EBEE]"
               }
             `}
@@ -35,7 +35,7 @@ const NewsFeeds = () => {
             <span
               className={`ml-2 px-2 py-0.5 text-xs font-semibold rounded-full ${
                 activeTab === tab.name
-                  ? "bg-cyan-700"
+                  ? "bg-[#d10000]"
                   : "bg-gray-100 text-gray-700"
               }`}
             >

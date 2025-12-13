@@ -64,7 +64,7 @@ export const HomeIndustriesCard = () => {
                   {renderLink(
                     `Explore ${title}`,
                     link,
-                    "w-full text-[#FFFAFF] text-[13px] font-[600] mt-[7px] text-center px-[18px] py-[10px] flex-[0_0_auto] bg-[#1e9ab0] rounded-[9.56px]"
+                    "w-full text-[#FFFAFF] text-[13px] font-[600] mt-[7px] text-center px-[18px] py-[10px] flex-[0_0_auto] bg-[#d10000] rounded-[9.56px]"
                   )}
                 </div>
               </div>

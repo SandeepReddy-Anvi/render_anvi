@@ -119,7 +119,7 @@ export const ContactUs = () => {
                     className="w-[18px] h-[18px] flex-shrink-0"
                     strokeWidth={1.5}
                   />
-                  <p>info@anvi.com</p>
+                  <p>info@anvi.co</p>
                 </div>
                 <div className="flex items-start gap-[12px]">
                   <MapPin
@@ -218,7 +218,7 @@ export const ContactUs = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`group link-bg-icon w-[200px] ${
+                className={`group link-bg-icon1 hover:bg-[#d10000] hover:text-white w-[200px] ${
                   loading
                     ? "bg-gray-400 cursor-not-allowed"
                     : "link-bg-icon"

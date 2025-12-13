@@ -41,8 +41,8 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => {
             // Good security practice for external links
             rel={isExternal ? "noopener noreferrer" : undefined} 
             className="rounded-xl border-[1px] border-gray-200 text-gray-100 px-[23px] py-[11px]
-        bg-gradient-to-r from-[#1E9AB0] to-[#1E9AB0]
-        hover:from-[#1E9AB0] hover:to-[#1E9AB0] 
+        bg-gradient-to-r from-[#d10000] to-[#d10000]
+        hover:from-[#d10000] hover:to-[#d10000] 
         bg-[length:0%_106%] hover:bg-[length:101%_106%]
         bg-left bg-no-repeat
         transition-[background-size] duration-500 ease-out

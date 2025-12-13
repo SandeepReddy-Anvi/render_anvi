@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      
       scale: {
         '102': '1.02',
       },
