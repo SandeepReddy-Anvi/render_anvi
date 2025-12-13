@@ -37,8 +37,8 @@ export default function InvestorLogin(props) {
   };
 
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 h-screen">
+    <section className="relative overflow-hidden h-[calc(100vh-101px)]">
+      <div className="absolute inset-0 h-full">
         <img
           loading="lazy"
           src="/images/investors/bg.png"
@@ -49,7 +49,7 @@ export default function InvestorLogin(props) {
 
       <div className="absolute inset-0 bg-black/80"></div>
 
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen font-['Wix Madefor Display']">
+      <div className="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-101px)] font-['Wix Madefor Display']">
         <div className="bg-[#FFFFFF] p-6 rounded-[24px]">
           <img
             src="/logos/anvi_black_logo.svg"
@@ -66,9 +66,9 @@ export default function InvestorLogin(props) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full max-w-sm p-3 mt-1 mb-8 rounded bg-[#FFFFFF] backdrop-blur border border-[#1111]"
-            // style={{
-            //   boxShadow: "0 0 3px 3px #b02e2e11"
-            // }}
+          // style={{
+          //   boxShadow: "0 0 3px 3px #b02e2e11"
+          // }}
           />
 
           <button

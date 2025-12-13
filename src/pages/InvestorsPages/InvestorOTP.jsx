@@ -62,7 +62,7 @@ export default function InvestorOTP(props) {
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden h-[calc(100vh-101px)]">
       {/* Background Image */}
       <div className="absolute inset-0 h-screen">
         <img
@@ -77,7 +77,7 @@ export default function InvestorOTP(props) {
       <div className="absolute inset-0 bg-black/80"></div>
 
       {/* Center Card */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-screen font-['Wix Madefor Display']">
+      <div className="relative z-10 flex flex-col items-center justify-center h-[calc(100vh-101px)] font-['Wix Madefor Display']">
         <div className="bg-[#FFFFFF] p-6 rounded-[24px]">
 
           {/* Logo */}

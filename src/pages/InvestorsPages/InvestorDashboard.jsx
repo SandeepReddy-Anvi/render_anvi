@@ -94,7 +94,7 @@ export default function InvestorDashboard() {
   };
 
   return (
-    <div className="bg-[#FFFFFF] overflow-hidden">
+    <div className="bg-[#FFFFFF] overflow-hidden min-h-[calc(100vh-101px)]">
 
       {/* HEADER */}
       <div className="px-7 md:px-14 py-4 bg-[#F8F8F8] flex items-center justify-between">
@@ -183,9 +183,8 @@ export default function InvestorDashboard() {
             <button
               key={`${yr}-${idx}`}
               onClick={() => setSelectedYear(yr)}
-              className={`px-6 py-2 rounded-full border text-[13px] md:text-[15px] ${
-                selectedYear === yr ? "bg-[#0E1726] text-white" : "bg-white text-[#0E1726] border-gray-300"
-              }`}
+              className={`px-6 py-2 rounded-full border text-[13px] md:text-[15px] ${selectedYear === yr ? "bg-[#0E1726] text-white" : "bg-white text-[#0E1726] border-gray-300"
+                }`}
             >
               {yr}
             </button>
@@ -287,72 +286,72 @@ export default function InvestorDashboard() {
       </div>
 
       {/* Gratitude */}
-<div className="relative bg-[#F9FAFB] px-6 md:px-20 lg:px-32 xl:px-48 2xl:px-64 py-10 md:py-20 w-full font-['Wix_Madefor_Display']">
+      <div className="relative bg-[#F9FAFB] px-6 md:px-20 lg:px-32 xl:px-48 2xl:px-64 py-10 md:py-20 w-full font-['Wix_Madefor_Display']">
 
-  {/* Wrapper */}
-  <div className="relative w-full min-h-[550px] md:min-h-[600px] lg:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[750px]">
+        {/* Wrapper */}
+        <div className="relative w-full min-h-[550px] md:min-h-[600px] lg:min-h-[650px] xl:min-h-[700px] 2xl:min-h-[750px]">
 
-    {/* Background Image */}
-    <div className="absolute inset-0">
-      <img
-        src="/images/investors/ty.png"
-        alt="background"
-        className="w-full h-full object-cover rounded-[24px]"
-      />
-    </div>
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img
+              src="/images/investors/ty.png"
+              alt="background"
+              className="w-full h-full object-cover rounded-[24px]"
+            />
+          </div>
 
-    {/* Overlay */}
-    <div className="absolute inset-0 bg-[#E9ECF2]/20 rounded-[24px]" />
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-[#E9ECF2]/20 rounded-[24px]" />
 
-    {/* Content */}
-    <div className="relative z-10 p-6 md:p-10 lg:pl-14 lg:pt-20 xl:pl-20">
+          {/* Content */}
+          <div className="relative z-10 p-6 md:p-10 lg:pl-14 lg:pt-20 xl:pl-20">
 
-      <div className="flex flex-cols-1 lg:flex-cols-2 gap-10 items-center">
+            <div className="flex flex-cols-1 lg:flex-cols-2 gap-10 items-center">
 
-        {/* Left Text Section */}
-        <div>
-          <h2 className="text-[#101014] text-[22px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-medium leading-tight">
-            PART OF OUR JOURNEY
-          </h2>
+              {/* Left Text Section */}
+              <div>
+                <h2 className="text-[#101014] text-[22px] md:text-[28px] lg:text-[32px] xl:text-[36px] font-medium leading-tight">
+                  PART OF OUR JOURNEY
+                </h2>
 
-          <div className="font-manrope text-[#000000] text-[15px] md:text-[16px] xl:text-[18px] leading-relaxed">
-            <p className="pt-4 lg:pt-6">Dear Investor,</p>
-            <p className="py-4 lg:py-6">
-              At Anvi, every contribution matters. Your belief in our vision continues to drive
-              innovation, growth, and impact across all our ventures. This journey is as much
-              yours as it is ours.
+                <div className="font-manrope text-[#000000] text-[15px] md:text-[16px] xl:text-[18px] leading-relaxed">
+                  <p className="pt-4 lg:pt-6">Dear Investor,</p>
+                  <p className="py-4 lg:py-6">
+                    At Anvi, every contribution matters. Your belief in our vision continues to drive
+                    innovation, growth, and impact across all our ventures. This journey is as much
+                    yours as it is ours.
+                  </p>
+                  <p className="pb-4 lg:pb-6">
+                    Thank you for being a valued part of the Anvi family. Together, we're shaping
+                    the future.
+                  </p>
+                  <p>
+                    Warm regards,<br />
+                    Investors Desk, Anvi.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Image */}
+              <div className="flex justify-center lg:justify-end">
+                <img
+                  src="/images/investors/products.png"
+                  className="w-[300px] md:w-[420px] lg:w-[500px] xl:w-[560px] 2xl:w-[620px] h-auto object-cover rounded-lg"
+                  alt="Products"
+                />
+              </div>
+
+            </div>
+
+            {/* Bottom Text */}
+            <p className="mt-6 md:mt-10 text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] font-normal max-w-4xl">
+              Every leap forward begins with a bold idea. At ANVI, we don't just imagine the future —
+              we engineer it. Across every frontier, we build what tomorrow is made of.
             </p>
-            <p className="pb-4 lg:pb-6">
-              Thank you for being a valued part of the Anvi family. Together, we're shaping
-              the future.
-            </p>
-            <p>
-              Warm regards,<br />
-              Investors Desk, Anvi.
-            </p>
+
           </div>
         </div>
-
-        {/* Right Image */}
-        <div className="flex justify-center lg:justify-end">
-          <img
-            src="/images/investors/products.png"
-            className="w-[300px] md:w-[420px] lg:w-[500px] xl:w-[560px] 2xl:w-[620px] h-auto object-cover rounded-lg"
-            alt="Products"
-          />
-        </div>
-
       </div>
-
-      {/* Bottom Text */}
-      <p className="mt-6 md:mt-10 text-[15px] md:text-[17px] lg:text-[18px] xl:text-[20px] font-normal max-w-4xl">
-        Every leap forward begins with a bold idea. At ANVI, we don't just imagine the future —
-        we engineer it. Across every frontier, we build what tomorrow is made of.
-      </p>
-
-    </div>
-  </div>
-</div>
 
       {/*  FOOTER  */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />

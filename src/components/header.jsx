@@ -72,9 +72,9 @@ const Header = () => {
   return (
     <>
       <header
-        className={`w-full md:h-[101px] bg-black text-white sticky top-0 overflow-hidden 
+        className={`w-full md:h-[101px] bg-white text-black sticky top-0 overflow-hidden 
       flex items-center justify-between gap-5 px-4 sm:px-6 sm:pr-8 md:pl-2 md:pr-3 
-      lg:px-[40px] xl:px-[60px] h-[101px] font-[manrope] text-[16px] 
+      lg:px-[30px] xl:px-[40px] h-[101px] font-[manrope] text-[16px] 
       max-md:text-xs transition-transform duration-300 z-[51] ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
@@ -82,9 +82,9 @@ const Header = () => {
         <Link to="/">
           <img
             loading="lazy"
-            src="/logos/anvi_logo.svg"
+            src="/logos/anvi_black_logo.svg"
             alt="anvi-logo"
-            className="w-auto h-[45px] sm:h-[50px] md:h-[55px] lg:h-[60px] xl:h-[70px] object-contain sticky z-[51] mt-[10px]"
+            className="w-auto max-h-[50px] object-contain sticky z-[51] mt-[10px]"
           />
         </Link>
 
@@ -126,7 +126,7 @@ const Header = () => {
             onClick={() => handleMobileMenu()}
             aria-label="Toggle mobile menu"
           >
-            <Menu size={35} color="white" />
+            <Menu size={35} color="BLACK" />
           </button>
         </nav>
       </header>
@@ -152,7 +152,7 @@ const Header = () => {
               aria-label="Close mobile menu"
             >
               <Plus
-                color="#fff"
+                color="#FFF"
                 size={35}
                 className="rotate-45 hover:rotate-[315deg] transition-transform duration-200"
               />
