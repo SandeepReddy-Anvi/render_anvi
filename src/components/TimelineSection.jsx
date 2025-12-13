@@ -32,8 +32,8 @@ const TimelineSection = () => {
         >
           {/* Year */}
           <div className="flex-shrink-0 w-10 relative inline-flex justify-between place-items-center align-middle text-right pr-4">
-            <i className="w-2.5 h-max absolute left-[-21.5px] rounded-full aspect-square inline-flex bg-[#d10000]" />
-            <span className="text-[12px] text-[#d10000] font-semibold pl-8">{item.year}</span>
+            <i className="w-2.5 h-max absolute left-[-21.5px] rounded-full aspect-square inline-flex bg-[#FA293E]" />
+            <span className="text-[12px] text-[#FA293E] font-semibold pl-8">{item.year}</span>
           </div>
 
           {/* Content */}

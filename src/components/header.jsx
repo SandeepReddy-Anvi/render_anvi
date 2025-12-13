@@ -104,7 +104,7 @@ const Header = () => {
                   >
                     <Link
                       to={link}
-                      className="hover:text-[#d10000] transition-colors"
+                      className="hover:text-[#FA293E] transition-colors"
                     >
                       {pageKey.replace(/([A-Z])/g, " $1").trim()}
                     </Link>
@@ -170,7 +170,7 @@ const Header = () => {
                     <Link
                       to={link}
                       onClick={() => handleLinkClick(link)}
-                      className={`hover:text-[#d10000] transition-colors ${currentPageStyle(
+                      className={`hover:text-[#FA293E] transition-colors ${currentPageStyle(
                         link
                       )}`}
                     >
@@ -180,11 +180,11 @@ const Header = () => {
                 );
               })}
 
-            <li className="rounded-[16px] bg-[#d10000] ">
+            <li className="rounded-[16px] bg-[#FA293E] ">
               <Link
                 to={mainPagesLinksList["ContactUs"]}
                 onClick={() => handleLinkClick(mainPagesLinksList["ContactUs"])}
-                className="w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-black font-semibold transition-colors hover:text-[#d10000]"
+                className="w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-black font-semibold transition-colors hover:text-[#FA293E]"
               >
                 Contact Us
               </Link>

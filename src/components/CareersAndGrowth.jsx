@@ -48,7 +48,7 @@ export default function CareersGrowthComponent({
               <button
                 onClick={handleExplore}
                 aria-label={buttonAriaLabel}
-                className=" link-bg-icon1  inline-flex items-center gap-3 bg-white text-black hover:bg-[#d10000] hover:text-white rounded-full px-5 py-3 shadow-md hover:shadow-lg active:scale-95 transition-transform text-sm font-medium"
+                className=" link-bg-icon1  inline-flex items-center gap-3 bg-white text-black hover:bg-[#FA293E] hover:text-white rounded-full px-5 py-3 shadow-md hover:shadow-lg active:scale-95 transition-transform text-sm font-medium"
               >
                 <span>{buttonLabel}</span>
                 <i className="rotate-45">{IconsObj.arrow}</i>

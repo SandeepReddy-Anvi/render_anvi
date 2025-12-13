@@ -60,7 +60,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                     <li key={pageKey}>
                       <Link
                         to={mainPagesLinksList[pageKey]}
-                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#d10000] transition-colors"
+                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#FA293E] transition-colors"
                       >
                         {pageKey}
                       </Link>

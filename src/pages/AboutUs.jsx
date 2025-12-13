@@ -193,7 +193,7 @@ const About = () => {
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-[1.6px] rounded-full top-0 h-full mt-[5px] w-1 bg-[#d10000]">
+            <div className="absolute left-[1.6px] rounded-full top-0 h-full mt-[5px] w-1 bg-[#FA293E]">
               <span className="w-1 h-2 bg-blue-600 sticky top-10"></span>
             </div>
 

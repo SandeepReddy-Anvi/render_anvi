@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Header */
 .currentPageLink {
-    color: #d10000 !important;
+    color: #FA293E !important;
     font-weight: 500 !important;
     transform: scale(1.1) !important;
 }
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-thumb {
     width: 0%;
     height: 103%;
     border-radius: 16px;
-    background-color: #d10000;
+    background-color: #FA293E;
     transition: width 0.3s ease-out;
 }
 
@@ -130,7 +130,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .link-bg-icon {
-    background-color: #d10000;
+    background-color: #FA293E;
     color: white;
     border-radius: 16px;
     padding: 12px 20px;
@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footerUpBox-iconlink:hover {
-    background-color: #d10000 !important;
+    background-color: #FA293E !important;
     color: #fff !important;
 }
 

@@ -45,7 +45,7 @@ const NewsCard = ({ item }) => {
         </p>
 
         {/* Read More Link */}
-        <span className="flex justify-center align-middle group gap-[5px] items-center text-sm font-medium text-[#d10000] hover:text-[#d10000] transition duration-150 ease-in-out">
+        <span className="flex justify-center align-middle group gap-[5px] items-center text-sm font-medium text-[#FA293E] hover:text-[#FA293E] transition duration-150 ease-in-out">
           Read More
           <ChevronDown
             size={20}
