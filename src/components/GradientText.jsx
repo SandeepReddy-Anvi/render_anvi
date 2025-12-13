@@ -14,14 +14,14 @@ const GradientText = (props) => {
     >
       {/* Normal Title */}
       {ourTitle && (
-        <h4 className="text-[#000000] text-[20px] md:text-[24px] lg:text-[26px] font-bold leading-normal tracking-[-0.02em]">
+        <h4 className="bg-gradient-to-r from-[#FF4A3A] to-[#CD0054] bg-clip-text text-transparent text-[20px] md:text-[24px] lg:text-[26px] font-bold leading-normal tracking-[-0.02em]">
           {ourTitle}
         </h4>
       )}
 
       {/* Gradient Title */}
       {gradientTitle && (
-        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[52px] font-bold bg-gradient-to-r from-[#8A38F5] to-[#F81442] bg-clip-text text-transparent pb-3">
+        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[52px] font-bold text-[#212121]">
           {gradientTitle}
         </h2>
       )}

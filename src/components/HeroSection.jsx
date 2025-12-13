@@ -49,7 +49,7 @@ const HeroSection = ({
         className="home-hero-content sticky z-10 w-full flex flex-col justify-start align-middle gap-[16px] font-['Wix_Madefor_Display'] max-md:p-3 ml-[2vw] md:ml-[30px] lg:ml-[4vw] mt-[30px] md:mt-[40px] lg:mt-[11vh]"
       >
         {page === "home" ? (
-          <h1 className="text-[36px] md:text-[56px] w-max bg-gradient-to-r from-[#FE842B] to-[#CD0054] bg-clip-text text-transparent font-[600]" style={{width: "max-content"}}>
+          <h1 className="text-[36px] md:text-[56px] w-max bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent font-[600]" style={{width: "max-content"}}>
             Engineering Your{" "}
             <span className="whitespace-nowrap">
               Edge <span className="-ml-3 max-md:px-1">™</span>

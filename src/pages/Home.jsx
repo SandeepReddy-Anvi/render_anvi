@@ -7,7 +7,8 @@ import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
 import LiveVideo from "../components/Home/LiveVideo";
 const footerUpBoxInfoObj = {
-  head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
+  head: `Ready to explore the future with Anvi?`,
+  //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
   linkLabel: "Contact Us",
   link: mainPagesLinksList.ContactUs,
@@ -92,10 +93,11 @@ const Home = () => {
 
         {/* Next at Anvi */}
         <section className="next-at-anvi max-w-[2000px] w-full px-5 md:px-[60px] py-[50px] text-center xl:px-[100px] md:py-[80px]">
-          <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
+          <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At Anvi
+            {/* {" "}
             <span className="text-[43px] sm:text-[53px] font-bauhaus">
               anvi
-            </span>
+            </span> */}
           </h2>
           <p className="text-[16px] md:text-[18px] text-[#2C2C2C] font-regular mb-[30px] md:mb-[64px] leading-[24px] text-center font-['Wix_Madefor_Display']">
             At Anvi, our engineers don’t work by the clock - they work by vision. Relentlessly innovating, designing, and building what’s next. <br /> 'Next at Anvi' is where tomorrow’s breakthroughs begin - and the future takes shape.
@@ -193,7 +195,7 @@ const Home = () => {
         {/* Pravikaya Initiative */}
         <div className="font-['Wix_Madefor_Display'] text-center mb-12">
           <p className="text-[32px] md:text-[46px] font-medium mb-2">
-            <span className="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span> social responsibility</p>
+            {/* <span className="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span> */} Anvi social responsibility</p>
           <p className="text-[16px] md:text-[18px] text-[#282828]">Empowering young innovators through learning, <br /> fellowship, and real-world opportunities</p>
         </div>
         <PravikayaInitiative />
