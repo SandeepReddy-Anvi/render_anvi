@@ -5,7 +5,7 @@ import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
-
+import LiveVideo from "../components/Home/LiveVideo";
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
@@ -37,7 +37,7 @@ const footerUpBoxInfoObj = {
 const Home = () => {
   return (
     <>
-      <main> 
+      <main>
         {/* Hero Section */}
         <HeroSection
           backgroundImage="/videos/Heroo_org.mp4"
@@ -82,6 +82,14 @@ const Home = () => {
           <HomeIndustriesCard />
         </section>
 
+        {/* Video Live Section */}
+        <section className="w-full px-5 md:px-[60px] py-[100px] text-center md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
+        <h2 className="text-[32px] md:text-[46px] font-medium text-[#282828] mb-[16px] px-5 md:px-[60px] text-center md:py-[30px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
+           ANVI Collective 2025 Live
+          </h2>
+        <LiveVideo />
+        </section>
+
         {/* Next at Anvi */}
         <section className="next-at-anvi max-w-[2000px] w-full px-5 md:px-[60px] py-[50px] text-center xl:px-[100px] md:py-[80px]">
           <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">Next At {" "}
@@ -90,15 +98,15 @@ const Home = () => {
             </span>
           </h2>
           <p className="text-[16px] md:text-[18px] text-[#2C2C2C] font-regular mb-[30px] md:mb-[64px] leading-[24px] text-center font-['Wix_Madefor_Display']">
-            At Anvi, our engineers don’t work by the clock - they work by vision. Relentlessly innovating, designing, and building what’s next. <br/> 'Next at Anvi' is where tomorrow’s breakthroughs begin - and the future takes shape.
+            At Anvi, our engineers don’t work by the clock - they work by vision. Relentlessly innovating, designing, and building what’s next. <br /> 'Next at Anvi' is where tomorrow’s breakthroughs begin - and the future takes shape.
           </p>
-          
+
           <div className="w-full m-auto md:mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4 text-[#282828]">
             {/* Left big card */}
             <div className="flex flex-col justify-between h-full md:row-span-2 bg-[#F4F3F7] shadow rounded-2xl p-4 text-start">
               <div className="grid grid-cols-2 items-center">
                 <p className="text-[26px] md:text-[39px] font-medium font-inter text-start">01</p>
-                <a 
+                <a
                   href={pagesLinksList.Robotics}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -126,7 +134,7 @@ const Home = () => {
               <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col  text-start ">
                 <div className="grid grid-cols-2 items-center ">
                   <p className="text-[26px] md:text-[39px] font-medium font-inter text-start">02</p>
-                  <a 
+                  <a
                     href={pagesLinksList.Space}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -142,14 +150,14 @@ const Home = () => {
                     and future-ready infrastructure.
                   </p>
                 </div>
-            {/* Centered by default (mobile), but aligned top on larger screens (sm:items-start) */}
-<div className="w-full bg-black rounded-lg mt-2 min-h-[221px] max-h-[350px] overflow-hidden flex items-center justify-center">
-  <img
-    src="/images/home/galactica.png"
-    alt="Anvi Space"
-    className="w-full rounded-xl object-cover" 
-  />
-</div>      </div>
+                {/* Centered by default (mobile), but aligned top on larger screens (sm:items-start) */}
+                <div className="w-full bg-black rounded-lg mt-2 min-h-[221px] max-h-[350px] overflow-hidden flex items-center justify-center">
+                  <img
+                    src="/images/home/galactica.png"
+                    alt="Anvi Space"
+                    className="w-full rounded-xl object-cover"
+                  />
+                </div>      </div>
 
               <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start">
                 <div className="grid grid-cols-2 items-center">
@@ -186,7 +194,7 @@ const Home = () => {
         <div className="font-['Wix_Madefor_Display'] text-center mb-12">
           <p className="text-[32px] md:text-[46px] font-medium mb-2">
             <span className="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span> social responsibility</p>
-          <p className="text-[16px] md:text-[18px] text-[#282828]">Empowering young innovators through learning, <br/> fellowship, and real-world opportunities</p>
+          <p className="text-[16px] md:text-[18px] text-[#282828]">Empowering young innovators through learning, <br /> fellowship, and real-world opportunities</p>
         </div>
         <PravikayaInitiative />
       </main>

@@ -4,7 +4,10 @@
   <!-- Main Pages -->
   <url><loc>https://www.anvi.co/</loc></url>
   <url><loc>https://www.anvi.co/about</loc></url>
-  <url><loc>https://www.anvi.co/investors</loc></url>
+  <url><loc>https://www.anvi.co/investors/login</loc></url>
+  <url><loc>https://www.anvi.co/investors/otp</loc></url>
+  <url><loc>https://www.anvi.co/investors/dashboard</loc></url>
+
   <url><loc>https://www.anvi.co/news</loc></url>
   <url><loc>https://www.anvi.co/contact</loc></url>
   <url><loc>https://www.anvi.co/privacy-policy</loc></url>
