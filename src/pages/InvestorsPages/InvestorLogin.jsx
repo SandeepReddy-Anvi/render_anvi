@@ -3,11 +3,17 @@ import { sendOTP } from "../../services/investorAuth";
 
 export default function InvestorLogin(props) {
   const { emailFun, loginFun } = props;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
 
   const [email, setEmail] = useState("");
 
   const handleSendOTP = async (e) => {
     e.preventDefault();
+
+    if (isSubmitting) return; // safety guard
+    setIsSubmitting(true);
+
     try {
       const response = await sendOTP(email);
       console.log(response);
@@ -26,6 +32,7 @@ export default function InvestorLogin(props) {
       alert("Failed to send OTP");
       emailFun('', false)
       loginFun('', false)
+      setIsSubmitting(false);
     }
   };
 
@@ -66,9 +73,15 @@ export default function InvestorLogin(props) {
 
           <button
             onClick={handleSendOTP}
-            className="w-full max-w-sm p-3 bg-[#2383EB] hover:bg-blue-700 rounded text-white font-semibold"
+            disabled={isSubmitting}
+            className={`w-full max-w-sm p-3 rounded text-white font-semibold
+              ${isSubmitting ? "cursor-not-allowed" : "hover:bg-blue-700"}
+            `}
+            style={{
+              backgroundColor: isSubmitting ? "#2383EB4F" : "#2383EB"
+            }}
           >
-            Send OTP
+            {isSubmitting ? "Sending OTP..." : "Send OTP"}
           </button>
         </div>
       </div>

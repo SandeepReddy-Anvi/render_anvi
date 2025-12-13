@@ -121,7 +121,7 @@ export default function InvestorOTP(props) {
           {/* VERIFY BUTTON */}
           <button
             onClick={handleVerifyOTP}
-            className="w-full mt-4 p-3 bg-[#2383EB] rounded text-white font-semibold hover:bg-blue-700"
+            className="w-full mt-4 p-3 bg-[#2383EB] rounded text-white font-semibold hover:bg-[#2383EB4F]"
           >
             Verify
           </button>
