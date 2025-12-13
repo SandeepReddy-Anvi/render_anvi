@@ -75,7 +75,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Header */
 .currentPageLink {
-    color: #1E9AB0 !important;
+    color: #FA293E !important;
     font-weight: 500 !important;
     transform: scale(1.1) !important;
 }
@@ -98,7 +98,7 @@ body::-webkit-scrollbar-thumb {
     color: #1E9AB0;
     font-family: Wix Madefor Display;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 16px;    
     line-height: 26.01px;
     position: relative;
     overflow: hidden;
@@ -120,7 +120,7 @@ body::-webkit-scrollbar-thumb {
     width: 0%;
     height: 103%;
     border-radius: 16px;
-    background-color: #1E9AB0;
+    background-color: #FA293E;
     transition: width 0.3s ease-out;
 }
 
@@ -130,7 +130,7 @@ body::-webkit-scrollbar-thumb {
 
 
 .link-bg-icon {
-    background-color: black;
+    background-color: #FA293E;
     color: white;
     border-radius: 16px;
     padding: 12px 20px;
@@ -157,7 +157,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .footerUpBox-iconlink:hover {
-    background-color: #1E9AB0 !important;
+    background-color: #FA293E !important;
     color: #fff !important;
 }
 
@@ -240,6 +240,34 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-bg-icon1:hover {
+    box-shadow: 0px 8px 20px 0px #1E9AB052;
+    transform: scale(1.02);
+
+    >i {
+        transform: scale(1.15) translateX(3px) rotate(90deg);
+    }
+}
+
+/* Add this to your index.css or a <style> block */
+
+ .link-bg-icon2 {
+    background-color: black;
+    color:  white;
+    border-radius: 16px;
+    padding: 12px 20px;
+    font-family: 'Madefor', sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease-in-out;
+
+    >i {
+        transition: all 0.2s ease-in-out;
+    }
+}
+.link-bg-icon2:hover {
     box-shadow: 0px 8px 20px 0px #1E9AB052;
     transform: scale(1.02);
 

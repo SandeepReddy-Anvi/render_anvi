@@ -41,9 +41,13 @@ const Solutions = () => {
           automation.
         </p>
         Featured Solutions Grid 
-      </section>*/}
+      </section>*/} 
 
-      <FeaturedSolutionsCardBox />
+      <div>      <FeaturedSolutionsCardBox />
+
+      </div>
+
+
 
       {/* Why Our Solution Matter */}
       <section className="w-full bg-[#F4F3F7D1] mb-[100px]">

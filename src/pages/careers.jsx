@@ -193,7 +193,7 @@ const Careers = () => {
               technology that empowers lives and shapes tomorrow.
             </p>
 
-            <Link to={pagesLinksList.Career_Openings} className="w-[220px] link-bg-icon">
+            <Link to={pagesLinksList.Career_Openings} className="w-[220px] link-bg-icon2 bg-[#000] ">
               Browse Openings <i className="rotate-45">{IconsObj.arrow}</i>
             </Link>
           </div>

@@ -33,7 +33,7 @@ export const ContactUs = () => {
 
   // routes/forms.routes.js (Fix 1)
   const sendMail = useCallback(async (data) => {
-    const api = import.meta.env.VITE_MAIL_API_CONTACT;
+    const api = mailBackendUrl.contact;
     console.log("Contact API:", api);
     setLoading(true);
     setFeedback({ type: "", message: "" });
@@ -81,7 +81,15 @@ export const ContactUs = () => {
     }
 
     // All good → send
-    sendMail(formData);
+    // console.log(formData);
+
+    const submitData = new FormData()
+    submitData.append("FullName", formData.Name)
+    submitData.append("Email", formData.Email)
+    submitData.append("Message", formData.Message)
+    submitData.append("Subject", formData.Subject)
+    submitData.append("Website", "Anvi.Co")
+    sendMail(submitData);
   };
 
   return (
@@ -218,7 +226,7 @@ export const ContactUs = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`group link-bg-icon w-[200px] ${
+                className={`group link-bg-icon1 hover:bg-[#FA293E] hover:text-white w-[200px] ${
                   loading
                     ? "bg-gray-400 cursor-not-allowed"
                     : "link-bg-icon"

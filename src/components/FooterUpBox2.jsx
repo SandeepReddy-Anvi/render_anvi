@@ -85,9 +85,9 @@ export const FooterUpBox2 = ({ info }) => {
         />
         <button
           type="button"
-          className="link-bg-icon footerUpBox-iconlink w-[100px] text-[14px]"
+          className="link-bg-icon2 footerUpBox-iconlink w-[100px] text-[14px]"
           onClick={handleSubscribe}
-          style={{ color: "#fff", background: "#2EACB8", borderRadius: "10px" }}
+          style={{ color: "#fff", background: "#FA293E", borderRadius: "10px" }}
         >
           {status.type === "loading" ? "..." : "Subscribe"}
         </button>
