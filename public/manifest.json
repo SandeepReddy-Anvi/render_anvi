@@ -4,7 +4,7 @@
   "description": "Anvi engineers robotics, AI, and deep-tech systems for industrial, environmental, and societal innovation.",
   "start_url": "/",
   "scope": "/",
-  "display": "standalone",
+  "display": "browser",
   "orientation": "portrait",
   "background_color": "#ffffff",
   "theme_color": "#00A0B0",
