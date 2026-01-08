@@ -2,191 +2,160 @@
 export const jobPositions = [
   {
     id: 1,
-    title: "Robotics Engineer",
-    description: "Design and build autonomous robotic systems.",
+    title: "Software Developer (Full-Stack)",
+    description: "Lead development of scalable full-stack applications while mentoring engineers.",
+    experience: "4-5 Years",
     location: "Hyderabad",
     type: "Full-Time",
+    type2: "On-Site",
     department: "Engineering",
     image: "/images/careers/robotics-engineer.jpg",
-    fullDescription: "We're seeking a talented Robotics Engineer to join our innovative team. You'll work on cutting-edge robotic systems that push the boundaries of automation and artificial intelligence.",
+    fullDescription: "We are seeking an experienced Software Manager (Full-Stack) who will be responsible for designing, developing, and maintaining scalable web applications. The ideal candidate should have strong hands-on experience across front-end, back-end, APIs, and system architecture, and be capable of guiding junior developers while contributing technically.",
     responsibilities: [
-      "Design and develop robotic systems and autonomous solutions",
-      "Implement control algorithms and motion planning systems",
-      "Collaborate with cross-functional teams on integration projects",
-      "Test and optimize robot performance in real-world scenarios",
-      "Document technical specifications and maintenance procedures"
+      "Design, develop, and maintain full-stack applications (Front-end, Back-end & APIs).",
+      "Build and integrate RESTful / GraphQL APIs and third-party services.",
+      "Collaborate with product managers, designers, and QA teams to deliver high-quality software.",
+      "Ensure application performance, security, scalability, and reliability.",
+      "Review code, enforce best practices, and mentor junior developers.",
+      "Participate in architecture decisions and technical planning.",
+      "Troubleshoot, debug, and optimize existing systems."
     ],
     qualifications: [
-      "Bachelor's or Master's degree in Robotics, Mechanical Engineering, or related field",
-      "3+ years of experience in robotics development",
-      "Proficiency in ROS, Python, and C++",
-      "Strong understanding of kinematics, dynamics, and control systems",
-      "Experience with sensors, actuators, and embedded systems"
+      "4–5 years of experience in full-stack software development.",
+      "Strong knowledge of JavaScript / TypeScript, HTML, CSS.",
+      "Front-end frameworks: React / Angular / Vue.js.",
+      "Back-end technologies: Node.js / Java / Python / .NET.",
+      "Database experience: MySQL, PostgreSQL, MongoDB.",
+      "API development & integration experience.",
+      "Understanding of SDLC, Agile/Scrum methodologies.",
+      "Experience with cloud platforms (AWS / Azure / GCP)."
     ],
-    benefits: [
-      "Competitive salary and equity options",
-      "Health insurance and wellness programs",
-      "Flexible work arrangements",
-      "Professional development opportunities",
-      "Collaborative and innovative work environment"
+    skills: [
+      "DevOps exposure (CI/CD, Docker, Kubernetes).",
+      "Experience handling small teams or leading modules",
     ]
   },
   {
     id: 2,
-    title: "UX/UI Designer",
-    description: "Design intuitive, user-friendly interfaces.",
+    title: "Lead AI Engineer",
+    description: "Design, develop, and deploy AI-driven systems for real-world use cases.",
+    experience: "4-5 Years",
     location: "Hyderabad",
     type: "Full-Time",
-    department: "Design",
+    type2: "On-Site",
+    department: "Engineering",
     image: "/images/careers/uiux.jpg",
-    fullDescription: `We are looking for a creative and detail-oriented UX/UI Designer to join Anvi’s design team. In this role, 
-    you’ll design intuitive user interfaces and engaging experiences that bring our robotics, AI, and deep-tech solutions to life. 
-    You’ll collaborate with engineers, researchers, and product teams to deliver designs that are both functional and visually compelling.`,
+    fullDescription: `We are looking for a Lead AI Engineer to design, develop, and deploy intelligent systems and AI-driven solutions. This role requires deep understanding of machine learning, AI algorithms, and data-driven models, along with the ability to lead AI initiatives end-to-end.`,
     responsibilities: [
-      "Conduct user research, interviews, and usability testing to understand user needs.",
-        "Translate requirements into wireframes, prototypes, and high-fidelity designs using Figma.",
-        "Collaborate with cross-functional teams (engineering, product, marketing) to deliver cohesive experiences.",
-        "Create and maintain design systems for consistent branding across platforms.",
-        "Present design concepts and gather feedback to refine solutions.",
-        "Stay updated on design trends, tools, and best practices."
+      "Design and develop AI/ML algorithms and models for real-world applications.",
+      "Work on model training, testing, optimization, and deployment.",
+      "Analyze large datasets and extract actionable insights.",
+      "Collaborate with engineering and product teams to integrate AI solutions into products.",
+      "Stay updated with the latest advancements in AI, ML, and deep learning.",
+      "Guide junior AI engineers and review their work.",
+      "Ensure scalability, accuracy, and ethical AI practices."
     ],
     qualifications: [
-      "Bachelor’s degree in Design, HCI, or related field (or equivalent experience).",
-      "1–3 years of experience in UX/UI design.",
-      "Proficiency in Figma (plus Adobe XD, Sketch, or similar tools).",
-      "Strong understanding of typography, color, layouts, and interaction design.",
-      "Good communication and problem-solving skills.",
-      "Portfolio showcasing UX/UI projects."
+      "4–5 years of experience in AI / Machine Learning development.",
+      "Strong knowledge of Python, ML libraries (TensorFlow, PyTorch, Scikit-learn).",
+      "Experience in algorithm development, neural networks, NLP or computer vision.",
+      "Understanding of data preprocessing, feature engineering, and model evaluation.",
+      "Experience deploying AI models in production environments.",
+      "Knowledge of cloud-based AI services is a plus."
     ],
-    benefits: [
-      `At Anvi, design is at the heart of innovation. You’ll work on projects that shape industries  
-      from robotics to space and sustainability. Here, you’ll grow alongside passionate technologists, 
-      collaborate across disciplines, and create user experiences that drive real impact. With a culture 
-      of learning, inclusivity, and purpose, your career will scale with your potential.`
+    skills: [
+      "Experience with MLOps pipelines.",
+      "Exposure to robotics, automation, or real-time AI systems."
     ]
   },
   {
     id: 3,
-    title: "Product Designer",
-    description: "Create intuitive interfaces for breakthrough technologies.",
+    title: "Lead ROS Engineer",
+    description: "Develop, integrate, test, and optimize ROS-based robotic systems.",
+    experience: "3-5 Years",
     location: "Hyderabad",
     type: "Full-Time",
-    department: "Design",
+    type2: "On-Site",
+    department: "Engineering",
     image: "/images/careers/product-designer.jpg",
-    fullDescription: "We're looking for a Product Designer who can bridge the gap between user needs and business goals, creating innovative solutions for complex technical products.",
+    fullDescription: "We are seeking a Lead ROS Engineer responsible for developing, integrating, and optimizing robotic systems using ROS/ROS2. The role involves working closely with hardware, AI, and control teams to deliver reliable robotic solutions.",
     responsibilities: [
-      "Lead product design from concept to launch",
-      "Develop user flows, wireframes, and interactive prototypes",
-      "Conduct user research and translate insights into design decisions",
-      "Work closely with product managers and engineers",
-      "Iterate designs based on user feedback and analytics"
+      "Design and develop robotic applications using ROS / ROS2.",
+      "Integrate sensors, actuators, and hardware components with ROS.",
+      "Develop and optimize robot navigation, perception, and control systems.",
+      "Debug real-time robotic system issues and improve system performance.",
+      "Collaborate with AI and embedded teams for intelligent robot behavior.",
+      "Maintain technical documentation and mentor junior engineers."
     ],
     qualifications: [
-      "4+ years of product design experience",
-      "Strong portfolio showcasing end-to-end product design",
-      "Experience with design thinking and agile methodologies",
-      "Proficiency in modern design and prototyping tools",
-      "Ability to advocate for users while balancing business needs"
+      "3–5 years of experience in ROS-based robotics development.",
+      "Strong programming skills in C++ and Python.",
+      "Experience with robot sensors (LiDAR, Cameras, IMU, GPS).",
+      "Knowledge of robot kinematics, motion planning, and control systems.",
+      "Familiarity with Linux environments and real-time systems."
     ],
-    benefits: [
-      "Competitive compensation",
-      "Impact-driven work on innovative products",
-      "Professional growth opportunities",
-      "Comprehensive health benefits",
-      "Flexible work culture"
+    skills: [
+      "Experience with autonomous robots or industrial robotics.",
+      "Simulation tools such as Gazebo / RViz."
     ]
   },
   {
     id: 4,
-    title: "UI Designer",
-    description: "Design intuitive, user-friendly interfaces.",
+    title: "Project Manager",
+    description: "Plan and deliver projects across engineering and AI teams.",
+    experience: "3-5 Years",
     location: "Hyderabad",
-    type: "Internship",
-    department: "Design",
+    type: "Full-Time",
+    type2: "On-Site",
+    department: "Management",
     image: "/images/careers/uiux.jpg",
-    fullDescription: "An excellent opportunity for emerging designers to gain hands-on experience creating beautiful user interfaces under the mentorship of senior designers.",
+    fullDescription: "We are seeking a Project Manager to plan, execute, and deliver projects on time and within scope. The role requires strong coordination, stakeholder management, and execution skills.",
     responsibilities: [
-      "Create visual designs for web and mobile interfaces",
-      "Assist in developing design components and patterns",
-      "Participate in design critiques and brainstorming sessions",
-      "Learn and apply design system principles",
-      "Support the design team with various projects"
+      "Plan and manage end-to-end project execution.",
+      "Define project scope, timelines, milestones, and deliverables.",
+      "Coordinate with cross-functional teams (Engineering, AI, Design, QA).",
+      "Track project progress, risks, and dependencies.",
+      "Ensure adherence to budgets and timelines.",
+      "Communicate project updates to stakeholders and leadership."
     ],
     qualifications: [
-      "Currently pursuing or recently completed degree in Design or related field",
-      "Basic knowledge of design tools (Figma, Adobe Suite)",
-      "Strong interest in UI/UX design",
-      "Good eye for aesthetics and attention to detail",
-      "Eagerness to learn and receive feedback"
+      "3–5 years of experience in project management.",
+      "Strong understanding of Agile / Scrum / Waterfall methodologies.",
+      "Excellent communication and leadership skills.",
+      "Experience using project management tools (Jira, Asana, MS Project)."
     ],
-    benefits: [
-      "Mentorship from experienced designers",
-      "Hands-on experience with real projects",
-      "Potential for full-time conversion",
-      "Certificate upon completion",
-      "Collaborative learning environment"
+    skills: [
+      "PMP / Agile certification is a plus.",
+      "Experience managing technical or AI/robotics projects."
     ]
   },
   {
     id: 5,
-    title: "Robotics Engineer",
-    description: "Design and build autonomous robotic systems.",
+    title: "Graphic Designer",
+    description: "Create brand-consistent visuals across digital and print platforms.",
+    experience: "2-4 Years (Flexible based on skill level)",
     location: "Hyderabad",
     type: "Full-Time",
-    department: "Engineering",
+    type2: "On-Site",
+    department: "Design",
     image: "/images/careers/robotics-engineer-2.jpg",
-    fullDescription: "Join our robotics team to work on next-generation autonomous systems. This role focuses on advanced perception and navigation systems.",
+    fullDescription: "We are looking for a creative In-House Graphic Designer to produce visually compelling designs that align with the company’s brand identity across digital and print platforms.",
     responsibilities: [
-      "Develop autonomous navigation and path planning algorithms",
-      "Integrate computer vision and sensor fusion systems",
-      "Optimize robot performance for various environments",
-      "Collaborate on hardware-software integration",
-      "Contribute to research and development initiatives"
+      "Design marketing creatives, social media posts, banners, brochures, and presentations.",
+      "Develop brand-consistent visual assets.",
+      "Collaborate with marketing, HR, and product teams.",
+      "Create UI visuals for websites and applications when required.",
+      "Manage multiple design projects and meet deadlines."
     ],
     qualifications: [
-      "Master's degree in Robotics or related field preferred",
-      "Strong background in SLAM, navigation, and computer vision",
-      "Experience with ROS2 and modern robotics frameworks",
-      "Programming skills in Python and C++",
-      "Published research or patents in robotics (preferred)"
+      "Proficiency in Adobe Creative Suite (Photoshop, Illustrator, InDesign).",
+      "Experience with Figma / Canva / UI design tools.",
+      "Strong creativity, typography, and color sense.",
+      "Ability to convert concepts into high-quality visuals."
     ],
-    benefits: [
-      "Cutting-edge robotics projects",
-      "Research and publication opportunities",
-      "Competitive compensation package",
-      "State-of-the-art facilities and equipment",
-      "Innovation-focused culture"
-    ]
-  },
-  {
-    id: 6,
-    title: "Research Intern",
-    description: "Contribute to cutting-edge research projects.",
-    location: "Hyderabad",
-    type: "Internship",
-    department: "Research",
-    image: "/images/careers/research-intern.jpg",
-    fullDescription: "Join our research team to work on innovative projects at the intersection of AI, robotics, and emerging technologies.",
-    responsibilities: [
-      "Assist with research experiments and data collection",
-      "Analyze research data and document findings",
-      "Contribute to research papers and technical reports",
-      "Collaborate with researchers on various projects",
-      "Stay updated with latest research in the field"
-    ],
-    qualifications: [
-      "Currently pursuing Master's or PhD in relevant field",
-      "Strong analytical and problem-solving skills",
-      "Programming experience in Python or similar languages",
-      "Familiarity with machine learning frameworks",
-      "Excellent written and verbal communication skills"
-    ],
-    benefits: [
-      "Exposure to cutting-edge research",
-      "Mentorship from leading researchers",
-      "Potential for publication opportunities",
-      "Networking with industry experts",
-      "Stipend and certificate"
+    skills: [
+      "Motion graphics or video editing experience.",
+      "Basic understanding of digital marketing design requirements."
     ]
   }
 ];

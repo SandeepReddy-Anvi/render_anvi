@@ -79,7 +79,7 @@ const CareersOpenings = () => {
               onChange={(e) =>
                 setFilters({ ...filters, department: e.target.value })
               }
-              className="w-full appearance-none bg-white border border-[#E1E7EF] rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 pr-8 sm:pr-10 text-sm sm:text-base text-[#0F1729] focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-transparent font-['Wix Madefor Display']"
+              className="w-full appearance-none bg-white border border-[#E1E7EF] rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 pr-8 sm:pr-10 text-sm sm:text-base text-[#0F1729] font-['Wix Madefor Display']"
             >
               {departments.map((dept) => (
                 <option key={dept} value={dept}>
@@ -96,7 +96,7 @@ const CareersOpenings = () => {
               onChange={(e) =>
                 setFilters({ ...filters, location: e.target.value })
               }
-              className="w-full appearance-none bg-white border border-[#E1E7EF] rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 pr-8 sm:pr-10 text-sm sm:text-base text-[#0F1729] focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-transparent font-['Wix Madefor Display']"
+              className="w-full appearance-none bg-white border border-[#E1E7EF] rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 pr-8 sm:pr-10 text-sm sm:text-base text-[#0F1729] font-['Wix Madefor Display']"
             >
               {locations.map((loc) => (
                 <option key={loc} value={loc}>
@@ -111,7 +111,7 @@ const CareersOpenings = () => {
             <select
               value={filters.type}
               onChange={(e) => setFilters({ ...filters, type: e.target.value })}
-              className="w-full appearance-none bg-white border border-[#E1E7EF] rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 pr-8 sm:pr-10 text-sm sm:text-base text-[#0F1729] focus:outline-none focus:ring-2 focus:ring-[#0097B2] focus:border-transparent font-['Wix Madefor Display']"
+              className="w-full appearance-none bg-white border border-[#E1E7EF] rounded-lg px-3 sm:px-4 py-2 sm:py-2.5 pr-8 sm:pr-10 text-sm sm:text-base text-[#0F1729] font-['Wix Madefor Display']"
             >
               {types.map((type) => (
                 <option key={type} value={type}>
@@ -124,21 +124,19 @@ const CareersOpenings = () => {
         </div>
 
         {/* Job Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-[48px]">
           {filteredJobs.map((job) => (
             <div
               key={job.id}
               onMouseEnter={() => setHoveredCard(job.id)}
               onMouseLeave={() => setHoveredCard(null)}
               onClick={() => handleApplyNow(job.id)}
-              className="rounded-[7.936px] border border-[#E1E7EF] p-4 sm:p-5 md:p-6 font-['Wix_Madefor_Display'] transition-all duration-300 cursor-pointer"
+              className="rounded-[16px] shadow-[0_4px_16px_rgba(225,231,239,0.7)] p-4 sm:p-5 md:p-6 font-['Wix_Madefor_Display'] transition-all duration-300 cursor-pointer"
               style={
                 hoveredCard === job.id
                   ? {
                       background:
                         "linear-gradient(107deg, #FFF 0%, #F9FAFB 100%)",
-                      boxShadow:
-                        "0 0 0 0.992px rgba(30, 153, 174, 0.20), 0 0.992px 27.8px 0 rgba(30, 154, 176, 0.25)",
                     }
                   : {
                       background: "#FFF",
@@ -148,7 +146,7 @@ const CareersOpenings = () => {
               <h3 className="text-base sm:text-lg md:text-[19.84px] font-normal text-[#0F1729] mb-2">
                 {job.title}
               </h3>
-              <p className="text-xs sm:text-sm md:text-[14px] text-[#65758B] mb-4">
+              <p className="text-xs sm:text-sm md:text-[14px] text-[#65758B] mb-4 pr-20">
                 {job.description}
               </p>
 
@@ -160,7 +158,7 @@ const CareersOpenings = () => {
                   </div>
                   <div className="flex items-center">
                     <Clock className="w-3 sm:w-4 h-3 sm:h-4 mr-1" />
-                    {job.type}
+                    {job.type}, {job.type2}
                   </div>
                 </div>
 
@@ -169,7 +167,7 @@ const CareersOpenings = () => {
                     e.stopPropagation();
                     handleApplyNow(job.id);
                   }}
-                  className="px-3 sm:px-4 py-1.5 sm:py-2 border border-[#0097B2] text-[#0097B2] rounded-lg hover:bg-[#1197B2] hover:text-white transition-colors-white text-xs sm:text-sm font-medium w-full sm:w-auto"
+                  className="px-3 sm:px-4 py-1.5 sm:py-2 border border-[#CD0054] text-[#CD0054] rounded-lg hover:bg-[#CD0054] hover:text-white transition-colors-white text-xs sm:text-sm font-medium w-[100px] md:w-auto"
                 >
                   Apply Now
                 </button>

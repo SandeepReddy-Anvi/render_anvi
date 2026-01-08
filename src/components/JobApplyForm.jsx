@@ -195,7 +195,7 @@ const JobApplyFormComponent = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-xl mx-auto p-6 bg-white rounded-lg flex flex-col gap-5"
+      className="max-w-xl mx-auto p-6 bg-white rounded-lg flex flex-col gap-5 lg:gap-10"
     >
       {renderInput("FullName", "text", "Full Name")}
 
@@ -252,7 +252,7 @@ const JobApplyFormComponent = () => {
       <button
         type="submit"
         disabled={loading}
-        className="link-bg-icon w-max flex items-center gap-2 px-6 py-2 rounded-md text-white hover:bg-[#1E9AB0]"
+        className="link-bg-icon w-max flex items-center gap-2 px-6 py-2 rounded-md text-white"
       >
         {loading ? "Submitting..." : "Submit"}
         <i className="rotate-45">{IconsObj.arrow}</i>

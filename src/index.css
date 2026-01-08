@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
 
 @font-face {
-    font-family: 'Bauhaus';
-    src: url('/fonts/BauhausRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Bauhaus';
+  src: url('/fonts/BauhausRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 * {
     box-sizing: border-box;
@@ -148,7 +150,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-bg-icon:hover {
-    box-shadow: 0px 8px 20px 0px #1E9AB052;
     transform: scale(1.02);
 
     >i {

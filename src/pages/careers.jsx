@@ -52,7 +52,6 @@ const Careers = () => {
         description="At Anvi, we're building tomorrow's technology today - and we want visionaries like 
             you to join us in creating the next generation of intelligent systems."
         descriptionWidth="680px"
- 
       />
 
       {/* <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">

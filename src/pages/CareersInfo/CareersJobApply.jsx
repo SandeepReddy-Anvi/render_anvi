@@ -17,26 +17,26 @@ const CareersJobApply = () => {
   }
 
   return (
-    <div className="w-full font-dm-sans">
+    <div className="w-full font-raleway bg-white">
       {/* Hero Section */}
       <div
-        className="relative w-full h-full max-md:py-2 min-h-[250px] md:h-[453px] flex items-center justify-center bg-cover bg-center"
+        className="relative w-full h-screen max-md:py-2 min-h-[250px] md:h-[453px] flex items-center justify-center bg-cover bg-center"
         // style={{ backgroundImage: `url(${job.image})` }}
-        style={{ backgroundImage: `url("/images/careers/uiux.jpg")` }}
+        style={{ backgroundImage: `url("/images/careers/hero.jpeg")` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-[#000000B8]" />
 
         {/* Text Content */}
-        <div className="relative flex flex-col items-center justify-center text-white text-center px-4">
-          <p className="text-[20px] sm:text-[22px] md:text-[24px] mt-3 font-[400]">
-            {job.type}
-          </p>
-          <h1 className="text-[48px] my-2 sm:text-[56px] md:text-[64px] lg:text-[72px] font-bold leading-tight">
+        <div className="relative items-center justify-center text-white px-4 max-w-[760px]">
+          <h1 className="text-[40px] my-2 sm:text-[42px] md:text-[44px] lg:text-[46px] font-bold leading-tight">
             {job.title}
           </h1>
-          <p className="text-[16px] mt-6 font-[400]">
-            Scroll Down To Fill The Form
+          <p className="text-[20px] sm:text-[22px] md:text-[22px] mt-3 font-regular">
+            Experience: {job.experience}
+          </p>
+          <p className="text-[20px] sm:text-[22px] md:text-[22px] mt-3 font-regular">
+            Role Type: {job.description}
           </p>
         </div>
       </div>
