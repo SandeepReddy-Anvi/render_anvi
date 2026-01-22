@@ -55,7 +55,7 @@ export const FooterUpBox2 = ({ info }) => {
 
   return (
     < section  
-      className="w-full min-h-[376px] font-[manrope] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
+      className="w-full min-h-[376px] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImag: "url(/images/footer.jpg)" }}
     >
       <div
@@ -64,10 +64,9 @@ export const FooterUpBox2 = ({ info }) => {
       ></div>
 
       <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div>
-      <h2 className="text-[48px] text-[#FFFFFF] sticky z-3">{head}</h2>
+      <h2 className="text-[46px] text-[#FFFFFF] sticky z-3">{head}</h2>
       <p
-        className="text-[16px] max-w-[412px] text-[#fff] font-[400] leading-[24px] text-center mx-auto sticky z-3"
-        style={{ fontFamily: '"Wix Madefor Display", sans-serif' }}
+        className="text-[16px] max-w-[412px] text-[#fff] font-medium leading-[24px] text-center mx-auto sticky z-3"
       >
         {para}
       </p>
@@ -81,13 +80,12 @@ export const FooterUpBox2 = ({ info }) => {
           placeholder="Enter your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border-[1px] border-[#E8EBEE] bg-[#fff] w-full max-w-[337px] rounded-[10px] font-[inter] font-[400] text-[14px] text-[#73808C] px-[13px] py-[11px] focus:outline-none focus:border-[#2EACB8]"
+          className="border-[1px] border-[#E8EBEE] bg-[#fff] w-full max-w-[337px] rounded-[10px] text-[12px] text-[#73808C] px-[18px] py-[8px] focus:outline-none focus:border-[#2EACB8]"
         />
         <button
           type="button"
-          className="link-bg-icon2 footerUpBox-iconlink w-[100px] text-[14px]"
+          className="link-bg-icon1 w-[110px] font-semibold text-[14px] px-4"
           onClick={handleSubscribe}
-          style={{ color: "#fff", background: "#FA293E", borderRadius: "10px" }}
         >
           {status.type === "loading" ? "..." : "Subscribe"}
         </button>

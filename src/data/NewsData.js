@@ -26,12 +26,22 @@ export const newsDataList = [
     imageUrl: '/images/home/robo_img.jpg', // Placeholder for the actual image path
     newsLink: "",
   },
+  {
+    id: 4,
+    date: 'December 15, 2025',
+    title: 'With its revolutionary robo-tech, Anvi Robotics dives into danger zones.',
+    info: 'Anvi Robotics’ AI-powered robots aided SLBC rescue, proving technology’s vital role in dangerous, life-saving missions.',
+    category: 'Inside Anvi',
+    imageUrl: '/images/news/collective.jpeg', // Placeholder for the actual image path
+    newsLink: "",
+  },
 ];
 
 export const newsTabsList = [
-    { name: 'All', count: newsDataList.length, active: true },
+    { name: 'All Categories', count: newsDataList.length, active: true },
     { name: 'Next at Anvi', count: newsDataList.filter(e => e.category === 'Next at Anvi').length, active: false },
-    { name: 'Announcements', count: newsDataList.filter(e => e.category === 'Announcements').length, active: false },
     // { name: 'Announcements', count: 0, active: false },
     { name: 'Press Releases', count: 2, active: false },
+    { name: 'Inside Anvi', count: newsDataList.filter(e => e.category === 'Inside Anvi').length, active: false },
+    { name: 'Announcements', count: newsDataList.filter(e => e.category === 'Announcements').length, active: false },
 ];

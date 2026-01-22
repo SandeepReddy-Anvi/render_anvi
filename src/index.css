@@ -1,21 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap'); 
 
 @font-face {
   font-family: 'Bauhaus';
   src: url('/fonts/BauhausRegular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+}*/
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    font-family: 'Raleway', sans-serif;
+}
+
+.font-wix {
+    font-family: 'Wix Madefor Display', sans-serif;
+}
 
 * {
     box-sizing: border-box;
@@ -24,14 +31,13 @@
 
 body {
     width: 100%;
-    max-width: 2400px;
     max-width: 100%;
     margin: auto;
     min-height: auto;
     overflow-x: hidden;
     overflow-y: auto;
 }
-
+ 
 main {
     width: 100%;
     overflow: hidden !important;
@@ -130,37 +136,38 @@ body::-webkit-scrollbar-thumb {
     width: 101%;
 }
 
-
-.link-bg-icon {
+.link-bg-icon1 {
     background-color: #FA293E;
-    color: white;
+    color:  #FFFFFF;
     border-radius: 16px;
-    padding: 12px 20px;
-    font-family: 'Madefor', sans-serif;
+    padding: 10px 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
     transition: all 0.2s ease-in-out;
+    transform: translateZ(0);
 
     >i {
         transition: all 0.2s ease-in-out;
     }
 }
 
-.link-bg-icon:hover {
-    transform: scale(1.02);
+.link-bg-icon1:hover {
+    background-color: #CD0054;
+    transform: translateZ(20px);
+    /* transform: scale(1.02); */
 
     >i {
         transform: scale(1.15) translateX(3px) rotate(90deg);
     }
 }
 
-.footerUpBox-iconlink:hover {
+/* .footerUpBox-iconlink:hover {
     background-color: #FA293E !important;
     color: #fff !important;
-}
+} */
 
 .next-at-anvi ul::-webkit-scrollbar {
     width: 0px;
@@ -218,22 +225,18 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
-
-
-
 .link-bg-icon1 {
-    background-color: white;
-    color:  black;
+    background-color: #FA293E;
+    color:  #FFFFFF;
     border-radius: 16px;
-    padding: 12px 20px;
-    font-family: 'Madefor', sans-serif;
+    padding: 10px 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
     transition: all 0.2s ease-in-out;
+    transform: translateZ(0);
 
     >i {
         transition: all 0.2s ease-in-out;
@@ -241,36 +244,9 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-bg-icon1:hover {
-    box-shadow: 0px 8px 20px 0px #1E9AB052;
-    transform: scale(1.02);
-
-    >i {
-        transform: scale(1.15) translateX(3px) rotate(90deg);
-    }
-}
-
-/* Add this to your index.css or a <style> block */
-
- .link-bg-icon2 {
-    background-color: black;
-    color:  white;
-    border-radius: 16px;
-    padding: 12px 20px;
-    font-family: 'Madefor', sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s ease-in-out;
-
-    >i {
-        transition: all 0.2s ease-in-out;
-    }
-}
-.link-bg-icon2:hover {
-    box-shadow: 0px 8px 20px 0px #1E9AB052;
-    transform: scale(1.02);
+    background-color: #CD0054;
+    transform: translateZ(20px);
+    /* transform: scale(1.02); */
 
     >i {
         transform: scale(1.15) translateX(3px) rotate(90deg);

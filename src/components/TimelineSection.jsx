@@ -8,13 +8,13 @@ const TimelineSection = () => {
     {
       year: "2022",
       title: "First Surveillance Robot Launch",
-      desc: "Deployed intelligent surveillance systems across multiple installations, enabling real-time monitoring, threat detection, and faster response.",
+      desc: "Started with a vision to revolutionize industries through deep-tech innovation.",
       img: "/images/about/about5.webp",
     },
     {
       year: "2023",
-      title: "AROP White Paper Release",
-      desc: "Published groundbreaking research on autonomous runway operations.",
+      title: "Autonomous Runway Operations (AROP )",
+      desc: "Published groundbreaking research on autonomous runway operations..",
     },
     {
       year: "2024",
@@ -24,7 +24,7 @@ const TimelineSection = () => {
   ];
 
   return (
-    <div className="space-y-12 font-dm-sans">
+    <div className="space-y-12">
       {timelineData.map((item, index) => (
         <div
           key={index}
@@ -33,13 +33,13 @@ const TimelineSection = () => {
           {/* Year */}
           <div className="flex-shrink-0 w-10 relative inline-flex justify-between place-items-center align-middle text-right pr-4">
             <i className="w-2.5 h-max absolute left-[-21.5px] rounded-full aspect-square inline-flex bg-[#FA293E]" />
-            <span className="text-[12px] text-[#FA293E] font-semibold pl-8">{item.year}</span>
+            <span className="text-[18px] text-[#D10000] font-medium pl-8">{item.year}</span>
           </div>
 
           {/* Content */}
           <div className="flex-1 pl-8 mt-2">
-            <h3 className="text-[20px] md:text-[24px] font-normal text-[#1E2024]">{item.title}</h3>
-            <p className="text-[#7B828E] text-[14px] font-normal mt-1">
+            <h3 className="text-[20px] md:text-[22px] font-medium md:font-semibold text-[#100000]">{item.title}</h3>
+            <p className="text-[#323232] text-[14px] font-medium mt-1">
               {item.desc}
             </p>
             {item.img && (

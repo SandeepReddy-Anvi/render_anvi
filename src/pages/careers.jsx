@@ -16,7 +16,17 @@ const footerUpBoxInfoObj = {
   link: pagesLinksList.Career_Openings,
   //  link: pagesLinksList.Career_Openings+"#job-openings-container",
 };
- 
+
+const ourDescription = [
+  "At ANVI, culture is not a set of rules  it is how we think, build, and collaborate every day. We bring together engineers, designers, scientists, creators, and problem-solvers who share a deep respect for innovation and purpose. Curiosity drives us to question the obvious, ownership empowers us to build boldly, and collaboration ensures every idea grows stronger through collective thinking.",
+
+  "We value experimentation over fear, learning over ego, and impact over noise. Our teams are encouraged to think long-term, act responsibly, and design with empathy  knowing that the technologies we build today will shape the world tomorrow. At ANVI, culture is our foundation, enabling us to create systems that are resilient, meaningful, and future-ready."
+];
+
+const ourDescription2 = [
+  "ANVI is powered by a diverse team of engineers, scientists, designers, storytellers, and innovators who share a common purpose — to build technology that creates meaningful impact. Our strength lies not just in individual expertise, but in how we collaborate across disciplines to solve complex challenges with clarity and conviction.",
+  "Each team member brings a unique perspective, combining technical depth with creative thinking and a strong sense of responsibility. From robotics and space systems to immersive media and lifestyle design, our teams work with precision, curiosity, and long-term vision. United by trust, ownership, and ambition, the ANVI team is committed to engineering solutions that are resilient, ethical, and future-ready."
+];
      
 // const cards = [
 //   {
@@ -44,7 +54,7 @@ const footerUpBoxInfoObj = {
 
 const Careers = () => {
   return (
-    <div id="careers" className="w-full">
+    <div id="careers" className="w-full bg-[#FFFFFF]">
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/videos/Heroo5_org.mp4"
@@ -177,22 +187,22 @@ const Careers = () => {
 
         {/* Content */}
         <div className="absolute inset-0 flex items-center p-[20px] md:p-[30px] lg:p-[50px]">
-          <div className="p-6 sm:p-8 md:p-10 pr-10 lg:pr-[180px] bg-white max-w-[680px] rounded-lg">
-            <p className="font-arial text-[19px] text-[#5C5D5E]">ANVI CAREERS</p>
+          <div className="p-6 sm:p-8 md:p-10 pr-10 lg:pr-[180px] bg-[#FFFFFF] max-w-[680px] rounded-lg">
+            <p className="text-[18px] text-[#5C5D5E] font-medium">ANVI CAREERS</p>
 
-            <h2 className="text-[#282828] font-['Wix_Madefor_Display'] font-medium text-[28px] md:text-[38px] lg:text-[44px]">
+            <h2 className="text-[#100000] font-medium text-[30px] md:text-[40px] lg:text-[46px] leading-[57px] my-2">
               Together, We Build What’s Next
             </h2>
 
-            <div className="h-[2px] lg:h-[4px] w-10 bg-[#282828]"></div>
+            {/* <div className="h-[2px] lg:h-[4px] w-10 bg-[#282828]"></div> */}
 
-            <p className="my-6 text-[14px] text-[#282828] font-dm-sans font-regular">
+            <p className="mt-4 mb-6 text-[14px] text-[#282828] font-regular">
               At Anvi, innovation starts with people. We build intelligent systems
               for smarter, safer cities and sustainability. Join us to create
               technology that empowers lives and shapes tomorrow.
             </p>
 
-            <Link to={pagesLinksList.Career_Openings} className="w-[220px] link-bg-icon2 bg-[#000] ">
+            <Link to={pagesLinksList.Career_Openings} className="link-bg-icon1 text-[14px] w-[180px]">
               Browse Openings <i className="rotate-45">{IconsObj.arrow}</i>
             </Link>
           </div>
@@ -201,8 +211,8 @@ const Careers = () => {
 
       <GradientText 
         ourTitle ="Our Culture"
-        gradientTitle ="Driven by Purpose. United by Passion."
-        ourDescription = "At Anvi, culture is driven by curiosity, collaboration, and care. Diverse minds build meaningful innovation. Every voice matters as we create technology that improves lives and protects our planet."
+        para="Built on curiosity, responsibility, and the courage to engineer what’s next."
+        ourDescription = {ourDescription}
       />
 
       {/* Section 4 Life at Anvi*/}
@@ -247,80 +257,68 @@ const Careers = () => {
       {/* Pravikaya Initiative 
       <PravikayaInitiative />*/}
       <GradientText 
-          ourTitle="Our Team"
-          gradientTitle="The People Behind the Innovation."
-          ourDescription="At Anvi, our team powers every breakthrough. Engineers, designers, and creators turn bold ideas into intelligent systems, advancing cities, learning together, pushing limits, and shaping the future as one team."
-        />
-        
+        ourTitle="Our Team"
+        gradientTitle="The People Behind the Innovation."
+        para="A collective of engineers, creators, and thinkers shaping the future together."
+        ourDescription= {ourDescription2}
+      />
+      
+      {/* Team Picture */}
       <section className="px-10 lg:px-[60px] overflow-hidden">
-<div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16">
+        <div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16">
 
-  {/* Background Image */}
-  <div className="absolute inset-0 overflow-hidden z-0">
-    <img
-      src="/images/careers/team.jpg"
-      alt="Our Team"
-      className="
-        w-full h-full object-cover
-        rounded-[16px]
-        sm:rounded-[20px]
-        md:rounded-[28px]
-        lg:rounded-[32px]
-        max-md:object-contain
-      "
-      draggable={false}
-    />
-  </div>
+          {/* Background Image */}
+          <div className="absolute inset-0 overflow-hidden z-0">
+            <img
+              src="/images/careers/team.jpg"
+              alt="Our Team"
+              className="w-full h-full object-cover rounded-[16px] sm:rounded-[20px] md:rounded-[28px] lg:rounded-[32px] max-md:object-contain"
+              draggable={false}
+            />
+          </div>
 
-  {/* Overlay Card */}
-  <div className="absolute inset-0 flex items-end justify-center z-10">
-    <div
-      className="
-        w-[90%]
-        sm:w-[85%]
+          {/* Overlay Card */}
+          <div className="absolute inset-0 flex items-end justify-center z-10">
+            <div className="w-[90%] sm:w-[85%] md:w-[70%] lg:w-[60%] 
+              bg-[#FFFFFF] backdrop-blur-sm rounded-2xl sm:rounded-3xl lg:rounded-[32px] 
+              px-5 py-6 sm:px-8 sm:py-7 md:px-12 md:py-9 lg:px-16 lg:py-12
+              translate-y-3 sm:translate-y-5 md:translate-y-10"
+            >
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#100000] text-center font-medium leading-[37px]">
+                The Core Values That Shape Everything We Do
+              </p>
+            </div>
+          </div>
 
-        md:w-[70%]
-        lg:w-[60%]
-
-        bg-white/95 backdrop-blur-sm
-        rounded-2xl sm:rounded-3xl lg:rounded-[32px]
-
-        px-5 py-6 
-        sm:px-8 sm:py-7
-        md:px-12 md:py-9
-        lg:px-16 lg:py-12
-
-        translate-y-3
-        sm:translate-y-5
-        md:translate-y-10
-      "
-    >
-      <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#222]  text-center font-['Wix_Madefor_Display'] font-medium leading-tight">
-        The Core Values That Shape Everything We Do
-      </p>
-    </div>
-  </div>
-
-</div>
-
-
+        </div>
       </section>
 
-
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-center items-start gap-6 md:gap-28 p-6 md:p-20 lg:p-24 font-['Wix_Madefor_Display']">
-        <div className="flex flex-col gap-4 text-[#282828] font-normal p-2">
-          <h2 className="text-[26px] md:pr-8 lg:pr-10">Innovate with Purpose</h2>
-          <p className="text-[14.4px]">We believe innovation should create real impact. At Anvi, every idea starts with purpose designing intelligent systems that make cities safer, smarter, and more sustainable.</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 justify-center text-center items-start gap-6 md:gap-28 p-6 md:p-20 lg:p-24">
+        <div className="flex flex-col gap-4">
+          <img 
+            src="/images/careers/bulb.png"
+            className="w-[60px] h-[60px] object-contain mx-auto"
+          />
+          <h2 className="text-[20px] md:text-[26px] text-[#282828] font-medium">Innovate with Purpose</h2>
+          <p className="text-[#100000] text-[14.4px]">We believe innovation should create real impact. At Anvi, every idea starts with purpose designing intelligent systems that make cities safer, smarter, and more sustainable.</p>
         </div>
 
-        <div className="flex flex-col gap-4 text-[#282828] font-normal p-2">
-          <h2 className="text-[26px] md:pr-8 lg:pr-10">Collaborate to Grow</h2>
-          <p className="text-[14.4px]">Great ideas grow stronger together. Our people bring diverse skills and perspectives that fuel creativity, teamwork, and progress helping us build better, together.</p>
+        <div className="flex flex-col gap-4 text-[#282828] font-normal">
+          <img 
+            src="/images/careers/hands.png"
+            className="w-[60px] h-[60px] object-contain mx-auto"
+          />
+          <h2 className="text-[20px] md:text-[26px] text-[#282828] font-medium">Collaborate to Grow</h2>
+          <p className="text-[#100000] text-[14.4px]">Great ideas grow stronger together. Our people bring diverse skills and perspectives that fuel creativity, teamwork, and progress helping us build better, together.</p>
         </div>          
 
-        <div className="flex flex-col gap-4 text-[#282828] font-normal p-2">
-          <h2 className="text-[26px] md:pr-8 lg:pr-16">Lead with Integrity</h2>
-          <p className="text-[14.4px]">Integrity is at the heart of everything we do. We act with honesty, responsibility, and transparency earning trust through every action and decision.</p>
+        <div className="flex flex-col gap-4 text-[#282828] font-normal">
+          <img 
+            src="/images/careers/clock.png"
+            className="mb-[12px] w-[50px] h-[50px] object-contain mx-auto"
+          />
+          <h2 className="text-[20px] md:text-[24px] text-[#282828] font-medium">Lead with Integrity</h2>
+          <p className="text-[#100000] text-[14.4px]">Integrity is at the heart of everything we do. We act with honesty, responsibility, and transparency earning trust through every action and decision.</p>
         </div>
       </div>
 

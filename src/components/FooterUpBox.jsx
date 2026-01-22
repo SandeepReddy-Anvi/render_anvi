@@ -10,7 +10,7 @@ export const FooterUpBox = ({ info }) => {
   if (!head) return null;
   return (
     <section
-      className="w-full min-h-[376px] px-5 py-[80px] font-[manrope] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
+      className="w-full min-h-[376px] px-5 py-[80px] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url(/images/footer.jpg)" }}
     >
       <div
@@ -19,19 +19,17 @@ export const FooterUpBox = ({ info }) => {
       ></div>
       <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div>
       <h2
-        className="text-[28px] md:text-[48px] text-white z-10"
+        className="text-[28px] md:text-[46px] text-[#FFFFFF] font-regular z-10"
         dangerouslySetInnerHTML={{ __html: head }}
       ></h2>
       <p
-        className="text-[14px] md:text-[16px] max-w-[612px] text-[#fff] font-[400] leading-[24px] text-center mx-auto sticky z-3"
-        style={{ fontFamily: '"Wix Madefor Display", sans-serif' }}
+        className="text-[14px] md:text-[16px] max-w-[612px] text-[#FFFFFF] font-medium leading-[24px] text-center mx-auto sticky z-3"
       >
         {para}
       </p>
       <Link
         to={link}
-        className="link-bg-icon footerUpBox-iconlink rounded-[12px] w-max text-[16px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
-        style={{ color: "#000", background: "white" }}
+        className="link-bg-icon1 w-max text-[14px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
       >
         {linkLabel}
         <i className="rotate-45">{IconsObj.arrow}</i>

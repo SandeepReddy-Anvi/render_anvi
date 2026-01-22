@@ -36,12 +36,12 @@ export const pagesLinksList = {
 
 export const mainPagesLinksList = {
   // Main Pages
-  Home: "/",
+  //Home: "/",
   AboutUs: "/aboutus",
-  Solutions: '/solutions',
   Industries: "/industries",
-  News: "/news",
+  Solutions: '/solutions',
   Careers: "/careers",
+  NewsRoom: "/news",
   InvestorsDesk: "/investors",
   ContactUs: "/contactus",
 }

@@ -48,7 +48,7 @@ const CareersJobDesc = () => {
           <h2 className="text-[20px] sm:text-[22px] font-semibold mb-5 text-[#000000]">
             Job Description
           </h2>
-          <p className="text-[16px] text-[#000000] font-medium leading-[26px]">
+          <p className="text-[16px] text-black font-normal leading-[26px]">
             {job.fullDescription}
           </p>
         </div>
