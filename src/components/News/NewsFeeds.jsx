@@ -3,7 +3,7 @@ import { newsDataList, newsTabsList } from "../../data/NewsData";
 import NewsCard from "./NewsCard";
 
 const NewsFeeds = () => {
-  const [activeTab, setActiveTab] = useState("All");
+  const [activeTab, setActiveTab] = useState("All Categories");
 
   // Filter the news based on the active tab
   const filteredData = useMemo(() => {
@@ -15,9 +15,9 @@ const NewsFeeds = () => {
   }, [activeTab]);
 
   return (
-    <div className="bg-[#FFFFFF] min-h-screen pb-[100px]">
+    <div className="bg-[#FFFFFF] min-h-screen pb-[100px] overflow-hidden">
       {/* Tab Navigation */}
-      <div className="grid grid-cols-5 justify-start align-middle bg-[#F4F4F4] gap-[6px] mb-16">
+      <div className="flex md:grid md:grid-cols-5 bg-[#F4F4F4] gap-[6px] mb-16 overflow-x-auto md:overflow-visible whitespace-nowrap scrollbar-hide px-3">
         {newsTabsList.map((tab) => (
           <button
             key={tab.name}

@@ -74,7 +74,7 @@ const About = () => {
   
 
       {/* section 3 -> Vision, Mission, Value Section*/}
-      <section className="relative w-screen h-full">
+      <section className="">
         <ContentCardUl infoList={aboutCardList} />
       </section>
 
@@ -84,24 +84,24 @@ const About = () => {
           <img 
             src="/images/about/anvi.png"
             alt="Anvi Entrance"
-            className="w-full h-[300px] md:w-auto md:h-auto pr-0 md:pr-14 mb-10 md:mb-0"
+            className="w-full h-[300px] md:w-[450px] md:h-auto pr-0 md:pr-14 mb-10 md:mb-0"
           />
           <div className="flex flex-col justify-center items-start md:items-start text-left">
-            <h2 className="font-semibold text-[32px] md:text-[43px]">Our journey began with a bold purpose</h2>
+            <h2 className="font-medium text-[32px] md:text-[36px] lg:text-[43px]">Our journey began with a bold purpose</h2>
             <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">ANVI began with the belief that technology should evolve beyond products and shape how humanity lives, works, and explores. What started as engineering excellence grew into a deep-tech ecosystem spanning robotics, space, creative media, and lifestyle innovation - expanding what technology can mean for people and the planet.</p>
             <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">Today, ANVI operates at the intersection of science, creativity, and engineering, building purposeful, resilient, and future-ready systems that turn challenges into possibilities.</p>
 
             <div className="flex flex-cols-3 gap-4 md:gap-10 pt-10">
               <div>
-                <h2 className="font-medium text-[40px] md:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">4</h2>
+                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">4</h2>
                 <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">Core Verticals</p>
               </div>
               <div>
-                <h2 className="font-medium text-[40px] md:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">8+</h2>
+                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">8+</h2>
                 <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">Industry Sectors</p>
               </div>
               <div>
-                <h2 className="font-medium text-[40px] md:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">1 <span className="text-[24px] md:text-[47px]">Purpose</span></h2>
+                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">1 <span className="text-[24px] md:text-[30px] lg:text-[47px]">Purpose</span></h2>
                 <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">Engineering Your Edge</p>
               </div>
             </div>
@@ -115,7 +115,7 @@ const About = () => {
         {/* Heading Section */}
         <div className="  sm:flex-row md:flex-row items-center justify-center text-clip">
           <div className="mt-0 2xl:mt-[20px] max-w-[1161px] text-center text-[#100000] mx-auto ">
-            <p className="w-full max-md:text-center leading-[50.569px] text-[32px] md:text-[46px] font-semibold">
+            <p className="w-full max-md:text-center leading-[50.569px] text-[32px] md:text-[46px] font-medium">
               What Makes ANVI Different
             </p>
             <p className="w-full text-center justify-center mt-6 px-0 lg:px-[130px] text-[18px] md:text-[20]">

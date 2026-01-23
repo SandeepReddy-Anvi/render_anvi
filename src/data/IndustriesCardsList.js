@@ -4,7 +4,7 @@ export const IndustriesCardsList = {
     robotics: {
         imgUrl: '/images/industries/robotics.jpg',
         title: 'Robotics',
-        desc: "Blending intelligence and engineering, our robotics transform human interaction.",
+        desc: "Blending intelligence with engineering, our robotics division is built to transform how humans interact with challenging environments on Earth.",
         link: pagesLinksList.Robotics,
         activeCard: true,
     },space: {

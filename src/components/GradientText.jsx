@@ -17,7 +17,7 @@ const GradientText = ({
     >
       {/* Title */}
       {ourTitle && (
-        <h4 className="text-[#CD0054] text-[20px] md:text-[24px] lg:text-[26.6px] font-bold tracking-[-0.02em] mb-6">
+        <h4 className="text-[#CD0054] text-[20px] md:text-[24px] lg:text-[26.6px] font-bold tracking-[-0.02em]">
           {ourTitle}
         </h4>
       )}
@@ -30,7 +30,7 @@ const GradientText = ({
       {paragraphs.map((para, index) => (
         <p
           key={index}
-          className="text-[18px] md:text-[20px] font-medium text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px] mb-6"
+          className="text-[16px] md:text-[20px] font-medium text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px] mb-6"
         >
           {para}
         </p>

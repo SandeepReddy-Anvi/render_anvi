@@ -35,7 +35,7 @@ export default function CareersGrowthComponent({
 
           {/* Left - Text */}
           <div className="lg:col-span-7 z-10 px-5 md:px-[60px] text-[#FFFFFF]">
-            <h2 className="text-[32px] md:text-[46px] font-semibold leading-tight">
+            <h2 className="text-[32px] md:text-[46px] font-medium leading-tight">
               {title}
             </h2>
 

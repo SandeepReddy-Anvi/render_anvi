@@ -29,7 +29,7 @@ export const FooterUpBox = ({ info }) => {
       </p>
       <Link
         to={link}
-        className="link-bg-icon1 w-max text-[14px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
+        className="link-bg-icon1 w-max font-semibold text-[14px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
       >
         {linkLabel}
         <i className="rotate-45">{IconsObj.arrow}</i>

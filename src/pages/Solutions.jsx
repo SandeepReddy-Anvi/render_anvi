@@ -52,7 +52,7 @@ const Solutions = () => {
 
       {/* Why Our Solution Matter */}
       <section className="w-full bg-[#F4F3F7D1] mb-[100px]">
-        <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[65px] font-dm-sans">
+        <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[65px]">
           <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828]">
             Why Our Solutions Matter
           </h2>
