@@ -6,7 +6,8 @@ const NewsCard = ({ item }) => {
   return (
     <Link
       to={item.newsLink}
-      target={item.newsLink ? "_blank" : ""}
+     target={item.openInNewTab ? "_blank" : "_self"}
+  rel={item.openInNewTab ? "noopener noreferrer" : undefined}
       // style={{
       //   boxShadow: "0px 1px 2px -1px #73808C1A, 0px 1px 3px 0px #73808C1A",
       // }}
