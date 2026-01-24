@@ -28,28 +28,30 @@ const ourDescription2 = [
   "Each team member brings a unique perspective, combining technical depth with creative thinking and a strong sense of responsibility. From robotics and space systems to immersive media and lifestyle design, our teams work with precision, curiosity, and long-term vision. United by trust, ownership, and ambition, the ANVI team is committed to engineering solutions that are resilient, ethical, and future-ready."
 ];
      
-// const cards = [
-//   {
-//     img: "/images/careers/career2.1.webp",
-//     title: "Innovate with Purpose",
-//     desc: "Work on breakthrough robotics and deep-tech innovations that go beyond boundaries, solving real-world challenges across industries and communities. At Anvi, you will explore ambitious ideas, design scalable systems, and collaborate with bright minds. Together, we shape industries of the future while driving safety, efficiency, and sustainability for people, businesses, and the planet.",
-//   },
-//   {
-//     img: "/images/careers/career2.2.webp",
-//     title: "Grow Without Limits",
-//     desc: "Explore ambitious ideas, embrace challenges, upskill continuously, collaborate with innovators, and build a career that grows, evolves, and scales with your limitless potential.",
-//   },
-//   {
-//     img: "/images/careers/career2.3.webp",
-//     title: "Collaborate & Belong",
-//     desc: "Be part of a culture that values teamwork, inclusion, respect, and diverse perspectives, where collaboration, creativity, and shared purpose drive excellence and meaningful progress.",
-//   },
-//   {
-//     img: "/images/careers/career2.4.webp",
-//     title: "Impact That Matters",
-//     desc: "Create solutions that drive industry progress, deliver measurable impact, and at the same time inspire communities while supporting sustainability for a smarter, safer, and better shared future.",
-//   },
-// ];
+const cultureCards = [
+  {
+    id: 1,
+    title: "Innovate with Purpose",
+    image: "/images/careers/career6.1.png",
+    description:
+      "We believe innovation should create real impact. At Anvi, every idea starts with purpose—designing intelligent systems that make cities safer, smarter, and more sustainable.",
+  },
+  {
+    id: 2,
+    title: "Collaborate to Grow",
+    image: "/images/careers/career6.2.jpg",
+    description:
+      "Great ideas grow stronger together. Our people bring diverse skills and perspectives that fuel creativity, teamwork, and progress—helping us build better, together.",
+  },
+  {
+    id: 3,
+    title: "Lead with Integrity",
+    image: "/images/careers/career6.3.png",
+    description:
+      "Integrity is at the heart of everything we do. We act with honesty, responsibility, and transparency—earning trust through every action and decision.",
+  },
+];
+
  
 
 const Careers = () => {
@@ -293,35 +295,73 @@ const Careers = () => {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 justify-center text-center items-start gap-6 md:gap-28 p-6 md:p-20 lg:p-24">
-        <div className="flex flex-col gap-4">
-          <img 
-            src="/images/careers/bulb.png"
-            className="w-[60px] h-[60px] object-contain mx-auto"
-          />
-          <h2 className="text-[20px] md:text-[26px] text-[#282828] font-medium">Innovate with Purpose</h2>
-          <p className="text-[#100000] text-[14.4px]">We believe innovation should create real impact. At Anvi, every idea starts with purpose designing intelligent systems that make cities safer, smarter, and more sustainable.</p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 p-6 md:p-20 lg:p-24 text-center">
+        {cultureCards.map((card) => (
+          <div key={card.id} className="flex flex-col items-center gap-2 group">
 
-        <div className="flex flex-col gap-4 text-[#282828] font-normal">
-          <img 
-            src="/images/careers/hands.png"
-            className="w-[60px] h-[60px] object-contain mx-auto"
-          />
-          <h2 className="text-[20px] md:text-[26px] text-[#282828] font-medium">Collaborate to Grow</h2>
-          <p className="text-[#100000] text-[14.4px]">Great ideas grow stronger together. Our people bring diverse skills and perspectives that fuel creativity, teamwork, and progress helping us build better, together.</p>
-        </div>          
+            {/* IMAGE / FLIP WRAPPER */}
+            <div className="relative w-[250px] lg:w-[290px] h-[220px] [perspective:1200px]">
 
-        <div className="flex flex-col gap-4 text-[#282828] font-normal">
-          <img 
-            src="/images/careers/clock.png"
-            className="mb-[12px] w-[50px] h-[50px] object-contain mx-auto"
-          />
-          <h2 className="text-[20px] md:text-[24px] text-[#282828] font-medium">Lead with Integrity</h2>
-          <p className="text-[#100000] text-[14.4px]">Integrity is at the heart of everything we do. We act with honesty, responsibility, and transparency earning trust through every action and decision.</p>
-        </div>
+              {/* FLIP CARD — only active on lg+ */}
+              <div
+                className="
+                  relative w-full h-full
+                  lg:transition-transform lg:duration-700 lg:ease-in-out
+                  lg:[transform-style:preserve-3d]
+                  lg:group-hover:[transform:rotateY(180deg)]
+                "
+              >
+                {/* FRONT — IMAGE */}
+                <div
+                  className="
+                    absolute inset-0 rounded-[12px] overflow-hidden
+                    [backface-visibility:hidden]
+                  "
+                >
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="w-full h-full object-cover"
+                  />
+
+                  {/* DARK OVERLAY + TEXT (mobile & md only) */}
+                  <div
+                    className="
+                      absolute inset-0 flex items-center justify-center px-5
+                      bg-black/50 text-white
+                      text-[14px] font-medium leading-relaxed
+                      lg:hidden
+                    "
+                  >
+                    {card.description}
+                  </div>
+                </div>
+
+                {/* BACK — DESCRIPTION (lg+ only) */}
+                <div
+                  className="
+                    absolute inset-0 rounded-[12px]
+                    hidden lg:flex items-center justify-center px-6
+                    bg-[#100000] text-white
+                    text-[14px] font-medium leading-relaxed
+                    [transform:rotateY(180deg)]
+                    [backface-visibility:hidden]
+                  "
+                >
+                  {card.description}
+                </div>
+
+              </div>
+            </div>
+
+            {/* TITLE — NEVER FLIPS */}
+            <h2 className="text-[18px] text-[#100000] font-medium">
+              {card.title}
+            </h2>
+
+          </div>
+        ))}
       </div>
-
 
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />

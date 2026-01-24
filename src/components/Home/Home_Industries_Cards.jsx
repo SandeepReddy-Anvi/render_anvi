@@ -23,7 +23,7 @@ export const HomeIndustriesCard = () => {
     // <ul className="home-industry-cards-ul w-full  h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] m-0 lg:mx-auto   ">
  
     //<ul className="home-industry-cards-ul w-full h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] lg:mx-auto px-0 md:px-0 ml-[-10px]">
-    <ul className="w-full h-auto flex md:flex-row justify-start 2xl:justify-between gap-[10px] md:gap-[12] lg:gap-[32px] lg:mx-auto px-0 pt-10 md:pt-16 lg:pt-20 overflow-x-auto overflow-y-hidden scrollbar-hide">
+    <ul className="w-full h-auto flex md:flex-row justify-start 2xl:justify-between gap-[10px] md:gap-[12px] lg:gap-[23px] lg:mx-auto px-0 pt-10 md:pt-16 lg:pt-20 overflow-x-auto overflow-y-hidden scrollbar-hide">
  
       {Object.keys(cardsList).map((eachIndustry, index) => {
         const { imgUrl, title, desc, link, activeCard } = cardsList[eachIndustry];
@@ -33,8 +33,8 @@ export const HomeIndustriesCard = () => {
             key={eachIndustry + index}
             className={`active-home-industry-card-li w-max h-auto overflow-hidden relative rounded-[22px] flex-shrink-0 transition-all duration-500 ease-in-out
               ${activeCard
-                ? "w-[350px] 2xl:w-[420px]"
-                : "w-[89px] 2xl:w-[110px]"
+                ? "w-[370px] 2xl:w-[420px]"
+                : "w-[90px] 2xl:w-[110px]"
               }
             `}
           >
