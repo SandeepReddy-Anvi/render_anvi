@@ -11,6 +11,7 @@ import {
 import { ScrollToTop } from "./hooks/ScrollToTop";
 import { pagesLinksList } from "./data/PagesLinkList";
 import Header from "./components/header";
+import AnviCollective from "./components/News/AnviCollective";
 
 /* =======================
    Lazy Loaded Pages
@@ -42,6 +43,8 @@ const SolutionsSewage = React.lazy(() =>
 const News = React.lazy(() =>
   import("./pages/News").then((m) => ({ default: m.News }))
 );
+
+
 
 const Energy = React.lazy(() => import("./pages/All_Industries/Energy"));
 const Textiles = React.lazy(() => import("./pages/All_Industries/Textiles"));
@@ -125,6 +128,7 @@ const AppRoutes = () => {
             path={pagesLinksList.PrivacyPolicy}
             element={<PrivacyPolicy />}
           />
+          <Route path={pagesLinksList.anvicollective} element={<AnviCollective />} />
 
           {/* Solutions */}
           <Route path={pagesLinksList.Solutions} element={<Solutions />} />
