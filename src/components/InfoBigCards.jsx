@@ -16,7 +16,7 @@ const getBackground = () => {
     case 'blue': 
       return '/images/industries/BlueCard.png';    
     case 'purple': 
-      return '/images/industries/PurpleCard.png';  
+      return '/images/industries/PurpleCard.webp';  
     case 'green': 
     default: 
       return '/images/industries/GreenCard.png';  

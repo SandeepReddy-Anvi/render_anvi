@@ -213,7 +213,7 @@ const semiconductors = () => {
         {/*- why anvi section -*/}
         <div>
 <WhySection 
-          backgroundImage="/images/industries/semiconductorsbox.png"
+          backgroundImage="/images/industries/semiconductorsbox.webp"
           title={<>Why ANVI <br /> Semiconductors</>} 
           description="ANVI builds high-performance, low-power semiconductor systems that are reliable, scalable, and future-ready."
           cards={whysemiconductorsData}

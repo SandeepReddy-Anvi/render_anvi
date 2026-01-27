@@ -98,6 +98,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 
+
+
 /* Hero Section */
 .link-round-mid {
     cursor: pointer;
@@ -139,37 +141,48 @@ body::-webkit-scrollbar-thumb {
 }
 
 .link-bg-icon1 {
+    position: relative;
     background-color: #FA293E;
-    color:  #FFFFFF;
+    color: #FFFFFF;
     border-radius: 16px;
     padding: 10px 20px;
-    text-align: center;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     gap: 6px;
-    transition: all 0.2s ease-in-out;
-    transform: translateZ(0);
-
-    >i {
-        transition: all 0.2s ease-in-out;
-    }
+    overflow: hidden;
 }
 
-.link-bg-icon1:hover {
+/* Text + icon always visible */
+.link-bg-icon1 span,
+.link-bg-icon1 i {
+    position: relative;
+    z-index: 2;
+}
+
+.link-bg-icon1 i {
+    transition: all 0.35s ease-in-out;
+}
+
+/* Diagonal fill */
+.link-bg-icon1::before {
+    content: "";
+    position: absolute;
+    inset: -160%;              /* extra coverage */
     background-color: #CD0054;
-    transform: translateZ(20px);
-    /* transform: scale(1.02); */
-
-    >i {
-        transform: scale(1.15) translateX(3px) rotate(90deg);
-    }
+    transform: translate(-110%, 100%) rotate(60deg); /* 👉 more right tilt */
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); /* 👉 slower & smooth */
+    z-index: 1;
 }
 
-/* .footerUpBox-iconlink:hover {
-    background-color: #FA293E !important;
-    color: #fff !important;
-} */
+.link-bg-icon1:hover::before {
+    transform: translate(0, 0) rotate(10deg);
+}
+
+.link-bg-icon1:hover i {
+    transform: scale(1.15) translateX(3px) rotate(90deg);
+}
+
 
 .next-at-anvi ul::-webkit-scrollbar {
     width: 0px;
@@ -224,86 +237,5 @@ body::-webkit-scrollbar-thumb {
 @media screen and (min-width: 768px) {
     .content-Card-ul li:nth-child(even) {
         flex-direction: row-reverse !important;
-    }
-}
-
-
-
-.link-bg-icon1 {
-    /* 1. Basic Shape & Border */
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    padding: 11px 23px;
-    border-radius: 20px; /* rounded-xl */
-   
-    
-    /* 2. Text Styles */
-    color: #f3f4f6; /* text-gray-100 */
-    font-family: 'Wix Madefor Display', sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    cursor: pointer;
-
-  
-    background-image: linear-gradient(to top right, #FA293E 50%, transparent 50%);
-    
- 
-    background-size: 300% 300%;
-    
- 
-    background-position: 100% 0; 
-    
-    background-repeat: repeat;
-
- 
-    transition: background-position 1s ease-out, color 0.5s ease-out;
-}
-
- 
-.link-bg-icon1:hover {
- 
-    background-position: 0 100%;
-    
-    
-    border-color: #CD0054;  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.link-bg-ico {
-    background-color: #FA293E;
-    color:  #FFFFFF;
-    border-radius: 100px;
-    padding: 10px 20px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.2s ease-in-out;
-    transform: translateZ(0);
-
-    >i {
-        transition: all 0.2s ease-in-out;
-    }
-}
-
-.link-bg-icon1:hover {
-    background-color: #CD0054;
-    transform: translateZ(20px);
-    /* transform: scale(1.02); */
-
-    >i {
-        transform: scale(1.15) translateX(3px) rotate(90deg);
     }
 }

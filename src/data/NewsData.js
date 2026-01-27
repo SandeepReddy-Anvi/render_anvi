@@ -36,7 +36,7 @@ export const newsDataList = [
     info: 'Anvi Robotics’ AI-powered robots aided SLBC rescue, proving technology’s vital role in dangerous, life-saving missions.',
     category: 'Inside Anvi',
     imageUrl: '/images/news/collective.jpeg', // Placeholder for the actual image path
-    newsLink: "/collective",
+   newsLink: "/collective",
     openInNewTab: false,
 
   },

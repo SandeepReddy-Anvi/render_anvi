@@ -62,7 +62,7 @@
       "name": "Textiles",
       "short_name": "Textiles",
       "url": "/textiles",
-      "icons": [{ "src": "/images/industries/textiles.jpg", "sizes": "192x192" }]
+      "icons": [{ "src": "/images/industries/textiles.webp", "sizes": "192x192" }]
     },
     {
       "name": "Semiconductors",

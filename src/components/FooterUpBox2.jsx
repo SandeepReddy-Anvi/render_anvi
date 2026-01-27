@@ -87,7 +87,7 @@ export const FooterUpBox2 = ({ info }) => {
           className="link-bg-icon1 w-[110px] font-semibold text-[14px] px-4"
           onClick={handleSubscribe}
         >
-          {status.type === "loading" ? "..." : "Subscribe"}
+          <span>{status.type === "loading" ? "..." : "Subscribe"}</span>
         </button>
       </div>
 

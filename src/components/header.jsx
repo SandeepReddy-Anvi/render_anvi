@@ -72,7 +72,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`w-full md:h-[101px] bg-white text-black sticky top-0 overflow-hidden 
+        className={`w-full md:h-[80px] lg:h-[101px] bg-white text-black sticky top-0 overflow-hidden 
       flex items-center justify-between gap-5 px-4 sm:px-6 sm:pr-8 md:pl-2 md:pr-3 
       lg:px-[30px] xl:px-[40px] h-[101px] text-[16px] 
       max-md:text-xs transition-transform duration-300 z-[51] ${
@@ -81,7 +81,7 @@ const Header = () => {
       >
         <Link to="/">
           <img
-            loading="lazy"
+            loading="eager"
             src="/logos/anvi_black_logo.svg"
             alt="anvi-logo"
             className="w-auto max-h-[50px] object-contain sticky z-[51] mt-[10px]"
@@ -127,11 +127,13 @@ const Header = () => {
           </ul>
 
           <Link
-            to={mainPagesLinksList["ContactUs"]}
-            className="max-md:hidden md:ml-2 lg:ml-5 link-bg-icon1 font-semibold text-[14px]"
-          >
-            Contact Us <i className="rotate-45">{IconsObj.arrow}</i>
-          </Link>
+  to={mainPagesLinksList["ContactUs"]}
+  className="max-md:hidden md:ml-2 lg:ml-[40px] link-bg-icon1 font-semibold text-[14px]"
+>
+  <span>Contact Us</span>
+  <i className="rotate-45">{IconsObj.arrow}</i>
+</Link>
+
 
           {/* Mobile Menu Button */}
           <button
@@ -146,7 +148,7 @@ const Header = () => {
 
       {/* MOBILE MENU OVERLAY */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 h-[74vh] z-[60] flex flex-col bg-black shadow-md   text-white overflow-y-auto rounded-3xl">
+        <div className="fixed inset-0 h-[74vh] z-[60] flex flex-col bg-black shadow-md   text-white overflow-y-auto">
           
           {/* Top Bar inside Menu: Logo + Close Button */}
           <div className="flex justify-between items-center w-full px-5 pt-6 pb-2">
@@ -197,7 +199,7 @@ const Header = () => {
               <Link
                 to={mainPagesLinksList["ContactUs"]}
                 onClick={() => handleLinkClick(mainPagesLinksList["ContactUs"])}
-                className="w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-black font-semibold transition-colors hover:text-[#FA293E]"
+                className=" w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-[#FFFFFF] font-semibold transition-colors hover:text-[#FFFFFF] hover:bg-[#CD0054]"
               >
                 Contact Us
               </Link>

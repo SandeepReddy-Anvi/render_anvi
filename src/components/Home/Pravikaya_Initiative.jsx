@@ -1,77 +1,112 @@
 import { Link } from "react-router-dom";
 import { pagesLinksList } from "../../data/PagesLinkList";
+import { IconsObj } from "../../utils/Iconify_icons";
 import React from "react";
 
 export const PravikayaInitiative = () => {
   return (
-    <section className="px-5 md:px-[60px] w-full">
-    <div className="relative h-auto max-md:h-[800px] max-lg:h-[600px] grid place-content-center mx-auto p-2 mb-[83px] font-[manrope] text-center min-h-[544px] bg-[#1a1a1a] rounded-xl overflow-hidden">
-      {/* Content */}
-      <div
-        className="w-full max-w-[541px] flex flex-col items-center justify-center align-middle self-stretch mx-2"
-        style={{ zIndex: 2 }}
-      >
-        <h1 className="font-[Dm sans] font-[500] flex items-center justify-center text-white text-[40px] sm:text-[51px]">
-          Pravikya Initiative
-        </h1>
-        <p className="w-full text-white text-[16px] sm:text-[18px] text-center font-[300]">
-          An initiative by Anvi Foundation driving sustainability, education,
-          and community empowerment. We believe technology should not only
-          advance industries but also uplift societies.
-        </p>
-        <Link
-          to={pagesLinksList.Foundations}
-          className="rounded-[32px] border-[1px] border-gray-200 text-gray-100 px-[23px] py-[11px]
-        bg-gradient-to-r  from-[#FA293E] to-[#FA293E]
-        hover:from-[#FA293E] hover:to-[#FA293E] 
-        bg-[length:0%_106%] hover:bg-[length:101%_106%]
-        bg-left bg-no-repeat
-        transition-[background-size] duration-500 ease-out
-        hover:text-white
-        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
-        inline-flex items-center"
-        >
-          Learn More
-        </Link>
-      </div>
+    <section className="w-full px-5 md:px-[60px] xl:px-[100px] py-[60px] md:py-[100px] bg-[#FFFFFF]">
+      <div className="flex flex-col md:flex-row lg:flex-row gap-10 lg:gap-2 items-center">
+        {/* LEFT – Image collage */}
+        <div className="flex gap-1 w-full justify-center lg:justify-start">
 
-      {/* Bg Images */}
-      <div className="absolute w-full max-w-28 rounded-[5px] aspect-square left-0 top-20 lg:max-w-[200px] lg:top-[147px] lg:h-[227px] bg-[#FF8C60] bg-[100% 100%]">
-        <img
-          loading="lazy"
-          src="/images/home/Pravikaya Init.jpg"
-          alt="Student studying"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
+        {/* Desktop-only collage */}
+        <div className="hidden lg:flex gap-1">
+          {/* Image 1 */}
+          <img
+            src="/images/home/Pravikya1.png"
+            alt="Education Impact"
+            className="w-[370px] h-[500px] rounded-[12px] object-cover"
+          />
 
-      <div className="max-sm:w-[30vw] sm:w-[224px] min-w-[160px] h-auto xl:w-[270px] aspect-square object-contain absolute bottom-[20px] xl:bottom-[20px] left-[20px] md:left-[60px] xl:left-[59px] flex overflow-hidden">
-        <img
-          loading="lazy"
-          src="/images/home/Pravikaya Init1.webp"
-          alt="Office team collaboration"
-          className="h-full w-full flex-1 object-cover object-center"
-        />
-      </div>
+          <div className="flex flex-col gap-1">
+            {/* Image 2 */}
+            <img
+              src="/images/home/Pravikya2.png"
+              alt="Pravikya Initiative"
+              className="w-[220px] h-[320px] rounded-[12px] object-cover -mt-10"
+            />
 
-      <div className="w-[250px] h-[130px] md:w-[293px] md:h-[205px] absolute right-0 md:right-[-50px] lg:top-[30px] xl:top-[74px] object-cover overflow-hidden aspect-video">
-        <img
-          loading="lazy"
-          src="/images/home/Pravikaya Init2.webp"
-          alt="Kitchen candid moments"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
+            {/* Image 3 */}
+            <img
+              src="/images/home/Pravikya3.png"
+              alt="Community Impact"
+              className="w-[360px] h-[280px] rounded-[12px] object-cover -ml-16"
+            />
+          </div>
+        </div>
 
-      <div className="w-[147px] h-[167px] bottom-[6%] top-[unset] sm:top-[60%] md:top-[60%] object-cover right-[8%] md:right-[5%] lg:right-[183px] absolute overflow-hidden md:translate-y-[-140px] md:translate-x-[40px]">
+        {/* Mobile + Md screens (Image 3) */}
         <img
-          loading="lazy"
-          src="/images/home/Pravikaya Init3.webp"
-          alt="Studio office environment"
-          className="w-full h-full object-cover object-center"
+          src="/images/home/Pravikya3.png"
+          alt="Community Impact"
+          className="block lg:hidden w-full md:w-[360px] h-[260px] md:h-[480px] rounded-[12px] object-cover"
         />
+        </div>  
+
+
+        {/* RIGHT – Content */}
+        <div className="w-full max-w-[500px] flex flex-col gap-4 md:items-start">
+
+          {/* Label */}
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#CD0054]" />
+            <p className="text-[14px] text-[#CD0054] font-medium tracking-wide">
+              SOCIETAL IMPACT
+            </p>
+          </div>
+
+          {/* Heading */}
+          <h3 className="text-[32px] md:text-[38px] lg:text-[44px] text-[#100000] font-medium leading-tight">
+            <span className="text-[26px] md:-text-[28px] lg:text-[30px]">We help you make</span> <br />
+            Social Responsibility Meaningful
+          </h3>
+
+          {/* Subheading */}
+          <p className="text-[16px] md:text-[18px] font-semibold">
+            <span className="text-[#100000]">Anvi Social Responsibility</span>{" "}
+            <span className="text-[#CD0054]">- Pravikya Initiative</span>
+          </p>
+
+          {/* Description */}
+          <p className="text-[16px] md:text-[16px] font-medium text-[#100000] leading-tight">
+            An initiative by Anvi Foundation driving sustainability, education, and
+            community empowerment. We believe technology should not only advance
+            industries but also uplift societies, creating a positive and lasting
+            impact.
+          </p>
+
+          {/* Bullet points */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[14px] font-medium text-[#100000] mt-6">
+            <div className="flex gap-2 items-start w-full lg:w-[200px]">
+              <span className="w-2 h-2 mt-[7px] rounded-full border border-[2px] border-[#CD0054] flex-shrink-0" />
+              Driving sustainable practices for a better future
+            </div>
+            <div className="flex gap-2 w-full lg:w-[200px]">
+              <span className="w-2 h-2 mt-[7px] rounded-full border border-[2px] border-[#CD0054] flex-shrink-0" />
+              Empowering communities through education
+            </div>
+            <div className="flex gap-2 w-full lg:w-[200px]">
+              <span className="w-2 h-2 mt-[7px] rounded-full border border-[2px] border-[#CD0054] flex-shrink-0" />
+              Using technology to uplift and transform lives
+            </div>
+            <div className="flex gap-2 w-full lg:w-[200px]">
+              <span className="w-2 h-2 mt-[7px] rounded-full border border-[2px] border-[#CD0054] flex-shrink-0" />
+              Building solutions that benefit people and society
+            </div>
+          </div>
+
+          {/* CTA */}
+          <Link
+            to={pagesLinksList.AboutUs}
+            className="link-bg-icon1 mt-4 w-[150px] text-[14px] font-semibold flex items-center gap-2"
+          >
+            <span>Learn More</span>
+            <i className="rotate-45">{IconsObj.arrow}</i>
+          </Link>
+        </div>
       </div>
-    </div>
     </section>
+
   );
 };

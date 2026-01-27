@@ -116,7 +116,7 @@ export const ContactUs = () => {
 
         {/* Section3 */}
         <div className="w-full px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
-          <h2 className="text-[34px] md:text-[38px] lg:text-[46px] text-center text-[#000000] font-medium w-full md:max-w-[890px] mx-auto leading-[57px] pt-5 md:pt-10 mb-10 md:mb-20">
+          <h2 className="text-[34px] md:text-[38px] lg:text-[46px] md:text-center text-[#000000] font-medium w-full md:max-w-[890px] mx-auto leading-[57px] pt-5 md:pt-10 mb-10 md:mb-20">
             Contact us for innovative and powerful engineering collaborations.
           </h2>
           <div className="flex flex-col md:flex-row bg-[#FFFFFF] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] xl:gap-[80px] justify-center">

@@ -207,7 +207,7 @@ const Entertainment = () => {
         {/*- why anvi section -*/}
         <div>
           <WhySection
-            backgroundImage="/images/industries/entertainmentbox.png"
+            backgroundImage="/images/industries/entertainmentbox.webp"
             title={<>Why ANVI <br /> Entertainment Delivers</>}
             description={"ANVI builds high-performance, low-power semiconductor systems that are reliable, scalable, and future-ready."}
             cards={whyEntertainmentData}

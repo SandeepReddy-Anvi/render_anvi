@@ -11,68 +11,40 @@ import {
 import { ScrollToTop } from "./hooks/ScrollToTop";
 import { pagesLinksList } from "./data/PagesLinkList";
 import Header from "./components/header";
+import Home from "./pages/Home";
+import AboutUs from "./pages/AboutUs";
+import { Industries } from "./pages/Industries";
+import { Investors } from "./pages/Investors";
+import { ContactUs } from "./pages/ContactUs";
+import Solutions from "./pages/Solutions";
+import SolutionsArop from "./pages/All_Solutions/SolutionsArop";
+import SolutionsSewage from "./pages/All_Solutions/SolutionsSewage";
+import { News } from "./pages/News";
+
+import Energy from "./pages/All_Industries/Energy";
+import Textiles from "./pages/All_Industries/Textiles";
+import Foundations from "./pages/All_Industries/Foundations";
+import LifeSciences from "./pages/All_Industries/LifeSciences";
+import SemiConductors from "./pages/All_Industries/SemiConductors";
+import Entertainment from "./pages/All_Industries/Entertainment";
+
+import Careers from "./pages/careers";
+import CareersOpenings from "./pages/CareersInfo/CareersOpenings";
+import CareersJobDesc from "./pages/CareersInfo/CareersJobDesc";
+import CareersJobApply from "./pages/CareersInfo/CareersJobApply";
+
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AnviCollective from "./components/News/AnviCollective";
+
+
 
 /* =======================
    Lazy Loaded Pages
 ======================= */
 
-const Home = React.lazy(() => import("./pages/Home"));
-const AboutUs = React.lazy(() => import("./pages/AboutUs"));
-
-const Industries = React.lazy(() =>
-  import("./pages/Industries").then((m) => ({ default: m.Industries }))
-);
-
-const Investors = React.lazy(() =>
-  import("./pages/Investors").then((m) => ({ default: m.Investors }))
-);
-
-const ContactUs = React.lazy(() =>
-  import("./pages/ContactUs").then((m) => ({ default: m.ContactUs }))
-);
-
-const Solutions = React.lazy(() => import("./pages/Solutions"));
-const SolutionsArop = React.lazy(() =>
-  import("./pages/All_Solutions/SolutionsArop")
-);
-const SolutionsSewage = React.lazy(() =>
-  import("./pages/All_Solutions/SolutionsSewage")
-);
-
-const News = React.lazy(() =>
-  import("./pages/News").then((m) => ({ default: m.News }))
-);
 
 
 
-const Energy = React.lazy(() => import("./pages/All_Industries/Energy"));
-const Textiles = React.lazy(() => import("./pages/All_Industries/Textiles"));
-const Foundations = React.lazy(() =>
-  import("./pages/All_Industries/Foundations")
-);
-const LifeSciences = React.lazy(() =>
-  import("./pages/All_Industries/LifeSciences")
-);
-const SemiConductors = React.lazy(() =>
-  import("./pages/All_Industries/SemiConductors")
-);
-const Entertainment = React.lazy(() =>
-  import("./pages/All_Industries/Entertainment")
-);
-
-const Careers = React.lazy(() => import("./pages/careers"));
-const CareersOpenings = React.lazy(() =>
-  import("./pages/CareersInfo/CareersOpenings")
-);
-const CareersJobDesc = React.lazy(() =>
-  import("./pages/CareersInfo/CareersJobDesc")
-);
-const CareersJobApply = React.lazy(() =>
-  import("./pages/CareersInfo/CareersJobApply")
-);
-
-const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"));
 
 /* =======================
    Loader
@@ -123,12 +95,12 @@ const AppRoutes = () => {
           <Route path={pagesLinksList.AboutUs} element={<AboutUs />} />
           <Route path={`${pagesLinksList.Investors}/*`} element={<Investors />} />
           <Route path={pagesLinksList.News} element={<News />} />
+          <Route path={pagesLinksList.anvicollective} element={<AnviCollective/>}/>
           <Route path={pagesLinksList.ContactUs} element={<ContactUs />} />
           <Route
             path={pagesLinksList.PrivacyPolicy}
             element={<PrivacyPolicy />}
           />
-          <Route path={pagesLinksList.anvicollective} element={<AnviCollective />} />
 
           {/* Solutions */}
           <Route path={pagesLinksList.Solutions} element={<Solutions />} />

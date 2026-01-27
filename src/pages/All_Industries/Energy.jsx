@@ -206,7 +206,7 @@ const Energy = () => {
         {/*- why anvi section -*/}
         <div>
 <WhySection 
-          backgroundImage="/images/industries/energybox.png"
+          backgroundImage="/images/industries/energybox.webp"
           title={<>Why ANVI <br /> Energy</>} 
           description="Technology that strengthens power systems, reduces waste, and prepares industries for a smarter future."
           cards={whyEnergyData}
@@ -218,7 +218,7 @@ const Energy = () => {
           ourTitle="Looking Ahead"
 
           ourDescription={[
-            "he Energy vertical at ANVI is continuously evolving. This page represents the foundation of a broader roadmap that will expand with deeper solutions, advanced platforms, and real-world impact storie",
+            "The Energy vertical at ANVI is continuously evolving. This page represents the foundation of a broader roadmap that will expand with deeper solutions, advanced platforms, and real-world impact storie",
             "As We grow this vertical, new technologies,insights,and case studeis be added here.ANVI welcomes collaborators , partners and innovatorsto shape the future of energy together."
           ]}
         >

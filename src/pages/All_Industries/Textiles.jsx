@@ -132,7 +132,7 @@ const Textiles = () => {
   return (
     <section>
       <IndustryLayout
-        backgroundImage="/images/industries/textiles.jpg"
+        backgroundImage="/images/industries/textiles.webp"
         title="Reinventing the Future of Textiles"
         description= "Where heritage craftsmanship meets intelligent design and next-gen personalization to create meaningful experiences."   
        comingSoonText="We’re pioneering AI tailoring in India to deliver personalized formal and ethnic wear experiences. Stay tuned for a personalized fashion revolution."
@@ -209,7 +209,7 @@ const Textiles = () => {
         {/*- why anvi section -*/}
         <div>
           <WhySection
-            backgroundImage="/images/industries/Textilesbox.png"
+            backgroundImage="/images/industries/Textilesbox.webp"
             title={<>Why ANVI <br /> Textiles</>}
             description={"We merge AI with heritage tailoring traditions to create fashion that is both meaningful and technologically advanced."}
              cards={whyTextilesData}
