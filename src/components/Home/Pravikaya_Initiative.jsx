@@ -101,7 +101,8 @@ export const PravikayaInitiative = () => {
             to={pagesLinksList.AboutUs}
             className="link-bg-icon1 mt-4 w-[150px] text-[14px] font-semibold flex items-center gap-2"
           >
-            Learn More <i className="rotate-45">{IconsObj.arrow}</i>
+            <span>Learn More</span>
+            <i className="rotate-45">{IconsObj.arrow}</i>
           </Link>
         </div>
       </div>

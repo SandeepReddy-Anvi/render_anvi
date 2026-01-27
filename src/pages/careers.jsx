@@ -63,7 +63,7 @@ const Careers = () => {
         title="Engineer the Future With Us"
         description="At Anvi, we're building tomorrow's technology today - and we want visionaries like 
             you to join us in creating the next generation of intelligent systems."
-        descriptionWidth="680px"
+        descriptionWidth="600px"
       />
 
       {/* <section className="px-2 md:px-6 lg:px-[118px] py-8 sm:py-12 md:py-[100px]">
@@ -205,7 +205,8 @@ const Careers = () => {
             </p>
 
             <Link to={pagesLinksList.Career_Openings} className="link-bg-icon1 text-[14px] w-[180px]">
-              Browse Openings <i className="rotate-45">{IconsObj.arrow}</i>
+              <span>Browse Openings</span>
+              <i className="rotate-45">{IconsObj.arrow}</i>
             </Link>
           </div>
         </div>

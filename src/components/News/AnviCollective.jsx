@@ -27,7 +27,7 @@ const AnviCollective = () => {
   return (
     <>
       <section
-        className="w-full px-[15px] md:px-[60px] lg:pl-[60px] lg:pr-0 flex flex-col lg:flex-row py-[40px] lg:py-[60px]"
+        className="w-full px-[15px] md:px-[60px] lg:pl-[60px] lg:pr-0 flex flex-col lg:flex-row py-[40px] lg:py-[60px] bg-[#FFFFFF]"
         style={{ fontFamily: "Sahitya", fontWeight: "400" }}
       >
         {/* LEFT CONTENT */}

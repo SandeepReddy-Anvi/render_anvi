@@ -17,7 +17,7 @@ const HeroSection = ({
   // const [button]
 
   return (
-    <section className="w-full h-[calc(100vh-100px)] m-auto overflow-hidden flex justify-start align-top relative">
+    <section className="w-full h-[calc(100vh-80px)] lg:h-[calc(100vh-100px)] md:min-h-[600px] m-auto overflow-hidden flex justify-start align-top relative">
       {/* Background container */}
       <div className="absolute top-0 left-0 w-full h-full z-[1]">
         <div className="w-full h-full absolute top-0 left-0 bg-black">
@@ -46,7 +46,7 @@ const HeroSection = ({
 
       {/* Hero Content */}
       <div
-        className="home-hero-content sticky z-10 w-full flex flex-col justify-start align-middle gap-[16px] max-md:p-3 ml-[2vw] md:ml-[30px] lg:ml-[4vw] mt-[30px] md:mt-[40px] lg:mt-[11vh]"
+        className="home-hero-content sticky z-10 w-full flex flex-col justify-start align-middle gap-[16px] max-md:p-3 ml-[2vw] md:ml-[30px] lg:ml-[4vw] mt-[30px] md:mt-[40px] lg:mt-[11vh] xl:mt-[14vh]"
       >
         {page === "home" ? (
           <h1 className="bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent font-[600] text-[36px] md:text-[46px] w-full lg:w-max break-words">
@@ -65,7 +65,7 @@ const HeroSection = ({
           style={{
             width: window.innerWidth >= 768 ? descriptionWidth : "auto",
           }}
-          className="max-md:max-w-[600px] max-md:w-auto text-[18px] font-wix font-regular leading-6 text-black pr-2"
+          className="w-full max-md:max-w-[600px] max-md:w-auto text-[18px] font-wix font-regular leading-6 text-black pr-2"
         >
           {description}
         </p>

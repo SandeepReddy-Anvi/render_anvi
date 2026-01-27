@@ -68,7 +68,7 @@ const Home = () => {
           backgroundImage="/videos/Heroo_org.mp4"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
-          descriptionWidth="680px"
+          descriptionWidth="600px"
           page="home"
         />
  
@@ -119,7 +119,8 @@ const Home = () => {
                 ANVI creates future-ready systems across robotics, space, media, and lifestyle combining science, engineering, and design to strengthen industries and shape a smarter world.
               </p>
               <Link to={pagesLinksList.AboutUs} className="link-bg-icon1 font-semibold text-[14px] w-[150px]">
-                Learn More<i className="rotate-45">{IconsObj.arrow}</i>
+                <span>Learn More</span>
+                <i className="rotate-45">{IconsObj.arrow}</i>
               </Link>
             </div>
           </div>
