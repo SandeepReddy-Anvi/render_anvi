@@ -4,7 +4,7 @@ import { IconsObj } from "../utils/Iconify_icons";
 
 export default function CareersGrowthComponent({
   title = "Careers and Growth",
-  body = `At Anvi, growth is about more than a job — it’s about solving real challenges, building deep-tech innovations, and shaping a sustainable future. Driven by purpose and inspired by our mission, our team explores ambitious ideas, works with breakthrough technologies, and creates impact across industries and communities. If you’re ready to grow and be part of a future engineered by innovation, your next role could start here.`,
+  body = `At ANVI, growth is about more than a job - it’s about solving real challenges, building deep-tech innovations, and shaping a sustainable future. Driven by purpose and inspired by our mission, our team explores ambitious ideas, works with breakthrough technologies, and creates impact across industries and communities. If you’re ready to grow and be part of a future engineered by innovation, your next role could start here.`,
   buttonLabel = "Explore Careers",
   buttonAriaLabel = "Explore Careers and Growth",
   onExplore = null, // function or link
@@ -18,7 +18,7 @@ export default function CareersGrowthComponent({
   };
 
   return (
-    <section className="   bg-black ">
+    <section className="bg-black ">
       <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-10">
 
           {/* Background Full Image */}
@@ -34,12 +34,12 @@ export default function CareersGrowthComponent({
           <div className="absolute inset-0 bg-[rgba(0,0,0,0.60)] w-full h-full"/>
 
           {/* Left - Text */}
-          <div className="lg:col-span-7 z-10 px-5 md:px-[60px]">
-            <h2 className="text-[#FFFFFF] text-[32px] md:text-[46px] font-medium leading-tight">
+          <div className="lg:col-span-7 z-10 px-5 md:px-[60px] text-[#FFFFFF]">
+            <h2 className="text-[32px] md:text-[46px] font-medium leading-tight">
               {title}
             </h2>
 
-            <p className="mt-6 text-[#FFFFFF] max-w-2xl text-[16px] md:text-[18px] leading-relaxed">
+            <p className="mt-6 max-w-2xl text-[16px] md:text-[18px] font-regular leading-relaxed">
               {body}
             </p>
 
@@ -48,7 +48,7 @@ export default function CareersGrowthComponent({
               <button
                 onClick={handleExplore}
                 aria-label={buttonAriaLabel}
-                className=" link-bg-icon1  inline-flex items-center gap-3 bg-white text-black hover:bg-[#FA293E] hover:text-white rounded-full px-5 py-3 shadow-md hover:shadow-lg active:scale-95 transition-transform text-sm font-medium"
+                className="link-bg-icon1 text-semibold text-[14px]"
               >
                 <span>{buttonLabel}</span>
                 <i className="rotate-45">{IconsObj.arrow}</i>

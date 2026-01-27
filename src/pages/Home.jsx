@@ -1,12 +1,13 @@
-
- 
+import React from "react";
 import { Link } from "react-router-dom";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
+import InitiativeSection from "../components/Initiatives";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
+import { IconsObj } from "../utils/Iconify_icons";
 import LiveVideo from "../components/Home/LiveVideo";
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with Anvi?`,
@@ -36,17 +37,38 @@ const footerUpBoxInfoObj = {
     link: mainPagesLinksList.Space,
   },
 }; */
+
+const impactStats = [
+  {
+    label: "Robotics Automation",
+    value: 92,
+  },
+  {
+    label: "Space Research & Systems",
+    value: 85,
+  },
+  {
+    label: "Environmental & Clean-Tech Innovation",
+    value: 89,
+  },
+  {
+    label: "Digital Media (EVOX) & Immersive Tech",
+    value: 74,
+  },
+];
+
+
  
 const Home = () => {
   return (
     <>
-      <main>
+      <main className="bg-[#FFFFFF]">
         {/* Hero Section */}
         <HeroSection
           backgroundImage="/videos/Heroo_org.mp4"
           title="Engineering Your Edge ™"
           description="We build breakthrough products, deep-tech systems, and future-proof solutions that redefine industries and empower societies."
-          descriptionWidth="680px"
+          descriptionWidth="600px"
           page="home"
         />
  
@@ -59,14 +81,14 @@ const Home = () => {
         </section> */}
  
         {/* We Build */}
-        <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[150px] font-['Wix_Madefor_Display']">
+        <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[150px]">
           <img
             loading="lazy"
             src="/images/home/we-build.png"
             className="w-full h-auto"
             alt="we_build_img"
           />
-          <p className="text-[20px] md:text-[23px] text-[#282828] mt-[25px] font-[400] leading-[24px] text-center">
+          <p className="text-[20px] md:text-[23px] text-[#000000] mt-[25px] font-medium leading-[24px] text-center">
             Every leap forward begins with a bold idea. At ANVI, we don't just
             imagine the future{" "}
             <span className="hidden md:block h-0">
@@ -76,19 +98,107 @@ const Home = () => {
             made of.
           </p>
         </section>
+        
+        {/* Section3 -> About */}
+        <section className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-20">
+            <img 
+              src="/images/home/About.jpg"
+              alt="Team"
+              className="w-[720px] h-[250px] md:h-[350px] lg:h-[420px] rounded-[24px] object-cover"
+            />
+            <div className="w-full flex flex-col gap-4 justify-center">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#CD0054]"/>
+                <p className="text-[14px] text-[#CD0054] font-medium">ABOUT US</p>
+              </div>
+              <h3 className="text-[34px] md:text-[38px] lg:text-[46px] text-[#100000] font-medium leading-tight">
+                We are committed to engineering meaningful innovation.
+              </h3>
+              <p className="text-[18px] text-[#100000]">
+                ANVI creates future-ready systems across robotics, space, media, and lifestyle combining science, engineering, and design to strengthen industries and shape a smarter world.
+              </p>
+              <Link to={pagesLinksList.AboutUs} className="link-bg-icon1 font-semibold text-[14px] w-[150px]">
+                <span>Learn More</span>
+                <i className="rotate-45">{IconsObj.arrow}</i>
+              </Link>
+            </div>
+          </div>
+
+          <div className="flex flex-cols-4 gap-4 md:gap-10 pt-10 px-0 md:px-10 lg:px-20 justify-between text-center">
+            <div>
+              <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">4</h2>
+              <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">Core Verticals</p>
+            </div>
+            <div>
+              <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">8+</h2>
+              <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">Industry Sectors</p>
+            </div>
+            <div>
+              <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">50+</h2>
+              <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">R&D Experiments</p>
+            </div>
+            <div>
+              <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">1 Purpose</h2>
+              <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">Engineering Your Edge</p>
+            </div>
+          </div>
+        </section>
+        
+        {/* Section 4 -> Impact */}
+        <section className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
+          <div className="flex flex-col md:flex-row gap-10 md:gap-20">
+            <div className="w-full flex flex-col gap-4 justify-center">
+              {/* IMPACT label */}
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#CD0054]" />
+                <p className="text-[14px] text-[#CD0054] font-medium ">
+                  IMPACT
+                </p>
+              </div>
+
+              {/* Heading */}
+              <h3 className="text-[34px] md:text-[38px] lg:text-[46px] text-[#100000] font-medium leading-tight max-w-[900px]">
+                Delivering real-world engineering impact with measurable outcomes.
+              </h3>
+
+              {/* Progress bars */}
+              <div className="flex flex-col gap-8 max-w-[550px] mt-2">
+                {impactStats.map((item, index) => (
+                  <div key={index} className="flex flex-col gap-3">
+                    {/* Label + Percentage */}
+                    <div className="flex justify-between items-center text-[#292929] text-[18px] font-medium">
+                      <span>{item.label}</span>
+                      <span>{item.value}%</span>
+                    </div>
+
+                    {/* Progress bar */}
+                    <div className="w-full h-[4px] bg-[#EAEAEA] rounded-full overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054]"
+                        style={{ width: `${item.value}%` }}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <img 
+              src="/images/home/impact.png"
+              alt="Team"
+              className="w-[720px] h-[250px] md:h-[450px] lg:h-[520px] rounded-[24px] object-cover my-0 md:my-auto lg:my-0"
+            />
+          </div>
+        </section>
  
-        {/* Industries */}
-        <section className="w-full px-5 md:px-[60px] py-[100px] text-center md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
-          <h2 className="text-[32px] md:text-[46px] font-medium text-[#282828] mb-[16px]">
+        {/* Section 5 -> Industries */}
+        <section className="w-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] text-center">
+          <h2 className="text-[34px] md:text-[38px] lg:text-[46px] font-medium text-[#1000000] mb-4 md:mb-2">
             Industries We Transform
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#2C2C2C] mb-[64px] font-[400] leading-[24px] text-center">
-            From robotics to space exploration, we’re creating advanced
-            solutions that
-            <span className="hidden md:block h-0">
-              <br />
-            </span>{" "}
-            reshape how industries operate and innovate.
+          <p className="text-[16px] md:text-[18px] text-[#100000] font-[400] leading-[24px] max-w-[800px] mx-auto">
+            From robotics to space exploration, we build advanced solutions that redefine the way industries function, innovate, and grow - driven by technology, precision, and vision.
           </p>
  
           {/* Industries Cards */}
@@ -96,135 +206,9 @@ const Home = () => {
         </section>
  
         {/* Next at Anvi */}
-        <section className="next-at-anvi max-w-[2000px] w-full px-5 md:px-[60px] py-[50px] text-center xl:px-[100px] md:py-[80px]">
-          <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828] font-['Wix_Madefor_Display']">
-            Next At Anvi
-            {/* {" "}
-            <span className="text-[43px] sm:text-[53px] font-bauhaus">
-              anvi
-            </span> */}
-          </h2>
-          <p className="text-[16px] md:text-[18px] text-[#2C2C2C] font-regular mb-[30px] md:mb-[64px] leading-[24px] text-center font-['Wix_Madefor_Display']">
-            At Anvi, our engineers don’t work by the clock - they work by
-            vision. Relentlessly innovating, designing, and building what’s
-            next. <br /> 'Next at Anvi' is where tomorrow’s breakthroughs begin
-            - and the future takes shape.
-          </p>
- 
-          <div className="w-full m-auto md:mb-[50px] grid sm:grid-cols-1 md:grid-cols-2 gap-[20px] py-4 text-[#282828]">
-            {/* Left big card */}
-            <div className="flex flex-col justify-between h-full md:row-span-2 bg-[#F4F3F7] shadow rounded-2xl p-4 text-start">
-              <div className="grid grid-cols-2 items-center">
-                <p className="text-[26px] md:text-[39px] font-medium font-inter text-start">
-                  01
-                </p>
-                <a
-                  href={pagesLinksList.Robotics}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <SquareArrowOutUpRight className="justify-self-end" />
-                </a>
-              </div>
-              <span className="h-[2px] bg-[#00000066] my-1"></span>
-              <div>
-                <p className="font-semibold text-[19px] mt-2 font-['Wix_Madefor_Display']">
-                  Surveillance Robot
-                </p>
-                <p className="text-[16px] mt-1 font-inter">
-                  Anvi’s Surveillance Robot delivers intelligent security,
-                  autonomous monitoring, and precision performance launching
-                  march 2026.
-                </p>
-              </div>
-              <img
-                src="/images/home/robo_img.jpg"
-                alt="Surveillance Robot"
-                className="w-full max-md:h-[211px] h-[400px]  md:h-full object-cover rounded-xl mt-3 sm:h-auto "
-              />
-            </div>
- 
-            {/* Right stacked cards */}
-            <div className="grid grid-rows-auto gap-[20px] h-auto">
-              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col  text-start ">
-                <div className="grid grid-cols-2 items-center ">
-                  <p className="text-[26px] md:text-[39px] font-medium font-inter text-start">
-                    02
-                  </p>
-                  <a
-                    href={pagesLinksList.Space}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <SquareArrowOutUpRight className="justify-self-end" />
-                  </a>
-                </div>
-                <span className="h-[2px] bg-[#00000066] my-1"></span>
-                <div>
-                  <p className="font-semibold text-[19px] mt-2 font-['Wix_Madefor_Display']">
-                    Anvi Space
-                  </p>
-                  <p className="text-[16px] mt-1 font-inter">
-                    Anvi’s Galactica builds sustainable space systems through
-                    debris removal, recycling, and future-ready infrastructure.
-                  </p>
-                </div>
-                {/* Centered by default (mobile), but aligned top on larger screens (sm:items-start) */}
-                <div className="w-full bg-black rounded-lg mt-2 min-h-[221px] max-h-[350px] overflow-hidden flex items-center justify-center">
-                  <img
-                    src="/images/home/galactica.png"
-                    alt="Anvi Space"
-                    className="w-full rounded-xl object-cover"
-                  />
-                </div>{" "}
-              </div>
- 
-              <div className="bg-[#F4F3F7] shadow rounded-2xl p-4 flex flex-col justify-between text-start">
-                <div className="grid grid-cols-2 items-center">
-                  <p className="text-[26px] md:text-[39px] font-medium font-inter text-start">
-                    03
-                  </p>
-                  <Link to={pagesLinksList.Solutions_Sewage}>
-                    <SquareArrowOutUpRight className="justify-self-end" />
-                  </Link>
-                </div>
-                <span className="h-[2px] bg-[#00000066] my-1"></span>
-                <div>
-                  <p className="font-semibold text-[19px] mt-2 font-['Wix_Madefor_Display']">
-                    Project SHUDH
-                  </p>
-                  <p className="text-[16px] font-inter mt-1">
-                    Project SHUDH revolutionizes urban sanitation through
-                    AI-powered, autonomous, and sustainable robotic cleaning
-                    systems.
-                  </p>
-                </div>
-                <img
-                  src="/images/solutions/solutionCard-2.webp"
-                  alt="Project Shudhi"
-                  className="w-full h-auto object-cover rounded-xl mt-3"
-                />
-              </div>
-            </div>
-          </div>
- 
-          {/* Read All Button
-        <Button to={mainPagesLinksList.News} variant="secondary">
-          Read all
-        </Button>*/}
-        </section>
+        <InitiativeSection />
  
         {/* Pravikaya Initiative */}
-        <div className="font-['Wix_Madefor_Display'] text-center mb-12">
-          <p className="text-[32px] md:text-[46px] font-medium mb-2">
-            {/* <span className="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span> */}{" "}
-            Anvi social responsibility
-          </p>
-          <p className="text-[16px] md:text-[18px] text-[#282828]">
-            Empowering young innovators through learning, <br /> fellowship, and
-            real-world opportunities
-          </p>
-        </div>
         <PravikayaInitiative />
       </main>
  

@@ -8,6 +8,7 @@ export const pagesLinksList = {
   News: "/news",
   ContactUs: "/contactus",
   PrivacyPolicy: "/privacy-policy",
+  anvicollective: "/collective",
 
   // Solutions
   Solutions: "/solutions",
@@ -36,12 +37,12 @@ export const pagesLinksList = {
 
 export const mainPagesLinksList = {
   // Main Pages
-  Home: "/",
+  //Home: "/",
   AboutUs: "/aboutus",
-  Solutions: '/solutions',
   Industries: "/industries",
-  News: "/news",
+  Solutions: '/solutions',
   Careers: "/careers",
+  NewsRoom: "/news",
   InvestorsDesk: "/investors",
   ContactUs: "/contactus",
 }

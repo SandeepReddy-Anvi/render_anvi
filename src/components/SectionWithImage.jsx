@@ -8,7 +8,7 @@ export default function SectionWithImage({
   subtitleLineColor = "white",
 }) {
   return (
-    <section className="relative w-full mx-auto font-inter overflow-hidden">
+    <section className="relative w-full mx-auto overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -34,16 +34,15 @@ export default function SectionWithImage({
       ">
         {/* Left BOX */}
         <div className="lg:col-span-6 bg-black/40 text-[#FFFFFF] px-6 sm:px-10 py-10 sm:py-16 rounded-2xl flex flex-col gap-6 max-w-[600px]">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase">
+          <h2 className="text-2xl sm:text-3xl lg:text-[24px] font-bold uppercase">
             {title}
           </h2>
 
           <span
-            className="block w-full max-w-[240px] h-[5px]"
-            style={{ backgroundColor: subtitleLineColor }}
+            className="block w-full max-w-[240px] h-[5px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054]"
           />
 
-          <p className="text-[16px] leading-relaxed ">
+          <p className="text-[14px] font-medium leading-relaxed ">
             {description}
           </p>
         </div>

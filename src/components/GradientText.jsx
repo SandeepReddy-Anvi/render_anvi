@@ -1,37 +1,40 @@
 import React from "react";
 
-const GradientText = (props) => {
-  const {
-    ourTitle = "",
-    gradientTitle = "",
-    ourDescription = "",
-    className = "",
-  } = props;
+const GradientText = ({
+  ourTitle = "",
+  para = "",
+  ourDescription = [],
+  className = "",
+}) => {
+
+  const paragraphs = Array.isArray(ourDescription)
+    ? ourDescription
+    : [ourDescription];
 
   return (
     <div
-      className={`w-full flex flex-col justify-start font-['Wix_Madefor_Display'] gap-[30px] py-14 md:py-[100px] py:mb-20 px-[20px] md:px-[60px] 2xl:px-[100px] ${className}`}
+      className={`w-full flex flex-col py-14 md:py-[100px] px-[20px] md:px-[60px] 2xl:px-[100px] ${className}`}
     >
-      {/* Normal Title */}
+      {/* Title */}
       {ourTitle && (
-        <h4 className="bg-gradient-to-r from-[#FF4A3A] to-[#CD0054] bg-clip-text text-transparent text-[20px] md:text-[24px] lg:text-[26px] font-bold leading-normal tracking-[-0.02em]">
+        <h4 className="text-[#CD0054] text-[20px] md:text-[24px] lg:text-[26.6px] font-bold tracking-[-0.02em]">
           {ourTitle}
         </h4>
       )}
 
-      {/* Gradient Title */}
-      {gradientTitle && (
-        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[52px] font-bold text-[#212121]">
-          {gradientTitle}
-        </h2>
-      )}
+      <p className="text-[18px] md:text-[20px] font-semibold text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px] py-3">
+        {para}
+      </p>
 
       {/* Description */}
-      {ourDescription && (
-        <p className="text-[20px] md:text-[26px] font-regular leading-[34px] text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px]">
-          {ourDescription}
+      {paragraphs.map((para, index) => (
+        <p
+          key={index}
+          className="text-[16px] md:text-[20px] font-medium text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px] mb-6"
+        >
+          {para}
         </p>
-      )}
+      ))}
     </div>
   );
 };

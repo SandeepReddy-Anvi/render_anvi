@@ -14,6 +14,11 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
+const ourDescription = [
+  "ANVI works across a diverse range of industries where technology creates meaningful change. From robotics and space to energy, entertainment, textiles, semiconductors, life sciences, and societal development, we build solutions that strengthen infrastructure, empower people, and drive sustainable progress.",
+  "Our multi-vertical approach allows us to blend engineering, design, and innovation to deliver systems that are efficient, scalable, and future-ready. Across every industry we serve, our purpose remains the same  to transform challenges into opportunities and shape a smarter, more resilient world."
+];
+
 export const IndustryCard = ({ title, desc, link, imgUrl }) => {
  
   const isExternal = link?.startsWith("https") || link?.startsWith("http");
@@ -27,10 +32,10 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => {
       />
 
       <div className="absolute inset-0 text-center bg-black/0 group-hover:bg-black/70 transition-all duration-500 flex flex-col justify-center items-center">
-        <p className="font-['Wix_Madefor_Display'] font-bold text-[30px] text-[#FFFFFF] mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
+        <p className="font-bold text-[30px] text-[#FFFFFF] mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
           {title}
         </p>
-        <p className="font-dm-sans text-[14px] font-medium text-[#FFFFFF] px-8 2xl:px-28 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+        <p className="text-[14px] font-medium text-[#FFFFFF] px-8 2xl:px-28 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
           {desc}
         </p>
         <div className="self-center max-md:pb-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -41,14 +46,14 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => {
             // Good security practice for external links
             rel={isExternal ? "noopener noreferrer" : undefined} 
             className="rounded-xl border-[1px] border-gray-200 text-gray-100 px-[23px] py-[11px]
-        bg-gradient-to-r from-[#FA293E] to-[#FA293E]
-        hover:from-[#FA293E] hover:to-[#FA293E] 
-        bg-[length:0%_106%] hover:bg-[length:101%_106%]
-        bg-left bg-no-repeat
-        transition-[background-size] duration-500 ease-out
-        hover:text-white
-        font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
-        inline-flex items-center"
+            bg-gradient-to-r from-[#FA293E] to-[#FA293E]
+            hover:from-[#FA293E] hover:to-[#FA293E] 
+            bg-[length:0%_106%] hover:bg-[length:101%_106%]
+            bg-left bg-no-repeat
+            transition-[background-size] duration-500 ease-out
+            hover:text-white
+            font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+            inline-flex items-center"
           >
             Learn More
           </Link>
@@ -73,8 +78,7 @@ export const Industries = () => {
 
         <GradientText
           ourTitle="Our Industries"
-          gradientTitle="Where Innovation Meets Every Industry."
-          ourDescription="From robotics and space to life sciences and semiconductors, Anvi’s technologies are reshaping how industries think, build, and evolve. We design intelligent systems that bring safety, efficiency, and sustainability to every sector we touch - creating innovation with purpose."
+          ourDescription={ourDescription}
         />
 
         {/* Industries */}

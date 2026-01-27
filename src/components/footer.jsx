@@ -32,7 +32,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
             <div className="col-span-full md:col-span-2 items-center gap-[45px] self-center">
               <div className="flex max-sm:flex-col max-sm:place-items-center justify-around lg:justify-center gap-[10px] md:gap-[30px] align-middle">
                 <img
-                  loading="lazy"
+                  loading="eager"
                   src="/logos/anvi_logo.svg"
                   alt="Anvilogo"
                   className="w-full max-sm:max-w-full max-w-[366px] lg:max-w-[50%] xl:max-w-[366px] object-contain"

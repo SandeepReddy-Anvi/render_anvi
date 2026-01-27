@@ -1,18 +1,17 @@
 import React from "react";
  
 export default function InitiativesSection({
-  title = "Initiatives",
+  title = "Next At ANVI",
   mainImage = "/images/about/surveillance.webp",
   topLogo = "/images/about/galactica.jpg",
   rightSmallImg = "/images/about/project_shudh.webp",
 }) {
   return (
-    <section className="bg-gray-50 py-12 font-['Wix_Madefor_Display']">
-      <div className="w-full px-5 md:px-[60px]">
-        <h3 className="text-[32px] md:text-[46px] font-medium text-[#000000] mb-8">{title}</h3>
+    <section className="w-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
+        <h3 className="text-[32px] md:text-[46px] font-medium text-[#100000] mb-4">{title}</h3>
 
         {/* Grid: left large image, right column with two stacked cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
           {/* Left big image */}
           <div className="lg:col-span-5">
             <div className="overflow-hidden shadow sm:h-[500px]">
@@ -25,9 +24,9 @@ export default function InitiativesSection({
             </div>
 
             {/* Caption / title under left image */}
-            <div className="mt-6">
-              <h4 className="text-[20px] md:text-[24px] font-medium text-[#000000]">Anvi’s Surveillance Robot</h4>
-              <p className="mt-2 text-[16px] text-[#302F2F] max-w-2xl">
+            <div className="mt-6 text-[#100000]">
+              <h4 className="text-[20px] md:text-[22px] font-semibold">Anvi’s Surveillance Robot</h4>
+              <p className="mt-2 text-[14px] font-medium max-w-2xl">
                 Delivering intelligent security, autonomous monitoring, and precision performance
                 redefining how cities stay safe. Launching March 2026.
               </p>
@@ -35,7 +34,7 @@ export default function InitiativesSection({
           </div>
 
           {/* Right column */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 lg:col-span-7">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:col-span-7">
 
             {/* Card 1 */}
             <div className="flex flex-col space-y-3">
@@ -48,8 +47,8 @@ export default function InitiativesSection({
                 />
               </div>
 
-              <h5 className="text-[20px] md:text-[24px] font-medium text-[#000000]">Anvi’s Galactica</h5>
-              <p className="mt-1 text-[16px] text-[#302F2F] font-regular">
+              <h5 className="text-[20px] md:text-[24px] text-[#100000] font-semibold">Anvi’s Galactica</h5>
+              <p className="mt-1 text-[14px] text-[#100000] font-medium">
                 Building sustainable space systems through debris removal, recycling, and
                 future-ready infrastructure — powering a cleaner, smarter orbital future.
               </p>
@@ -66,8 +65,8 @@ export default function InitiativesSection({
                 />
               </div>
 
-              <h5 className="text-[20px] md:text-[24px] font-medium text-[#000000]">Project SHUDH</h5>
-              <p className="mt-1 text-[16px] text-[#302F2F]">
+              <h5 className="text-[20px] md:text-[24px] font-semibold text-[#100000]">Project SHUDH</h5>
+              <p className="mt-1 text-[14px] text-[#100000] font-medium">
                 Revolutionizing urban sanitation through AI-powered, autonomous, and sustainable
                 robotic cleaning systems — ensuring safety, precision, and dignity for all.
               </p>
@@ -77,7 +76,6 @@ export default function InitiativesSection({
 
 
         </div>
-      </div>
     </section>
   );
 }

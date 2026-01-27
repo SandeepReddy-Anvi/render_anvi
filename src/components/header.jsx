@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import { Menu, Plus } from "lucide-react";
 import { IconsObj } from "../utils/Iconify_icons";
 
@@ -72,29 +72,31 @@ const Header = () => {
   return (
     <>
       <header
-        className={`w-full md:h-[101px] bg-white text-black sticky top-0 overflow-hidden 
+        className={`w-full md:h-[80px] lg:h-[101px] bg-white text-black sticky top-0 overflow-hidden 
       flex items-center justify-between gap-5 px-4 sm:px-6 sm:pr-8 md:pl-2 md:pr-3 
-      lg:px-[30px] xl:px-[40px] h-[101px] font-[manrope] text-[16px] 
+      lg:px-[30px] xl:px-[40px] h-[101px] text-[16px] 
       max-md:text-xs transition-transform duration-300 z-[51] ${
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
       >
         <Link to="/">
           <img
-            loading="lazy"
+            loading="eager"
             src="/logos/anvi_black_logo.svg"
             alt="anvi-logo"
             className="w-auto max-h-[50px] object-contain sticky z-[51] mt-[10px]"
+            onClick={pagesLinksList.Home}
           />
         </Link>
 
         {/* Nav Bar & Buttons (right side) */}
         <nav className="flex flex-1 justify-end align-middle">
-          <ul className="desktop-ul hidden md:flex justify-center align-middle gap-[2px] md:gap-3 lg:gap-[30px] xl:gap-[40px]">
+          <ul className="desktop-ul hidden md:flex justify-center font-medium text-[16px] align-middle gap-[2px] md:gap-3 lg:gap-[30px] xl:gap-[40px]">
             {Object.keys(mainPagesLinksList)
               .slice(0, -1)
               .map((pageKey) => {
                 const link = mainPagesLinksList[pageKey];
+                const isActive = currentPageStyle(link);
                 return (
                   <li
                     key={link}
@@ -104,7 +106,18 @@ const Header = () => {
                   >
                     <Link
                       to={link}
-                      className="hover:text-[#FA293E] transition-colors"
+                      className={`
+                        relative inline-block transition-all duration-300 font-medium text-[16px]
+                        ${
+                          isActive
+                            ? "bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent"
+                            : `text-[101010] after:content-[''] after:absolute after:left-0 after:-bottom-[6px]
+                              after:h-[1px] after:w-0
+                              after:bg-gradient-to-r after:from-[#FE7F2C] after:via-[#FF4A3A] after:via-[#FA293E] after:to-[#CD0054]
+                              after:transition-all after:duration-300 hover:after:w-full`
+                        }
+                      `}
+                      /* className="hover:text-[#FA293E] transition-colors" */
                     >
                       {pageKey.replace(/([A-Z])/g, " $1").trim()}
                     </Link>
@@ -114,11 +127,13 @@ const Header = () => {
           </ul>
 
           <Link
-            to={mainPagesLinksList["ContactUs"]}
-            className="max-md:hidden md:ml-2 lg:ml-5 link-bg-icon"
-          >
-            Contact Us <i className="rotate-45">{IconsObj.arrow}</i>
-          </Link>
+  to={mainPagesLinksList["ContactUs"]}
+  className="max-md:hidden md:ml-2 lg:ml-[40px] link-bg-icon1 font-semibold text-[14px]"
+>
+  <span>Contact Us</span>
+  <i className="rotate-45">{IconsObj.arrow}</i>
+</Link>
+
 
           {/* Mobile Menu Button */}
           <button
@@ -133,7 +148,7 @@ const Header = () => {
 
       {/* MOBILE MENU OVERLAY */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 h-[74vh] z-[60] flex flex-col bg-black shadow-md   text-white overflow-y-auto rounded-3xl">
+        <div className="fixed inset-0 h-[74vh] z-[60] flex flex-col bg-black shadow-md   text-white overflow-y-auto">
           
           {/* Top Bar inside Menu: Logo + Close Button */}
           <div className="flex justify-between items-center w-full px-5 pt-6 pb-2">
@@ -184,7 +199,7 @@ const Header = () => {
               <Link
                 to={mainPagesLinksList["ContactUs"]}
                 onClick={() => handleLinkClick(mainPagesLinksList["ContactUs"])}
-                className="w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-black font-semibold transition-colors hover:text-[#FA293E]"
+                className=" w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-[#FFFFFF] font-semibold transition-colors hover:text-[#FFFFFF] hover:bg-[#CD0054]"
               >
                 Contact Us
               </Link>
