@@ -26,7 +26,7 @@ export const IndustriesCardsList = {
         link: pagesLinksList.Entertainment,
         activeCard: false,
     },textiles: {
-        imgUrl: '/images/industries/textiles.webp',
+        imgUrl: '/images/industries/textiles.jpg',
         title: 'Textiles',
         desc: 'Anvi merges AI and tradition to craft personalized clothing experiences.',
         link: pagesLinksList.Textiles,

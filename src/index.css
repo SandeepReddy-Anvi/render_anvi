@@ -225,10 +225,63 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+
+
 .link-bg-icon1 {
+    /* 1. Basic Shape & Border */
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 11px 23px;
+    border-radius: 20px; /* rounded-xl */
+   
+    
+    /* 2. Text Styles */
+    color: #f3f4f6; /* text-gray-100 */
+    font-family: 'Wix Madefor Display', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+
+  
+    background-image: linear-gradient(to top right, #FA293E 50%, transparent 50%);
+    
+ 
+    background-size: 300% 300%;
+    
+ 
+    background-position: 100% 0; 
+    
+    background-repeat: repeat;
+
+ 
+    transition: background-position 1s ease-out, color 0.5s ease-out;
+}
+
+ 
+.link-bg-icon1:hover {
+ 
+    background-position: 0 100%;
+    
+    
+    border-color: #CD0054;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.link-bg-ico {
     background-color: #FA293E;
     color:  #FFFFFF;
-    border-radius: 16px;
+    border-radius: 100px;
     padding: 10px 20px;
     text-align: center;
     display: flex;
