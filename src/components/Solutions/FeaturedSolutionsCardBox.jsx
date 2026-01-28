@@ -52,14 +52,13 @@ const FeaturedSolutionsCardBox = () => {
       {/* --- ANIMATION STYLES (Matched to CarouselSection) --- */}
       <style>
         {`
-          /* Physics-based Easing */
-          /* NEXT/DOWN: Content slides UP from bottom */
+   
           @keyframes slideInFromBottom {
             from { transform: translateY(100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
           }
           
-          /* PREV/UP: Content slides DOWN from top */
+ 
           @keyframes slideInFromTop {
             from { transform: translateY(-100%); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
@@ -81,56 +80,62 @@ const FeaturedSolutionsCardBox = () => {
   {/* Container: h-full fills the 500px parent */}
   <ul className="w-full flex flex-col h-full overflow-hidden">
     
-    {featuredSolutionsList.map((item, index) => (
-      <li
-        key={"featured-solutions-" + item.id}
-        onClick={() => updateActiveCardIndex(index)}
-        
-        className={`w-full md:max-w-[392px] relative flex flex-col justify-start pl-[50px] gap-[20px] border-l-4 cursor-pointer transition-all duration-500 ease-in-out pt-[30px]
-        ${
-          activeCardIndex === index
-            ? "flex-[2] border-l-black"
-            : "flex-[1] border-l-transparent" 
-        }`}
-      >
-        {/* Top Divider */}
-        {index > 0 && (
-          <span className="w-[80%] h-[1px] top-0 absolute bg-[#BDC5D2]"></span>
-        )}
+{featuredSolutionsList.map((item, index) => (
+  <li
+    key={"featured-solutions-" + item.id}
+    onClick={() => updateActiveCardIndex(index)}
+    className={`w-full md:max-w-[392px] relative flex flex-col justify-start pl-[50px] gap-[20px] cursor-pointer transition-all duration-500 ease-in-out pt-[30px] bg-white
+    ${
+      activeCardIndex === index
+        ? "flex-[2]" 
+        : "flex-[1]" 
+    }
+    /* Pseudo-element for the Gradient Line */
+    before:content-[''] before:absolute before:left-0 before:top-0 before:w-[4px] before:h-full before:transition-opacity before:duration-500
+    ${
+      activeCardIndex === index
+        ? "before:opacity-100 before:bg-gradient-to-b before:from-[#FE7F2C] before:via-[#FF4A3A] before:via-[#FA293E] before:to-[#CD0054]"
+        : "before:opacity-0 before:bg-transparent"
+    }`}
+  >
+    {/* Top Divider */}
+    {index > 0 && (
+      <span className="w-[80%] h-[1px] top-0 absolute bg-[#BDC5D2]"></span>
+    )}
 
-        {/* Title - Fixed at the top via padding */}
-        <h3 className="text-[#0E1726] text-[24px] font-semibold tracking-normal leading-[28.74px] shrink-0">
-          {item.title}
-        </h3>
+    {/* Title */}
+    <h3 className={`text-[24px] font-semibold tracking-normal leading-[28.74px] shrink-0 transition-colors duration-500 ${activeCardIndex === index ? 'text-[#0E1726]' : 'text-[#8D99AE]'}`}>
+      {item.title}
+    </h3>
 
-        {/* Accordion Content */}
-        <div
-          className={`overflow-hidden transition-all duration-500 ${
-            activeCardIndex === index
-              ? "opacity-100 max-h-[400px] translate-y-0"
-              : "opacity-0 max-h-0 translate-y-4"
-          }`}
+    {/* Accordion Content */}
+    <div
+      className={`overflow-hidden transition-all duration-500 ${
+        activeCardIndex === index
+          ? "opacity-100 max-h-[400px] translate-y-0"
+          : "opacity-0 max-h-0 translate-y-4"
+      }`}
+    >
+      <div className="flex flex-col gap-[15px] pb-2">
+        <p className="text-[#17253D] font-normal text-[16px] leading-[24.63px]">
+          {item.description}
+        </p>
+
+        <a
+          href={item.link}
+          className="text-[#CD0054] font-semibold text-[14px] self-start leading-[20.53px] border-b-2 border-[#CD0054]"
         >
-          <div className="flex flex-col gap-[15px] pb-2">
-            <p className="text-[#17253D] font-normal text-[16px] leading-[24.63px]">
-              {item.description}
-            </p>
+          View White Paper
+        </a>
+      </div>
+    </div>
 
-            <a
-              href={item.link}
-              className="text-[#3E143F] font-semibold text-[14px] self-start leading-[20.53px] border-b-2 border-spacing-2 border-[#3E143F]"
-            >
-              View White Paper
-            </a>
-          </div>
-        </div>
-
-        {/* Bottom Divider */}
-        {index === featuredSolutionsList.length - 1 && (
-          <span className="w-[80%] h-[1px] bottom-0 absolute bg-[#BDC5D2]"></span>
-        )}
-      </li>
-    ))}
+    {/* Bottom Divider */}
+    {index === featuredSolutionsList.length - 1 && (
+      <span className="w-[80%] h-[1px] bottom-0 absolute bg-[#BDC5D2]"></span>
+    )}
+  </li>
+))}
   </ul>
 </div>
 

@@ -39,7 +39,7 @@ export default function CareersGrowthComponent({
               {title}
             </h2>
 
-            <p className="mt-6 max-w-2xl text-[16px] md:text-[18px] font-regular leading-relaxed">
+            <p className="mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
               {body}
             </p>
 

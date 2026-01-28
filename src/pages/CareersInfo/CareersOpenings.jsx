@@ -7,12 +7,12 @@ import { pagesLinksList } from "../../data/PagesLinkList";
  
 import Footer from "../../components/footer";
 
-const footerUpBoxInfoObj = {
-  head: "Didn't find the right role?",
-  para: "Send us your resume and we'll keep in touch for future opportunities that match your skills and interests.",
-  // linkLabel: "Send Resume",
-  // link: '#',
-};
+// const footerUpBoxInfoObj = {
+//   head: "Didn't find the right role?",
+//   para: "Send us your resume and we'll keep in touch for future opportunities that match your skills and interests.",
+//   // linkLabel: "Send Resume",
+//   // link: '#',
+// };
  
 
 const CareersOpenings = () => {
@@ -186,7 +186,7 @@ const CareersOpenings = () => {
       </section>
 
       {/* Footer */}
-      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
+      <Footer  />
     </div>
   );
 };

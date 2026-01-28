@@ -90,10 +90,11 @@ const CareersJobDesc = () => {
 
           <Link
             to={`${pagesLinksList.JobInfo_Apply.replace(":jobId", jobId)}`}
-            className="link-bg-icon mt-6 w-full md:max-w-[150px]"
-          >
-            Apply Now <i className="rotate-45">{IconsObj.arrow}</i>
-          </Link>
+             className="link-bg-icon1 mt-4 w-[150px] text-[14px] font-semibold flex items-center gap-2"
+                     >
+                       <span>Apply Now</span>
+                       <i className="rotate-45">{IconsObj.arrow}</i>
+                       </Link>
         </div>
       </section>
 

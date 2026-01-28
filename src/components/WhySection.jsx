@@ -35,7 +35,7 @@ const WhySection = ({ backgroundImage, title, description, cards }) => {
             {cards.map((card, index) => (
            <div 
       key={index} 
-       className="bg-white p-8 md:p-10 rounded-lg  hover:bg-[#FA293E]   group cursor-pointer transition-all duration-300"
+       className="bg-white p-8 md:p-10 rounded-lg  hover:bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] group cursor-pointer transition-all duration-300"
     >
       
  
