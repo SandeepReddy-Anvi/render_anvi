@@ -6,10 +6,10 @@ import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
 import TimelineSection from "../components/TimelineSection";
 import { mainPagesLinksList } from "../data/PagesLinkList";
- 
+
 
 const footerUpBoxInfoObj = {
-   head: `Ready to explore the future with Anvi?`,
+  head: `Ready to explore the future with anvi?`,
   //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
   linkLabel: "Contact Us",
@@ -60,18 +60,18 @@ const About = () => {
         backgroundImage="/videos/Heroo2_org.mp4"
         title="We Engineer It."
         description="At Anvi, we build breakthrough deep-tech robots and future-ready systems that deliver strategic advantages for industries."
-        
+
         descriptionWidth="600px"
       />
 
       {/* section 2 */}
-      <div className=" items-center justify-center content-center"> 
+      <div className=" items-center justify-center content-center">
         <GradientText
-         ourTitle="About Us"
-         ourDescription={ourDescription}
-        />    
+          ourTitle="About Us"
+          ourDescription={ourDescription}
+        />
       </div>
-  
+
 
       {/* section 3 -> Vision, Mission, Value Section*/}
       <section className="">
@@ -81,7 +81,7 @@ const About = () => {
       {/* section 4 -> Purpose*/}
       <section className="relative px-5 md:px-[60px] py-[100px] md:py-[102px]">
         <div className="flex flex-col md:flex-row">
-          <img 
+          <img
             src="/images/about/anvi.png"
             alt="Anvi Entrance"
             className="w-full h-[300px] md:w-[450px] md:h-auto pr-0 md:pr-14 mb-10 md:mb-0"
@@ -129,14 +129,14 @@ const About = () => {
           {/* Row 1: Large + Small */}
           <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-6">
             {/* Large Card */}
-             <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
+            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
               <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
-                  <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                    Technological Excellence
-                  </h3>
-                  <p className="text-[15px] text-[#100000] font-regular mt-2">
-                    Robotics engineered with precision and innovation        
-                  </p>
+                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
+                  Technological Excellence
+                </h3>
+                <p className="text-[15px] text-[#100000] font-regular mt-2">
+                  Robotics engineered with precision and innovation
+                </p>
               </div>
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
@@ -146,16 +146,16 @@ const About = () => {
                   className=" rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center  "
                 />
               </div>
-              </div>
+            </div>
 
             {/* Small Card */}
             <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
               <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
-               <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
+                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
                   Strategic Focus
                 </h3>
                 <p className="text-[15px] text-[#100000] font-regular mt-2">
-                 Solutions addressing real challenges with impact and scalability
+                  Solutions addressing real challenges with impact and scalability
                 </p>
               </div>
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
@@ -165,7 +165,7 @@ const About = () => {
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
-              </div> 
+              </div>
             </div>
           </div>
 
@@ -175,7 +175,7 @@ const About = () => {
             <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-[370px] md:h-full ">
               <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
                 <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                 Collaborative Approach
+                  Collaborative Approach
                 </h3>
                 <p className="text-[15px] text-[#100000] font-regular mt-2">
                   Progress through partnerships driving collective growth
@@ -186,9 +186,9 @@ const About = () => {
                   loading="lazy"
                   src="/images/about/about3.3.webp"
                   alt="Strategic Focus"
-                 className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
+                  className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
-              </div>            
+              </div>
             </div>
 
             {/* Large Card          */}
@@ -198,13 +198,13 @@ const About = () => {
                   Impact-Driven Solutions
                 </h3>
                 <p className="text-[15px] text-[#100000] font-regular mt-2">
-                   Designing systems for measurable impact
+                  Designing systems for measurable impact
                 </p>
               </div>
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.4.webp" 
+                  src="/images/about/about3.4.webp"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
@@ -215,31 +215,30 @@ const About = () => {
       </section>
 
       {/* careers and growth */}
-      <CareerAndGrowth/>
+      <CareerAndGrowth />
 
       {/*section 4*/}
       <div className="relative w-full py-20 px-8 md:px-20 lg:px-22">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
           {/* Section Heading */}
-          
 
-      
-<div className="md:sticky md:top-[120px] lg:sticky  self-start">
-  <h2 className="text-[32px] md:text-[46px] font-medium leading-[54.7px] text-[#100000] mb-[27px]">
-    Our Journey of Innovation
-  </h2>
-  <p className="text-[16px] md:text-[18px] font-medium text-[#323232]">Shaping the Future, Step by Step</p>
-  <p className="text-[16px] md:text-[18px] font-medium text-[#323232]">
-Shaping the Future, Step by Step.
-From our first prototypes to large-scale deployments, every milestone reflects our vision to engineer meaningful innovation.
-  </p>
-</div>
- 
+
+
+          <div className="md:sticky md:top-[120px] lg:sticky  self-start">
+            <h2 className="text-[32px] md:text-[46px] font-medium leading-[54.7px] text-[#100000] mb-[27px]">
+              Our Journey of Innovation
+            </h2>
+            <p className="text-[16px] md:text-[18px] font-medium text-[#323232]">
+              Shaping the Future, Step by Step. <br/>
+              From our first prototypes to large-scale deployments, every milestone reflects our vision to engineer meaningful innovation.
+            </p>
+          </div>
+
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
             <div className="absolute left-[1.6px] rounded-full top-0 h-full mt-[5px] w-[2px] bg-gradient-to-b from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054]">
-              <div className="w-1 h-2 bg-blue-600 sticky top-10"></div>
+              {/* <div className="w-1 h-2 bg-blue-600 sticky top-10"></div> */}
             </div>
 
             {/* Timeline Section Component */}

@@ -10,9 +10,9 @@ import HeroSection from "../components/HeroSection";
 import { IconsObj } from "../utils/Iconify_icons";
 import LiveVideo from "../components/Home/LiveVideo";
 const footerUpBoxInfoObj = {
-  head: `Ready to explore the future with Anvi?`,
+  head: `Let's Build the Future Together`,
   //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
-  para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
+  para: "Ready to transform your operations with cutting-edge robotics? Get in touch with our team of innovation experts.",
   linkLabel: "Contact Us",
   link: mainPagesLinksList.ContactUs,
 };

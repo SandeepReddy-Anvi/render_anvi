@@ -45,4 +45,21 @@ export const mainPagesLinksList = {
   NewsRoom: "/news",
   InvestorsDesk: "/investors",
   ContactUs: "/contactus",
-}
+};
+export const  explorelinklist = {
+  "Anvi Robotics":'https://anvirobotics.com',
+   "Anvi Space":'https://anvispace.com',
+   "Caaryo" : "https://caaryo.com",
+   "The Bot Factory" : "https://www.thebotfactory.in"
+ }
+ export const mainPagesLinks = {
+  // Main Pages
+  //Home: "/",
+  AboutUs: "/aboutus",
+  Industries: "/industries",
+  Solutions: '/solutions',
+  Careers: "/careers",
+  NewsRoom: "/news",
+  InvestorsDesk: "/investors",
+  // ContactUs: "/contactus",
+};

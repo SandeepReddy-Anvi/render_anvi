@@ -39,7 +39,7 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
- 
+
 main {
     width: 100%;
     overflow: hidden !important;
@@ -99,53 +99,12 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
-/* Hero Section */
-.link-round-mid {
-    cursor: pointer;
-    width: max-content;
-    padding: 10px 16px;
-    border-radius: 16px;
-    border: 2px solid #1E9AB0;
-    color: #1E9AB0;
-    font-family: Wix Madefor Display;
-    font-weight: 600;
-    font-size: 16px;    
-    line-height: 26.01px;
-    position: relative;
-    overflow: hidden;
-    transition: Color 0.3s ease-out;
-
-    &:hover {
-        color: #fff;
-        border-color: transparent;
-        /* box-shadow: 0px 8px 20px 0px #1E9AB052; */
-    }
-}
-
-.link-round-mid::before {
-    content: '';
-    position: absolute;
-    left: 0%;
-    top: 0%;
-    z-index: -10;
-    width: 0%;
-    height: 103%;
-    border-radius: 16px;
-    background-color: #FA293E;
-    transition: width 0.3s ease-out;
-}
-
-.link-round-mid:hover::before {
-    width: 101%;
-}
-
 .link-bg-icon1 {
     position: relative;
     background-color: #FA293E;
     color: #FFFFFF;
     border-radius: 16px;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -168,10 +127,13 @@ body::-webkit-scrollbar-thumb {
 .link-bg-icon1::before {
     content: "";
     position: absolute;
-    inset: -160%;              /* extra coverage */
+    inset: -160%;
+    /* extra coverage */
     background-color: #CD0054;
-    transform: translate(-110%, 100%) rotate(60deg); /* 👉 more right tilt */
-    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); /* 👉 slower & smooth */
+    transform: translate(-110%, 100%) rotate(60deg);
+    /* 👉 more right tilt */
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    /* 👉 slower & smooth */
     z-index: 1;
 }
 

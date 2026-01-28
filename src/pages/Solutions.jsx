@@ -27,10 +27,11 @@ const Solutions = () => {
 
       {/* Featured Solution */}
       <GradientText
-        ourTitle="Featured Solutions"
+        ourTitle="Engineering Solutions for a Smarter, Stronger Tomorrow"
         gradientTitle="We Engineer it."
-        ourDescription="From robotics and space to life sciences and semiconductors, Anvi’s technologies are reshaping how industries think, build, and evolve. We design intelligent systems that bring safety, efficiency, and sustainability to every sector we touch - creating innovation with purpose."
-      />
+        ourDescription={["At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future.",
+          "At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future."]}
+       />
 
       {/* <section className="w-full mt-[30px] px-5 pt-[50px] text-center xl:px-[118px] md:pt-[60px] lg:pt-[50px] font-['Wix_Madefor_Display']">
         <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">

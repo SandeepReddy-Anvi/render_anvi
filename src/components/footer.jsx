@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, MapPin, Mail } from "lucide-react";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { explorelinklist, mainPagesLinks, mainPagesLinksList } from "../data/PagesLinkList";
 import { FooterUpBox } from "./FooterUpBox";
 import { FooterUpBox2 } from "./FooterUpBox2";
 import { motion } from "framer-motion";
@@ -29,37 +29,59 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
           {/* Parent Grid */}
           <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[17px] mx-auto items-start">
             {/* Logo + Description */}
-            <div className="col-span-full md:col-span-2 items-center gap-[45px] self-center">
-              <div className="flex max-sm:flex-col max-sm:place-items-center justify-around lg:justify-center gap-[10px] md:gap-[30px] align-middle">
-                <img
-                  loading="eager"
-                  src="/logos/anvi_logo.svg"
-                  alt="Anvilogo"
-                  className="w-full max-sm:max-w-full max-w-[366px] lg:max-w-[50%] xl:max-w-[366px] object-contain"
-                />
-                <p
-                  className="text-white self-center text-[14px] max-sm:max-w-[450px] font-[500] leading-[22.4px] tracking-[-0.32px] max-w-[297px]"
-                  style={{ fontFamily: '"DM Sans", sans-serif' }}
-                >
-                  Engineering Your Edge™ - We build breakthrough products,
-                  deep-tech systems, and future-proof robotics solutions across
-                  industries.
-                </p>
-              </div>
-            </div>
+  <div className="col-span-1 flex justify-center items-center sm:pl-5">
+  {/* Changed to flex-col to stack vertically; items-center keeps them aligned */}
+  <div className="flex flex-col items-start gap-[20px] md:gap-[30px]">
+    <img
+      loading="eager"
+      src="/logos/anvi_logo.svg"
+      alt="Anvilogo"
+      className="w-full max-w-[300px] md:max-w-[366px] object-contain"
+    />
+    <p
+      className="text-white text-start text-[14px] font-[500] leading-[22.4px] tracking-[-0.32px] max-w-[450px]"
+      style={{ fontFamily: '"DM Sans", sans-serif' }}
+    >
+      <span className="block mb-2 text-[16px] font-medium">Engineering Your Edge™</span>
+      We build breakthrough products, deep-tech systems, and future-proof 
+      robotics solutions across industries.
+    </p>
+  </div>
+</div>
 
             {/* Desktop / Tablet View */}
-            <div className="hidden sm:flex flex-col gap-[18px] w-[160px] md:mx-auto self-start">
+            <div className="hidden sm:flex flex-col gap-[18px] w-[90px] md:mx-auto self-start">
               <h4 className="text-[14px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
                 Quick Links
               </h4>
               <ul className="flex flex-col gap-[12px]">
-                {Object.keys(mainPagesLinksList || {})
-                  .slice(1, -1)
+                {Object.keys(mainPagesLinks || {})
+                
                   .map((pageKey) => (
                     <li key={pageKey}>
                       <Link
-                        to={mainPagesLinksList[pageKey]}
+                        to={mainPagesLinks[pageKey]}
+                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#FA293E] transition-colors"
+                      >
+                        {pageKey}
+                      </Link>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+
+
+              <div className="hidden sm:flex flex-col gap-[18px] w-[160px] md:mx-auto self-start">
+              <h4 className="text-[14px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
+              Explore 
+              </h4>
+              <ul className="flex flex-col gap-[12px]">
+                {Object.keys(explorelinklist || {})
+                  .map((pageKey) => (
+                    <li key={pageKey}>
+                      <Link
+                        to={explorelinklist[pageKey]}
+                        target="_blank"
                         className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#FA293E] transition-colors"
                       >
                         {pageKey}

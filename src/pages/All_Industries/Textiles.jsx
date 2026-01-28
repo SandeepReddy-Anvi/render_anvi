@@ -25,7 +25,7 @@ const Textiles = () => {
       id: "card-0",
       title: "Smart Material Intelligence",
       theme: "green",
-      description: "ANVI builds high-end cinematic assets, motion visuals, and storytelling sequences using advanced creative technology pipelines.",
+      description : "We combine tradition with technology by recommending materials based on comfort, climate, longevity, and cultural context. Our system ensures users receive the perfect combination of heritage fabric and modern performance.",
       marketItems: ["Designer Wear", "Retail", "Personal Styling"],
       serviceItems: ["Intelligent Fabric Recommendation", "Climate & Comfort Profiling"],
       lifecycleItems: ["Analytics", "Material Selection", "Fabric Integration"]
@@ -34,7 +34,7 @@ const Textiles = () => {
       id: "card-1",
       title: "AI-Driven Personal Tailoring",
       theme: "purple",
-      description: "We design interactive experiences that respond to movement, sound, and emotion  allowing audiences to engage with stories in entirely new ways.",
+      description:"ANVI leverages intelligent measurement systems to deliver precision-fit clothing customised to each individual’s body profile. Every outfit is engineered for comfort, style, and cultural expression.",
       marketItems: ["Formal Wear", "Ethnic Wear", "Custom Fashion"],
       serviceItems: ["AI Measurement & Fit Mapping", "Hyper-Personalized Tailoring"],
       lifecycleItems: ["Scan", "Personal Fit Model", "Tailored Output"]
@@ -43,7 +43,7 @@ const Textiles = () => {
       id: "card-2",
       title:  "Adaptive Fashion Experiences",
       theme: "blue",
-      description: "ANVI creates cinematic universes and visually rich digital worlds that blend narrative depth with artistic precision. Our worldbuilding frameworks support games, films, virtual experiences, and narrative-driven environments.",
+     description : "Our platform delivers interactive, AI-enhanced fashion journeys that evolve with the wearer style updates, body profile changes, and cultural preferences.",
       marketItems: ["Fashion Tech", "Personal Styling", "Lifestyle Apparel"],
       serviceItems: ["AI-Based Style Adaptation", "Personalized Fashion Intelligence"],
       lifecycleItems: ["User Insights", "Adaptation", "Continuous Refinement"]
@@ -53,7 +53,7 @@ const Textiles = () => {
       id: "card-3",
       title: "Cultural & Heritage Design Systems",
       theme: "red",
-      description: "We bring creativity and engineering together to build new forms of entertainment  AI-generated experiences, simulation-driven stories, and adaptive content.",
+      description : "ANVI preserves India’s textile legacy through digital design systems that modernize traditional craftsmanship while maintaining authenticity and emotional value.",
       marketItems: ["Ethnic Fashion", "Weddings", "Cultural Wear"],
       serviceItems: ["Digital Ethnic Craft Design", "Heritage Pattern Engineering"],
       lifecycleItems: ["Craft Research", "Digital Design", "Modern Output"]
