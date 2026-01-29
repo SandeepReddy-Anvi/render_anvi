@@ -17,15 +17,31 @@ const footerUpBoxInfoObj = {
   //  link: pagesLinksList.Career_Openings+"#job-openings-container",
 };
 
-const ourDescription = [
+const ourDescriptionDesktop = [
   "At ANVI, culture is not a set of rules  it is how we think, build, and collaborate every day. We bring together engineers, designers, scientists, creators, and problem-solvers who share a deep respect for innovation and purpose. Curiosity drives us to question the obvious, ownership empowers us to build boldly, and collaboration ensures every idea grows stronger through collective thinking.",
 
   "We value experimentation over fear, learning over ego, and impact over noise. Our teams are encouraged to think long-term, act responsibly, and design with empathy  knowing that the technologies we build today will shape the world tomorrow. At ANVI, culture is our foundation, enabling us to create systems that are resilient, meaningful, and future-ready."
 ];
 
-const ourDescription2 = [
+const ourDescriptionMobile = [
+  `At ANVI, culture is how we think, build, and collaborate. Our teams of engineers, designers, scientists, and 
+  creators share a deep respect for innovation and purpose.`,
+
+  `We value experimentation, ownership, empathy, and long-term thinking  shaping technologies that are 
+  resilient, meaningful, and future ready.`
+];
+
+const ourDescriptionDesktop2 = [
   "ANVI is powered by a diverse team of engineers, scientists, designers, storytellers, and innovators who share a common purpose — to build technology that creates meaningful impact. Our strength lies not just in individual expertise, but in how we collaborate across disciplines to solve complex challenges with clarity and conviction.",
   "Each team member brings a unique perspective, combining technical depth with creative thinking and a strong sense of responsibility. From robotics and space systems to immersive media and lifestyle design, our teams work with precision, curiosity, and long-term vision. United by trust, ownership, and ambition, the ANVI team is committed to engineering solutions that are resilient, ethical, and future-ready."
+];
+
+const ourDescriptionMobile2 = [
+  `ANVI is powered by a diverse team of engineers, scientists, designers, and innovators united by a purpose: 
+  building technology with meaningful impact.`,
+
+  `Our strength comes from cross-disciplinary collaboration, technical depth, and long-term vision as we 
+  engineer resilient and ethical solutions for the future.`
 ];
      
 const cultureCards = [
@@ -215,7 +231,8 @@ const Careers = () => {
       <GradientText 
         ourTitle ="Our Culture"
         para="Built on curiosity, responsibility, and the courage to engineer what’s next."
-        ourDescription = {ourDescription}
+        ourDescription = {ourDescriptionDesktop}
+        mobileDescription = {ourDescriptionMobile}
       />
 
       {/* Section 4 Life at Anvi*/}
@@ -263,7 +280,8 @@ const Careers = () => {
         ourTitle="Our Team"
         gradientTitle="The People Behind the Innovation."
         para="A collective of engineers, creators, and thinkers shaping the future together."
-        ourDescription= {ourDescription2}
+        ourDescription = {ourDescriptionDesktop2}
+        mobileDescription = {ourDescriptionMobile2}
       />
       
       {/* Team Picture */}

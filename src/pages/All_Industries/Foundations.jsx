@@ -138,9 +138,16 @@ const Foundation = () => {
         ourTitle="Engineering Change That Begins at the Ground Level"
         gradientTitle="Impact That Starts at the Ground Level."
         ourDescription={["Social Impact at ANVI is driven by the belief that technology should uplift people. We build systems and initiatives that strengthen communities, support sustainable development, improve education access, and enable digital empowerment. ",
-          "Our work spans environmental sustainability, social upliftment, and long-term community development shaping a future where innovation benefits everyone."]}
+          "Our work spans environmental sustainability, social upliftment, and long-term community development shaping a future where innovation benefits everyone."
+        ]}
+        mobileDescription={[
+          `ANVI’s Social Impact initiatives use technology to uplift people and strengthen communities.`,
+          `We focus on sustainable development, education access, digital empowerment, and environmental 
+          improvement  shaping a future where innovation benefits everyone.`
+        ]}    
       >
-  <TwoImageSection/>
+
+      <TwoImageSection/>
 
         {/* --- MAIN CONTENT CONTAINER --- */}
         <div className="bg-white w-full py-12 px-4 sm:px-6 md:px-12 lg:px-20 lg:py-24 ">

@@ -144,7 +144,16 @@ const semiconductors = () => {
         ourTitle="A Smarter, Faster, and More Intelligent Tomorrow"
         gradientTitle="Building the Core of Modern Technology."
         ourDescription={["Semiconductors power the world’s devices, industries, and intelligent systems. At ANVI, we develop advanced semiconductor technologies that accelerate computation, enhance reliability, and enable breakthroughs in robotics, AI, space, automation, and consumer electronics.",
-          "Our work spans chip design, material engineering, embedded intelligence, and adaptive micro-systems helping organisations scale faster, operate smarter, and innovate with confidence."]}
+          "Our work spans chip design, material engineering, embedded intelligence, and adaptive micro-systems helping organisations scale faster, operate smarter, and innovate with confidence."
+        ]}
+        mobileDescription={[
+          `ANVI develops advanced semiconductor technologies that accelerate computation, enhance reliability, 
+          and enable breakthroughs in robotics, AI, space, and automation.
+          `,
+
+          `Our work spans chip design, material engineering, embedded intelligence, and adaptive microsystems  
+          helping organisations scale faster and innovate with confidence.`
+        ]}  
       >
 
         {/* --- MAIN CONTENT CONTAINER --- */}

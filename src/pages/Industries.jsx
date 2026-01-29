@@ -14,9 +14,18 @@ const footerUpBoxInfoObj = {
   link: mainPagesLinksList.ContactUs,
 };
 
-const ourDescription = [
+const ourDescriptionDesktop = [
   "ANVI works across a diverse range of industries where technology creates meaningful change. From robotics and space to energy, entertainment, textiles, semiconductors, life sciences, and societal development, we build solutions that strengthen infrastructure, empower people, and drive sustainable progress.",
   "Our multi-vertical approach allows us to blend engineering, design, and innovation to deliver systems that are efficient, scalable, and future-ready. Across every industry we serve, our purpose remains the same  to transform challenges into opportunities and shape a smarter, more resilient world."
+];
+
+const ourDescriptionMobile = [
+  `ANVI works across robotics, space, energy, entertainment, textiles, semiconductors, life sciences, and 
+  societal development  creating technology that drives real change. Our multi-vertical approach blends 
+  engineering, design, and innovation to build scalable, future-ready systems.`,
+
+  `Across every industry, our purpose stays the same: turn challenges into opportunities and build a smarter, 
+  more resilient world.`
 ];
 
 export const IndustryCard = ({ title, desc, link, imgUrl }) => {
@@ -76,7 +85,8 @@ export const Industries = () => {
 
         <GradientText
           ourTitle="Our Industries"
-          ourDescription={ourDescription}
+          ourDescription={ourDescriptionDesktop}
+          mobileDescription = {ourDescriptionMobile}
         />
 
         {/* Industries */}

@@ -24,6 +24,7 @@ const IndustryLayout = ({
   ourTitle,
   gradientTitle,
   ourDescription,
+  mobileDescription,
   children,
   childern2
 }) => {
@@ -45,6 +46,7 @@ const IndustryLayout = ({
           ourTitle={ourTitle}
           gradientTitle={gradientTitle}
           ourDescription={ourDescription}
+          mobileDescription={mobileDescription}
         />
       </div>
       <div className="w-full">

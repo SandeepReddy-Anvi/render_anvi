@@ -43,12 +43,21 @@ const aboutCardList = [
   },
 ];
 
-const ourDescription = [
+const ourDescriptionDesktop = [
   "ANVI is a future-focused deep-tech organisation built on the belief that engineering can rewrite what humanity is capable of. From robots that solve ground-level operational problems to space technologies that take us beyond earth, ANVI exists to create products and systems that move industries, societies, and individuals forward.",
 
   "The foundation of ANVI is rooted in three core pillars: Engineering Excellence, Strategic Innovation, and Societal Purpose.",
 
   "In every vertical we touch, our goal is not just to build products — we build technological ecosystems that accelerate global progress."
+];
+
+const ourDescriptionMobile = [
+  `ANVI is a future-focused deep-tech company building advanced robotic systems, space technologies, and 
+  intelligent engineering solutions.Our work combines engineering excellence, strategic innovation, and 
+  societal purpose to solve real-world challenges.`,
+
+  `Across every vertical, we create scalable technological ecosystems that drive industrial growth, improve 
+  human lives, and accelerate global progress.`
 ];
 
 
@@ -68,7 +77,8 @@ const About = () => {
       <div className=" items-center justify-center content-center">
         <GradientText
           ourTitle="About Us"
-          ourDescription={ourDescription}
+          ourDescription= {ourDescriptionDesktop}
+          mobileDescription= {ourDescriptionMobile}
         />
       </div>
 
@@ -88,8 +98,21 @@ const About = () => {
           />
           <div className="flex flex-col justify-center items-start md:items-start text-left">
             <h2 className="font-medium text-[32px] md:text-[36px] lg:text-[43px]">Our journey began with a bold purpose</h2>
-            <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">ANVI began with the belief that technology should evolve beyond products and shape how humanity lives, works, and explores. What started as engineering excellence grew into a deep-tech ecosystem spanning robotics, space, creative media, and lifestyle innovation - expanding what technology can mean for people and the planet.</p>
-            <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">Today, ANVI operates at the intersection of science, creativity, and engineering, building purposeful, resilient, and future-ready systems that turn challenges into possibilities.</p>
+            <div className="hidden md:block">
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">ANVI began with the belief that technology should evolve beyond products and shape how humanity lives, works, and explores. What started as engineering excellence grew into a deep-tech ecosystem spanning robotics, space, creative media, and lifestyle innovation - expanding what technology can mean for people and the planet.</p>
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">Today, ANVI operates at the intersection of science, creativity, and engineering, building purposeful, resilient, and future-ready systems that turn challenges into possibilities.</p>
+            </div>
+
+            <div className="block md:hidden">
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">ANVI began with a belief that technology should shape how humanity lives, works, and explores  not just 
+                create products. What started as engineering excellence has grown into a deep-tech ecosystem spanning 
+                robotics, space, creative media, and lifestyle innovation.
+              </p>
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">Today, we unite science, creativity, and engineering to build purposeful, resilient systems that turn 
+                challenges into possibilities.
+              </p>
+            </div>
+            
 
             <div className="flex flex-cols-3 gap-4 md:gap-10 pt-10">
               <div>

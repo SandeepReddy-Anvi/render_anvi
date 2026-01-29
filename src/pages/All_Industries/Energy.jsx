@@ -138,6 +138,12 @@ const Energy = () => {
           "Energy is the foundation of modern society  powering industries, cities, and everyday life. At ANVI, we believe the future of energy must be intelligent, sustainable, and adaptable. Our Energy vertical focuses on building advanced systems that help organisations transition toward cleaner operations, improve efficiency, and strengthen long-term resilience.",
           "We combine engineering expertise, digital intelligence, and sustainability-driven thinking to create energy solutions that respond to today’s challenges while preparing for tomorrow’s demands."
         ]}
+        mobileDescription = {[
+          `ANVI’s Energy vertical builds intelligent, sustainable systems that help organisations shift to cleaner 
+          operations, boost efficiency, and strengthen long-term resilience.`,
+          `By combining engineering, digital intelligence, and sustainability, we create energy solutions designed for 
+          today’s needs and tomorrow’s demands.`
+        ]}
       >
 
         {/* --- MAIN CONTENT CONTAINER --- */}

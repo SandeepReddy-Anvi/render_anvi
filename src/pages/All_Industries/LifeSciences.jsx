@@ -139,7 +139,15 @@ const LifeSciences = () => {
         ourTitle="Building Impact That Lasts for Generations"
         gradientTitle="Innovating for Healthier Futures."
         ourDescription={["ANVI Life Sciences merges innovation, sustainability, and community progress to create meaningful impact. We combine engineering, biology, and digital intelligence to advance healthcare and improve quality of life.",
-          "Our work spans intelligent health systems, environment-aware technologies, and empowerment platforms built for an inclusive and sustainable future."]}
+          "Our work spans intelligent health systems, environment-aware technologies, and empowerment platforms built for an inclusive and sustainable future."
+        ]}
+        mobileDescription={[
+          `ANVI Life Sciences merges innovation, sustainability, and community progress to advance healthcare and 
+          improve quality of life.`,
+
+          `We develop intelligent health systems, environment-aware technologies, and empowerment platforms 
+          designed for an inclusive, sustainable future.`
+        ]}  
 
         >
 

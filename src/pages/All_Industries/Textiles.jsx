@@ -140,7 +140,15 @@ const Textiles = () => {
         ourTitle="Crafting Fashion Through Intelligence & Tradition"
         gradientTitle="Tradition Tailored. Technology Perfected."
         ourDescription={["ANVI Textiles is shaping a new era of smart fashion where AI, design engineering, and cultural craftsmanship create garments that are personal, precise, and expressive.",
-          "As India’s first AI tailoring ecosystem, we blend heritage techniques with advanced digital systems to deliver perfect fits, intelligent material choices, and fashion that feels truly personal."]}
+          "As India’s first AI tailoring ecosystem, we blend heritage techniques with advanced digital systems to deliver perfect fits, intelligent material choices, and fashion that feels truly personal."
+        ]}
+        mobileDescription={[
+          `ANVI Textiles blends AI, design engineering, and cultural craftsmanship to create garments that are 
+          precise, personal, and expressive.`,
+
+          `As India’s first AI tailoring ecosystem, we combine heritage techniques with advanced digital systems to 
+          deliver perfect fits and smart material choices.`
+        ]}
        >
 
         {/* --- MAIN CONTENT CONTAINER --- */}

@@ -139,6 +139,13 @@ const Entertainment = () => {
         gradientTitle="Crafting the Future of Entertainment."
         ourDescription={["At ANVI, entertainment blends storytelling, design, and technology to create immersive, emotionally engaging experiences. From cinematic worlds to interactive simulations, we combine artistry and engineering to bring imagination to life",
           "Our focus spans worldbuilding, virtual experiences, interactive media, and creative tech innovations that are intuitive and unforgettable"]}
+        mobileDescription={[
+          `At ANVI, we blend storytelling, design, and technology to create immersive and emotionally engaging 
+          entertainment experiences.`,
+
+          `From cinematic worlds to interactive simulations, we combine artistry and engineering to build intuitive, 
+          unforgettable digital environments.`
+        ]}
       >
 
         {/* --- MAIN CONTENT CONTAINER --- */}
