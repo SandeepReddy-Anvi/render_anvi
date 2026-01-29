@@ -42,7 +42,7 @@ export const ContentCardUl = ({ infoList = [] }) => {
           <div className="flex-1 w-full">
  
             {/* NAVIGATION */}
-            <div className="overflow-x-auto no-scrollbar">
+            <div className="overflow-x-auto  no-scrollbar ">
               <nav
                 ref={navRef}
                 className="relative inline-flex gap-6 lg:gap-20 xl:gap-24 2xl:gap-28 items-end border-b-2 border-white/50"
@@ -70,26 +70,11 @@ export const ContentCardUl = ({ infoList = [] }) => {
               </nav>
             </div>
  
-            {/*Desktop DESCRIPTION (UNDER TITLE) */}
-            <div className="hidden md:block mt-16 space-y-6 max-w-[900px]">
+            {/* DESCRIPTION (UNDER TITLE) */}
+            <div className="mt-16 space-y-6 max-w-[900px]">
               {(Array.isArray(activeItem.desc)
                 ? activeItem.desc
                 : activeItem.desc.split("\n\n")
-              ).map((para, index) => (
-                <p
-                  key={index}
-                  className="text-[#FFFFFF] text-[14px] md:text-[16px] 2xl:text-[17px] font-medium leading-relaxed"
-                >
-                  {para}
-                </p>
-              ))}
-            </div>
-            
-            {/*Mobile DESCRIPTION (UNDER TITLE) */}
-            <div className="block md:hidden mt-16 space-y-6 max-w-[900px]">
-              {(Array.isArray(activeItem.mobile)
-                ? activeItem.mobile
-                : activeItem.mobile.split("\n\n")
               ).map((para, index) => (
                 <p
                   key={index}

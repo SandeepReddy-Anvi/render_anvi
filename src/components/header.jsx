@@ -146,6 +146,91 @@ const Header = () => {
         </nav>
       </header>
 
+
+{/* DYNAMIC BREADCRUMB - CORRECTED FOR COLLECTIVE */}
+{(() => {
+  const currentPath = location.pathname;
+  const pathSegments = currentPath.split('/').filter(Boolean);
+
+  const categoryMap = {
+    "/energy": "Industries",
+    "/textiles": "Industries",
+    "/foundations": "Industries",
+    "/lifesciences": "Industries",
+    "/semiconductors": "Industries",
+    "/entertainment": "Industries",
+    "/solutions/arop": "Solutions",
+    "/solutions/sewage": "Solutions",
+    "/careers/job-openings": "Careers",
+    // Match the exact key from your pagesLinksList
+    "/collective": "News", 
+  };
+
+  let parentName = null;
+  
+  // 1. Check the direct map first
+  if (categoryMap[currentPath]) {
+    parentName = categoryMap[currentPath];
+  } 
+  // 2. Fallback to prefix checks
+  else if (currentPath.startsWith("/careers")) {
+    parentName = "Careers";
+  } else if (currentPath.startsWith("/solutions")) {
+    parentName = "Solutions";
+  } else if (currentPath.startsWith("/news")) {
+    parentName = "News";
+  }
+
+  // Hide on main roots - add /collective to this list if you want it hidden there too, 
+  // but keep it out if you want "News > Collective" to show on that page.
+  const mainRoots = ["/", "/aboutus", "/investors", "/news", "/contactus", "/industries", "/solutions", "/careers"];
+  
+  if (mainRoots.includes(currentPath) || !parentName) return null;
+
+  return (
+    <div 
+      className={`w-full bg-[#F8F8F8] border-b border-[#eeeeee] font-raleway px-4 lg:px-[40px] py-[8px] sticky z-[50] transition-all duration-300 ease-in-out ${
+        showHeader 
+          ? "top-[80px] lg:top-[101px] translate-y-0 opacity-100" 
+          : "top-0 -translate-y-full opacity-0 pointer-events-none"
+      }`}
+    >
+      <nav className="flex items-center">
+        <ul className="flex items-center list-none m-0 p-0 overflow-x-auto no-scrollbar">
+          
+          {/* Parent Category */}
+          <li className="text-[#666] whitespace-nowrap text-[14px] font-medium capitalize">
+            <Link to={mainPagesLinksList[parentName === "News" ? "NewsRoom" : parentName] || "/"} className="hover:text-black transition-colors">
+              {parentName}
+            </Link>
+          </li>
+
+          {/* Child Levels */}
+          {pathSegments.map((segment, index) => {
+            // Logic to prevent "News > News" or "News > Newsroom"
+            const isRedundant = segment.toLowerCase() === parentName.toLowerCase() || 
+                                (parentName === "News" && segment.toLowerCase() === "news");
+            
+            if (isRedundant && index === 0) return null;
+
+            const routeTo = `/${pathSegments.slice(0, index + 1).join("/")}`;
+            const isLast = index === pathSegments.length - 1;
+            const cleanName = segment.replace(/-/g, ' ');
+
+            return (
+              <div key={routeTo} className="flex items-center whitespace-nowrap">
+                <span className="px-[12px] text-[#999] font-light text-[14px]">{">"}</span>
+                <li className={`${isLast ? "text-[#333] font-semibold" : "text-[#666]"} text-[14px] capitalize`}>
+                  {isLast ? cleanName : <Link to={routeTo} className="hover:text-black">{cleanName}</Link>}
+                </li>
+              </div>
+            );
+          })}
+        </ul>
+      </nav>
+    </div>
+  );
+})()}
       {/* MOBILE MENU OVERLAY */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 h-[74vh] z-[60] flex flex-col bg-black shadow-md   text-white overflow-y-auto">
