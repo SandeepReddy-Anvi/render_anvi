@@ -14,7 +14,7 @@ export default function CareersGrowthComponent({
   const handleExplore = (e) => {
     if (onExplore) return onExplore(e);
     // sensible default: try to navigate to /careers
-    if (typeof window !== "undefined") window.location.href = "/ContactUs";
+    if (typeof window !== "undefined") window.location.href = "/careers";
   };
 
   return (

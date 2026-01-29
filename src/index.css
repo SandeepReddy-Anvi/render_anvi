@@ -201,3 +201,55 @@ body::-webkit-scrollbar-thumb {
         flex-direction: row-reverse !important;
     }
 }
+
+/* Styling for the breadcrumb separators and active states */
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+  padding: 0 15px;
+  color: #999999;
+  font-weight: 300;
+}
+
+/* Ensure the header and breadcrumb bar transition together */
+header, .anvi-breadcrumb-bar {
+  transition: transform 0.3s ease-in-out;
+}
+.translate-y-0 {
+  transform: translateY(0);
+}
+
+.-translate-y-full {
+  transform: translateY(-100%);
+}
+
+/* Ensure React Fragments don't break flex layout */
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+}
+/* Styling to match the screenshot provided */
+.breadcrumb-item active {
+  color: #333333;
+  font-weight: 500;
+}
+
+/* Ensure smooth transition when header hides */
+.sticky {
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+/* Add this to your global CSS file */
+
+/* Custom styling for the breadcrumb active state */
+.currentPageLink {
+  font-weight: 600;
+}
+
+/* This ensures the breadcrumb bar moves smoothly with the header */
+.sticky {
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Optional: if your project doesn't have a standard reset for lists */
+.list-none {
+  list-style-type: none;
+}
