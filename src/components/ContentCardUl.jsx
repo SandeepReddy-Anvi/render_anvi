@@ -70,11 +70,26 @@ export const ContentCardUl = ({ infoList = [] }) => {
               </nav>
             </div>
  
-            {/* DESCRIPTION (UNDER TITLE) */}
-            <div className="mt-16 space-y-6 max-w-[900px]">
+            {/*Desktop DESCRIPTION (UNDER TITLE) */}
+            <div className="hidden md:block mt-16 space-y-6 max-w-[900px]">
               {(Array.isArray(activeItem.desc)
                 ? activeItem.desc
                 : activeItem.desc.split("\n\n")
+              ).map((para, index) => (
+                <p
+                  key={index}
+                  className="text-[#FFFFFF] text-[14px] md:text-[16px] 2xl:text-[17px] font-medium leading-relaxed"
+                >
+                  {para}
+                </p>
+              ))}
+            </div>
+            
+            {/*Mobile DESCRIPTION (UNDER TITLE) */}
+            <div className="block md:hidden mt-16 space-y-6 max-w-[900px]">
+              {(Array.isArray(activeItem.mobile)
+                ? activeItem.mobile
+                : activeItem.mobile.split("\n\n")
               ).map((para, index) => (
                 <p
                   key={index}

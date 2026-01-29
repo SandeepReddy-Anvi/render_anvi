@@ -23,6 +23,11 @@ const aboutCardList = [
       "At ANVI, our mission is to use technology as a force of transformation. We believe engineering should elevate people, improve systems, and shape a better future for generations to come. Through robotics, space innovation, creative storytelling, and lifestyle design, we build solutions that unlock human potential and bring progress closer to everyday life.",
       "We aim to go beyond product creation - challenging limitations, redefining industries, and making advanced technology accessible to all. By combining research, engineering, and creativity, we develop purposeful solutions that drive long-term growth. Our commitment is to build ethical, sustainable, and human-centric innovation that empowers communities, strengthens industries, and shapes the future of tomorrow."
     ],
+    mobile: [
+      `At ANVI, we use technology to drive meaningful transformation.
+      We believe engineering should elevate people, strengthen systems, and shape a better future. Through robotics, space innovation, storytelling, and lifestyle design, we create solutions that unlock human potential and bring progress closer to everyday life.
+      Our mission is to build ethical, sustainable, and human-centric innovation that empowers communities and accelerates long-term growth.`
+    ],
     imgUrl: "/images/about/mission.webp",
   },
   {
@@ -31,6 +36,11 @@ const aboutCardList = [
       "Our vision at ANVI is to become a global leader in deep-technology innovation, shaping industries and inspiring future generations through engineering, science, and creativity. We imagine a world where robotics, space technology, creative communication, and lifestyle design work together to build smarter, safer, and more sustainable systems for humanity. We aim to redefine how technology is created, experienced, and integrated into everyday life, expanding possibilities for businesses and communities.",
       "Through continuous research, ethical practices, and human-centric thinking, our vision is to engineer not just the future we imagine, but the future the world genuinely needs - driving lasting progress and inspiring change everywhere."
     ],
+    mobile : [
+      `ANVI’s vision is to become a global leader in deep-tech innovation.
+      We imagine a future where robotics, space technology, creative engineering, and lifestyle design come together to build smarter, safer, and more sustainable systems.
+      Through continuous research and human-centric thinking, we aim to create technology that truly serves the world and drives long-term progress.`
+    ],
     imgUrl: "/images/about/about2.1.webp",
   },
   {
@@ -38,6 +48,13 @@ const aboutCardList = [
     desc: [
       "At ANVI, our values shape every idea and decision we make. Innovation drives us—we push boundaries, explore possibilities, and treat curiosity as a way of thinking. Engineering excellence guides our work, ensuring precision, reliability, and lasting impact. We act with transparency and integrity, building trust with teams, partners, and communities. Human-centric thinking inspires us to design technology that serves people and improves life.",
       "We value sustainability and create solutions that respect our planet and future generations. Collaboration fuels progress as we unite engineering, creativity, science, and strategy to solve challenges together. Above all, we value purpose - using technology to elevate humanity and turn ambitious ideas into real progress."
+    ],
+    mobile: [
+      `At ANVI, our values guide every idea and decision.
+      We innovate boldly, pursue engineering excellence, and act with transparency and integrity.
+      Our approach is human-centric, designing technology that truly serves people.
+      We prioritise sustainability, creating solutions that respect the planet and future generations.
+      Driven by collaboration and purpose, we use technology to elevate humanity and turn ambitious ideas into progress.`
     ],
     imgUrl: "/images/about/value.webp",
   },
