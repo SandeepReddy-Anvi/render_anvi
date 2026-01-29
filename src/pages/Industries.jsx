@@ -45,14 +45,12 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => {
             target={isExternal ? "_blank" : undefined} 
             // Good security practice for external links
             rel={isExternal ? "noopener noreferrer" : undefined} 
-            className="rounded-xl border-[1px] border-gray-200 text-gray-100 px-[23px] py-[11px]
+            className="rounded-xl border-[1px] border-[#FFFFFF] text-[#FFFFFF] px-[20px] py-[10px]
             bg-gradient-to-r from-[#FA293E] to-[#FA293E]
             hover:from-[#FA293E] hover:to-[#FA293E] 
             bg-[length:0%_106%] hover:bg-[length:101%_106%]
-            bg-left bg-no-repeat
-            transition-[background-size] duration-500 ease-out
-            hover:text-white
-            font-['Wix_Madefor_Display'] text-[15px] sm:text-[16px]
+            bg-left bg-no-repeat hover:border-[0px]
+            transition-[background-size] duration-500 ease-out text-[15px] sm:text-[16px]
             inline-flex items-center"
           >
             Learn More

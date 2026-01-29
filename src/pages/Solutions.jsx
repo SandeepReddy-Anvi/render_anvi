@@ -16,7 +16,7 @@ const footerUpBoxInfoObj = {
 
 const Solutions = () => {
   return (
-    <div id="solutions" className="w-full">
+    <div id="solutions" className="w-full bg-[#FFFFFF]">
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/videos/Heroo3_org.mp4"
@@ -30,7 +30,8 @@ const Solutions = () => {
         ourTitle="Engineering Solutions for a Smarter, Stronger Tomorrow"
         gradientTitle="We Engineer it."
         ourDescription={["At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future.",
-          "At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future."]}
+          "From advanced automation to immersive digital environments and purpose-led community projects, ANVI solutions deliver lasting value for industries and society."
+        ]}
        />
 
       {/* <section className="w-full mt-[30px] px-5 pt-[50px] text-center xl:px-[118px] md:pt-[60px] lg:pt-[50px] font-['Wix_Madefor_Display']">
@@ -52,12 +53,12 @@ const Solutions = () => {
 
 
       {/* Why Our Solution Matter */}
-      <section className="w-full bg-[#F4F3F7D1] mb-[100px]">
+      <section className="w-full mb-[100px]">
         <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[65px]">
-          <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#282828]">
+          <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#100000]">
             Why Our Solutions Matter
           </h2>
-          <p className="text-[16px] w-full md:w-[752px] mx-auto text-[#465455] font-[400] leading-[24px] text-center">
+          <p className="text-[16px] w-full md:w-[752px] mx-auto text-[#100000] leading-[24px] text-center">
             Our solutions address critical global challenges, empowering
             industries to innovate, enabling societies to thrive, and shaping a
             smarter, sustainable future.

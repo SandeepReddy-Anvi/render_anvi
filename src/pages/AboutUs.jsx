@@ -54,7 +54,7 @@ const ourDescription = [
 
 const About = () => {
   return (
-    <div id="about" className="w-full bg-[#FFFFFF] overflow-hidden">
+    <div id="about" className="w-full bg-[#FFFFFF] overflow-hidden lg:overflow-visible">
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/videos/Heroo2_org.mp4"
@@ -221,9 +221,6 @@ const About = () => {
       <div className="relative w-full py-20 px-8 md:px-20 lg:px-22">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
           {/* Section Heading */}
-
-
-
           <div className="md:sticky md:top-[120px] lg:sticky  self-start">
             <h2 className="text-[32px] md:text-[46px] font-medium leading-[54.7px] text-[#100000] mb-[27px]">
               Our Journey of Innovation

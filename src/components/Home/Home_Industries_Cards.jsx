@@ -23,11 +23,11 @@ export const HomeIndustriesCard = () => {
     // <ul className="home-industry-cards-ul w-full  h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] m-0 lg:mx-auto   ">
  
     //<ul className="home-industry-cards-ul w-full h-auto flex md:flex-row justify-start gap-[10px] md:gap-[15px] lg:mx-auto px-0 md:px-0 ml-[-10px]">
-<ul className="
-  w-full h-auto flex flex-row justify-start gap-8 md:gap-10 lg:gap-[68px] 2xl:justify-between 2xl:gap-0 
-  lg:mx-auto px-0 pt-10 md:pt-16 lg:pt-20 
-overflow-x-auto overflow-y-hidden scrollbar-hide
-">
+    <ul className="
+      w-full h-auto flex flex-row justify-start gap-8 md:gap-10 lg:gap-[46px] 2xl:justify-between 2xl:gap-0 
+      lg:mx-auto px-0 pt-10 md:pt-16 lg:pt-20 
+    overflow-x-auto overflow-y-hidden scrollbar-hide
+    ">
    
       {Object.keys(cardsList).map((eachIndustry, index) => {
         const { imgUrl, title, desc, link, activeCard } = cardsList[eachIndustry];
