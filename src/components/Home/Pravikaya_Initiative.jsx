@@ -107,6 +107,5 @@ export const PravikayaInitiative = () => {
         </div>
       </div>
     </section>
- 
   );
 };
