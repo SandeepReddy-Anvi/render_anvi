@@ -45,11 +45,9 @@ const Solutions = () => {
         Featured Solutions Grid 
       </section>*/} 
 
-      <div>      <FeaturedSolutionsCardBox />
-
+      <div>
+        <FeaturedSolutionsCardBox />
       </div>
-
-
 
       {/* Why Our Solution Matter */}
       <section className="w-full mb-[100px]">
