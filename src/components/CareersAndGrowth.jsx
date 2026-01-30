@@ -4,7 +4,12 @@ import { IconsObj } from "../utils/Iconify_icons";
 
 export default function CareersGrowthComponent({
   title = "Careers and Growth",
-  body = `At ANVI, growth is about more than a job - it’s about solving real challenges, building deep-tech innovations, and shaping a sustainable future. Driven by purpose and inspired by our mission, our team explores ambitious ideas, works with breakthrough technologies, and creates impact across industries and communities. If you’re ready to grow and be part of a future engineered by innovation, your next role could start here.`,
+  body = `At ANVI, growth is about more than a job - it’s about solving real challenges, building deep-tech innovations, and shaping a sustainable future. Driven by purpose and inspired by our mission, our team explores ambitious ideas, works with breakthrough technologies, and creates impact across industries and communities. If you’re ready to grow and be part of a future engineered by innovation, your next role could start here. `,
+  mobieBody = [`At ANVI, growth means solving real challenges and creating deep-tech innovations that matter.`,
+    ` Our team works with breakthrough technologies, builds sustainable solutions, and drives impact across 
+      industries and communities. If you’re ready to shape the future through innovation, your next role starts 
+      here.`
+  ],
   buttonLabel = "Explore Careers",
   buttonAriaLabel = "Explore Careers and Growth",
   onExplore = null, // function or link
@@ -39,8 +44,12 @@ export default function CareersGrowthComponent({
               {title}
             </h2>
 
-            <p className="mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
+            <p className="hidden md:block mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
               {body}
+            </p>
+
+            <p className="block md:hidden mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
+              {mobieBody}
             </p>
 
             <div className="mt-8">
