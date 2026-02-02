@@ -181,7 +181,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.1.webp"
+                  src="/images/about/about3.1.png"
                   alt="Strategic Focus"
                   className=" rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center  "
                 />
@@ -201,7 +201,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.2.webp"
+                  src="/images/about/about3.2.png"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
@@ -224,7 +224,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.3.webp"
+                  src="/images/about/about3.3.png"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
@@ -244,7 +244,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.4.webp"
+                  src="/images/about/about3.4.png"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />

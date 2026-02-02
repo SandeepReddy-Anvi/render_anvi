@@ -13,7 +13,7 @@ export default function CareersGrowthComponent({
   buttonLabel = "Explore Careers",
   buttonAriaLabel = "Explore Careers and Growth",
   onExplore = null, // function or link
-  imageSrc = "images/about/careerGrowth1.webp", // pass a string url or import
+  imageSrc = "images/about/careerGrowth1.jpg", // pass a string url or import
 }) {
   // If onExplore is not provided, default to a no-op that logs; you can replace with react-router navigation.
   const handleExplore = (e) => {
