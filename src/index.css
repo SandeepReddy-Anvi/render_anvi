@@ -241,7 +241,8 @@ body::-webkit-scrollbar-thumb {
     }
 
     100% {
-        width: calc(375px - 25px);
+        width: 375px;
+        max-width: calc(375px - 50px);
         opacity: 1;
         transform: scale(1)
     }
