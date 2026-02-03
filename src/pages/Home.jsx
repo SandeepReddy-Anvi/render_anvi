@@ -103,7 +103,7 @@ const Home = () => {
         <section className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
           <div className="flex flex-col md:flex-row gap-10 md:gap-20">
             <img 
-              src="/images/home/About.jpg"
+              src="/images/home/About.webp"
               alt="Team"
               className="w-[720px] h-[250px] md:h-[350px] lg:h-[420px] rounded-[24px] object-cover"
             />
@@ -185,7 +185,7 @@ const Home = () => {
             </div>
 
             <img 
-              src="/images/home/impact.png"
+              src="/images/home/impact.webp"
               alt="Team"
               className="w-[720px] h-[250px] md:h-[450px] lg:h-[520px] rounded-[24px] object-cover my-0 md:my-auto lg:my-0"
             />

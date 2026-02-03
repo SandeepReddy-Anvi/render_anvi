@@ -109,7 +109,7 @@ const About = () => {
       <section className="relative px-5 md:px-[60px] py-[100px] md:py-[102px]">
         <div className="flex flex-col md:flex-row">
           <img
-            src="/images/about/anvi.png"
+            src="/images/about/anvi.webp"
             alt="Anvi Entrance"
             className="w-full h-[300px] md:w-[450px] md:h-auto pr-0 md:pr-14 mb-10 md:mb-0"
           />
@@ -181,7 +181,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.1.png"
+                  src="/images/about/about3.1.webp"
                   alt="Strategic Focus"
                   className=" rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center  "
                 />
@@ -201,7 +201,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.2.png"
+                  src="/images/about/about3.2.webp"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
@@ -224,7 +224,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.3.png"
+                  src="/images/about/about3.3.webp"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />
@@ -244,7 +244,7 @@ const About = () => {
               <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
                 <img
                   loading="lazy"
-                  src="/images/about/about3.4.png"
+                  src="/images/about/about3.4.webp"
                   alt="Strategic Focus"
                   className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
                 />

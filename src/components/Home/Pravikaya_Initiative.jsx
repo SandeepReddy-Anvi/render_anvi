@@ -14,7 +14,7 @@ export const PravikayaInitiative = () => {
         <div className="hidden lg:flex gap-1">
           {/* Image 1 */}
           <img
-            src="/images/home/Pravikya1.png"
+            src="/images/home/Pravikya1.webp"
             alt="Education Impact"
             className="w-[300px] xl:w-[340px] 2xl:w-[380px] h-[400px] xl:h-[460px] 2xl:h-[520px] rounded-[12px] object-cover"
           />

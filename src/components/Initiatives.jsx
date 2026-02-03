@@ -3,7 +3,7 @@ import React from "react";
 export default function InitiativesSection({
   title = "Next At ANVI",
   mainImage = "/images/about/surveillance.webp",
-  topLogo = "/images/home/galactica.png",
+  topLogo = "/images/home/galactica.webp",
   rightSmallImg = "/images/about/project_shudh.webp",
 }) {
   return (
