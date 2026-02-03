@@ -58,7 +58,7 @@ main {
 /* For Chrome, Edge, and Safari */
 body {
     --sb-track-color: transparent;
-    --sb-thumb-color: gray;
+    --sb-thumb-color: #FA293E;
     --sb-size: 5px;
 }
 
@@ -150,30 +150,65 @@ body::-webkit-scrollbar-thumb {
     width: 0px;
 }
 
+.home-indus-cards-container::before, .home-indus-cards-container::after {
+    content: "";
+    flex: 0 0 20px;
+    width: 30px;
+    position: absolute;
+    left: 0;
+    height: 494px;
+    /* background-color: red; */
+}
+.home-indus-cards-container::after{
+    right: 0;
+    left: unset;
+}
 .home-industry-cards-ul {
-    width: 1600px;
-    padding: 50px;
-    padding-right: 80px;
-    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    overflow-x: scroll;
     overflow-y: hidden;
-    scrollbar-width: none;
+    scrollbar-width: 5px;
+    /* scrollbar-color: #FA293E; */
+    scrollbar-color: #eee;
+    /* gap-[10px] md:gap-[17px] lg:gap-[20px] xl:gap-[34px] */
+    @media screen and (max-width: 1200px) {
+        gap: 25px;
+    }
+    @media screen and (min-width: 1201px) {
+        gap: 34px;
+    }
 }
 
+.home-industry-cards-ul::-webkit-scrollbar {
+    height: 8px;              /* horizontal scrollbar height */
+}
+
+.home-industry-cards-ul::-webkit-scrollbar-track {
+    /* background: #eee; */
+    border-radius: 10px;
+}
+
+.home-industry-cards-ul::-webkit-scrollbar-thumb {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+}
+
+/* 
 @media screen and (max-width: 1100px) {
-    .home-industry-cards-ul {
+    .home-industry-cards-u {
         width: 100vw;
         transform: translateX(-20px);
     }
 }
 
 @media screen and (min-width: 1100px) {
-    .home-industry-cards-ul {
+    .home-industry-cards-u {
         transform: translateX(0px);
         padding-right: 0 !important;
         width: 1080px !important;
         margin: auto !important;
     }
-}
+} */
 
 
 .active-home-industry-card {
@@ -181,6 +216,9 @@ body::-webkit-scrollbar-thumb {
         animation: active-industry-card 0.5s ease-in-out 0s 1 forwards;
         transition: opacity 1s ease-in-out;
         /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    }
+    >div:nth-child(2) p{
+        animation: active-industry-card-para 0s linear 0s 1 forwards;
     }
 }
 
@@ -193,6 +231,20 @@ body::-webkit-scrollbar-thumb {
     100% {
         opacity: 1;
         transform: translateY(0px)
+    }
+}
+@keyframes active-industry-card-para {
+    0% {
+        width: 100%;
+        opacity: 0;
+        transform: scale(0.7)
+    }
+
+    100% {
+        width: 375px;
+        max-width: calc(375px - 50px);
+        opacity: 1;
+        transform: scale(1)
     }
 }
 

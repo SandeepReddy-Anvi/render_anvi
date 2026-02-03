@@ -1,6 +1,4 @@
-import React from "react";
 import { Link } from "react-router-dom";
-import { SquareArrowOutUpRight } from "lucide-react";
 import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
@@ -8,35 +6,13 @@ import InitiativeSection from "../components/Initiatives";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
 import { IconsObj } from "../utils/Iconify_icons";
-import LiveVideo from "../components/Home/LiveVideo";
+
 const footerUpBoxInfoObj = {
   head: `Let's Build the Future Together`,
-  //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Ready to transform your operations with cutting-edge robotics? Get in touch with our team of innovation experts.",
   linkLabel: "Contact Us",
   link: mainPagesLinksList.ContactUs,
 };
- 
-/* const nextAtAnvi = {
-  robotics: {
-    imgUrl: "/images/home/robo_img.jpg",
-    title: "Surveillance Robot",
-    desc: "Witness the global launch of Anvi’s Surveillance Robot, an advanced innovation under Anvi Robots, engineered to deliver intelligent security, autonomous monitoring, and precision performance. Launching on 26 January 2026.",
-    link: mainPagesLinksList.Robotics,
-  },
-  Sewage: {
-    imgUrl: "/images/solutions/solutionCard-2.png",
-    title: "Sewage Cleaning Robot",
-    desc: "Introducing Anvi’s Sewage Cleaning Robot under Bot Factory — an AI-powered system that predicts, prevents, and cures blockages through robotic automation, ensuring safe, efficient, and sustainable urban sanitation for smart cities.",
-    link: mainPagesLinksList.Solutions,
-  },
-  space: {
-    imgUrl: "/images/home/space.webp",
-    title: "Anvi Space",
-    desc: "Anvi Space is pioneering advanced space robotics and intelligent satellite systems to ensure sustainable orbital operations, extend mission lifetimes, reduce debris, and build a self-reliant future space ecosystem.",
-    link: mainPagesLinksList.Space,
-  },
-}; */
 
 const impactStats = [
   {
@@ -56,8 +32,6 @@ const impactStats = [
     value: 74,
   },
 ];
-
-
  
 const Home = () => {
   return (
@@ -71,14 +45,6 @@ const Home = () => {
           descriptionWidth="600px"
           page="home"
         />
- 
-        {/* Video Live Section */}
-        {/* <section className="w-full px-5 md:px-[60px] py-[100px] text-center md:py-[102px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
-          <h2 className="text-[32px] md:text-[46px] font-medium text-[#282828] mb-[16px] px-5 md:px-[60px] text-center md:py-[30px] font-['Wix_Madefor_Display'] bg-[#F4F3F7]">
-            ANVI Collective 2025 Live
-          </h2>
-          <LiveVideo />
-        </section> */}
  
         {/* We Build */}
         <section className="w-full px-5 py-[100px] text-center xl:px-[118px] md:py-[150px]">
@@ -193,16 +159,18 @@ const Home = () => {
         </section>
  
         {/* Section 5 -> Industries */}
-        <section className="w-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] text-center">
-          <h2 className="text-[34px] md:text-[38px] lg:text-[46px] font-medium text-[#1000000] mb-4 md:mb-2">
+        <section className="w-full py-[50px] md:py-[80px] text-center">
+          <h2 className="px-5 md:px-[60px] xl:px-[100px] text-[34px] md:text-[38px] lg:text-[46px] font-medium text-[#1000000] mb-4 md:mb-2">
             Industries We Transform
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#100000] font-[400] leading-[24px] max-w-[800px] mx-auto">
+          <p className="md:px-[60px] xl:px-[80px] text-[16px] md:text-[18px] text-[#100000] font-[400] leading-[24px] max-w-[900px] mx-auto">
             From robotics to space exploration, we build advanced solutions that redefine the way industries function, innovate, and grow - driven by technology, precision, and vision.
           </p>
  
           {/* Industries Cards */}
-          <HomeIndustriesCard />
+          <div className="home-indus-cards-container w-auto h-auto relative max-w-[1440px] mx-auto flex justify-center align-middle px-[0px] md:px-[20px] lg:px-[50px] pt-10 md:pt-16 lg:pt-20">
+            <HomeIndustriesCard />
+          </div>
         </section>
  
         {/* Next at Anvi */}
