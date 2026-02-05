@@ -8,7 +8,7 @@ export const IndustriesCardsList = {
         link: pagesLinksList.Robotics,
         activeCard: true,
     },space: {
-        imgUrl: '/images/home/space.png', 
+        imgUrl: '/images/home/galactica.webp', 
         title: 'Space',
         desc: 'Our mission make space safer, smarter, and sustainable through innovation.',
         link: pagesLinksList.Space,

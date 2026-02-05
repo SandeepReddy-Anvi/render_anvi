@@ -55,24 +55,27 @@ export const FooterUpBox2 = ({ info }) => {
 
   return (
     < section  
-      className="w-full min-h-[376px] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImag: "url(/images/footer.jpg)" }}
+      className="w-full min-h-[376px] px-[20px] md:px-[60px] 2xl:px-[100px] max-h-auto flex flex-col justify-center align-middle gap-[16px]"
+      /* style={{ backgroundImag: "url(/images/footer.jpg)" }} */
     >
-      <div
+      {/* <div
         className="bg-cover bg-center h-[101%] bg-no-repeat absolute inset-0 -z-2"
-        style={{ backgroundImage: "url(/images/footer.jpg)" }}
+          style={{ backgroundImage: "url(/images/footer.jpg)" }} 
       ></div>
 
-      <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div>
-      <h2 className="text-[46px] text-[#FFFFFF] sticky z-3">{head}</h2>
-      <p
+      <div className="dark-bgblue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div>*/}
+
+
+      <h2 className="text-[38px] md:text-[56px] text-[#FFFFFF] sticky z-3">{head}</h2>
+
+      {/* <p
         className="text-[16px] max-w-[412px] text-[#fff] font-medium leading-[24px] text-center mx-auto sticky z-3"
       >
         {para}
-      </p>
+      </p> */}
 
       {/* Subscribe Input */}
-      <div className="sticky z-3 flex justify-center align-middle gap-[12px] mt-[40px] flex-wrap px-4">
+      <div className="sticky z-3 flex align-middle gap-[12px] mt-[40px] flex-wrap">
         <input
           type="email"
           id="subscribe-email"

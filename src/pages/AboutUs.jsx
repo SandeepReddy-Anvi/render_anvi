@@ -151,7 +151,7 @@ const About = () => {
       </section>
 
       {/* section 5 */}
-      <section className="w-full bg-[#F9FAFB] px-5 lg:px-[60px] py-[100px]">
+      <section className="w-full bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF] px-5 lg:px-[60px] py-[100px]">
         {/* Heading Section */}
         <div className="  sm:flex-row md:flex-row items-center justify-center text-clip">
           <div className="mt-0 2xl:mt-[20px] max-w-[1161px] text-center text-[#100000] mx-auto ">
@@ -178,12 +178,12 @@ const About = () => {
                   Robotics engineered with precision and innovation
                 </p>
               </div>
-              <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
+              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
                 <img
                   loading="lazy"
                   src="/images/about/about3.1.webp"
                   alt="Strategic Focus"
-                  className=" rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center  "
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
                 />
               </div>
             </div>
@@ -198,12 +198,12 @@ const About = () => {
                   Solutions addressing real challenges with impact and scalability
                 </p>
               </div>
-              <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
+              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
                 <img
                   loading="lazy"
                   src="/images/about/about3.2.webp"
                   alt="Strategic Focus"
-                  className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
                 />
               </div>
             </div>
@@ -221,12 +221,12 @@ const About = () => {
                   Progress through partnerships driving collective growth
                 </p>
               </div>
-              <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
+              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
                 <img
                   loading="lazy"
                   src="/images/about/about3.3.webp"
                   alt="Strategic Focus"
-                  className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
                 />
               </div>
             </div>
@@ -241,12 +241,12 @@ const About = () => {
                   Designing systems for measurable impact
                 </p>
               </div>
-              <div className="md:object-cover sm:mx-20  md:mx-10 content-center h-[240px] lg:h-[440px]">
+              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
                 <img
                   loading="lazy"
                   src="/images/about/about3.4.webp"
                   alt="Strategic Focus"
-                  className="rounded-3xl md:rounded-[37px] object-cover h-full  w-full content-center"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
                 />
               </div>
             </div>

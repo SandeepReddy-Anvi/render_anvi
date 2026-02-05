@@ -74,7 +74,7 @@ export default function CareersGrowthComponent({
                   <img
                     src={imageSrc}
                     alt="Careers and Growth"
-                    className="w-full h-[120px] sm:h-[300px] md:h-[420px] lg:h-[460px] object-cover"
+                    className="w-full h-[250px] md:h-[420px] lg:h-[460px] object-cover px-5 md:px-0 rounded-2xl"
                     draggable={false}
                   />
                 ) : (
