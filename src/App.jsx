@@ -10,7 +10,7 @@ import {
 
 import { ScrollToTop } from "./hooks/ScrollToTop";
 import { pagesLinksObj } from "./data/PagesLinkList";
-import SEO from "./components/SEO/seo";
+import SEO from "./components/SEO/Seo";
 import { seoRoutes } from "./components/SEO/SEO_Routes";
 
 import Header from "./components/header";
