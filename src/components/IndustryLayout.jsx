@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { IndustryCard } from "../pages/Industries";
 import { IndustriesCardsList } from "../data/IndustriesCardsList";
 import GradientText from "./GradientText";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj } from "../data/PagesLinkList";
 import Footer from "./footer";
 import HeroSection from "./HeroSection";
 
@@ -10,7 +10,7 @@ import HeroSection from "./HeroSection";
 //   head: "Ready to Transform Your Industry?",
 //   para: "Don't see your industry listed, We work across diverse sectors and can adapt our technologies to meet your specific needs.",
 //   linkLabel: "Contact Us",
-//   link: mainPagesLinksList.ContactUs,
+//   link: mainPagesLinksObj.ContactUs,
 // };
 
 

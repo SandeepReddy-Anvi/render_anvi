@@ -2,7 +2,7 @@ import { useCallback, useState } from "react";
 import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj } from "../data/PagesLinkList";
 import { MapPin, Mail, Clock } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";

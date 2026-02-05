@@ -8,14 +8,14 @@ import InfoCard from "../../components/InfoBigCards";
 
 import GradientText from "../../components/GradientText";
 import WhySection from "../../components/WhySection";
-import { mainPagesLinksList } from "../../data/PagesLinkList";
+import { mainPagesLinksObj } from "../../data/PagesLinkList";
 import Footer from "../../components/footer";
 
 const footerUpBoxInfoentertainment = {
   head: "Let’s Build the Future of Entertainment",
   para: "Reach out to us to create immersive worlds, visionary stories, and next-generation creative experiences.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs
+  link: mainPagesLinksObj.ContactUs
 }
 
 const Entertainment = () => {

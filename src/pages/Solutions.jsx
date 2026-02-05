@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import FeaturedSolutionsCardBox from "../components/Solutions/FeaturedSolutionsCardBox";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj } from "../data/PagesLinkList";
 import SectionWithImage from "../components/SectionWithImage";
 import GradientText from "../components/GradientText";
 import ImpactSolutions from "../components/Solutions/ImpactSolutions";
@@ -11,7 +11,7 @@ const footerUpBoxInfoObj = {
   //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  link: mainPagesLinksObj.ContactUs,
 };
 
 const Solutions = () => {

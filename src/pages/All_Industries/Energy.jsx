@@ -5,14 +5,14 @@ import { GraduationCap } from "lucide-react";
 import GradientText from "../../components/GradientText";
 import WhySection from "../../components/WhySection";
 import Footer from "../../components/footer";
-import { mainPagesLinksList } from "../../data/PagesLinkList";
+import { mainPagesLinksObj } from "../../data/PagesLinkList";
 
 
 const footerUpBoxInfoenergy = {
   head: "Let’s Build the Future of Energy",
   para: "Get in touch with us to explore how intelligent energy systems can power your next chapter.",
    linkLabel: "Contact Us",
-  link : mainPagesLinksList.ContactUs
+  link : mainPagesLinksObj.ContactUs
 };
 
 const Energy = () => {

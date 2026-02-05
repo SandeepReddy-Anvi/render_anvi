@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
 import TimelineSection from "../components/TimelineSection";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj } from "../data/PagesLinkList";
 
 
 const footerUpBoxInfoObj = {
@@ -13,7 +13,7 @@ const footerUpBoxInfoObj = {
   //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  link: mainPagesLinksObj.ContactUs,
 };
 
 const aboutCardList = [

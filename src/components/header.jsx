@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj, pagesLinksObj } from "../data/PagesLinkList";
 import { Menu, Plus } from "lucide-react";
 import { IconsObj } from "../utils/Iconify_icons";
 
@@ -79,29 +79,28 @@ const Header = () => {
         showHeader ? "translate-y-0" : "-translate-y-full"
       }`}
       >
-        <Link to="/">
+        <Link to={pagesLinksObj.Home}>
           <img
             loading="eager"
             src="/logos/anvi_black_logo.svg"
             alt="anvi-logo"
             className="w-auto max-h-[50px] object-contain sticky z-[51] mt-[10px]"
-            onClick={pagesLinksList.Home}
           />
         </Link>
 
         {/* Nav Bar & Buttons (right side) */}
         <nav className="flex flex-1 justify-end align-middle">
           <ul className="desktop-ul hidden md:flex justify-center font-medium text-[16px] align-middle gap-[2px] md:gap-3 lg:gap-[30px] xl:gap-[40px]">
-            {Object.keys(mainPagesLinksList)
+            {Object.keys(mainPagesLinksObj)
               .slice(0, -1)
               .map((pageKey) => {
-                const link = mainPagesLinksList[pageKey];
+                const link = mainPagesLinksObj[pageKey];
                 const isActive = currentPageStyle(link);
                 return (
                   <li
                     key={link}
-                    className={`flex place-items-center transition-all duration-120 ${currentPageStyle(
-                      link
+                    className={`flex place-items-center ${currentPageStyle(
+                      link,
                     )}`}
                   >
                     <Link
@@ -127,13 +126,12 @@ const Header = () => {
           </ul>
 
           <Link
-  to={mainPagesLinksList["ContactUs"]}
-  className="max-md:hidden md:ml-2 lg:ml-[40px] link-bg-icon1 font-semibold text-[14px]"
->
-  <span>Contact Us</span>
-  <i className="rotate-45">{IconsObj.arrow}</i>
-</Link>
-
+            to={mainPagesLinksObj["ContactUs"]}
+            className="max-md:hidden md:ml-2 lg:ml-[40px] link-bg-icon1 font-semibold text-[14px]"
+          >
+            <span>Contact Us</span>
+            <i className="rotate-45">{IconsObj.arrow}</i>
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
@@ -146,98 +144,124 @@ const Header = () => {
         </nav>
       </header>
 
+      {/* DYNAMIC BREADCRUMB - CORRECTED FOR COLLECTIVE */}
+      {(() => {
+        const currentPath = location.pathname;
+        const pathSegments = currentPath.split("/").filter(Boolean);
 
-{/* DYNAMIC BREADCRUMB - CORRECTED FOR COLLECTIVE */}
-{(() => {
-  const currentPath = location.pathname;
-  const pathSegments = currentPath.split('/').filter(Boolean);
+        const categoryMap = {
+          "/energy": "Industries",
+          "/textiles": "Industries",
+          "/social_impact": "Industries",
+          "/lifesciences": "Industries",
+          "/semiconductors": "Industries",
+          "/entertainment": "Industries",
+          "/solutions/arop": "Solutions",
+          "/solutions/sewage": "Solutions",
+          "/careers/job-openings": "Careers",
+          // Match the exact key from your pagesLinksObj
+          "/collective": "News",
+        };
 
-  const categoryMap = {
-    "/energy": "Industries",
-    "/textiles": "Industries",
-    "/foundations": "Industries",
-    "/lifesciences": "Industries",
-    "/semiconductors": "Industries",
-    "/entertainment": "Industries",
-    "/solutions/arop": "Solutions",
-    "/solutions/sewage": "Solutions",
-    "/careers/job-openings": "Careers",
-    // Match the exact key from your pagesLinksList
-    "/collective": "News", 
-  };
+        let parentName = null;
 
-  let parentName = null;
-  
-  // 1. Check the direct map first
-  if (categoryMap[currentPath]) {
-    parentName = categoryMap[currentPath];
-  } 
-  // 2. Fallback to prefix checks
-  else if (currentPath.startsWith("/careers")) {
-    parentName = "Careers";
-  } else if (currentPath.startsWith("/solutions")) {
-    parentName = "Solutions";
-  } else if (currentPath.startsWith("/news")) {
-    parentName = "News";
-  }
+        // 1. Check the direct map first
+        if (categoryMap[currentPath]) {
+          parentName = categoryMap[currentPath];
+        }
+        // 2. Fallback to prefix checks
+        else if (currentPath.startsWith("/careers")) {
+          parentName = "Careers";
+        } else if (currentPath.startsWith("/solutions")) {
+          parentName = "Solutions";
+        } else if (currentPath.startsWith("/news")) {
+          parentName = "News";
+        }
 
-  // Hide on main roots - add /collective to this list if you want it hidden there too, 
-  // but keep it out if you want "News > Collective" to show on that page.
-  const mainRoots = ["/", "/aboutus", "/investors", "/news", "/contactus", "/industries", "/solutions", "/careers"];
-  
-  if (mainRoots.includes(currentPath) || !parentName) return null;
+        // Hide on main roots - add /collective to this list if you want it hidden there too,
+        // but keep it out if you want "News > Collective" to show on that page.
+        const mainRoots = [
+          "/",
+          "/aboutus",
+          "/investors",
+          "/news",
+          "/contactus",
+          "/industries",
+          "/solutions",
+          "/careers",
+        ];
 
-  return (
-    <div 
-      className={`w-full bg-[#F8F8F8] border-b border-[#eeeeee] font-raleway px-4 lg:px-[40px] py-[8px] sticky z-[50] transition-all duration-300 ease-in-out ${
-        showHeader 
-          ? "top-[80px] lg:top-[101px] translate-y-0 opacity-100" 
-          : "top-0 -translate-y-full opacity-0 pointer-events-none"
-      }`}
-    >
-      <nav className="flex items-center">
-        <ul className="flex items-center list-none m-0 p-0 overflow-x-auto no-scrollbar">
-          
-          {/* Parent Category */}
-          <li className="text-[#666] whitespace-nowrap text-[14px] font-medium capitalize">
-            <Link to={mainPagesLinksList[parentName === "News" ? "NewsRoom" : parentName] || "/"} className="hover:text-black transition-colors">
-              {parentName}
-            </Link>
-          </li>
+        if (mainRoots.includes(currentPath) || !parentName) return null;
 
-          {/* Child Levels */}
-          {pathSegments.map((segment, index) => {
-            // Logic to prevent "News > News" or "News > Newsroom"
-            const isRedundant = segment.toLowerCase() === parentName.toLowerCase() || 
-                                (parentName === "News" && segment.toLowerCase() === "news");
-            
-            if (isRedundant && index === 0) return null;
-
-            const routeTo = `/${pathSegments.slice(0, index + 1).join("/")}`;
-            const isLast = index === pathSegments.length - 1;
-            const cleanName = segment.replace(/-/g, ' ');
-
-            return (
-              <div key={routeTo} className="flex items-center whitespace-nowrap">
-                <span className="px-[12px] text-[#999] font-light text-[14px]">{">"}</span>
-                <li className={`${isLast ? "text-[#333] font-semibold" : "text-[#666]"} text-[14px] capitalize`}>
-                  {isLast ? cleanName : <Link to={routeTo} className="hover:text-black">{cleanName}</Link>}
+        return (
+          <div
+            className={`w-full bg-[#F8F8F8] border-b border-[#eeeeee] font-raleway px-4 lg:px-[40px] py-[8px] sticky z-[50] transition-all duration-300 ease-in-out ${
+              showHeader
+                ? "top-[80px] lg:top-[101px] translate-y-0 opacity-100"
+                : "top-0 -translate-y-full opacity-0 pointer-events-none"
+            }`}
+          >
+            <nav className="flex items-center">
+              <ul className="flex items-center list-none m-0 p-0 overflow-x-auto no-scrollbar">
+                {/* Parent Category */}
+                <li className="text-[#666] whitespace-nowrap text-[14px] font-medium capitalize">
+                  <Link
+                    to={
+                      mainPagesLinksObj[
+                        parentName === "News" ? "NewsRoom" : parentName
+                      ] || "/"
+                    }
+                    className="hover:text-black transition-colors"
+                  >
+                    {parentName}
+                  </Link>
                 </li>
-              </div>
-            );
-          })}
-        </ul>
-      </nav>
-    </div>
-  );
-})()}
+
+                {/* Child Levels */}
+                {pathSegments.map((segment, index) => {
+                  // Logic to prevent "News > News" or "News > Newsroom"
+                  const isRedundant =
+                    segment.toLowerCase() === parentName.toLowerCase() ||
+                    (parentName === "News" && segment.toLowerCase() === "news");
+
+                  if (isRedundant && index === 0) return null;
+
+                  const routeTo = `/${pathSegments.slice(0, index + 1).join("/")}`;
+                  const isLast = index === pathSegments.length - 1;
+                  const cleanName = segment.replace(/-/g, " ");
+
+                  return (
+                    <div
+                      key={routeTo}
+                      className="flex items-center whitespace-nowrap"
+                    >
+                      <span className="px-[12px] text-[#999] font-light text-[14px]">
+                        {">"}
+                      </span>
+                      <li
+                        className={`${isLast ? "text-[#333] font-semibold" : "text-[#666]"} text-[14px] capitalize`}
+                      >
+                        {isLast ? (
+                          cleanName
+                        ) : (
+                          <Link to={routeTo} className="hover:text-black">
+                            {cleanName}
+                          </Link>
+                        )}
+                      </li>
+                    </div>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+        );
+      })()}
       {/* MOBILE MENU OVERLAY */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 h-[74vh] z-[60] flex flex-col bg-black shadow-md   text-white overflow-y-auto">
-          
           {/* Top Bar inside Menu: Logo + Close Button */}
           <div className="flex justify-between items-center w-full px-5 pt-6 pb-2">
-            
             {/* ✅ Added SVG Logo Here */}
             <img
               src="/logos/anvi_logo.svg"
@@ -248,7 +272,7 @@ const Header = () => {
             {/* Close Button */}
             <button
               className="cursor-pointer p-2 text-white"
-              onClick={handleMobileMenu}
+              onClick={() => handleMobileMenu()}
               aria-label="Close mobile menu"
             >
               <Plus
@@ -261,17 +285,17 @@ const Header = () => {
 
           {/* Mobile Links List */}
           <ul className="w-full  mt-[5vh] flex flex-col items-center justify-start gap-[20px] font-[600] text-[20px]">
-            {Object.keys(mainPagesLinksList)
+            {Object.keys(mainPagesLinksObj)
               .slice(0, -1)
               .map((pageKey) => {
-                const link = mainPagesLinksList[pageKey];
+                const link = mainPagesLinksObj[pageKey];
                 return (
                   <li key={link} className={currentPageStyle(link)}>
                     <Link
                       to={link}
                       onClick={() => handleLinkClick(link)}
                       className={`hover:text-[#FA293E] transition-colors ${currentPageStyle(
-                        link
+                        link,
                       )}`}
                     >
                       {pageKey}
@@ -282,8 +306,8 @@ const Header = () => {
 
             <li className="rounded-[16px] bg-[#FA293E] ">
               <Link
-                to={mainPagesLinksList["ContactUs"]}
-                onClick={() => handleLinkClick(mainPagesLinksList["ContactUs"])}
+                to={mainPagesLinksObj["ContactUs"]}
+                onClick={() => handleLinkClick(mainPagesLinksObj["ContactUs"])}
                 className=" w-full max-w-[280px] h-[50px] px-[90px] inline-flex items-center justify-center whitespace-nowrap text-[16px] text-[#FFFFFF] font-semibold transition-colors hover:text-[#FFFFFF] hover:bg-[#CD0054]"
               >
                 Contact Us

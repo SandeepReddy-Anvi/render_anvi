@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect } from "react";
+import { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -9,7 +9,10 @@ import {
 } from "react-router-dom";
 
 import { ScrollToTop } from "./hooks/ScrollToTop";
-import { pagesLinksList } from "./data/PagesLinkList";
+import { pagesLinksObj } from "./data/PagesLinkList";
+import SEO from "./components/SEO/seo";
+import { seoRoutes } from "./components/SEO/SEO_Routes";
+
 import Header from "./components/header";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
@@ -23,7 +26,7 @@ import { News } from "./pages/News";
 
 import Energy from "./pages/All_Industries/Energy";
 import Textiles from "./pages/All_Industries/Textiles";
-import Foundations from "./pages/All_Industries/Foundations";
+import SocialImpact from "./pages/All_Industries/SocialImpact";
 import LifeSciences from "./pages/All_Industries/LifeSciences";
 import SemiConductors from "./pages/All_Industries/SemiConductors";
 import Entertainment from "./pages/All_Industries/Entertainment";
@@ -36,25 +39,6 @@ import CareersJobApply from "./pages/CareersInfo/CareersJobApply";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AnviCollective from "./components/News/AnviCollective";
 
-
-
-/* =======================
-   Lazy Loaded Pages
-======================= */
-
-
-
-
-
-/* =======================
-   Loader
-======================= */
-
-const Loader = (
-  <div className="w-full h-[65vh] flex items-center justify-center bg-white text-black text-xl">
-    Loading...
-  </div>
-);
 
 /* =======================
    Layout Component
@@ -72,8 +56,21 @@ const Layout = () => {
     }
   }, [location.pathname]);
 
+  const seoData =
+    seoRoutes[location.pathname] || {
+      title: "Anvi",
+      description: "Anvi engineers robotics and intelligent systems that redefine industries through deep-tech innovation.",
+    };
+
   return (
     <>
+    {/* SEO Handler */}
+      <SEO
+        title={seoData.title}
+        description={seoData.description}  
+        breadcrumb={seoData.breadcrumb}
+      />
+
       <ScrollToTop />
       <Header />
       <Outlet />
@@ -87,67 +84,41 @@ const Layout = () => {
 
 const AppRoutes = () => {
   return (
-    <Suspense fallback={Loader}>
       <Routes>
         <Route element={<Layout />}>
           {/* Main Pages */}
-          <Route path={pagesLinksList.Home} element={<Home />} />
-          <Route path={pagesLinksList.AboutUs} element={<AboutUs />} />
-          <Route path={`${pagesLinksList.Investors}/*`} element={<Investors />} />
-          <Route path={pagesLinksList.News} element={<News />} />
-          <Route path={pagesLinksList.anvicollective} element={<AnviCollective/>}/>
-          <Route path={pagesLinksList.ContactUs} element={<ContactUs />} />
-          <Route
-            path={pagesLinksList.PrivacyPolicy}
-            element={<PrivacyPolicy />}
-          />
+          <Route path={pagesLinksObj.Home} element={<Home />} />
+          <Route path={pagesLinksObj.AboutUs} element={<AboutUs />} />
+          <Route path={`${pagesLinksObj.Investors}/*`} element={<Investors />} />
+          <Route path={pagesLinksObj.News} element={<News />} />
+          <Route path={pagesLinksObj.anvicollective} element={<AnviCollective/>}/>
+          <Route path={pagesLinksObj.ContactUs} element={<ContactUs />} />
+          <Route path={pagesLinksObj.PrivacyPolicy} element={<PrivacyPolicy />} />
 
           {/* Solutions */}
-          <Route path={pagesLinksList.Solutions} element={<Solutions />} />
-          <Route
-            path={pagesLinksList.Solutions_AROP}
-            element={<SolutionsArop />}
-          />
-          <Route
-            path={pagesLinksList.Solutions_Sewage}
-            element={<SolutionsSewage />}
-          />
+          <Route path={pagesLinksObj.Solutions} element={<Solutions />} />
+          <Route path={pagesLinksObj.Solutions_AROP} element={<SolutionsArop />} />
+          <Route path={pagesLinksObj.Solutions_Sewage} element={<SolutionsSewage />} />
 
           {/* Industries */}
-          <Route path={pagesLinksList.Industries} element={<Industries />} />
-          <Route path={pagesLinksList.Energy} element={<Energy />} />
-          <Route path={pagesLinksList.Textiles} element={<Textiles />} />
-          <Route path={pagesLinksList.Foundations} element={<Foundations />} />
-          <Route
-            path={pagesLinksList.LifeSciences}
-            element={<LifeSciences />}
-          />
-          <Route
-            path={pagesLinksList.SemiConductors}
-            element={<SemiConductors />}
-          />
-          <Route
-            path={pagesLinksList.Entertainment}
-            element={<Entertainment />}
-          />
+          <Route path={pagesLinksObj.Industries} element={<Industries />} />
+          <Route path={pagesLinksObj.Energy} element={<Energy />} />
+          <Route path={pagesLinksObj.Textiles} element={<Textiles />} />
+          <Route path={pagesLinksObj.SocialImpact} element={<SocialImpact />} />
+          <Route path={pagesLinksObj.LifeSciences} element={<LifeSciences />} />
+          <Route path={pagesLinksObj.SemiConductors} element={<SemiConductors />} />
+          <Route path={pagesLinksObj.Entertainment} element={<Entertainment />} />
 
           {/* Careers */}
-          <Route path={pagesLinksList.Careers} element={<Careers />} />
-          <Route
-            path={pagesLinksList.Career_Openings}
-            element={<CareersOpenings />}
-          />
-          <Route path={pagesLinksList.JobInfo} element={<CareersJobDesc />} />
-          <Route
-            path={pagesLinksList.JobInfo_Apply}
-            element={<CareersJobApply />}
-          />
+          <Route path={pagesLinksObj.Careers} element={<Careers />} />
+          <Route path={pagesLinksObj.Career_Openings} element={<CareersOpenings />} />
+          <Route path={pagesLinksObj.JobInfo} element={<CareersJobDesc />} />
+          <Route path={pagesLinksObj.JobInfo_Apply} element={<CareersJobApply />} />
         </Route>
 
         {/* Fallback */}
-        <Route path="*" element={<Navigate to={pagesLinksList.Home} replace />} />
+        <Route path="*" element={<Navigate to={pagesLinksObj.Home} replace />} />
       </Routes>
-    </Suspense>
   );
 };
 

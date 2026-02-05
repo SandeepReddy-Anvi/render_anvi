@@ -1,7 +1,7 @@
 import Button from "../utils/Button";
 import HeroSection from "../components/HeroSection";
 import { IndustriesCardsList } from "../data/IndustriesCardsList";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj } from "../data/PagesLinkList";
 import GradientText from "../components/GradientText";
 import Footer from "../components/footer";
 import { Link } from "react-router-dom";
@@ -11,7 +11,7 @@ const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Industry?",
   para: "Don't see your industry listed, We work across diverse sectors and can adapt our technologies to meet your specific needs.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  link: mainPagesLinksObj.ContactUs,
 };
 
 const ourDescriptionDesktop = [
@@ -96,10 +96,10 @@ export const Industries = () => {
             <IndustryCard {...IndustriesCardsList.space} />
             <IndustryCard {...IndustriesCardsList.energy} />
             <IndustryCard {...IndustriesCardsList.entertainment} />
-            <IndustryCard {...IndustriesCardsList.SemiConductors} />
+            <IndustryCard {...IndustriesCardsList.semiconductors} />
             <IndustryCard {...IndustriesCardsList.textiles} />
             <IndustryCard {...IndustriesCardsList.lifesciences} />
-            <IndustryCard {...IndustriesCardsList.foundations} />
+            <IndustryCard {...IndustriesCardsList.social_impact} />
           </div>
         </section>
       </main>

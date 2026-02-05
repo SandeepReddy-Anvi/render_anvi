@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import SectionWithImage from "../components/SectionWithImage";
-import { pagesLinksList } from "../data/PagesLinkList";
+import { pagesLinksObj } from "../data/PagesLinkList";
 import GradientText from "../components/GradientText";
  
 
@@ -13,8 +13,8 @@ const footerUpBoxInfoObj = {
   head: "Looking for the Right Job ?",
   para: "Join Anvi to explore ambitious ideas, work with breakthrough technologies, and build a career that creates real impact.",
   linkLabel: "Browse Openings",
-  link: pagesLinksList.Career_Openings,
-  //  link: pagesLinksList.Career_Openings+"#job-openings-container",
+  link: pagesLinksObj.Career_Openings,
+  //  link: pagesLinksObj.Career_Openings+"#job-openings-container",
 };
 
 const ourDescriptionDesktop = [
@@ -220,7 +220,7 @@ const Careers = () => {
               technology that empowers lives and shapes tomorrow.
             </p>
 
-            <Link to={pagesLinksList.Career_Openings} className="link-bg-icon1 text-[14px] w-[180px]">
+            <Link to={pagesLinksObj.Career_Openings} className="link-bg-icon1 text-[14px] w-[180px]">
               <span>Browse Openings</span>
               <i className="rotate-45">{IconsObj.arrow}</i>
             </Link>

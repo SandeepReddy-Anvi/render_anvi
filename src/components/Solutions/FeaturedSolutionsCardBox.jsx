@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const pagesLinksList = {
+const pagesLinksObj = {
   Solutions_AROP: "/solutions/arop",
   Solutions_Sewage: "/solutions/sewage",
 };
@@ -17,7 +17,7 @@ const featuredSolutionsList = [
       "24/7 autonomous operation",
     ],
     imageUrl: "/images/solutions/solutionCard-1.webp",
-    link: pagesLinksList.Solutions_AROP,
+    link: pagesLinksObj.Solutions_AROP,
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ const featuredSolutionsList = [
       "Zero Manual Scavenging",
     ],
     imageUrl: "/images/solutions/solutionCard-2.webp",
-    link: pagesLinksList.Solutions_Sewage,
+    link: pagesLinksObj.Solutions_Sewage,
   },
 ];
 

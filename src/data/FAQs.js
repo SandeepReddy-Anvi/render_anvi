@@ -3,7 +3,7 @@ export const ContactUsFaqs = [
   {
     question: "What industries does Anvi work in?",
     answer:
-      "We are active in Robotics, Space, Energy, Semiconductors, Entertainment, Textiles, Life Sciences, and Foundation initiative",
+      "We are active in Robotics, Space, Energy, SemiConductors, Entertainment, Textiles, Life Sciences, and SocialImpact initiative",
   },
   {
     question: "How can I apply for careers or internships?",

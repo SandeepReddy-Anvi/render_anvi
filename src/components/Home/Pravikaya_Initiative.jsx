@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { pagesLinksList } from "../../data/PagesLinkList";
+import { pagesLinksObj } from "../../data/PagesLinkList";
 import { IconsObj } from "../../utils/Iconify_icons";
 import React from "react";
  
@@ -98,7 +98,7 @@ export const PravikayaInitiative = () => {
  
           {/* CTA */}
           <Link
-            to={pagesLinksList.AboutUs}
+            to={pagesLinksObj.AboutUs}
             className="link-bg-icon1 mt-4 w-[150px] text-[14px] font-semibold flex items-center gap-2"
           >
             <span>Learn More</span>
