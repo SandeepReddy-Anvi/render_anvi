@@ -14,8 +14,14 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{  amount: 0.20, margin: " 0px" }}
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-        className="bg-[#0B0B0B] text-white font-manrope"
+        className="relative bg-[#000000] text-white overflow-hidden"
       >
+        {/* Gradient background */}
+        <div className="footer-gradient-wrapper">
+          <div className="footer-gradient-bg"></div>
+        </div>
+
+        <div className="relative z-10">
         {/* Optional Top Boxes */}
         {footerUpBoxInfo && Object.keys(footerUpBoxInfo).length > 0 && (
           <FooterUpBox info={footerUpBoxInfo} />
@@ -24,30 +30,32 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
           <FooterUpBox2 info={footerUpBoxInfo2} />
         )}
 
+        <div className="w-[95%] mx-auto h-[1px] bg-[#333333]" />
+
         {/* Main Footer */}
         <div className="max-md:px-[25px] lg:px-[50px] py-[80px] lg:pt-[64px] lg:pb-[48px] h-full min-h-[300px]">
           {/* Parent Grid */}
           <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[17px] mx-auto items-start">
             {/* Logo + Description */}
-  <div className="col-span-1 flex justify-center items-center sm:pl-5">
-  {/* Changed to flex-col to stack vertically; items-center keeps them aligned */}
-  <div className="flex flex-col items-start gap-[20px] md:gap-[30px]">
-    <img
-      loading="eager"
-      src="/logos/anvi_logo.svg"
-      alt="Anvilogo"
-      className="w-full max-w-[300px] md:max-w-[366px] object-contain"
-    />
-    <p
-      className="text-white text-start text-[14px] font-[500] leading-[22.4px] tracking-[-0.32px] max-w-[450px]"
-      style={{ fontFamily: '"DM Sans", sans-serif' }}
-    >
-      <span className="block mb-2 text-[16px] font-medium">Engineering Your Edge™</span>
-      We build breakthrough products, deep-tech systems, and future-proof 
-      robotics solutions across industries.
-    </p>
-  </div>
-</div>
+              <div className="col-span-1 flex justify-center items-center sm:pl-5">
+              {/* Changed to flex-col to stack vertically; items-center keeps them aligned */}
+              <div className="flex flex-col items-start gap-[20px] md:gap-[30px]">
+                <img
+                  loading="eager"
+                  src="/logos/anvi_logo.svg"
+                  alt="Anvilogo"
+                  className="w-full max-w-[300px] md:max-w-[366px] object-contain"
+                />
+                <p
+                  className="text-white text-start text-[14px] font-[500] leading-[22.4px] tracking-[-0.32px] max-w-[450px]"
+                  style={{ fontFamily: '"DM Sans", sans-serif' }}
+                >
+                  <span className="block mb-2 text-[16px] font-medium">Engineering Your Edge™</span>
+                  We build breakthrough products, deep-tech systems, and future-proof 
+                  robotics solutions across industries.
+                </p>
+              </div>
+            </div>
 
             {/* Desktop / Tablet View */}
             <div className="hidden sm:flex flex-col gap-[18px] w-[90px] md:mx-auto self-start">
@@ -220,6 +228,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
               Privacy Policy
             </Link>
           </div>
+        </div>
         </div>
       </motion.footer>
     </>

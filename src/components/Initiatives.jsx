@@ -7,18 +7,18 @@ export default function InitiativesSection({
   rightSmallImg = "/images/about/project_shudh.webp",
 }) {
   return (
-    <section className="w-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
+    <section className="w-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
         <h3 className="text-[32px] md:text-[46px] font-medium text-[#100000] mb-4">{title}</h3>
 
         {/* Grid: left large image, right column with two stacked cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
           {/* Left big image */}
           <div className="lg:col-span-5">
-            <div className="overflow-hidden shadow sm:h-[500px]">
+            <div className="overflow-hidden shadow h-[300px] md:h-[500px]">
               <img
                 src={mainImage}
                 alt="Main initiative - large"
-                className="w-full  h-full object-cover"
+                className="w-full h-full rounded-[12px] object-cover"
                 draggable={false}
               />
             </div>
@@ -38,11 +38,11 @@ export default function InitiativesSection({
 
             {/* Card 1 */}
             <div className="flex flex-col space-y-3">
-              <div className="w-full h-[230px] md:h-[218px] lg:h-[220px] xl:h-[260px] flex items-center justify-center">
+              <div className="w-full h-[300px] md:h-[218px] lg:h-[220px] xl:h-[260px] flex items-center justify-center">
                 <img
                   src={topLogo}
                   alt="Galactica logo"
-                  className="w-full   h-full object-cover"
+                  className="w-full rounded-[12px] h-full object-cover"
                   draggable={false}
                 />
               </div>
@@ -56,11 +56,11 @@ export default function InitiativesSection({
 
             {/* Card 2 */}
             <div className="flex flex-col space-y-3">
-              <div className="w-full sm:h-[150px] md:h-[328px] lg:h-[328px] overflow-hidden">
+              <div className="w-full h-[300px] md:h-[328px] lg:h-[328px] overflow-hidden">
                 <img
                   src={rightSmallImg}
                   alt="Project SHUDH"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full rounded-[12px] object-cover"
                   draggable={false}
                 />
               </div>

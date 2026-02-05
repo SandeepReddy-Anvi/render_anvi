@@ -40,7 +40,7 @@ export const PravikayaInitiative = () => {
         <img
           src="/images/home/Pravikya3.png"
           alt="Community Impact"
-          className="block lg:hidden w-full md:w-[360px] h-[260px] md:h-[480px] rounded-[12px] object-cover"
+          className="block lg:hidden w-full md:w-[360px] h-[350px] md:h-[480px] rounded-[12px] object-cover"
         />
         </div>  
  

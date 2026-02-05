@@ -305,3 +305,133 @@ header, .anvi-breadcrumb-bar {
 .list-none {
   list-style-type: none;
 }
+
+
+/*     .footer-gradient-bg {
+    position: absolute;
+    inset: -15%;
+
+    background: linear-gradient(
+        140deg,
+        #0124A2 0%,
+    #0124A2 45%,
+    #701077 65%,
+    #CD0054 100%
+    
+    );
+
+    filter: blur(150px);
+    opacity: 0.95;
+
+    
+    -webkit-mask-image: radial-gradient(
+        ellipse 1950px 1560px at 0% 100%,
+        transparent 0%,
+        transparent 60%,
+        black 75%
+    );
+
+    mask-image: radial-gradient(
+        ellipse 1900px 1560px at 0% 100%,
+        transparent 0%,
+        transparent 70%,
+        black 75%
+    );
+
+    z-index: 0;
+    pointer-events: none;
+    } 
+*/
+
+.footer-gradient-wrapper {
+  position: absolute;
+  inset: -15%;
+  pointer-events: none;
+
+  /* ✅ MASK APPLIED HERE */
+  -webkit-mask-image: radial-gradient(
+    ellipse 1950px 1560px at 0% 100%,
+    transparent 72%,
+    black 74%
+  );
+
+  mask-image: radial-gradient(
+    ellipse 1950px 1560px at 0% 100%,
+    transparent 72%,
+    black 74%
+  );
+
+  z-index: 0;
+}
+
+.footer-gradient-bg {
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    140deg,
+    #0124A2 0%,
+    #0124A2 30%,
+    #701077 72%,
+    #CD0054 100%
+  );
+
+  filter: blur(120px);
+  opacity: 0.75;
+}
+
+/* Mobile gradient adjustment */
+@media (max-width: 768px) {
+  .footer-gradient-wrapper {
+    /* ✅ REMOVE MASK on mobile - no arc */
+    -webkit-mask-image: none;
+    mask-image: none;
+    inset: 0; /* Reset inset to fit container */
+  }
+
+  .footer-gradient-bg {
+    background: linear-gradient(
+      180deg,
+      #CD0054 10%,
+      #CD0054 45%,
+      #701077 60%,
+      #0124A2 100%
+    );
+    
+    filter: blur(190px);
+    opacity: 0.62;
+
+    /* 🎯 CENTER THE GRADIENT */
+    transform: translateX(-50%) translateY(-30%);
+
+    top: 0;
+    position: absolute;
+
+    transform: rotate(-27deg);
+    transform-origin: right bottom; 
+  }
+}
+
+/* 2xl screens */
+@media (min-width: 1536px) {
+  .footer-gradient-wrapper {
+    inset: -22%;
+
+    -webkit-mask-image: radial-gradient(
+      ellipse 2350px 1850px at 0% 100%,
+      transparent 72%,
+      black 74%
+    );
+
+    mask-image: radial-gradient(
+      ellipse 2550px 1850px at 0% 100%,
+      transparent 72%,
+      black 74%
+    );
+  }
+
+  .footer-gradient-bg {
+    filter: blur(150px);
+    opacity: 0.8;
+  }
+}

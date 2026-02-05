@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useEffect, useState, useRef } from "react";
 import { mainPagesLinksList, pagesLinksList } from "../data/PagesLinkList";
 import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
 import Footer from "../components/footer";
@@ -32,8 +33,66 @@ const impactStats = [
     value: 74,
   },
 ];
+
+const ProgressBar = ({ label, value, trigger }) => {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    if (trigger) {
+      setWidth(0); // ensure reset
+
+      const id = requestAnimationFrame(() => {
+        setWidth(value);
+      });
+
+      return () => cancelAnimationFrame(id);
+    }
+  }, [trigger, value]);
+
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="flex justify-between items-center text-[#292929] text-[18px] font-medium">
+        <span>{label}</span>
+        <span>{value}%</span>
+      </div>
+
+      <div className="w-full h-[4px] bg-[#EAEAEA] rounded-full overflow-hidden">
+        <div
+          className="
+            h-full rounded-full
+            bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054]
+            transition-[width] duration-1000 ease-out
+          "
+          style={{ width: `${width}%` }}
+        />
+      </div>
+    </div>
+  );
+};
+
  
 const Home = () => {
+  const impactRef = useRef(null);
+  const [animateBars, setAnimateBars] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setAnimateBars(true);
+          observer.disconnect(); // 🔥 run ONLY once
+        }
+      },
+      { threshold: 0.5 } // 30% visible
+    );
+
+    if (impactRef.current) {
+      observer.observe(impactRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <main className="bg-[#FFFFFF]">
@@ -65,13 +124,14 @@ const Home = () => {
           </p>
         </section>
         
+        <div className="bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
         {/* Section3 -> About */}
-        <section className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
+        <section className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px]">
           <div className="flex flex-col md:flex-row gap-10 md:gap-20">
             <img 
               src="/images/home/About.webp"
               alt="Team"
-              className="w-[720px] h-[250px] md:h-[350px] lg:h-[420px] rounded-[24px] object-cover"
+              className="w-[720px] h-[350px] lg:h-[420px] rounded-[24px] object-cover"
             />
             <div className="w-full flex flex-col gap-4 justify-center">
               <div className="flex items-center gap-2">
@@ -91,7 +151,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="flex flex-cols-4 gap-4 md:gap-10 pt-10 px-0 md:px-10 lg:px-20 justify-between text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 pt-10 px-0 md:px-10 lg:px-20 justify-between text-center">
             <div>
               <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">4</h2>
               <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">Core Verticals</p>
@@ -112,7 +172,7 @@ const Home = () => {
         </section>
         
         {/* Section 4 -> Impact */}
-        <section className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px] bg-[#F9FAFB]">
+        <section ref={impactRef} className="w-full h-full px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px]">
           <div className="flex flex-col md:flex-row gap-10 md:gap-20">
             <div className="w-full flex flex-col gap-4 justify-center">
               {/* IMPACT label */}
@@ -131,21 +191,12 @@ const Home = () => {
               {/* Progress bars */}
               <div className="flex flex-col gap-8 max-w-[550px] mt-2">
                 {impactStats.map((item, index) => (
-                  <div key={index} className="flex flex-col gap-3">
-                    {/* Label + Percentage */}
-                    <div className="flex justify-between items-center text-[#292929] text-[18px] font-medium">
-                      <span>{item.label}</span>
-                      <span>{item.value}%</span>
-                    </div>
-
-                    {/* Progress bar */}
-                    <div className="w-full h-[4px] bg-[#EAEAEA] rounded-full overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054]"
-                        style={{ width: `${item.value}%` }}
-                      />
-                    </div>
-                  </div>
+                  <ProgressBar
+                    key={index}
+                    label={item.label}
+                    value={item.value}
+                    trigger={animateBars}
+                  />
                 ))}
               </div>
             </div>
@@ -153,10 +204,11 @@ const Home = () => {
             <img 
               src="/images/home/impact.webp"
               alt="Team"
-              className="w-[720px] h-[250px] md:h-[450px] lg:h-[520px] rounded-[24px] object-cover my-0 md:my-auto lg:my-0"
+              className="w-[720px] h-[350px] md:h-[450px] lg:h-[520px] rounded-[24px] object-cover my-0 md:my-auto lg:my-0"
             />
           </div>
         </section>
+        </div>
  
         {/* Section 5 -> Industries */}
         <section className="w-full py-[50px] md:py-[80px] text-center">
