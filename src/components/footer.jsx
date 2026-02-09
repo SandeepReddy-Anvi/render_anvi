@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { Instagram, Linkedin, MapPin, Mail } from "lucide-react";
-import { exploreLinksObj, mainPagesLinksObj } from "../data/PagesLinkList";
+import {
+  exploreLinksObj,
+  mainPagesLinksObj,
+  socialMediaLinksObj,
+} from "../data/PagesLinkList";
 import { FooterUpBox } from "./FooterUpBox";
 import { FooterUpBox2 } from "./FooterUpBox2";
 import { motion } from "framer-motion";
@@ -29,21 +33,21 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
             <FooterUpBox2 info={footerUpBoxInfo2} />
           )}
 
-          <div className="w-[95%] mx-auto h-[1px] bg-[#333333]" />
+          <div className="w-[95%] max-w-[1312px] mx-auto h-[0.5px] bg-[#FAFAFA80]" />
 
           {/* Main Footer */}
-          <div className="max-md:px-[25px] lg:px-[50px] py-[80px] lg:pt-[64px] lg:pb-[48px] h-full min-h-[300px]">
+          <div className="max-md:px-[25px] px-[30px] lg:px-[50px] py-[80px] lg:pt-[64px] lg:pb-[48px] h-full min-h-[300px]">
             {/* Parent Grid */}
-            <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[17px] mx-auto items-start">
+            <div className="grid xs:grid-cols-1 sm:grid-cols-2 place-items-center md:grid-cols-[1fr_repeat(3,0.8fr)] lg:grid-cols-[1.5fr_repeat(3,0.8fr)] gap-[30px] lg:gap-[17px] mx-auto items-start">
               {/* Logo + Description */}
-              <div className="col-span-1 flex justify-center items-center sm:pl-5">
+              <div className="col-span-1 flex justify-center items-center">
                 {/* Changed to flex-col to stack vertically; items-center keeps them aligned */}
                 <div className="flex flex-col items-start gap-[20px] md:gap-[30px]">
                   <img
                     loading="eager"
                     src="/logos/anvi_logo.svg"
                     alt="Anvilogo"
-                    className="w-full max-w-[300px] md:max-w-[366px] object-contain"
+                    className="w-full max-w-[500px] md:max-w-[366px] object-contain"
                   />
                   <p
                     className="text-white text-start text-[14px] font-[500] leading-[22.4px] tracking-[-0.32px] max-w-[450px]"
@@ -59,7 +63,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
               </div>
 
               {/* Desktop / Tablet View */}
-              <div className="hidden sm:flex flex-col gap-[18px] w-[90px] md:mx-auto self-start">
+              <div className="hidden sm:flex flex-col gap-[18px] md:pl-16 md:mx-auto self-start">
                 <h4 className="text-[14px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
                   Quick Links
                 </h4>
@@ -70,7 +74,12 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                       <li key={pageKey}>
                         <Link
                           to={mainPagesLinksObj[pageKey]}
-                          className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#FA293E] transition-colors"
+                          className="text-[#FFFAFF] relative font-medium text-[16px] leading-[22.4px] tracking-[-0.32px]
+                            after:content-[''] after:absolute after:left-0 after:-bottom-[6px]
+                            after:h-[1px] after:w-0
+                            after:bg-gradient-to-r after:from-[#FE7F2C] after:via-[#FF4A3A] after:via-[#FA293E] after:to-[#CD0054]
+                            after:transition-all after:duration-300 hover:after:w-full
+                            transition-colors"
                         >
                           {pageKey}
                         </Link>
@@ -79,7 +88,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                 </ul>
               </div>
 
-              <div className="hidden sm:flex flex-col gap-[18px] w-[160px] md:mx-auto self-start">
+              <div className="hidden sm:flex flex-col gap-[18px] md:mx-auto self-start">
                 <h4 className="text-[14px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
                   Explore
                 </h4>
@@ -89,7 +98,12 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                       <Link
                         to={exploreLinksObj[pageKey]}
                         target="_blank"
-                        className="text-[#FFFAFF] font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] hover:text-[#FA293E] transition-colors"
+                        className="text-[#FFFAFF] relative font-medium text-[16px] leading-[22.4px] tracking-[-0.32px] transition-colors
+                          after:content-[''] after:absolute after:left-0 after:-bottom-[6px]
+                          after:h-[1px] after:w-0
+                          after:bg-gradient-to-r after:from-[#FE7F2C] after:via-[#FF4A3A] after:via-[#FA293E] after:to-[#CD0054]
+                          after:transition-all after:duration-300 hover:after:w-full
+                        "
                       >
                         {pageKey}
                       </Link>
@@ -98,13 +112,13 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                 </ul>
               </div>
 
-              <div className="hidden sm:flex flex-col gap-[18px] w-[281px] self-start">
+              <div className="hidden sm:flex flex-col gap-[18px] w-auto md:mx-auto self-start">
                 <h4 className="text-[14px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
-                  Contact
+                  Contact Info
                 </h4>
                 <div className="flex flex-col gap-[16px]">
                   <a
-                    href="https://maps.app.goo.gl/rqWRRaMvyspAxSQKA"
+                    href={socialMediaLinksObj.Map}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-start gap-[12px]"
@@ -125,19 +139,19 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                       strokeWidth={1.5}
                     />
                     <a
-                      href="mailto:info@anvi.co"
+                      href={socialMediaLinksObj.Mail_to}
                       className="text-[#FFFAFF] text-[16px] font-medium leading-[22.4px] tracking-[-0.32px]"
                     >
-                      info@anvi.co
+                      {socialMediaLinksObj.Mail}
                     </a>
                   </div>
                 </div>
               </div>
 
               {/* Mobile View (<640px) */}
-              <div className="sm:hidden flex flex-row justify-between w-full mt-[40px]">
+              <div className="sm:hidden flex flex-row gap-[20px] justify-between w-full mt-[40px]">
                 {/* Quick Links */}
-                <div className="flex flex-col gap-[12px] w-[40%]">
+                <div className="flex flex-col gap-[12px] mx-auto">
                   <h4 className="text-[13px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
                     Quick Links
                   </h4>
@@ -148,7 +162,12 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                         <li key={pageKey}>
                           <Link
                             to={mainPagesLinksObj[pageKey]}
-                            className="text-[#FFFAFF] font-medium text-[13px] leading-[20px] tracking-[-0.32px] hover:text-[#1E9AB0] transition-colors"
+                            className="text-[#FFFAFF] relative font-medium text-[13px] leading-[20px] tracking-[-0.32px]
+                            after:content-[''] after:absolute after:left-0 after:-bottom-[6px]
+                            after:h-[1px] after:w-0
+                            after:bg-gradient-to-r after:from-[#FE7F2C] after:via-[#FF4A3A] after:via-[#FA293E] after:to-[#CD0054]
+                            after:transition-all after:duration-300 hover:after:w-full
+                            transition-colors"
                           >
                             {pageKey}
                           </Link>
@@ -160,11 +179,11 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                 {/* Contact */}
                 <div className="flex flex-col gap-[12px] w-[58%] items-start">
                   <h4 className="text-[13px] text-[#BDBDBD] font-medium tracking-[-0.32px]">
-                    Contact
+                    Contact Info
                   </h4>
                   <div className="flex flex-col gap-[10px] items-start">
                     <a
-                      href="https://maps.app.goo.gl/rqWRRaMvyspAxSQKA"
+                      href={socialMediaLinksObj.Map}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-start gap-[8px]"
@@ -180,10 +199,10 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                     <div className="flex items-center gap-[8px]">
                       <Mail className="w-[16px] h-[16px]" strokeWidth={1.5} />
                       <a
-                        href="mailto:info@anvi.co"
+                        href={socialMediaLinksObj.Mail_to}
                         className="text-[#FFFAFF] text-[13px] font-medium leading-[20px]"
                       >
-                        info@anvi.co
+                        {socialMediaLinksObj.Mail}
                       </a>
                     </div>
                   </div>
@@ -193,7 +212,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
           </div>
 
           {/* Divider */}
-          <div className="w-[95%] mx-auto h-[1px] bg-[#333333]" />
+          <div className="w-[95%] max-w-[1312px] mx-auto h-[1px] bg-[#FAFAFA80]" />
 
           {/* Bottom Row */}
           <div className="px-[60px] py-[24px] max-md:px-6">
@@ -202,19 +221,19 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
 
               <div className="flex gap-[20px] justify-start m-auto md:mr-auto md:ml-[40px]">
                 <a
-                  href="https://www.instagram.com/anvi_robotics"
+                  href={socialMediaLinksObj.Instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-[#FA293E]"
                   aria-label="Instagram"
                 >
                   <Instagram size={20} strokeWidth={1.5} />
                 </a>
                 <a
-                  href="https://www.linkedin.com/company/anvirobotics"
+                  href={socialMediaLinksObj.LinkedIn}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-white transition-colors"
+                  className="transition-colors hover:text-[#FA293E]"
                   aria-label="LinkedIn"
                 >
                   <Linkedin size={20} strokeWidth={1.5} />
@@ -223,7 +242,11 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
 
               <Link
                 to="/privacy-policy"
-                className="hover:text-white transition-colors"
+                className="text-white relative after:content-[''] after:absolute after:left-0 after:-bottom-[6px]
+                            after:h-[1px] after:w-0
+                            after:bg-gradient-to-r after:from-[#FE7F2C] after:via-[#FF4A3A] after:via-[#FA293E] after:to-[#CD0054]
+                            after:transition-all after:duration-300 hover:after:w-full
+                            transition-colors"
               >
                 Privacy Policy
               </Link>

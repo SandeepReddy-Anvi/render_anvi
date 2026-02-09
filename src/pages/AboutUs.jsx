@@ -1,12 +1,10 @@
 import { ContentCardUl } from "../components/ContentCardUl";
 import CareerAndGrowth from "../components/CareersAndGrowth";
-import Initiatives from "../components/Initiatives";
 import Footer from "../components/footer";
 import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
 import TimelineSection from "../components/TimelineSection";
 import { mainPagesLinksObj } from "../data/PagesLinkList";
-
 
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with anvi?`,
@@ -21,12 +19,12 @@ const aboutCardList = [
     title: "Our Mission",
     desc: [
       "At ANVI, our mission is to use technology as a force of transformation. We believe engineering should elevate people, improve systems, and shape a better future for generations to come. Through robotics, space innovation, creative storytelling, and lifestyle design, we build solutions that unlock human potential and bring progress closer to everyday life.",
-      "We aim to go beyond product creation - challenging limitations, redefining industries, and making advanced technology accessible to all. By combining research, engineering, and creativity, we develop purposeful solutions that drive long-term growth. Our commitment is to build ethical, sustainable, and human-centric innovation that empowers communities, strengthens industries, and shapes the future of tomorrow."
+      "We aim to go beyond product creation - challenging limitations, redefining industries, and making advanced technology accessible to all. By combining research, engineering, and creativity, we develop purposeful solutions that drive long-term growth. Our commitment is to build ethical, sustainable, and human-centric innovation that empowers communities, strengthens industries, and shapes the future of tomorrow.",
     ],
     mobile: [
       `At ANVI, we use technology to drive meaningful transformation.
       We believe engineering should elevate people, strengthen systems, and shape a better future. Through robotics, space innovation, storytelling, and lifestyle design, we create solutions that unlock human potential and bring progress closer to everyday life.
-      Our mission is to build ethical, sustainable, and human-centric innovation that empowers communities and accelerates long-term growth.`
+      Our mission is to build ethical, sustainable, and human-centric innovation that empowers communities and accelerates long-term growth.`,
     ],
     imgUrl: "/images/about/mission.webp",
   },
@@ -34,12 +32,12 @@ const aboutCardList = [
     title: "Our Vision",
     desc: [
       "Our vision at ANVI is to become a global leader in deep-technology innovation, shaping industries and inspiring future generations through engineering, science, and creativity. We imagine a world where robotics, space technology, creative communication, and lifestyle design work together to build smarter, safer, and more sustainable systems for humanity. We aim to redefine how technology is created, experienced, and integrated into everyday life, expanding possibilities for businesses and communities.",
-      "Through continuous research, ethical practices, and human-centric thinking, our vision is to engineer not just the future we imagine, but the future the world genuinely needs - driving lasting progress and inspiring change everywhere."
+      "Through continuous research, ethical practices, and human-centric thinking, our vision is to engineer not just the future we imagine, but the future the world genuinely needs - driving lasting progress and inspiring change everywhere.",
     ],
-    mobile : [
+    mobile: [
       `ANVI’s vision is to become a global leader in deep-tech innovation.
       We imagine a future where robotics, space technology, creative engineering, and lifestyle design come together to build smarter, safer, and more sustainable systems.
-      Through continuous research and human-centric thinking, we aim to create technology that truly serves the world and drives long-term progress.`
+      Through continuous research and human-centric thinking, we aim to create technology that truly serves the world and drives long-term progress.`,
     ],
     imgUrl: "/images/about/about2.1.webp",
   },
@@ -47,14 +45,14 @@ const aboutCardList = [
     title: "Our Value",
     desc: [
       "At ANVI, our values shape every idea and decision we make. Innovation drives us—we push boundaries, explore possibilities, and treat curiosity as a way of thinking. Engineering excellence guides our work, ensuring precision, reliability, and lasting impact. We act with transparency and integrity, building trust with teams, partners, and communities. Human-centric thinking inspires us to design technology that serves people and improves life.",
-      "We value sustainability and create solutions that respect our planet and future generations. Collaboration fuels progress as we unite engineering, creativity, science, and strategy to solve challenges together. Above all, we value purpose - using technology to elevate humanity and turn ambitious ideas into real progress."
+      "We value sustainability and create solutions that respect our planet and future generations. Collaboration fuels progress as we unite engineering, creativity, science, and strategy to solve challenges together. Above all, we value purpose - using technology to elevate humanity and turn ambitious ideas into real progress.",
     ],
     mobile: [
       `At ANVI, our values guide every idea and decision.
       We innovate boldly, pursue engineering excellence, and act with transparency and integrity.
       Our approach is human-centric, designing technology that truly serves people.
       We prioritise sustainability, creating solutions that respect the planet and future generations.
-      Driven by collaboration and purpose, we use technology to elevate humanity and turn ambitious ideas into progress.`
+      Driven by collaboration and purpose, we use technology to elevate humanity and turn ambitious ideas into progress.`,
     ],
     imgUrl: "/images/about/value.webp",
   },
@@ -65,7 +63,7 @@ const ourDescriptionDesktop = [
 
   "The foundation of ANVI is rooted in three core pillars: Engineering Excellence, Strategic Innovation, and Societal Purpose.",
 
-  "In every vertical we touch, our goal is not just to build products — we build technological ecosystems that accelerate global progress."
+  "In every vertical we touch, our goal is not just to build products — we build technological ecosystems that accelerate global progress.",
 ];
 
 const ourDescriptionMobile = [
@@ -74,19 +72,20 @@ const ourDescriptionMobile = [
   societal purpose to solve real-world challenges.`,
 
   `Across every vertical, we create scalable technological ecosystems that drive industrial growth, improve 
-  human lives, and accelerate global progress.`
+  human lives, and accelerate global progress.`,
 ];
-
 
 const About = () => {
   return (
-    <div id="about" className="w-full bg-[#FFFFFF] overflow-hidden lg:overflow-visible">
+    <div
+      id="about"
+      className="w-full bg-[#FFFFFF] overflow-hidden lg:overflow-visible"
+    >
       {/* Hero Section */}
       <HeroSection
         backgroundImage="/videos/Heroo2_org.mp4"
         title="We Engineer It."
         description="At Anvi, we build breakthrough deep-tech robots and future-ready systems that deliver strategic advantages for industries."
-
         descriptionWidth="600px"
       />
 
@@ -94,11 +93,10 @@ const About = () => {
       <div className=" items-center justify-center content-center">
         <GradientText
           ourTitle="About Us"
-          ourDescription= {ourDescriptionDesktop}
-          mobileDescription= {ourDescriptionMobile}
+          ourDescription={ourDescriptionDesktop}
+          mobileDescription={ourDescriptionMobile}
         />
       </div>
-
 
       {/* section 3 -> Vision, Mission, Value Section*/}
       <section className="">
@@ -114,38 +112,69 @@ const About = () => {
             className="w-full h-[300px] md:w-[450px] md:h-auto pr-0 md:pr-14 mb-10 md:mb-0"
           />
           <div className="flex flex-col justify-center items-start md:items-start text-left">
-            <h2 className="font-medium text-[32px] md:text-[36px] lg:text-[43px]">Our journey began with a bold purpose</h2>
+            <h2 className="font-medium text-[32px] md:text-[36px] lg:text-[43px]">
+              Our journey began with a bold purpose
+            </h2>
             <div className="hidden md:block">
-              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">ANVI began with the belief that technology should evolve beyond products and shape how humanity lives, works, and explores. What started as engineering excellence grew into a deep-tech ecosystem spanning robotics, space, creative media, and lifestyle innovation - expanding what technology can mean for people and the planet.</p>
-              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">Today, ANVI operates at the intersection of science, creativity, and engineering, building purposeful, resilient, and future-ready systems that turn challenges into possibilities.</p>
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">
+                ANVI began with the belief that technology should evolve beyond
+                products and shape how humanity lives, works, and explores. What
+                started as engineering excellence grew into a deep-tech
+                ecosystem spanning robotics, space, creative media, and
+                lifestyle innovation - expanding what technology can mean for
+                people and the planet.
+              </p>
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">
+                Today, ANVI operates at the intersection of science, creativity,
+                and engineering, building purposeful, resilient, and
+                future-ready systems that turn challenges into possibilities.
+              </p>
             </div>
 
             <div className="block md:hidden">
-              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">ANVI began with a belief that technology should shape how humanity lives, works, and explores  not just 
-                create products. What started as engineering excellence has grown into a deep-tech ecosystem spanning 
-                robotics, space, creative media, and lifestyle innovation.
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">
+                ANVI began with a belief that technology should shape how
+                humanity lives, works, and explores not just create products.
+                What started as engineering excellence has grown into a
+                deep-tech ecosystem spanning robotics, space, creative media,
+                and lifestyle innovation.
               </p>
-              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">Today, we unite science, creativity, and engineering to build purposeful, resilient systems that turn 
-                challenges into possibilities.
+              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">
+                Today, we unite science, creativity, and engineering to build
+                purposeful, resilient systems that turn challenges into
+                possibilities.
               </p>
             </div>
-            
 
             <div className="flex flex-cols-3 gap-4 md:gap-10 pt-10">
               <div>
-                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">4</h2>
-                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">Core Verticals</p>
+                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                  4
+                </h2>
+                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">
+                  Core Verticals
+                </p>
               </div>
               <div>
-                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">8+</h2>
-                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">Industry Sectors</p>
+                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                  8+
+                </h2>
+                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">
+                  Industry Sectors
+                </p>
               </div>
               <div>
-                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">1 <span className="text-[24px] md:text-[30px] lg:text-[47px]">Purpose</span></h2>
-                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">Engineering Your Edge</p>
+                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                  1{" "}
+                  <span className="text-[24px] md:text-[30px] lg:text-[47px]">
+                    Purpose
+                  </span>
+                </h2>
+                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">
+                  Engineering Your Edge
+                </p>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -159,7 +188,9 @@ const About = () => {
               What Makes ANVI Different
             </p>
             <p className="w-full text-center justify-center mt-6 px-0 lg:px-[130px] text-[18px] md:text-[20]">
-              ANVI stands apart not by what we build, but how we build  combining science, creativity, and human-centric design to create technology that truly transforms lives, industries, and our shared future.
+              ANVI stands apart not by what we build, but how we build combining
+              science, creativity, and human-centric design to create technology
+              that truly transforms lives, industries, and our shared future.
             </p>
           </div>
         </div>
@@ -195,7 +226,8 @@ const About = () => {
                   Strategic Focus
                 </h3>
                 <p className="text-[15px] text-[#100000] font-regular mt-2">
-                  Solutions addressing real challenges with impact and scalability
+                  Solutions addressing real challenges with impact and
+                  scalability
                 </p>
               </div>
               <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
@@ -266,8 +298,9 @@ const About = () => {
               Our Journey of Innovation
             </h2>
             <p className="text-[16px] md:text-[18px] font-medium text-[#323232]">
-              Shaping the Future, Step by Step. <br/>
-              From our first prototypes to large-scale deployments, every milestone reflects our vision to engineer meaningful innovation.
+              Shaping the Future, Step by Step. <br />
+              From our first prototypes to large-scale deployments, every
+              milestone reflects our vision to engineer meaningful innovation.
             </p>
           </div>
 

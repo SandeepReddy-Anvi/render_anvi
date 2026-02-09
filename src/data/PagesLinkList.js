@@ -1,4 +1,7 @@
 // Total 20 pages and links
+
+import { Mail } from "lucide-react";
+
 // =================================
 export const pagesLinksObj = {
   // Main Pages
@@ -36,8 +39,6 @@ export const pagesLinksObj = {
 };
 
 export const mainPagesLinksObj = {
-  // Main Pages
-  //Home: "/",
   AboutUs: pagesLinksObj.AboutUs,
   Industries: pagesLinksObj.Industries,
   Solutions: pagesLinksObj.Solutions,
@@ -54,3 +55,10 @@ export const exploreLinksObj = {
   "The Bot Factory": "https://www.thebotfactory.in",
 };
 
+export const socialMediaLinksObj = {
+  Mail: "info@anvi.co",
+  Mail_to: "mailto:info@anvi.co",
+  Map: "https://maps.app.goo.gl/rqWRRaMvyspAxSQKA",
+  Instagram: "https://www.instagram.com/anvi__co/",
+  LinkedIn: "https://www.linkedin.com/company/anvirobotics/",
+};

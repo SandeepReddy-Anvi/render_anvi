@@ -1,47 +1,112 @@
 import { useEffect } from "react";
+import commonSEO from "./Common_Seo";
 
-const SEO = ({ title, description, breadcrumb, keywords, url }) => {
+const SEO = ({ title, description, keywords, url, breadcrumb }) => {
+  // Run once
   useEffect(() => {
-    /* ---------------- Title ---------------- */
-    if (title) {
-      document.title = title;
-    }
+    setCharset();
+  }, []);
 
-    /* ---------------- Description ---------------- */
-    if (description) {
-      setMeta("description", description);
-    }
+  useEffect(() => {
+    /* ===============================
+       Merge Common + Page SEO
+    =============================== */
 
-    /* ---------------- Keywords ---------------- */
-    if (keywords) {
-      setMeta("keywords", keywords);
-    }
+    const finalTitle = title || commonSEO.title;
+    const finalDescription = description || commonSEO.description;
+    const finalKeywords = keywords || commonSEO.keywords;
+    const finalUrl = url || commonSEO.url;
 
-    /* ---------------- Canonical ---------------- */
-    if (url) {
-      setLink("canonical", url);
-    }
+    /* ===============================
+       BASIC META
+    =============================== */
 
-    /* ---------------- OpenGraph ---------------- */
-    if (title) setProperty("og:title", title);
-    if (description) setProperty("og:description", description);
-    if (url) setProperty("og:url", url);
+    document.title = finalTitle;
+
+    setMeta("description", finalDescription);
+    setMeta("keywords", finalKeywords);
+    setMeta("author", commonSEO.author);
+    setMeta("robots", commonSEO.robots);
+    setMeta("language", commonSEO.language);
+    setMeta("theme-color", commonSEO.themeColor);
+
+    /* ===============================
+    EXTRA META (RECOMMENDED)
+    =============================== */
+
+    setMeta("viewport", "width=device-width, initial-scale=1");
+    setMeta("referrer", "strict-origin-when-cross-origin");
+    setMeta("geo.region", "IN-TG");
+    setMeta("geo.placename", "Hyderabad");
+
+    /* ===============================
+       CANONICAL
+    =============================== */
+
+    setLink("canonical", finalUrl);
+
+    /* ===============================
+       OPEN GRAPH
+    =============================== */
+
     setProperty("og:type", "website");
+    setProperty("og:site_name", commonSEO.og.siteName);
+    setProperty("og:title", finalTitle);
+    setProperty("og:description", finalDescription);
+    setProperty("og:url", finalUrl);
+    setProperty("og:image", commonSEO.og.image);
+    setProperty("og:image:alt", commonSEO.og.imageAlt);
 
-    /* ---------------- Breadcrumb Schema ---------------- */
+    /* ===============================
+       TWITTER
+    =============================== */
+
+    setMeta("twitter:card", commonSEO.twitter.card);
+    setMeta("twitter:title", finalTitle);
+    setMeta("twitter:description", finalDescription);
+    setMeta("twitter:image", commonSEO.twitter.image);
+
+    /* ===============================
+       GOOGLE VERIFICATION
+    =============================== */
+
+    setMeta("google-site-verification", commonSEO.googleVerification);
+
+    /* ===============================
+       STRUCTURED DATA
+    =============================== */
+
+    setJsonLd(commonSEO.structuredData);
+
+    /* ===============================
+       BREADCRUMB SCHEMA
+    =============================== */
+
     if (breadcrumb?.length) {
       setBreadcrumbSchema(breadcrumb);
     } else {
       removeBreadcrumbSchema();
     }
-  }, [title, description, keywords, breadcrumb, url]);
+  }, [title, description, keywords, url, breadcrumb]);
 
   return null;
 };
 
+export default SEO;
+
 /* ================================================= */
-/* Helpers */
+/* HELPERS */
 /* ================================================= */
+
+const setCharset = () => {
+  let meta = document.querySelector("meta[charset]");
+
+  if (!meta) {
+    meta = document.createElement("meta");
+    meta.setAttribute("charset", "UTF-8");
+    document.head.prepend(meta);
+  }
+};
 
 const setMeta = (name, content) => {
   if (!content) return;
@@ -72,6 +137,8 @@ const setProperty = (property, content) => {
 };
 
 const setLink = (rel, href) => {
+  if (!href) return;
+
   let link = document.querySelector(`link[rel="${rel}"]`);
 
   if (!link) {
@@ -82,6 +149,31 @@ const setLink = (rel, href) => {
 
   link.href = href;
 };
+
+/* ===============================
+  JSON-LD
+=============================== */
+
+const setJsonLd = (schema) => {
+  if (!schema) return;
+
+  let script = document.querySelector(
+    "script[type='application/ld+json'][data-org]",
+  );
+
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.dataset.org = "true";
+    document.head.appendChild(script);
+  }
+
+  script.textContent = JSON.stringify(schema);
+};
+
+/* ===============================
+  BREADCRUMB
+=============================== */
 
 const setBreadcrumbSchema = (breadcrumb) => {
   const schema = {
@@ -96,7 +188,7 @@ const setBreadcrumbSchema = (breadcrumb) => {
   };
 
   let script = document.querySelector(
-    "script[type='application/ld+json'][data-breadcrumb]"
+    "script[type='application/ld+json'][data-breadcrumb]",
   );
 
   if (!script) {
@@ -111,9 +203,8 @@ const setBreadcrumbSchema = (breadcrumb) => {
 
 const removeBreadcrumbSchema = () => {
   const script = document.querySelector(
-    "script[type='application/ld+json'][data-breadcrumb]"
+    "script[type='application/ld+json'][data-breadcrumb]",
   );
+
   if (script) script.remove();
 };
-
-export default SEO;

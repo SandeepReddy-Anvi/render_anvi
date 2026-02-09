@@ -3,7 +3,6 @@ import { pagesLinksObj } from "../../data/PagesLinkList";
 const BASE_URL = "https://www.anvi.co";
 
 export const seoRoutes = {
-
   /* ===================== Main Pages ===================== */
   [pagesLinksObj.Home]: {
     title: "Anvi | Engineering the Future",
@@ -46,7 +45,7 @@ export const seoRoutes = {
     description:
       "Stay updated with ANVI’s latest innovations, milestones, research, and breakthroughs across all deep-tech verticals.",
   },
-  
+
   [pagesLinksObj.Investors]: {
     title: "Anvi | Investors",
     url: `${BASE_URL}${pagesLinksObj.Investors}`,
@@ -58,7 +57,6 @@ export const seoRoutes = {
     description:
       "Connect with ANVI for collaborations, partnerships, inquiries, and support across robotics, space, semiconductors, and more.",
   },
-
 
   /* ===================== Sub Industries ===================== */
   [pagesLinksObj.Energy]: {
@@ -93,19 +91,25 @@ export const seoRoutes = {
     breadcrumb: [
       { name: "Home", url: `${BASE_URL}/` },
       { name: "Industries", url: `${BASE_URL}${pagesLinksObj.Industries}` },
-      { name: "Life Sciences", url: `${BASE_URL}${pagesLinksObj.LifeSciences}` },
+      {
+        name: "Life Sciences",
+        url: `${BASE_URL}${pagesLinksObj.LifeSciences}`,
+      },
     ],
   },
 
   [pagesLinksObj.SemiConductors]: {
-    title: "Anvi | Semiconductors",
+    title: "Anvi | Semi Conductors",
     url: `${BASE_URL}${pagesLinksObj.SemiConductors}`,
     description:
       "ANVI creates high-performance chips and intelligent micro-systems powering next-generation electronics and AI platforms.",
     breadcrumb: [
       { name: "Home", url: `${BASE_URL}/` },
       { name: "Industries", url: `${BASE_URL}${pagesLinksObj.Industries}` },
-      { name: "Semiconductors", url: `${BASE_URL}${pagesLinksObj.SemiConductors}` },
+      {
+        name: "Semi Conductors",
+        url: `${BASE_URL}${pagesLinksObj.SemiConductors}`,
+      },
     ],
   },
 
@@ -117,7 +121,10 @@ export const seoRoutes = {
     breadcrumb: [
       { name: "Home", url: `${BASE_URL}/` },
       { name: "Industries", url: `${BASE_URL}${pagesLinksObj.Industries}` },
-      { name: "Entertainment", url: `${BASE_URL}${pagesLinksObj.Entertainment}` },
+      {
+        name: "Entertainment",
+        url: `${BASE_URL}${pagesLinksObj.Entertainment}`,
+      },
     ],
   },
 
@@ -129,7 +136,10 @@ export const seoRoutes = {
     breadcrumb: [
       { name: "Home", url: `${BASE_URL}/` },
       { name: "Industries", url: `${BASE_URL}${pagesLinksObj.Industries}` },
-      { name: "Social Impact", url: `${BASE_URL}${pagesLinksObj.SocialImpact}` },
+      {
+        name: "Social Impact",
+        url: `${BASE_URL}${pagesLinksObj.SocialImpact}`,
+      },
     ],
   },
 };

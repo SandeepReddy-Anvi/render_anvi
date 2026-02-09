@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
+
+import { IconsObj } from "../utils/Iconify_icons";
+
 import { mainPagesLinksObj, pagesLinksObj } from "../data/PagesLinkList";
 import { HomeIndustriesCard } from "../components/Home/Home_Industries_Cards";
-import Footer from "../components/footer";
 import InitiativeSection from "../components/Initiatives";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
-import { IconsObj } from "../utils/Iconify_icons";
+import Footer from "../components/footer";
 
 const footerUpBoxInfoObj = {
   head: `Let's Build the Future Together`,

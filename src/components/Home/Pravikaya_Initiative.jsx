@@ -31,7 +31,7 @@ export const PravikayaInitiative = () => {
             <img
               src="/images/home/Pravikya3.png"
               alt="Community Impact"
-              className="w-[300px] xl:w-[340px] 2xl:w-[380px] h-[230px] xl:h-[260px] 2xl:h-[290px] rounded-[12px] object-cover -ml-16"
+              className="w-[300px] xl:w-[340px] 2xl:w-[380px] h-[230px] xl:h-[260px] 2xl:h-[290px] rounded-[12px] object-cover -ml-16 mt-[-4px] border-[4px] border-solid border-[#fff]"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@ export const PravikayaInitiative = () => {
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#CD0054]" />
             <p className="text-[14px] text-[#CD0054] font-medium tracking-wide">
-              SOCIETAL IMPACT
+              SOCIAL IMPACT
             </p>
           </div>
  

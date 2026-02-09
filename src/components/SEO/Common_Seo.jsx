@@ -1,3 +1,5 @@
+import { socialMediaLinksObj } from "../../data/PagesLinkList";
+
 const all_keywords = [
   "ANVI",
   "ANVI India",
@@ -107,11 +109,11 @@ const commonSEO = {
     type: "website",
     url: "https://www.anvi.co/",
     siteName: "Anvi",
-    title: "Anvi.Co",
+    title: "Anvi | Engineering the Future",
     description:
       "ANVI is a future-driven deep-tech organisation powering across four core verticals-Robotics, Space, Studios, and Lifestyle (CAARYO). We engineer intelligent ecosystems that power 8+ industries with one unifying purpose: Engineering Your Edge™",
     image: "https://www.anvi.co/logos/anvi_logo.svg",
-    imageAlt: "Anvi",
+    imageAlt: "Anvi Logo",
   },
 
   /* ---------------- Twitter ---------------- */
@@ -159,8 +161,8 @@ const commonSEO = {
     },
 
     sameAs: [
-      "https://www.linkedin.com/company/anvirobotics",
-      "https://www.instagram.com/anvi_robotics",
+      socialMediaLinksObj.LinkedIn,
+      socialMediaLinksObj.Instagram,
     ],
   },
 
