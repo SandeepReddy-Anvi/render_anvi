@@ -124,7 +124,7 @@ export const ContactUs = () => {
             {/* Form */}
             <form
               onSubmit={handleSubmit}
-              className="flex-1 flex flex-col gap-4 mx-auto md:mx-0  w-full md:w-3/5 lg:w-full flex-shrink-0 justify-center"
+              className="flex-1 flex flex-col gap-4 mx-auto md:mx-0  w-full md:w-3/5 lg:max-w-[800px] flex-shrink-0 justify-center"
             >
               {/* Feedback Message */}
               {feedback.message && (
@@ -213,7 +213,19 @@ export const ContactUs = () => {
 
               <p className="font-semibold text-[16px] text-[#757575] w-full md:w-[290px]">For any support or inquiries, feel free to email us or visit our office.</p>
 
-              <div className="flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4">
+              <div className="flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4 flex-wrap">
+                {/* Address */}
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 text-white" strokeWidth={1.5} />
+                  </div>
+                  <a
+                    className="w-[418px]"
+                  >
+                    Anvi Rrobotics, 1st Floor, Profound  Buliders, whitefields, Kondapur, Telangana 500081
+                  </a>
+                </div>
+
                 {/* Email */}
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
@@ -222,27 +234,13 @@ export const ContactUs = () => {
                   <p>info@anvi.co</p>
                 </div>
 
-                {/* Address */}
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-                  <a
-                    href="https://maps.app.goo.gl/PLtjgPJXSxa7eecy9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-[#CD0054] break-all"
-                  >
-                    https://maps.app.goo.gl/PLtjgPJXSxa7eecy9
-                  </a>
-                </div>
               </div>
 
             </form>
-            <div className="md:w-2/5 lg:w-[350px] w-full flex justify-center md:justify-end">
+            <div className="md:w-2/5 lg:max-w-[350px] h-max[250px] h-full aspect[9/16] w-full flex justify-center md:justify-end">
                 <img
                   src="/images/contactUs.png"
-                  className="w-full h-[250px] md:h-full object-cover" 
+                  className="w-full h-full max-md:aspect-[4/3] object-cover " 
                 />
             </div>
           </div>

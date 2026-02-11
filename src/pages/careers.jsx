@@ -192,47 +192,45 @@ const Careers = () => {
       </section> */}
 
       {/* Section 2 */}
-      <section className="relative w-full h-[100vh] md:max-h-[600px]">
-        <div className="absolute inset-0">
-          <img
-            src="/images/careers/career.webp"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {/* Section 2 */}
+      <section className="w-full flex flex-col md:flex-row gap-10 items-center px-5 md:px-[60px] 2xl:px-[100px] py-[60px] md:py-[100px] bg-[#FFFFFF]">
+  
+  {/* Left Content */}
+  <div className="md:max-w-[506px] 2xl:max-w-[650px] pr-10"> 
+    <p className="text-[18px] text-[#5C5D5E] font-medium">
+      ANVI CAREERS
+    </p> 
+    <h2 className="text-[#100000] font-medium text-[30px] md:text-[40px] lg:text-[46px] leading-[57px] my-2"> 
+      Together, We Build What’s Next 
+    </h2> 
+    {/* <div className="h-[2px] lg:h-[4px] w-10 bg-[#282828]"></div> */} 
+    <p className="mt-4 mb-6 text-[14px] text-[#100000] font-regular"> 
+      At Anvi, innovation starts with people. We build intelligent systems for smarter, safer cities and sustainability. Join us to create technology that empowers lives and shapes tomorrow. 
+    </p> 
+    <Link to={pagesLinksObj.Career_Openings} className="link-bg-icon1 text-[14px] w-[180px]"> 
+      <span>Browse Openings</span> 
+      <i className="rotate-45">{IconsObj.arrow}</i> 
+    </Link> 
+  </div> 
 
-        {/* background overlay */}
-        <div className="absolute inset-0 bg-[rgba(0,0,0,0.62)] w-full h-full" />
+  {/* Right Image */}
+  <div className="flex-1 h-full ">
+    <img
+      src="/images/careers/career.webp"
+      alt="Careers"
+      className="w-full h-full md:h-[390px] object-cover rounded-lg"
+    />
+  </div>
 
-        {/* Content */}
-        <div className="absolute inset-0 flex items-center p-[20px] md:p-[30px] lg:p-[50px]">
-          <div className="p-6 sm:p-8 md:p-10 pr-10 lg:pr-[180px] bg-[#FFFFFF] max-w-[680px] rounded-lg">
-            <p className="text-[18px] text-[#5C5D5E] font-medium">ANVI CAREERS</p>
+</section>
 
-            <h2 className="text-[#100000] font-medium text-[30px] md:text-[40px] lg:text-[46px] leading-[57px] my-2">
-              Together, We Build What’s Next
-            </h2>
-
-            {/* <div className="h-[2px] lg:h-[4px] w-10 bg-[#282828]"></div> */}
-
-            <p className="mt-4 mb-6 text-[14px] text-[#282828] font-regular">
-              At Anvi, innovation starts with people. We build intelligent systems
-              for smarter, safer cities and sustainability. Join us to create
-              technology that empowers lives and shapes tomorrow.
-            </p>
-
-            <Link to={pagesLinksObj.Career_Openings} className="link-bg-icon1 text-[14px] w-[180px]">
-              <span>Browse Openings</span>
-              <i className="rotate-45">{IconsObj.arrow}</i>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <GradientText 
         ourTitle ="Our Culture"
         para="Built on curiosity, responsibility, and the courage to engineer what’s next."
         ourDescription = {ourDescriptionDesktop}
         mobileDescription = {ourDescriptionMobile}
+        className="bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]"
       />
 
       {/* Section 4 Life at Anvi*/}
@@ -286,7 +284,7 @@ const Careers = () => {
       
       {/* Team Picture */}
       <section className="px-10 lg:px-[60px] overflow-hidden">
-        <div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16">
+        <div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16 px-4">
 
           {/* Background Image */}
           <div className="absolute inset-0 overflow-hidden z-0">
@@ -314,12 +312,12 @@ const Careers = () => {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 p-6 md:p-20 lg:p-24 text-center">
+      <div className="px-5 md:px-[60px] xl:px-[100px] flex flex-col md:flex-row justify-center md:gap-4 lg:gap-16 py-6 md:py-20 lg:py-24 text-center">
         {cultureCards.map((card) => (
           <div key={card.id} className="flex flex-col items-center gap-2 group">
 
             {/* IMAGE / FLIP WRAPPER */}
-            <div className="relative w-[250px] lg:w-[290px] h-[220px] [perspective:1200px]">
+            <div className="relative w-full max-w-[400px] md:max-w-[250px] lg:max-w-[290px] aspect-[4/3] h-[220px]">
 
               {/* FLIP CARD — only active on lg+ */}
               <div

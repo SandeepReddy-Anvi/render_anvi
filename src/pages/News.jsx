@@ -1,11 +1,13 @@
-import HeroSection from "../components/HeroSection";
+ import HeroSection from "../components/HeroSection";
 import { pagesLinksObj } from "../data/PagesLinkList";
 import Footer from "../components/footer";
 import NewsFeeds from "../components/News/NewsFeeds";
 
 const footerUpBoxInfoObj = {
-  head: "Stay Updated",
-  para: "Get the latest news, updates, and insights delivered directly to your inbox"
+  head: "Ready to Be a Part of Something Bigger at ANVI?",
+  linkLabel: "Browse Openings",
+  link: pagesLinksObj.Career_Openings,
+  //  link: pagesLinksObj.Career_Openings+"#job-openings-container",
 };
 
 export const News = () => {
@@ -26,7 +28,7 @@ export const News = () => {
       <NewsFeeds />
 
       {/* Footer */}
-      <Footer footerUpBoxInfo2={footerUpBoxInfoObj} />
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </>
   );
 };

@@ -44,7 +44,7 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => {
         <p className="font-bold text-[30px] text-[#FFFFFF] mb-2 opacity-0 group-hover:opacity-100 transition-all duration-300">
           {title}
         </p>
-        <p className="text-[14px] font-medium text-[#FFFFFF] px-8 2xl:px-28 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
+        <p className="text-[14px] font-medium text-[#FFFFFF] px-8 2xl:px-22 leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-all duration-300">
           {desc}
         </p>
         <div className="self-center max-md:pb-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -56,9 +56,9 @@ export const IndustryCard = ({ title, desc, link, imgUrl }) => {
             rel={isExternal ? "noopener noreferrer" : undefined} 
             className="rounded-xl border-[1px] border-[#FFFFFF] text-[#FFFFFF] px-[20px] py-[10px]
             bg-gradient-to-r from-[#FA293E] to-[#FA293E]
-            hover:from-[#FA293E] hover:to-[#FA293E] 
+            hover:from-[#FA293E] hover:to-[#FA293E]
             bg-[length:0%_106%] hover:bg-[length:101%_106%]
-            bg-left bg-no-repeat hover:border-[0px]
+            bg-left bg-no-repeat hover:border-[1px] hover:border-[#0D1F21]
             transition-[background-size] duration-500 ease-out text-[15px] sm:text-[16px]
             inline-flex items-center"
           >
