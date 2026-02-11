@@ -38,13 +38,13 @@ body {
     min-height: auto;
     overflow-x: hidden;
     overflow-y: auto;
-    /* position: relative; */
 }
 
 main {
     width: 100%;
-    overflow: hidden !important;
+    /* overflow: hidden !important; */
     max-width: 1800px;
+    place-content: center;
     max-width: 100%;
     margin: auto;
     min-height: calc(100vh - 106px);

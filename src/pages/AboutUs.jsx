@@ -5,6 +5,7 @@ import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
 import TimelineSection from "../components/TimelineSection";
 import { mainPagesLinksObj } from "../data/PagesLinkList";
+import { SmartCountUp } from "../components/CountAnimOnScroll";
 
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with anvi?`,
@@ -75,6 +76,21 @@ const ourDescriptionMobile = [
   human lives, and accelerate global progress.`,
 ];
 
+const countList = [
+  {
+    head: "4",
+    subtext: "Core Verticals",
+  },
+  {
+    head: "8+",
+    subtext: "Industry Sectors",
+  },
+  {
+    head: "1 Purpose",
+    subtext: "Engineering Your Edge",
+  },
+];
+
 const About = () => {
   return (
     <div
@@ -103,19 +119,21 @@ const About = () => {
         <ContentCardUl infoList={aboutCardList} />
       </section>
 
-      {/* section 4 -> Purpose*/}
-      <section className="relative px-5 md:px-[60px] py-[100px] md:py-[102px]">
-        <div className="flex flex-col md:flex-row">
-          <img
-            src="/images/about/anvi.webp"
-            alt="Anvi Entrance"
-            className="w-full h-[300px] md:w-[450px] md:h-auto pr-0 md:pr-14 mb-10 md:mb-0"
-          />
-          <div className="flex flex-col justify-center items-start md:items-start text-left">
-            <h2 className="font-medium text-[32px] md:text-[36px] lg:text-[43px]">
+      {/* section 4 -> Our journey began*/}
+      <section className="relative px-[20px] md:px-[60px] py-[100px] md:py-[102px]">
+        <div className="flex flex-col md:flex-row md:gap-[40px] lg:gap-[60px] place-content-center">
+          <div>
+            <img
+              src="/images/about/anvi.webp"
+              alt="Anvi Entrance"
+              className="w-full max-w-full max-h-[300px] md:max-w-[450px] md:h-auto mb-10 md:mb-0"
+            />
+          </div>
+          <div className="w-full max-w-[744px] flex flex-col justify-center items-start md:items-start text-left">
+            <h2 className="w-full font-medium text-[32px] md:text-[36px] lg:text-[43px]">
               Our journey began with a bold purpose
             </h2>
-            <div className="hidden md:block">
+            <div className="w-full hidden md:flex md:flex-col">
               <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">
                 ANVI began with the belief that technology should evolve beyond
                 products and shape how humanity lives, works, and explores. What
@@ -146,35 +164,19 @@ const About = () => {
               </p>
             </div>
 
-            <div className="flex flex-cols-3 gap-4 md:gap-10 pt-10">
-              <div>
-                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  4
+            {/* Count Ul Box */}
+            <ul className="w-full mt-[60px] flex justify-between text-center">
+              {countList.map((each, index) =>
+              <li key={each.head+index} className="w-max place-content-center mx-auto">
+                <h2 className="font-medium text-[20px] md:text-[40px] lg:text-[70px] whitespace bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                  <SmartCountUp text={each.head} smallText={true} />
                 </h2>
-                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">
-                  Core Verticals
+                <p className="font-medium text-[14px] md:text-[20px] text-[#100000] whitespace-nowrap">
+                  {each.subtext}
                 </p>
-              </div>
-              <div>
-                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  8+
-                </h2>
-                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">
-                  Industry Sectors
-                </p>
-              </div>
-              <div>
-                <h2 className="font-medium text-[40px] md:text-[55px] lg:text-[70px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  1{" "}
-                  <span className="text-[24px] md:text-[30px] lg:text-[47px]">
-                    Purpose
-                  </span>
-                </h2>
-                <p className="font-semibold text-[14px] md:text-[18px] text-[#100000]">
-                  Engineering Your Edge
-                </p>
-              </div>
-            </div>
+              </li>
+              )}
+            </ul>
           </div>
         </div>
       </section>
@@ -182,7 +184,7 @@ const About = () => {
       {/* section 5 */}
       <section className="w-full bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF] px-5 lg:px-[60px] py-[100px]">
         {/* Heading Section */}
-        <div className="  sm:flex-row md:flex-row items-center justify-center text-clip">
+        <div className="sm:flex-row md:flex-row items-center justify-center text-clip">
           <div className="mt-0 2xl:mt-[20px] max-w-[1161px] text-center text-[#100000] mx-auto ">
             <p className="w-full max-md:text-center leading-[50.569px] text-[32px] md:text-[46px] font-medium">
               What Makes ANVI Different

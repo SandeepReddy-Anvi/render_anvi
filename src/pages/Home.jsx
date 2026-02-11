@@ -9,6 +9,7 @@ import InitiativeSection from "../components/Initiatives";
 import { PravikayaInitiative } from "../components/Home/Pravikaya_Initiative";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/footer";
+import { CountAnimOnScroll, SmartCountUp } from "../components/CountAnimOnScroll";
 
 const footerUpBoxInfoObj = {
   head: `Let's Build the Future Together`,
@@ -16,6 +17,25 @@ const footerUpBoxInfoObj = {
   linkLabel: "Contact Us",
   link: mainPagesLinksObj.ContactUs,
 };
+
+const countList = [
+  {
+    head: "4",
+    subtext: "Core Verticals",
+  },
+  {
+    head: "8+",
+    subtext: "Industry Sectors",
+  },
+  {
+    head: "50+",
+    subtext: "R&D Experiments",
+  },
+  {
+    head: "1 Purpose",
+    subtext: "Engineering Your Edge",
+  },
+];
 
 const impactStats = [
   {
@@ -55,7 +75,7 @@ const ProgressBar = ({ label, value, trigger }) => {
     <div className="flex flex-col gap-3">
       <div className="flex justify-between items-center text-[#292929] text-[18px] font-medium">
         <span>{label}</span>
-        <span>{value}%</span>
+        <span><CountAnimOnScroll value={value}/>%</span>
       </div>
 
       <div className="w-full h-[4px] bg-[#EAEAEA] rounded-full overflow-hidden">
@@ -159,40 +179,19 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 pt-10 px-0 md:px-10 lg:px-20 justify-between text-center">
-              <div>
-                <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  4
+            {/* Count Ul Box */}
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 lg:gap-[150px] pt-[60px] px-0 md:px-10 lg:px-20 justify-between text-center">
+              {countList.map((each, index) =>
+              <li key={each.head+index} className="w-max place-content-center mx-auto">
+                <h2 className="font-medium text-[20px] md:text-[40px] whitespace-nowrap bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                  <SmartCountUp text={each.head} />
                 </h2>
-                <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">
-                  Core Verticals
+                <p className="font-medium text-[14px] md:text-[20px] text-[#100000] whitespace-nowrap">
+                  {each.subtext}
                 </p>
-              </div>
-              <div>
-                <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  8+
-                </h2>
-                <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">
-                  Industry Sectors
-                </p>
-              </div>
-              <div>
-                <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  50+
-                </h2>
-                <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">
-                  R&D Experiments
-                </p>
-              </div>
-              <div>
-                <h2 className="font-medium text-[20px] md:text-[38px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  1 Purpose
-                </h2>
-                <p className="font-medium text-[14px] md:text-[18px] text-[#100000]">
-                  Engineering Your Edge
-                </p>
-              </div>
-            </div>
+              </li>
+              )}
+            </ul>
           </section>
 
           {/* Section 4 -> Impact */}
@@ -256,7 +255,26 @@ const Home = () => {
         </section>
 
         {/* Next at Anvi */}
-        <InitiativeSection />
+        <section className="w-screen relative h-auto max-w-[1461px]
+         px-5 md:px-[60px] pt-[50px] xl:px-[100px] md:pt-[80px]">
+          {/* Heading Content */}
+          <div className="w-full max-w-[872px] text-[#100000] mb-[80px]">
+            <h3 className="text-[32px] w-full md:text-[46px] font-medium mb-[24px]">
+              Next at ANVI Shaping tomorrow with bold innovation.
+            </h3>
+            <p className="text-[18px] w-full font-[400] tracking-[0px] leading-[28px]">
+              We’re building next-generation intelligent products and systems
+              across industries - each crafted to push boundaries and accelerate
+              the future we believe in.
+            </p>
+          </div>
+        </section>
+
+        {/* Initiative Section */}
+        <section className="w-screen relative h-auto max-w[1461px]">
+         {/* px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px]"> */}
+          <InitiativeSection />
+        </section>
 
         {/* Pravikaya Initiative */}
         <PravikayaInitiative />

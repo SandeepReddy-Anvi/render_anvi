@@ -1,5 +1,7 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect } from "react";
+"use client";
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
+
 import { FaArrowRight } from "react-icons/fa";
 
 const scrollItems = [
@@ -26,238 +28,157 @@ const scrollItems = [
   },
 ];
 
-const InitiativeSection = ({
-  title = "Next at ANVI Shaping tomorrow with bold innovation.",
-  mainImage = "/images/about/surveillance.webp",
-  topLogo = "/images/home/space-galactica.png",
-  rightSmallImg = "/images/about/project_shudh.webp",
-}) => {
-  const sectionRef = useRef(null);
-  const ulRef = useRef(null);
-  const lastItemRef = useRef(null);
+const InitiativeSection = () => {
+  const containerRef = useRef(null);
 
-  const scrollX = useRef(0);
-  const isLocked = useRef(false);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
 
-  useEffect(() => {
-    const section = sectionRef.current;
-    const ul = ulRef.current;
-
-    if (!section || !ul) return;
-
-    let maxScrollX = 0;
-
-    const calculateMax = () => {
-      const ul = ulRef.current;
-      const container = ul?.parentElement; // sticky wrapper
-
-      if (!ul || !container) return;
-
-      maxScrollX = ul.scrollWidth - container.clientWidth;
-
-      if (maxScrollX < 0) maxScrollX = 0;
-
-      console.log("UL width:", ul.scrollWidth);
-      console.log("VIEW width:", container.clientWidth);
-      console.log("MAX scroll:", maxScrollX);
-    };
-
-    calculateMax();
-    window.addEventListener("resize", calculateMax);
-
-    const onScroll = () => {
-      const rect = section.getBoundingClientRect();
-
-      // Activate when section hits top
-      if (rect.top <= 0 && rect.bottom > window.innerHeight) {
-        isLocked.current = true;
-      } else {
-        isLocked.current = false;
-      }
-    };
-
-    const onWheel = (e) => {
-      if (!isLocked.current) return;
-
-      e.preventDefault();
-
-      // Normalize scroll speed
-      const speed = 1.2;
-
-      let delta = e.deltaY * speed;
-
-      // For trackpads (sometimes give deltaX)
-      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) {
-        delta = e.deltaX * speed;
-      }
-
-      scrollX.current += delta;
-
-      // Clamp
-      scrollX.current = Math.max(0, Math.min(scrollX.current, maxScrollX));
-
-      ul.style.transform = `translateX(-${scrollX.current}px)`;
-    };
-
-    window.addEventListener("scroll", onScroll);
-    window.addEventListener("wheel", onWheel, { passive: false });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("wheel", onWheel);
-      window.removeEventListener("resize", calculateMax);
-    };
-  }, []);
+  const xScroll = useTransform(scrollYProgress, [0, 1], ["0%", "-188%"]);
+  const lineWidth = useTransform(scrollYProgress, [0, 1], ["0%", "72vw"]);
+  const arrowScroll = useTransform(scrollYProgress, [0, 1], ["0%", "70vw"]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="w-[100vw] overscroll-none relative h-auto md:h-[250vh] px-5 md:px-[60px] py-[50px] xl:px-[100px] md:py-[80px]"
-    >
-      <div className="w-full max-w-[872px] text-[#100000] mb-[80px]">
-        <h3 className="text-[32px] w-full md:text-[46px] font-medium mb-[24px]">
-          {title}
-        </h3>
-        <p className="text-[18px] w-full font-[400] tracking-[0px] leading-[28px]">
-          We’re building next-generation intelligent products and systems across
-          industries - each crafted to push boundaries and accelerate the future
-          we believe in.
-        </p>
-      </div>
-
+    <>
       {/* On Scroll Component */}
-      <div className="w-full sticky bg-red-300 touch-pan-x top-0 h-screen md:h-[100vh] flex items-center overflow-hidden">
-        <motion.ul
-          ref={ulRef}
-          className="w-max relative flex flex-col md:flex-row flex-nowrap gap-x-[20px] gap-y-[180px] md:gap-[120px] mb-[80px] items-start
-            transition-transform duration-75 will-change-transform"
-        >
-          {scrollItems.map((item, index) => (
-            <li
-              key={index}
-              ref={index === scrollItems.length - 1 ? lastItemRef : null}
-              className="w-full max-w-[1400px] flex-shrink-0 flex flex-row gap-[20px] md:gap-[40px]"
-            >
-              <div className="w-full max-w-[631px]">
-                <img
-                  src={item.img_1}
-                  alt={item.title}
-                  className="w-full max-w-[631px] aspect-square h-auto rounded-[12px] object-cover"
-                  draggable={false}
-                />
-              </div>
-
-              <div className="w-full lg:w-[50%] relative">
-                <div className="w-full max-w-[631px] mt-[30px] md:mt-[100px]">
-                  <h5 className="text-[20px] md:text-[24px] text-[#100000] font-semibold">
-                    {item.title}
-                  </h5>
-                  <p className="mt-2 text-[16px] text-[#100000] font-[400] leading-[24px]">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="absolute bottom-[-120px] lg:bottom-[50px] left-[-110px]">
+      <div
+        ref={containerRef}
+        className="relative w-full h-auto md:h-[300vw] flex items-center justify-center md:items-start"
+      >
+        {/* Sticky Wrapper */}
+        <div className="w-auto sticky top-[100px] lg:top-[calc(100vh-651px)] overflow-hidden flex items-start">
+          {/* Desktop Scroll Ul Box */}
+          <motion.ul
+            style={{ x: xScroll }}
+            className="w-max max-md:hidden flex flex-col md:flex-row flex-nowrap gap-x-[20px] gap-y-[20px] md:gap-y-[180px] md:gap-[120px] mb-[80px] items-center md:px-[80px] max-md:px-[20px] max-lg:pr-[120px] lg:px-[100px] transition-transform duration-200"
+          >
+            {scrollItems.map((item, index) => (
+              <li
+                key={index}
+                className="w-full relative flex-shrink-0 flex flex-row place-content-center gap-[20px] md:gap-[40px] mx-auto"
+              >
+                <div className="w-full max-w-[631px]">
                   <img
-                    src={item.img_2}
-                    alt={item.title + "_2"}
-                    className="w-full max-w-[600px] aspect-[16/9] h-auto rounded-[12px] object-fill static"
+                    src={item.img_1}
+                    alt={item.title}
+                    className="w-full lg:max-w-[631px] lg:max-h-[80vh] xl:max-w-[631px] aspect-square h-auto rounded-[12px] object-cover"
                     draggable={false}
                   />
-                  <span
-                    className="w-[64px] grid place-content-center rounded-full aspect-square bg-[#FA293E] outline-offset-2 absolute right-[-18px] bottom-[-30px]"
-                    style={{ outline: "1px solid #FA293E" }}
+                </div>
+
+                {/* Right Image+Content Box */}
+                <div className="w-full max-w-max relative flex max-md:items-center">
+                  <div className="w-full max-w-[531px] mt-[30px] lg:mt-[6%] xl:mt-[60px] 2xl:mt-[100px]">
+                    <h5 className="text-[20px] md:text-[24px] text-[#100000] font-semibold">
+                      {item.title}
+                    </h5>
+                    <p className="mt-2 text-[16px] text-[#100000] font-[400] leading-[24px]">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Right Image Box */}
+                  <div
+                    className="absolute w-auto max-md:hidden
+                    md:bottom-[-80px] lg:bottom-[40px] xl:bottom-[40px]
+                    md:left-[-110px] lg:left-[-110px] xl:left-[-100px]"
                   >
-                    <FaArrowRight
-                      color="white"
-                      className="w-[16px] h-auto aspect-square"
+                    <img
+                      src={item.img_2}
+                      alt={item.title + "_2"}
+                      className="w-full max-w-[50vw] aspect-[16/9] h-auto rounded-[12px] object-cover
+                        md:max-w-[350px] lg:max-w-[350px] xl:max-w-[490px] 2xl:max-w-[500px]"
+                      draggable={false}
                     />
-                  </span>
-                  <hr
-                    className="w-[300vw] absolute bottom-0 left-[104%] h-[1px] bg-black border-none"
-                    style={{
-                      background:
-                        "linear-gradient(to right, #FE7F2C, #FF4A3A, #FA293E, #CD0054)",
-                    }}
+                  </div>
+                </div>
+              </li>
+            ))}
+          </motion.ul>
+
+          {/* Mobile Ul Box */}
+          <ul className="w-full md:w-max flex md:hidden flex-col flex-wrap gap-x-[20px] gap-y-[60px] md:gap-y-[20px] items-center px-[20px] pb-[100px]">
+            {scrollItems.map((item, index) => (
+              <li
+                key={index}
+                className="w-full relative flex-shrink-0 flex flex-col-reverse place-content-center gap-[20px] md:gap-[40px] mx-auto"
+              >
+                <div className="w-full md:max-w-[631px]">
+                  <img
+                    src={item.img_1}
+                    alt={item.title}
+                    className="w-full aspect-square h-auto rounded-[12px] object-cover"
+                    draggable={false}
                   />
                 </div>
+
+                {/* Right Image+Content Box */}
+                <div className="w-full md:max-w-max relative flex max-md:items-center">
+                  <div className="w-full max-w-[531px]">
+                    <h5 className="text-[20px] md:text-[24px] text-[#100000] font-semibold">
+                      {item.title}
+                    </h5>
+                    <p className="mt-2 text-[16px] text-[#100000] font-[400] leading-[24px]">
+                      {item.description}
+                    </p>
+                  </div>
+
+                  {/* Right Image Box */}
+                  <div
+                    className="absolute w-auto max-md:hidden
+                    md:bottom-[-80px] lg:bottom-[40px] xl:bottom-[40px]
+                    md:left-[-110px] lg:left-[-110px] xl:left-[-100px]"
+                  >
+                    <img
+                      src={item.img_2}
+                      alt={item.title + "_2"}
+                      className="w-full max-w-[50vw] aspect-[16/9] h-auto rounded-[12px] object-cover
+                        md:max-w-[350px] lg:max-w-[350px] xl:max-w-[490px] 2xl:max-w-[500px]"
+                      draggable={false}
+                    />
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          {/* Fixed Arrow Box */}
+          <div
+            className="absolute max-md:hidden bottom-[5px] lg:bottom-[110px]
+            left-[70px] lg:left-[110px] xl:left-[9vw] 2xl:left-[18vw]"
+          >
+            <div className="relative w-auto">
+              <div className="sticky z-[5]">
+                <motion.span
+                  className="w-[64px] h-[64px] grid place-content-center rounded-full bg-[#FA293E] shadow-xl"
+                  style={{
+                    x: arrowScroll,
+                    outline: "2px solid #FA293E",
+                    outlineOffset: "4px",
+                  }}
+                >
+                  <FaArrowRight color="white" className="w-[20px] h-auto" />
+                </motion.span>
               </div>
-            </li>
-          ))}
-        </motion.ul>
-      </div>
 
-      {/* Grid: left large image, right column with two stacked cards */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
-        {/* Left big image */}
-        <div className="lg:col-span-5">
-          <div className="overflow-hidden shadow h-[300px] md:h-[500px]">
-            <img
-              src={mainImage}
-              alt="Main initiative - large"
-              className="w-full h-full rounded-[12px] object-cover"
-              draggable={false}
-            />
-          </div>
-
-          {/* Caption / title under left image */}
-          <div className="mt-6 text-[#100000]">
-            <h4 className="text-[20px] md:text-[22px] font-semibold">
-              Anvi’s Surveillance Robot
-            </h4>
-            <p className="mt-2 text-[14px] font-medium max-w-2xl">
-              Delivering intelligent security, autonomous monitoring, and
-              precision performance redefining how cities stay safe. Launching
-              March 2026.
-            </p>
-          </div>
-        </div>
-
-        {/* Right column */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:col-span-7">
-          {/* Card 1 */}
-          <div className="flex flex-col space-y-3">
-            <div className="w-full h-[300px] md:h-[218px] lg:h-[220px] xl:h-[260px] flex items-center justify-center">
-              <img
-                src={topLogo}
-                alt="Galactica logo"
-                className="w-full rounded-[12px] h-full object-cover"
-                draggable={false}
-              />
+              {/* Scroll HR Line */}
+              <div className="absolute max-md:hidden bottom-[30px] lg:bottom-[30px] left-0 w-[100%] h-[1px] z-[4]">
+                <motion.div
+                  style={{
+                    width: lineWidth,
+                    background:
+                      "linear-gradient(to right, #FE7F2C, #FF4A3A, #FA293E, #CD0054)",
+                  }}
+                  className="h-full shadow-[0_0_10px_#FA293E]"
+                />
+              </div>
             </div>
-
-            <h5 className="text-[20px] md:text-[24px] text-[#100000] font-semibold">
-              Anvi’s Galactica
-            </h5>
-            <p className="mt-1 text-[14px] text-[#100000] font-medium">
-              Building sustainable space systems through debris removal,
-              recycling, and future-ready infrastructure — powering a cleaner,
-              smarter orbital future.
-            </p>
-          </div>
-
-          {/* Card 2 */}
-          <div className="flex flex-col space-y-3">
-            <div className="w-full h-[300px] md:h-[328px] lg:h-[328px] overflow-hidden">
-              <img
-                src={rightSmallImg}
-                alt="Project SHUDH"
-                className="w-full h-full rounded-[12px] object-cover"
-                draggable={false}
-              />
-            </div>
-
-            <h5 className="text-[20px] md:text-[24px] font-semibold text-[#100000]">
-              Project SHUDH
-            </h5>
-            <p className="mt-1 text-[14px] text-[#100000] font-medium">
-              Revolutionizing urban sanitation through AI-powered, autonomous,
-              and sustainable robotic cleaning systems — ensuring safety,
-              precision, and dignity for all.
-            </p>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 };
 
