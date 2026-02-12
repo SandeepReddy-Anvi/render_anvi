@@ -1,6 +1,9 @@
 // Total 20 pages and links
+
+import { Mail } from "lucide-react";
+
 // =================================
-export const pagesLinksList = {
+export const pagesLinksObj = {
   // Main Pages
   Home: "/",
   AboutUs: "/aboutus",
@@ -17,14 +20,14 @@ export const pagesLinksList = {
 
   // Industries
   Industries: "/industries",
-  Space:'https://anvispace.com',
-  Robotics:'https://anvirobotics.com',
-  Energy: "/energy",
-  Textiles: "/textiles",
-  Foundations: "/foundations",
-  LifeSciences: "/lifesciences",
-  SemiConductors: "/semiconductors",
-  Entertainment: "/entertainment",
+  Space: "https://anvispace.com",
+  Robotics: "https://anvirobotics.com",
+  Energy: "/industries/energy",
+  Textiles: "/industries/textiles",
+  SocialImpact: "/industries/social_impact",
+  LifeSciences: "/industries/lifesciences",
+  SemiConductors: "/industries/semiconductors",
+  Entertainment: "/industries/entertainment",
 
   //  Careers
   Careers: "/careers",
@@ -35,31 +38,27 @@ export const pagesLinksList = {
   JobInfo_Apply: "/careers/job-info/apply/:jobId",
 };
 
-export const mainPagesLinksList = {
-  // Main Pages
-  //Home: "/",
-  AboutUs: "/aboutus",
-  Industries: "/industries",
-  Solutions: '/solutions',
-  Careers: "/careers",
-  NewsRoom: "/news",
-  InvestorsDesk: "/investors",
-  ContactUs: "/contactus",
+export const mainPagesLinksObj = {
+  AboutUs: pagesLinksObj.AboutUs,
+  Industries: pagesLinksObj.Industries,
+  Solutions: pagesLinksObj.Solutions,
+  Careers: pagesLinksObj.Careers,
+  NewsRoom: pagesLinksObj.News,
+  InvestorsDesk: pagesLinksObj.Investors,
+  ContactUs: pagesLinksObj.ContactUs,
 };
-export const  explorelinklist = {
-  "Anvi Robotics":'https://anvirobotics.com',
-   "Anvi Space":'https://anvispace.com',
-   "Caaryo" : "https://caaryo.com",
-   "The Bot Factory" : "https://www.thebotfactory.in"
- }
- export const mainPagesLinks = {
-  // Main Pages
-  //Home: "/",
-  AboutUs: "/aboutus",
-  Industries: "/industries",
-  Solutions: '/solutions',
-  Careers: "/careers",
-  NewsRoom: "/news",
-  InvestorsDesk: "/investors",
-  // ContactUs: "/contactus",
+
+export const exploreLinksObj = {
+  "Anvi Robotics": "https://anvirobotics.com",
+  "Anvi Space": "https://anvispace.com",
+  Caaryo: "https://caaryo.com",
+  "The Bot Factory": "https://www.thebotfactory.in",
+};
+
+export const socialMediaLinksObj = {
+  Mail: "info@anvi.co",
+  Mail_to: "mailto:info@anvi.co",
+  Map: "https://maps.app.goo.gl/rqWRRaMvyspAxSQKA",
+  Instagram: "https://www.instagram.com/anvi__co/",
+  LinkedIn: "https://www.linkedin.com/company/anvirobotics/",
 };

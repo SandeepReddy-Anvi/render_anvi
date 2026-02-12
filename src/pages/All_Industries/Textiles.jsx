@@ -7,14 +7,14 @@ import InfoCard from "../../components/InfoBigCards";
 
 import GradientText from "../../components/GradientText";
 import WhySection from "../../components/WhySection";
-import { mainPagesLinksList } from "../../data/PagesLinkList";
+import { mainPagesLinksObj } from "../../data/PagesLinkList";
 import Footer from "../../components/footer";
 
 const footerUpBoxInfoentertainment = {
   head: "Let’s Build the Future of Textiles",
   para: "Get in touch with us to explore how intelligent energy systems can power your next chapter.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs
+  link: mainPagesLinksObj.ContactUs
 }
 
 const Textiles = () => {

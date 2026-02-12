@@ -24,10 +24,7 @@ const NewsFeeds = () => {
             onClick={() => setActiveTab(tab.name)}
             className={`
               py-[20px] px-[16px] mr-2 mb-2 sm:mb-0 text-[18px] font-semibold transition-all duration-300
-              ${
-                activeTab === tab.name
-                  ? "text-[#FA293E]" : "text-black/50"
-              }
+              ${activeTab === tab.name ? "text-[#FA293E]" : "text-black/50"}
             `}
           >
             {tab.name}

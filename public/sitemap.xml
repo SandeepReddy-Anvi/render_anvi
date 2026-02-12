@@ -3,14 +3,9 @@
 
   <!-- Main Pages -->
   <url><loc>https://www.anvi.co</loc></url>
-  <url><loc>https://www.anvi.co/about</loc></url>
-  <url><loc>https://www.anvi.co/investors/login</loc></url>
-  <url><loc>https://www.anvi.co/investors/otp</loc></url>
-  <url><loc>https://www.anvi.co/investors/dashboard</loc></url>
-
+  <url><loc>https://www.anvi.co/aboutus</loc></url>
   <url><loc>https://www.anvi.co/news</loc></url>
-  <url><loc>https://www.anvi.co/contact</loc></url>
-  <url><loc>https://www.anvi.co/privacy-policy</loc></url>
+  <url><loc>https://www.anvi.co/contactus</loc></url>
 
   <!-- Solutions -->
   <url><loc>https://www.anvi.co/solutions</loc></url>
@@ -19,17 +14,15 @@
 
   <!-- Industries -->
   <url><loc>https://www.anvi.co/industries</loc></url>
-  <url><loc>https://www.anvi.co/energy</loc></url>
-  <url><loc>https://www.anvi.co/textiles</loc></url>
-  <url><loc>https://www.anvi.co/foundations</loc></url>
-  <url><loc>https://www.anvi.co/lifesciences</loc></url>
-  <url><loc>https://www.anvi.co/semiconductors</loc></url>
-  <url><loc>https://www.anvi.co/entertainment</loc></url>
+  <url><loc>https://www.anvi.co/industries/energy</loc></url>
+  <url><loc>https://www.anvi.co/industries/textiles</loc></url>
+  <url><loc>https://www.anvi.co/industries/social_impact</loc></url>
+  <url><loc>https://www.anvi.co/industries/lifesciences</loc></url>
+  <url><loc>https://www.anvi.co/industries/semiconductors</loc></url>
+  <url><loc>https://www.anvi.co/industries/entertainment</loc></url>
 
   <!-- Careers -->
   <url><loc>https://www.anvi.co/careers</loc></url>
   <url><loc>https://www.anvi.co/careers/job-openings</loc></url>
-  <url><loc>https://www.anvi.co/careers/job</loc></url>
-  <url><loc>https://www.anvi.co/careers/apply</loc></url>
 
 </urlset>

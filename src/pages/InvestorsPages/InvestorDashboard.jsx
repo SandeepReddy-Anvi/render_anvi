@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { getContent } from "../../services/investorAuth";
 import Footer from "../../components/footer";
-import { mainPagesLinksList } from "../../data/PagesLinkList";
+import { mainPagesLinksObj } from "../../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: `Have questions about your investment?`,
   para: "We’re here to help with clarity, updates, and next steps, providing transparent insights that support your investment journey.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  link: mainPagesLinksObj.ContactUs,
 };
 
 export default function InvestorDashboard() {

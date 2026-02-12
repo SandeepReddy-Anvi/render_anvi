@@ -10,26 +10,29 @@ export const FooterUpBox = ({ info }) => {
   if (!head) return null;
   return (
     <section
-      className="w-full min-h-[376px] px-5 py-[80px] max-h-auto flex flex-col justify-center text-center align-middle gap-[16px] relative bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url(/images/footer.jpg)" }}
+      className="w-full min-h-[376px] px-[20px] md:px-[60px] 2xl:px-[100px] max-h-auto flex flex-col justify-center align-middle gap-[16px]"
+      /* style={{ backgroundImage: "url(/images/footer.jpg)" }} */
     >
-      <div
+      {/* <div
         className="bg-cover bg-center h-[101%] bg-no-repeat absolute inset-0 -z-2"
-        style={{ backgroundImage: "url(/images/footer.jpg)" }}
+         style={{ backgroundImage: "url(/images/footer.jpg)" }} 
       ></div>
-      <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div>
+      <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div> */}
+
       <h2
-        className="text-[28px] md:text-[46px] text-[#FFFFFF] font-regular z-10"
+        className="text-[38px] md:text-[58px] max-w-[740px] text-[#FFFFFF] font-medium z-10"
         dangerouslySetInnerHTML={{ __html: head }}
       ></h2>
-      <p
-        className="text-[14px] md:text-[16px] max-w-[612px] text-[#FFFFFF] font-medium leading-[24px] text-center mx-auto sticky z-3"
+
+      {/* <p
+        className="text-[14px] md:text-[16px] max-w-[612px] text-[#FFFFFF] font-medium leading-[24px] sticky z-3"
       >
         {para}
-      </p>
+      </p> */}
+
       <Link
         to={link}
-        className="link-bg-icon1 w-max font-semibold text-[14px] min-w-[170px] mx-auto mt-[16px] sticky z-3"
+        className="link-bg-icon1 w-max font-semibold text-[14px] min-w-[170px] mt-[16px] sticky z-3"
       >
         <span>{linkLabel}</span>
         <i className="rotate-45">{IconsObj.arrow}</i>
