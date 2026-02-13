@@ -85,7 +85,7 @@ const Careers = () => {
             Together, We Build What’s Next
           </h2>
           {/* <div className="h-[2px] lg:h-[4px] w-10 bg-[#282828]"></div> */}
-          <p className="mt-4 mb-6 text-[14px] text-[#100000] font-regular">
+          <p className="mt-4 mb-6 text-[16px] text-[#100000] font-regular leading-[30px]">
             At Anvi, innovation starts with people. We build intelligent systems
             for smarter, safer cities and sustainability. Join us to create
             technology that empowers lives and shapes tomorrow.

@@ -213,7 +213,7 @@ const PrivacyPolicy = () => {
             {privacyContent.map((item) => (
               <article key={item.id} id={item.id} className="scroll-mt-32">
                 {/* Heading (Dynamic h2) */}
-                <h2 className="text-[#CD0054] font-medium font-raleway text-[20px] mb-6 underline underline-offset-[12px] decoration-1">
+                <h2 className="text-[#CD0054] font-[500] font-raleway text-[20px] mb-6 underline underline-offset-[10px] decoration-1">
                   {item.title}
                 </h2>
 
@@ -250,11 +250,9 @@ const PrivacyPolicy = () => {
                   <a href="https://www.google.com/maps/place/Anvi+Space+Private+Limited/@17.4571026,78.370425,21z/data=!3m1!5s0x3bcb93cf84a648eb:0xf42ea2f9403a7a36!4m14!1m7!3m6!1s0x3bcb93cf9bc32c83:0x1e85e5cc49998439!2sProfound+Builders!8m2!3d17.4571626!4d78.370505!16s%2Fg%2F11bw2fmfdw!3m5!1s0x3bcb93301fcdcf79:0xece2e84e0d5308e3!8m2!3d17.4570773!4d78.3703841!16s%2Fg%2F11xf52f6kh?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D">
                     {item.address}
                   </a>
-                  <p>
-                    {item.paragraphs01}
-                    <br />
-                    {item.paragraphs02}
-                  </p>
+
+                  <p style={{ margin: 0 }}>{item.paragraphs01}</p>
+                  <p style={{ margin: 0 }}>{item.paragraphs02}</p>
                 </div>
               </article>
             ))}

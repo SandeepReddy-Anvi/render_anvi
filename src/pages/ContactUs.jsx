@@ -8,6 +8,7 @@ import FAQLayout from "../components/FAQLayout";
 import GradientText from "../components/GradientText";
 import { IconsObj } from "../utils/Iconify_icons";
 import { mailBackendUrl } from "../data/MailBackendUrl";
+import { socialMediaLinksObj } from "../data/PagesLinkList";
 
 const initialFormData = {
   Name: "",
@@ -227,23 +228,33 @@ export const ContactUs = () => {
 
               <div className="flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4 flex-wrap">
                 {/* Address */}
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
+                <a
+                  className="flex items-start gap-3"
+                  href={socialMediaLinksObj.Map}
+                >
+                  <span className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-                  <a className="w-[418px]">
+                  </span>
+                  <address
+                    className="w-[418px]"
+                    style={{ fontStyle: "normal" }}
+                  >
                     Anvi Rrobotics, 1st Floor, Profound Buliders, whitefields,
                     Kondapur, Telangana 500081
-                  </a>
-                </div>
+                  </address>
+                </a>
 
                 {/* Email */}
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
+                <a
+                  className="flex items-center gap-3"
+                  href={socialMediaLinksObj.Mail_to}
+                  target="_blank"
+                >
+                  <span className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-                  <p>info@anvi.co</p>
-                </div>
+                  </span>
+                  <p>{socialMediaLinksObj.Mail}</p>
+                </a>
               </div>
             </form>
             <div className="md:w-2/5 lg:max-w-[350px] h-max[250px] h-full aspect[9/16] w-full flex justify-center md:justify-end">
