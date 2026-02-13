@@ -52,7 +52,7 @@ const InitiativeSection = () => {
           {/* Desktop Scroll Ul Box */}
           <motion.ul
             style={{ x: xScroll }}
-            className="w-max max-md:hidden flex flex-col md:flex-row flex-nowrap gap-x-[20px] gap-y-[20px] md:gap-y-[180px] md:gap-[120px] mb-[80px] items-center md:px-[80px] max-md:px-[20px] max-lg:pr-[120px] lg:px-[100px] transition-transform duration-200"
+            className="w-max max-md:hidden flex flex-col md:flex-row flex-nowrap gap-x-[20px] gap-y-[20px] md:gap-y-[180px] md:gap-[120px] mb-[80px] items-center md:px-[80px] max-md:px-[20px] max-lg:pr-[120px] lg:px-[100px] transition-transform ease-linear duration-200"
           >
             {scrollItems.map((item, index) => (
               <li
