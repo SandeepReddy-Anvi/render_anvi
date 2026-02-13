@@ -135,45 +135,45 @@ export default function CareersGrowthComponent({
         <div className="absolute inset-0 bg-[rgba(0,0,0,0.60)] w-full h-full" />
 
         {/* Content Box */}
-          {/* Left - Text */}
-          <div className="lg:col-span-7 z-10 px-5 md:px-[60px] text-[#FFFFFF]">
-            <h2 className="text-[32px] md:text-[46px] font-medium leading-tight">
-              {title}
-            </h2>
+        {/* Left - Text */}
+        <div className="lg:col-span-7 z-10 px-5 md:px-[60px] text-[#FFFFFF]">
+          <h2 className="text-[32px] md:text-[46px] font-medium leading-tight">
+            {title}
+          </h2>
 
-            <p className="hidden md:block mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
-              {body}
-            </p>
+          <p className="hidden md:block mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
+            {body}
+          </p>
 
-            <p className="block md:hidden mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
-              {mobieBody}
-            </p>
+          <p className="block md:hidden mt-6 max-w-2xl text-[10px] md:text-[18px] font-raleway leading-relaxed">
+            {mobieBody}
+          </p>
 
-            <div className="mt-8">
-              <button
-                onClick={handleExplore}
-                aria-label={buttonAriaLabel}
-                className="link-bg-icon1 text-semibold text-[14px]"
-              >
-                <span>{buttonLabel}</span>
-                <i className="rotate-45">{IconsObj.arrow}</i>
-              </button>
-            </div>
+          <div className="mt-8">
+            <button
+              onClick={handleExplore}
+              aria-label={buttonAriaLabel}
+              className="link-bg-icon1 text-semibold text-[14px]"
+            >
+              <span>{buttonLabel}</span>
+              <i className="rotate-45">{IconsObj.arrow}</i>
+            </button>
           </div>
+        </div>
 
-          {/* Right - Image */}
-          <div className="relative md:w-[600px] lg:w-[625px] right-15 md:right-8 lg:right-8 rounded unded-2xl overflow-hidden shadow-2xl   lg:col-span-5 flex justify-center lg:justify-end">
-            {imageSrc ? (
-              <img
-                src={imageSrc}
-                alt="Careers and Growth"
-                className="w-max-auto h-[250px] md:h-[420px] lg:h-[460px] object-cover px-5 md:px-0 rounded-2xl md:rounded-2xl sm:rounded-2xl lg:rounded-2xl"
-                draggable={false}
-              />
-            ) : (
-              <div className="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 w-full h-[320px] sm:h-[360px] md:h-[420px] lg:h-[460px] flex items-center justify-center text-gray-300"></div>
-            )}
-          </div>
+        {/* Right - Image */}
+        <div className="relative md:w-[600px] lg:w-[625px] right-15 md:right-8 lg:right-8 rounded unded-2xl overflow-hidden shadow-2xl   lg:col-span-5 flex justify-center lg:justify-end">
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt="Careers and Growth"
+              className="w-max-auto h-[250px] md:h-[420px] lg:h-[460px] object-cover px-5 md:px-0 rounded-2xl md:rounded-2xl sm:rounded-2xl lg:rounded-2xl"
+              draggable={false}
+            />
+          ) : (
+            <div className="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 w-full h-[320px] sm:h-[360px] md:h-[420px] lg:h-[460px] flex items-center justify-center text-gray-300"></div>
+          )}
+        </div>
       </div>
     </section>
   );

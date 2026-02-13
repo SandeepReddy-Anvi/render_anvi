@@ -92,33 +92,6 @@ const countList = [
   },
 ];
 
-const anviDiffList = [
-  {
-    head: "Technological Excellence",
-    para: "Robotics engineered with precision and innovation",
-    imgLink: "/images/about/about3.1.webp",
-    size: "small",
-  },
-  {
-    head: "Strategic Focus",
-    para: "Solutions addressing real challenges with impact and scalability",
-    imgLink: "images/about/about3.2.webp",
-    size: "big",
-  },
-  {
-    head: "Collaborative Approach",
-    para: "Progress through partnerships driving collective growth",
-    imgLink: "images/about/about3.3.webp",
-    size: "big",
-  },
-  {
-    head: "Impact-Driven Solutions",
-    para: "Designing systems for measurable impact",
-    imgLink: "images/about/about3.4.webp",
-    size: "small",
-  },
-];
-
 const About = () => {
   return (
     <section
@@ -249,56 +222,95 @@ const About = () => {
           </div>
         </div>
 
-        {/* Image Grid Section (Dynamic) */}
-        <ul className="w-full flex flex-col gap-[10px] md:gap-y-[30px] mt-[50px] lg:mt-[60px] 2xl:mt-[100px]">
-          {anviDiffList.map((item, index) => {
-            // Group items into rows of 2
-            if (index % 2 !== 0) return null;
+        {/* Image Grid Section 2 */}
+        <div className="w-full flex flex-col md:gap-6 mt-[50px] lg:mt-[60px] 2xl:mt-[100px]">
+          {/* Row 1: Large + Small */}
+          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] md:gap-6">
+            {/* Large Card */}
+            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
+              <div className="py-5">
+                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
+                  Technological Excellence
+                </h3>
+                <p className="text-[15px] text-[#100000] font-regular mt-2">
+                  Robotics engineered with precision and innovation
+                </p>
+              </div>
+              <div className="overflow-hidden md:object-cover content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
+                <img
+                  loading="lazy"
+                  src="/images/about/about3.1.webp"
+                  alt="Strategic Focus"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
+                />
+              </div>
+            </div>
 
-            const first = anviDiffList[index];
-            const second = anviDiffList[index + 1];
+            {/* Small Card */}
+            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
+              <div className="py-5">
+                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
+                  Strategic Focus
+                </h3>
+                <p className="text-[15px] text-[#100000] font-regular mt-2">
+                  Solutions addressing real challenges with impact and
+                  scalability
+                </p>
+              </div>
+              <div className="overflow-hidden md:object-cover content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
+                <img
+                  loading="lazy"
+                  src="/images/about/about3.2.webp"
+                  alt="Strategic Focus"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
 
-            // Alternate grid pattern
-            const isEvenRow = Math.floor(index / 2) % 2 === 0;
+          {/* Row 2: Small + Large */}
+          <div className="grid grid-cols-1 md:grid-cols-[2fr_1.5fr] md:gap-6">
+            {/* Small Card */}
+            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-[370px] md:h-full ">
+              <div className="py-5">
+                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
+                  Collaborative Approach
+                </h3>
+                <p className="text-[15px] text-[#100000] font-regular mt-2">
+                  Progress through partnerships driving collective growth
+                </p>
+              </div>
+              <div className="overflow-hidden md:object-cover content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
+                <img
+                  loading="lazy"
+                  src="/images/about/about3.3.webp"
+                  alt="Strategic Focus"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
+                />
+              </div>
+            </div>
 
-            return (
-              <li
-                key={index}
-                className={`grid grid-cols-1 md:grid-cols-[${
-                  isEvenRow ? "1.5fr_2fr" : "2fr_1.5fr"
-                }] gap-0 lg:gap-6 gap-y-[10px] md:gap-y-[50px]`}
-              >
-                {[first, second].map((i, idx) => (
-                  <div
-                    key={idx}
-                    className="relative p-4 group overflow-hidden rounded-3xl md:rounded-[46px] bg-[#fff] content-center h-full"
-                  >
-                    {/* Text */}
-                    <div className="pt-2 pb-4">
-                      <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                        {i.head}
-                      </h3>
-
-                      <p className="text-[15px] text-[#100000] font-regular mt-2">
-                        {i.para}
-                      </p>
-                    </div>
-
-                    {/* Image */}
-                    <div className="overflow-hidden md:object-cover content-center h-[340px] md:h-[340px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
-                      <img
-                        loading="lazy"
-                        src={i.imgLink}
-                        alt={i.head}
-                        className="object-cover h-full w-full transition-transform duration-500 ease-out group-hover:scale-110"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </li>
-            );
-          })}
-        </ul>
+            {/* Large Card          */}
+            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-[370px] md:h-full ">
+              <div className="py-5">
+                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
+                  Impact-Driven Solutions
+                </h3>
+                <p className="text-[15px] text-[#100000] font-regular mt-2">
+                  Designing systems for measurable impact
+                </p>
+              </div>
+              <div className="overflow-hidden md:object-cover content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
+                <img
+                  loading="lazy"
+                  src="/images/about/about3.4.webp"
+                  alt="Strategic Focus"
+                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* section 8 -> Careers and Growth */}

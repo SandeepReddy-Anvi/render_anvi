@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import IndustryLayout from "../../components/IndustryLayout";
-import InfoCard2 from "../../components/InfoBigCard2";
 
 import GradientText from "../../components/GradientText";
 import WhySection from "../../components/WhySection";
 import Footer from "../../components/footer";
 import { mainPagesLinksObj } from "../../data/PagesLinkList";
 import TwoImageSection from "../../components/Socialimpactcomponet2img";
+import { InfoCard2 } from "../../components/All_Industries/InfoBigCard2";
 
 const footerUpBoxInfosocialimpact = {
   head: "Let’s Build the Future of Social impact",
@@ -159,7 +159,7 @@ const SocialImpact = () => {
         <TwoImageSection />
 
         {/* --- MAIN CONTENT CONTAINER --- */}
-        <div className="bg-white w-full py-12 px-4 sm:px-6 md:px-12 lg:px-20 lg:py-24 ">
+        <div className="bg-white w-full py-12 px-4 sm:px-[20px] md:px-[30px] lg:px-[60px] lg:py-24 ">
           <div className="max-w-7xl mx-auto">
             {/* items-start is REQUIRED for sticky sidebar to work */}
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-20  ">
