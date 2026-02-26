@@ -118,7 +118,9 @@ const Textiles = () => (
       ]}
     >
       {/* --- MAIN CONTENT CONTAINER --- */}
-      <IndustriesBlackBox featuresData={featuresData} />
+      <IndustriesBlackBox 
+       title={<>What ANVI <br className="hidden md:block" /> Textiles Delivers</>}
+       featuresData={featuresData} />
 
       {/*- Why Anvi Section -*/}
       <div>

@@ -114,7 +114,9 @@ const LifeSciences = () => (
     >
 
       {/* --- MAIN CONTENT CONTAINER --- */}
-      <IndustriesBlackBox featuresData={featuresData} />
+      <IndustriesBlackBox 
+       title={<>What ANVI <br className="hidden md:block" /> LifeScience Delivers</>}
+      featuresData={featuresData} />
 
       {/*- why anvi section -*/}
       <div>

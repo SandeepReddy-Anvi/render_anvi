@@ -104,7 +104,9 @@ const Energy = () => {
         ]}
       >
         {/* --- MAIN CONTENT CONTAINER --- */}
-        <IndustriesBlackBox featuresData={featuresData} />
+        <IndustriesBlackBox 
+         title={<>What ANVI <br className="hidden md:block" /> Energy Delivers</>}
+        featuresData={featuresData} />
 
         {/*- Why Anvi section -*/}
         <WhySection

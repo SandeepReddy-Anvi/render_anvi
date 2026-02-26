@@ -126,7 +126,9 @@ const Entertainment = () => {
       >
 
         {/* --- MAIN CONTENT CONTAINER --- */}
-        <IndustriesBlackBox featuresData={featuresData} />
+        <IndustriesBlackBox 
+        title={<>What ANVI <br className="hidden md:block" /> Entertainment Delivers</>}
+        featuresData={featuresData} />
 
         {/*- why anvi section -*/}
         <div>
