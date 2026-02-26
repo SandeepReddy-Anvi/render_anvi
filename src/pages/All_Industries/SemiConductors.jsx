@@ -126,7 +126,9 @@ const SemiConductors = () => {
         ]}
       >
         {/* --- MAIN CONTENT CONTAINER --- */}
-        <IndustriesBlackBox featuresData={featuresData} />
+        <IndustriesBlackBox 
+         title={<>What ANVI <br className="hidden md:block" /> SemiConductors Delivers</>}
+        featuresData={featuresData} />
 
         {/*- why anvi section -*/}
         <WhySection

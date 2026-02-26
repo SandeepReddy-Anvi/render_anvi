@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { InfoCard } from "./InfoBigCards";
 
-export const IndustriesBlackBox = ({ featuresData }) => {
+export const IndustriesBlackBox = ({ featuresData ,title }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   // --- CLICK HANDLER: Smooth Scroll ---
@@ -58,8 +58,7 @@ export const IndustriesBlackBox = ({ featuresData }) => {
           {/* --- LEFT COLUMN: Sticky Navigation --- */}
           <div className="w-full lg:w-1/3 lg:sticky lg:top-32 h-fit space-y-[200px]">
             <h2 className="text-3xl md:text-5xl text-black font-raleway font-medium sm:font-medium sm:text-3xl  mb-8 leading-tight">
-              What ANVI <br className="hidden md:block" />
-              Semiconductors Delivers
+              {title}
             </h2>
             {/* ADDED 'hidden lg:flex': Hides on mobile, shows as Flex on Desktop */}
             <div className="hidden lg:flex flex-col space-y-6">
