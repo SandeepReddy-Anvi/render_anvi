@@ -140,7 +140,7 @@ const SocialImpact = () => {
   return (
     <section>
       <IndustryLayout
-        backgroundImage="/images/industries/social-impact.jpg"
+        backgroundImage="/images/industries/social_impact.jpg"
         title="Future of Social Impact"
         description="Empowering communities, advancing sustainability, and creating change that lasts for generations."
         comingSoonText="Creating impact from the ground up by empowering people, driving innovation, fostering sustainability, shaping communities, and transforming futures."
