@@ -23,13 +23,13 @@ const GradientText = ({
     >
       {/* Title */}
       {ourTitle && (
-        <h4 className="text-[#CD0054] text-[20px] md:text-[24px] lg:text-[26.6px] font-bold tracking-[-0.02em] mb-3">
+        <h4 className="text-[#CD0054] text-[20px] md:text-[24px] lg:text-[28.6px] font-[700] leading-[36px] font-wix mb-[24px]">
           {ourTitle}
         </h4>
       )}
 
       {para && (
-        <p className="text-[18px] md:text-[20px] font-semibold text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px] pb-3">
+        <p className="text-[16px] md:text-[20px] font-[500] text-[#100000] pr-0 lg:pr-10 2xl:pr-[300px] pb-[24px]">
           {para}
         </p>
       )}
@@ -39,7 +39,7 @@ const GradientText = ({
         {mobileParagraphs.map((text, index) => (
           <p
             key={index}
-            className="text-[16px] font-medium text-[#000000] mb-4"
+            className="text-[16px] font-[400] text-[#100000] mb-4 leading-[33px]"
           >
             {text}
           </p>
@@ -51,7 +51,7 @@ const GradientText = ({
         {desktopParagraphs.map((text, index) => (
           <p
             key={index}
-            className="text-[16px] md:text-[20px] font-medium text-[#000000] pr-0 lg:pr-10 2xl:pr-[300px] mb-6"
+            className="text-[16px] md:text-[18px] font-[400] text-[#100000] pr-0 lg:pr-10 2xl:pr-[300px] mb-6 leading-[33px]"
           >
             {text}
           </p>

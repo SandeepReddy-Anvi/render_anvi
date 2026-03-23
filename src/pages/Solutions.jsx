@@ -1,7 +1,7 @@
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
 import FeaturedSolutionsCardBox from "../components/Solutions/FeaturedSolutionsCardBox";
-import { mainPagesLinksList } from "../data/PagesLinkList";
+import { mainPagesLinksObj } from "../data/PagesLinkList";
 import SectionWithImage from "../components/SectionWithImage";
 import GradientText from "../components/GradientText";
 import ImpactSolutions from "../components/Solutions/ImpactSolutions";
@@ -11,7 +11,7 @@ const footerUpBoxInfoObj = {
   //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  link: mainPagesLinksObj.ContactUs,
 };
 
 const Solutions = () => {
@@ -32,18 +32,6 @@ const Solutions = () => {
         ourDescription={["At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future.",
           "From advanced automation to immersive digital environments and purpose-led community projects, ANVI solutions deliver lasting value for industries and society."]}
        />
-
-      {/* <section className="w-full mt-[30px] px-5 pt-[50px] text-center xl:px-[118px] md:pt-[60px] lg:pt-[50px] font-['Wix_Madefor_Display']">
-        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">
-          Featured Solution
-        </h2>
-        <p className="text-[16px] w-full md:w-[584px] m-auto text-[#4C4C4C] mb-[6px] font-[400] leading-[24px] text-center">
-          Discover Anvi’s groundbreaking innovations that solve critical
-          challenges and redefine what’s possible through intelligent
-          automation.
-        </p>
-        Featured Solutions Grid 
-      </section>*/} 
 
       <div>
         <FeaturedSolutionsCardBox />

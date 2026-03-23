@@ -1,11 +1,12 @@
 import HeroSection from "../components/HeroSection";
-import { pagesLinksList } from "../data/PagesLinkList";
+import { pagesLinksObj } from "../data/PagesLinkList";
 import Footer from "../components/footer";
 import NewsFeeds from "../components/News/NewsFeeds";
 
 const footerUpBoxInfoObj = {
-  head: "Stay Updated",
-  para: "Get the latest news, updates, and insights delivered directly to your inbox"
+  head: "Ready to Be a Part of Something Bigger at ANVI?",
+  linkLabel: "Browse Openings",
+  link: pagesLinksObj.Career_Openings,
 };
 
 export const News = () => {
@@ -17,7 +18,6 @@ export const News = () => {
           backgroundImage="/videos/Heroo2_org.mp4"
           title="News & Updates"
           description="Stay informed with Anvi latest announcements, official press releases, and exciting new opportunities."
-   
           descriptionWidth="570px"
         />
       </main>
@@ -26,7 +26,7 @@ export const News = () => {
       <NewsFeeds />
 
       {/* Footer */}
-      <Footer footerUpBoxInfo2={footerUpBoxInfoObj} />
+      <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </>
   );
 };

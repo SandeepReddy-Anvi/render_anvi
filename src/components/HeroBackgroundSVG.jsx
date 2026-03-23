@@ -1,8 +1,8 @@
-import { useIsMobile } from "../hooks/useScreenSize";
+import { UseIsMobile } from "../hooks/useScreenSize";
 
 export const HeroBackgroundSVG = () => {
-  const isMobile = useIsMobile(708);
-  const isTablet = useIsMobile(1023);
+  const isMobile = UseIsMobile(708);
+  const isTablet = UseIsMobile(1023);
 
   const nonMobilePath =
     // "M0,0 L1000,0 " +

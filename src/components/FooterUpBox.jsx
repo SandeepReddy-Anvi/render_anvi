@@ -17,10 +17,10 @@ export const FooterUpBox = ({ info }) => {
         className="bg-cover bg-center h-[101%] bg-no-repeat absolute inset-0 -z-2"
          style={{ backgroundImage: "url(/images/footer.jpg)" }} 
       ></div>
-      <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div> */} 
+      <div className="dark-bg-blue w-full h-[101.3%] absolute inset-0 mix-blend-multiply bg-[#1E1E1EF0] -z-1"></div> */}
 
       <h2
-        className="text-[38px] md:text-[58px] max-w-[612px] text-[#FFFFFF] font-medium z-10"
+        className="text-[38px] md:text-[58px] max-w-[740px] text-[#FFFFFF] font-medium z-10"
         dangerouslySetInnerHTML={{ __html: head }}
       ></h2>
 

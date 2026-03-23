@@ -49,7 +49,7 @@
     {
       "name": "Energy",
       "short_name": "Energy",
-      "url": "/energy",
+      "url": "/industries/energy",
       "icons": [{ "src": "/images/industries/energy.webp", "sizes": "192x192" }]
     },
     {
@@ -65,8 +65,8 @@
       "icons": [{ "src": "/images/industries/textiles.webp", "sizes": "192x192" }]
     },
     {
-      "name": "Semiconductors",
-      "short_name": "Semiconductors",
+      "name": "SemiConductors",
+      "short_name": "SemiConductors",
       "url": "/semiconductors",
       "icons": [{ "src": "/images/industries/semiconductors.jpg", "sizes": "192x192" }]
     },
@@ -77,10 +77,10 @@
       "icons": [{ "src": "/images/industries/lifesciences.jpg", "sizes": "192x192" }]
     },
     {
-      "name": "Foundations",
-      "short_name": "Foundations",
-      "url": "/foundations",
-      "icons": [{ "src": "/images/industries/foundation.jpg", "sizes": "192x192" }]
+      "name": "Social Impact",
+      "short_name": "SocialImpact",
+      "url": "/social_impact",
+      "icons": [{ "src": "/images/industries/social_impact.jpg", "sizes": "192x192" }]
     }
   ],
 

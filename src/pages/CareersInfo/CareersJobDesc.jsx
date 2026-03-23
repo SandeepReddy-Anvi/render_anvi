@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { jobPositions } from "../../data/jobData";
 import Footer from "../../components/footer";
 import { IconsObj } from "../../utils/Iconify_icons";
-import { pagesLinksList } from "../../data/PagesLinkList";
+import { pagesLinksObj } from "../../data/PagesLinkList";
 
 const CareersJobDesc = () => {
   const { jobId } = useParams();
@@ -89,7 +89,7 @@ const CareersJobDesc = () => {
           </ul>
 
           <Link
-            to={`${pagesLinksList.JobInfo_Apply.replace(":jobId", jobId)}`}
+            to={`${pagesLinksObj.JobInfo_Apply.replace(":jobId", jobId)}`}
              className="link-bg-icon1 mt-4 w-[150px] text-[14px] font-semibold flex items-center gap-2"
                      >
                        <span>Apply Now</span>

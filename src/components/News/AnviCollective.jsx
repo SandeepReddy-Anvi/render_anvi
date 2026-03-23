@@ -1,12 +1,12 @@
 import Footer from "../footer";
-import { mainPagesLinksList } from "../../data/PagesLinkList";
+import { mainPagesLinksObj } from "../../data/PagesLinkList";
 
 const footerUpBoxInfoObj = {
   head: "Ready to explore the future with Anvi?",
   para:
     "Step into tomorrow with Anvi - where deep-tech innovation meets safety, efficiency, and sustainability.",
   linkLabel: "Contact Us",
-  link: mainPagesLinksList.ContactUs,
+  link: mainPagesLinksObj.ContactUs,
 };
 
 const imgurl = {
