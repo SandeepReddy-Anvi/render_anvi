@@ -17,7 +17,7 @@ const scrollItems = [
     description:
       "Building sustainable space systems through debris removal, recycling, and future-ready infrastructure - powering a cleaner, smarter orbital future.",
     img_1: "/images/home/space-galactica.png",
-    img_2: "/images/home/galactica-logo.png",
+    img_2: "/images/home/galactica-logo.webp",
   },
   {
     title: "Project SHUDH",
