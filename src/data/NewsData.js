@@ -32,8 +32,8 @@ export const newsDataList = [
   {
     id: 4,
     date: 'December 15, 2025',
-    title: 'With its revolutionary robo-tech, Anvi Robotics dives into danger zones.',
-    info: 'Anvi Robotics’ AI-powered robots aided SLBC rescue, proving technology’s vital role in dangerous, life-saving missions.',
+    title: 'Anvi Collection 2025 | The Next',
+    info: 'Anvi’s annual updates event highlighting achievements from 2025 and outlining the company’s stategic direction for 2026 and beyond',
     category: 'Inside Anvi',
     imageUrl: '/images/news/collective.jpeg', // Placeholder for the actual image path
    newsLink: "/collective",

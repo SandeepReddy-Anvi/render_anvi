@@ -88,7 +88,7 @@ const InitiativeSection = () => {
                     <img
                       src={item.img_2}
                       alt={item.title + "_2"}
-                      className="w-full max-w-[50vw] aspect-[16/9] h-auto rounded-[12px] object-cover
+                      className="w-full max-w-[50vw] aspect-[16/9] h-auto rounded-[12px] object-fit
                         md:max-w-[350px] lg:max-w-[350px] xl:max-w-[490px] 2xl:max-w-[500px]"
                       draggable={false}
                     />
