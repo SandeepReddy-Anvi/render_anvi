@@ -6,8 +6,8 @@ const NewsCard = ({ item }) => {
   return (
     <Link
       to={item.newsLink}
-     target={item.openInNewTab ? "_blank" : "_self"}
-  rel={item.openInNewTab ? "noopener noreferrer" : undefined}
+      target={item.openInNewTab ? "_blank" : "_self"}
+      rel={item.openInNewTab ? "noopener noreferrer" : undefined}
       // style={{
       //   boxShadow: "0px 1px 2px -1px #73808C1A, 0px 1px 3px 0px #73808C1A",
       // }}
@@ -41,9 +41,7 @@ const NewsCard = ({ item }) => {
         </h3>
 
         {/* Excerpt */}
-        <p className="text-[#73808C] text-[16px] leading-[27px]">
-          {item.info}
-        </p>
+        <p className="text-[#73808C] text-[16px] leading-[27px]">{item.info}</p>
 
         {/* Read More Link */}
         <span className="flex justify-center align-middle group gap-[5px] items-center text-[18px] font-medium text-[#FD3B3C] hover:text-[#FD3B3C]/30 transition duration-150 ease-in-out">

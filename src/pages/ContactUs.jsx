@@ -2,13 +2,13 @@ import { useCallback, useState } from "react";
 import { ContactUsFaqs } from "../data/FAQs";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
-import { mainPagesLinksObj } from "../data/PagesLinkList";
-import { MapPin, Mail, Clock } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
 import axios from "axios";
 import FAQLayout from "../components/FAQLayout";
 import GradientText from "../components/GradientText";
 import { IconsObj } from "../utils/Iconify_icons";
 import { mailBackendUrl } from "../data/MailBackendUrl";
+import { socialMediaLinksObj } from "../data/PagesLinkList";
 
 const initialFormData = {
   Name: "",
@@ -20,7 +20,7 @@ const initialFormData = {
 const ourDescription = [
   "Whether you’re exploring partnerships, collaborations, or looking to understand how ANVI can support your vision, our team is here to help. We work closely with organisations, innovators, and creators to turn ideas into purposeful, future-ready solutions.",
   "From robotics and space systems to lifestyle innovation and immersive media, we welcome conversations that push boundaries and open new possibilities.",
-  "Reach out to us  we’ll connect you with the right team, guide you through our process, and ensure you have everything you need to take the next step with confidence."
+  "Reach out to us  we’ll connect you with the right team, guide you through our process, and ensure you have everything you need to take the next step with confidence.",
 ];
 
 export const ContactUs = () => {
@@ -48,7 +48,7 @@ export const ContactUs = () => {
     try {
       // await axios.post(api, formData);
       const resp = await axios.post(api, data);
-      console.log('Response:', resp.data);
+      console.log("Response:", resp.data);
       setFeedback({
         type: "success",
         message: "✅ Message sent successfully!",
@@ -57,7 +57,7 @@ export const ContactUs = () => {
     } catch (error) {
       console.error(
         "Error sending email:",
-        error.response ? error.response.data : error.message
+        error.response ? error.response.data : error.message,
       );
       setFeedback({
         type: "error",
@@ -89,12 +89,12 @@ export const ContactUs = () => {
     // All good → send
     // console.log(formData);
 
-    const submitData = new FormData()
-    submitData.append("FullName", formData.Name)
-    submitData.append("Email", formData.Email)
-    submitData.append("Message", formData.Message)
-    submitData.append("Subject", formData.Subject)
-    submitData.append("Website", "Anvi.Co")
+    const submitData = new FormData();
+    submitData.append("FullName", formData.Name);
+    submitData.append("Email", formData.Email);
+    submitData.append("Message", formData.Message);
+    submitData.append("Subject", formData.Subject);
+    submitData.append("Website", "Anvi.Co");
     sendMail(submitData);
   };
 
@@ -110,17 +110,17 @@ export const ContactUs = () => {
         />
 
         <GradientText
-          ourTitle = "Let’s Build What’s Next, Together."
-          ourDescription = {ourDescription}
+          header="Connect with ANVI"
+          ourTitle="Let’s Build What’s Next, Together."
+          ourDescription={ourDescription}
         />
 
         {/* Section3 */}
-        <div className="w-full px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
+        <div className="w-full overflow-hidden px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
           <h2 className="text-[34px] md:text-[38px] lg:text-[46px] md:text-center text-[#000000] font-medium w-full md:max-w-[890px] mx-auto leading-[57px] pt-5 md:pt-10 mb-10 md:mb-20">
             Contact us for innovative and powerful engineering collaborations.
           </h2>
           <div className="flex flex-col md:flex-row bg-[#FFFFFF] rounded-[20px] p-[20px] lg:p-[30px] gap-[30px] xl:gap-[80px] justify-center">
-
             {/* Form */}
             <form
               onSubmit={handleSubmit}
@@ -156,7 +156,9 @@ export const ContactUs = () => {
                 </label>
 
                 <label htmlFor="email" className="flex flex-col w-full">
-                  <span className="text-[16px] text-[#212121] mb-1">Email Address</span>
+                  <span className="text-[16px] text-[#212121] mb-1">
+                    Email Address
+                  </span>
                   <input
                     type="email"
                     name="Email"
@@ -169,7 +171,10 @@ export const ContactUs = () => {
               </div>
 
               {/* Subject */}
-              <label htmlFor="subject" className="flex flex-col w-full font-medium my-4">
+              <label
+                htmlFor="subject"
+                className="flex flex-col w-full font-medium my-4"
+              >
                 <span className="text-[16px] text-[#212121] mb-1">Subject</span>
                 <input
                   type="text"
@@ -182,7 +187,10 @@ export const ContactUs = () => {
               </label>
 
               {/* Message */}
-              <label htmlFor="message" className="flex flex-col w-full font-medium">
+              <label
+                htmlFor="message"
+                className="flex flex-col w-full font-medium"
+              >
                 <span className="text-[16px] text-[#212121] mb-1">Message</span>
                 <textarea
                   id="message"
@@ -199,49 +207,62 @@ export const ContactUs = () => {
                 type="submit"
                 disabled={loading}
                 className={`group link-bg-icon1 w-[220px] my-4 text-[14px] font-semibold ${
-                  loading
-                    ? "bg-gray-400 cursor-not-allowed"
-                    : "link-bg-icon1"
+                  loading ? "bg-gray-400 cursor-not-allowed" : "link-bg-icon1"
                 }`}
               >
-                {loading ? ("Sending...") : 
-                  (<span className="flex items-center gap-2 ">
-                    Submit your request <i className="rotate-45 transform rotate-0 transition-transform duration-300 group-hover:rotate-90">{IconsObj.arrow}</i>
-                  </span>)
-                }
+                {loading ? (
+                  "Sending..."
+                ) : (
+                  <span className="flex items-center gap-2 ">
+                    Submit your request{" "}
+                    <i className="rotate-45 transform rotate-0 transition-transform duration-300 group-hover:rotate-90">
+                      {IconsObj.arrow}
+                    </i>
+                  </span>
+                )}
               </button>
 
-              <p className="font-semibold text-[16px] text-[#757575] w-full md:w-[290px]">For any support or inquiries, feel free to email us or visit our office.</p>
+              <p className="font-semibold text-[16px] text-[#757575] w-full md:w-[290px]">
+                For any support or inquiries, feel free to email us or visit our
+                office.
+              </p>
 
-              <div className="flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4 flex-wrap">
+              <div className="w-full overflow-hidden flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4">
                 {/* Address */}
-                <div className="flex items-start gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
+                <a
+                  className="flex items-start gap-3"
+                  href={socialMediaLinksObj.Map}
+                >
+                  <span className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-                  <a
+                  </span>
+                  <address
                     className="w-[418px]"
+                    style={{ fontStyle: "normal" }}
                   >
-                    Anvi Rrobotics, 1st Floor, Profound  Buliders, whitefields, Kondapur, Telangana 500081
-                  </a>
-                </div>
+                    Anvi Rrobotics, 1st Floor, Profound Buliders, whitefields,
+                    Kondapur, Telangana 500081
+                  </address>
+                </a>
 
                 {/* Email */}
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
+                <a
+                  className="flex items-center gap-3"
+                  href={socialMediaLinksObj.Mail_to}
+                  target="_blank"
+                >
+                  <span className="w-9 h-9 rounded-full bg-[#CD0054] flex items-center justify-center flex-shrink-0">
                     <Mail className="w-4 h-4 text-white" strokeWidth={1.5} />
-                  </div>
-                  <p>info@anvi.co</p>
-                </div>
-
+                  </span>
+                  <p>{socialMediaLinksObj.Mail}</p>
+                </a>
               </div>
-
             </form>
             <div className="md:w-2/5 lg:max-w-[350px] h-max[250px] h-full aspect[9/16] w-full flex justify-center md:justify-end">
-                <img
-                  src="/images/contactUs.png"
-                  className="w-full h-full max-md:aspect-[4/3] object-cover " 
-                />
+              <img
+                src="/images/contactUs.png"
+                className="w-full h-full max-md:aspect-[4/3] object-cover "
+              />
             </div>
           </div>
         </div>
@@ -250,8 +271,6 @@ export const ContactUs = () => {
         <section className="w-full">
           <FAQLayout faqs={ContactUsFaqs} />
         </section>
-        
-      
       </main>
 
       {/* Footer */}

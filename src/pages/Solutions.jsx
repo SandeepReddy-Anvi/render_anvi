@@ -5,9 +5,10 @@ import { mainPagesLinksObj } from "../data/PagesLinkList";
 import SectionWithImage from "../components/SectionWithImage";
 import GradientText from "../components/GradientText";
 import ImpactSolutions from "../components/Solutions/ImpactSolutions";
+import CoreCapabilities from "../components/CoreCapabilities";
 
 const footerUpBoxInfoObj = {
-   head: `Ready to explore the future with Anvi?`,
+  head: `Ready to explore the future with Anvi?`,
   //head: `Ready to explore the future with <span class="text-[38px] sm:text-[48px] font-bauhaus leading-[27px]">anvi</span>?`,
   para: "Discover how our solutions can transform your industry, driving efficiency, safety, and innovation with sustainable, compliant outcomes for a smarter, future-ready business.",
   linkLabel: "Contact Us",
@@ -27,31 +28,26 @@ const Solutions = () => {
 
       {/* Featured Solution */}
       <GradientText
+        header="Featured Solutions"
         ourTitle="Engineering Solutions for a Smarter, Stronger Tomorrow"
         gradientTitle="We Engineer it."
         ourDescription={["At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future.",
           "From advanced automation to immersive digital environments and purpose-led community projects, ANVI solutions deliver lasting value for industries and society."]}
-       />
-
-      {/* <section className="w-full mt-[30px] px-5 pt-[50px] text-center xl:px-[118px] md:pt-[60px] lg:pt-[50px] font-['Wix_Madefor_Display']">
-        <h2 className="text-4xl sm:text-4xl md:text-4xl lg:text-[48px] mb-[16px] text-[#282828]">
-          Featured Solution
-        </h2>
-        <p className="text-[16px] w-full md:w-[584px] m-auto text-[#4C4C4C] mb-[6px] font-[400] leading-[24px] text-center">
-          Discover Anvi’s groundbreaking innovations that solve critical
-          challenges and redefine what’s possible through intelligent
-          automation.
-        </p>
-        Featured Solutions Grid 
-      </section>*/} 
+      />
 
       <div>
         <FeaturedSolutionsCardBox />
       </div>
 
       {/* Why Our Solution Matter */}
-      <section className="w-full mb-[100px]">
+      <section className="w-full">
         <div className="w-full my-[20px] px-5 py-[50px] text-center xl:px-[118px] md:py-[60px] lg:py-[65px]">
+          <div className="flex items-center gap-2 pb-4 justify-center">
+            <span className="w-6 h-[2px] bg-[#CD0054]" />
+            <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+              Why anvi
+            </p>
+          </div>
           <h2 className="text-[32px] md:text-[46px] font-medium mb-[16px] text-[#100000]">
             Why Our Solutions Matter
           </h2>
@@ -61,8 +57,9 @@ const Solutions = () => {
             smarter, sustainable future.
           </p>
         </div>
+      </section>
 
-        {/* Why */}
+      {/* Why */}
         <SectionWithImage
           title="Why ??"
           description="Our solutions create meaningful impact across industries and society. They safeguard people and assets, optimize operations, promote responsible practices, ensure compliance with standards, and drive continuous innovation — empowering businesses and communities to thrive today while shaping a smarter, more resilient tomorrow."
@@ -75,9 +72,12 @@ const Solutions = () => {
           ]}
           backgroundImage="/images/careers/career3.1.webp"
         />
+        
+        <div className="pt-10 md:pt-[30px] lg:pt-[60px]">
+          <CoreCapabilities />
+        </div>
 
         <ImpactSolutions />
-      </section>
 
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />

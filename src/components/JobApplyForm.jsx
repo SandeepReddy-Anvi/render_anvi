@@ -252,10 +252,12 @@ const JobApplyFormComponent = () => {
       <button
         type="submit"
         disabled={loading}
-        className="link-bg-icon w-max flex items-center gap-2 px-6 py-2 rounded-md text-white"
+        className="group link-bg-icon1 w-[220px] my-4 text-[14px] font-semibold"
       >
-        {loading ? "Submitting..." : "Submit"}
-        <i className="rotate-45">{IconsObj.arrow}</i>
+        <span>
+          {loading ? "Submitting..." : "Submit"}
+        </span>
+        <i className="rotate-45 transform rotate-0 transition-transform duration-300 group-hover:rotate-90">{IconsObj.arrow}</i>
       </button>
 
       {successMsg && (

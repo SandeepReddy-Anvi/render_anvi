@@ -1,6 +1,5 @@
- import { useState } from "react";
- import { FiPlus } from "react-icons/fi";
-
+import { useState } from "react";
+import { FiPlus } from "react-icons/fi";
 
 const FAQLayout = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -11,11 +10,10 @@ const FAQLayout = ({ faqs }) => {
 
   return (
     <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-16 md:gap-[20px] p-[20px] md:p-[40px] lg:p-[60px]">
-    
       {/* LEFT TEXT */}
       <div className="flex flex-col gap-4 md:gap-[16px] w-full md:w-[470px]">
-        <span className="flex items-center gap-2 text-[14px] text-[#CD0054] font-medium">
-          <span className="h-[1px] w-4 bg-[#CD0054]"></span>
+        <span className="flex items-center gap-2 text-[14px] text-[#CD0054] font-bold font-wix">
+          <span className="h-[2px] w-6 bg-[#CD0054]"></span>
           FAQ
         </span>
         <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[46px] text-[#1F1F1F] font-medium leading-tight lg:leading-[52px]">
@@ -48,16 +46,13 @@ const FAQLayout = ({ faqs }) => {
               </button>
 
               <div
-  className={`
-    overflow-hidden transition-all duration-500 ease-in-out
-    ${isOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
-  `}
->
-  <div className="pl-4 pr-24 pb-4 text-[14px] text-[#282828] font-normal bg-white leading-relaxed">
-    {faq.answer}
-  </div>
-</div>
-
+                className={`overflow-hidden transition-all delay-0
+                  ${isOpen ? "max-h-40 opacity-100 duration-[1s] ease-in-out" : "max-h-0 opacity-0 duration-[0.4s] linear"}`}
+              >
+                <div className="pl-4 pr-24 pb-4 text-[14px] text-[#282828] font-normal bg-white leading-relaxed">
+                  {faq.answer}
+                </div>
+              </div>
             </div>
           );
         })}

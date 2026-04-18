@@ -1,6 +1,128 @@
-import { PhoneCall } from "lucide-react";
+import { useEffect, useState } from "react";
 import Footer from "../components/footer";
 import { mainPagesLinksObj } from "../data/PagesLinkList";
+
+// 1. DYNAMIC DATA OBJECT
+const privacyContent = [
+  {
+    id: "introduction",
+    title: "Introduction",
+    paragraphs: [
+      "Anvi (“we”, “our”, “us”) is committed to safeguarding your personal information and ensuring that your privacy is protected. We understand the importance of transparency and trust when it comes to handling your data. This Privacy Policy outlines in detail the types of information we collect, how we use and protect that information, and the choices and rights you have regarding your personal data.",
+      "This policy applies to all users who visit, browse, or interact with our website (https://www.anvi.co/), as well as individuals who contact us, apply for jobs, or engage with our services in any form. By accessing or using our website, you acknowledge and agree to the practices described in this Privacy Policy. If you do not agree with any part of this policy, we kindly request that you discontinue the use of our website.",
+      "Our goal is to provide a safe, transparent, and seamless experience for every visitor. We continuously work to maintain industry-standard security practices, comply with applicable privacy laws, and handle your information responsibly.  ",
+    ],
+  },
+  {
+    id: "Information We Collect",
+    title: "Information We Collect",
+    sections: [
+      {
+        head: "Contact Information",
+        text: "When you fill out any “Get In Touch” or contact inquiry forms on our site, we collect personal details such as your name, email address, phone number, and any message content you provide. This helps us respond to your inquiries or requests.",
+      },
+      {
+        head: "Job Applicant Data",
+        text: "When applying for a position, we may collect information such as your resume, work experience, educational details, contact information, and any additional data you provide during the hiring process.",
+      },
+      {
+        head: "Automatically Collected Data",
+        text: "When you visit our website, we automatically collect certain technical information, such as your IP address, browser type, device type, and pages viewed. This data is collected through cookies and similar technologies to improve site functionality and analytics.",
+      },
+    ],
+  },
+  {
+    id: "How We Use Your Information",
+    title: "How We Use Your Information",
+    sections: [
+      {
+        head: "Customer Service & Communication",
+        text: "We use your contact information to respond to your inquiries, provide requested information, and maintain communication.",
+      },
+      {
+        head: "Hiring & Recruitment",
+        text: "Job application data is used exclusively for evaluating and processing applications. Only authorized HR personnel and hiring managers have access to this information.",
+      },
+      {
+        head: "Marketing & Updates",
+        text: "With your consent, we may send emails containing news, project updates, or event information related to Anvi. You may opt out at any time using the unsubscribe link in our emails.",
+      },
+      {
+        head: "Analytics & Site Improvement",
+        text: "We use analytics tools to understand website traffic, user behavior, and to improve user experience.",
+      },
+      {
+        head: "Legal Compliance",
+        text: "We may use or disclose information if required by law or to protect our legal rights.",
+      },
+    ],
+  },
+  {
+    id: "Third-Party Services and Integrations",
+    title: "Third-Party Services and Integrations",
+    sections: [
+      {
+        head: "Web Analytics",
+        text: "Our website may use Google Analytics or Wix Analytics to analyze visitor behavior. These services use cookies and IP addresses to collect anonymous data. You can learn how Google processes data by reviewing Google’s Privacy Policy.",
+      },
+      {
+        head: "Social Media Links",
+        text: "Our website includes links to official social media pages (such as LinkedIn, X  and Instagram). Your interactions on these platforms are governed by their respective privacy policies.",
+      },
+      {
+        head: "Marketing & Updates",
+        text: "With your consent, we may send emails containing news, project updates, or event information related to Anvi. You may opt out at any time using the unsubscribe link in our emails.",
+      },
+      {
+        head: "Recruitment Platforms",
+        text: "We may use third-party recruitment tools or email systems to manage applications. Any shared information will be handled securely and used solely for hiring purposes.",
+      },
+    ],
+  },
+  {
+    id: "Data Security and Retention",
+    title: "Data Security and Retention",
+    sections: [
+      {
+        head: "Security Measures",
+        text: "We implement reasonable safeguards, such as SSL encryption and secure servers, to protect your data from unauthorized access, disclosure, or alteration.",
+      },
+      {
+        head: "Data Retention",
+        text: "We retain personal data only for as long as necessary for communication, recruitment, or legal compliance. Job applicant data for unsuccessful candidates may be stored for up to 2 years for future opportunities.",
+      },
+      {
+        head: "Children’s Data",
+        text: "Our services are not directed toward children under the age of 13, and we do not knowingly collect personal information from them.",
+      },
+    ],
+  },
+  {
+    id: "Your Rights and Choices",
+    title: "Your Rights and Choices",
+    head01: "Depending on your location, you may have rights to:",
+    list01: [
+      "Access or request a copy of your data",
+      "Correct or update inaccurate information",
+      "Request deletion of your data (“Right to be Forgotten”)",
+      "Withdraw consent for marketing communications",
+    ],
+    paragraphs01: "We do not sell personal data",
+    paragraphs02:
+      "To exercise your rights, please contact us using the details below.",
+  },
+  {
+    id: "Contact Us",
+    title: "Contact Us",
+    head01:
+      "If you have questions about this Privacy Policy or our data practices, please contact us:",
+    link: "Email: info@anvi.co",
+    address:
+      "Address: 1st Floor, Profound Builders, Whitefields, Kondapur, Hyderabad, Telangana 500084",
+    paragraphs01:
+      "We will review and respond to your request in accordance with applicable laws.",
+  },
+];
 
 const footerUpBoxInfoObj = {
   head: "Ready to Transform Your Industry?",
@@ -10,202 +132,134 @@ const footerUpBoxInfoObj = {
 };
 
 const PrivacyPolicy = () => {
+  const [activeId, setActiveId] = useState("introduction");
+
+  // 2. SCROLLSPY LOGIC (Intersection Observer)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-65% 0% -70% 0%" }, // Triggers when section is in view
+    );
+
+    privacyContent.forEach((item) => {
+      const el = document.getElementById(item.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
-      <main className="w-full h-full mb-40 bg-white    font-dm-sans ">
-        <h1 className=" text-black  font-semibold    text-[35px] gap-1 ">
-          Privacy Policy
+      <header className="max-w-[1440px] mx-auto px-2 md:px-10  py-10 ">
+        <h1 className="text-[#100000] font-semibold text-[36px] md:text-[48px] leading-tight mb-4 font-raleway">
+          Anvi Privacy Policy
         </h1>
-        <section className="ml-4 w-full md:w-[600px] lg:w-[1000px]  self-center text-gray-500 ">
-          <h3 className="">Last Updated : 24/11/2025</h3>
-          <div className=" mt-58 w-full ">
-            <p className=" mt-6 ">
-              Anvi is committed to protecting the privacy of visitors to our
-              website .
-              <a
-                href="https://www.anvi.co/"
-                className=" hover:underline hover:text-blue-900"
-              >
-                (https://www.anvi.co/)
-              </a>
-              This Privacy Policy explains what personal information we collect,
-              how we use it, and your rights regarding that information. By
-              using our site and services, you consent to the practices
-              described herein.
-            </p>
+        <p className="text-[#575757] font-medium">
+          Last Updated: 05 February 2026
+        </p>
+      </header>
+      <main
+        className="
+          max-w-[1440px] mx-auto 
+          px-6 md:px-12 2xl:px-0 
+          py-10 lg:py-20 
+          flex flex-col lg:flex-row items-start 
+          gap-10 lg:gap-20 2xl:gap-32 
+          font-raleway
+        "
+      >
+        {/* DIV 1: LEFT SIDEBAR (The one not working) */}
+        <aside className="lg:w-1/6 shrink-0 sticky top-28 lg:sticky  h-max self-start hidden lg:block">
+          <p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-8">
+            On this page
+          </p>
 
-            {/* first paragraph */}
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              1. Information We Collect
-            </h1>
-            <p className=" mt-3">Contact Information:</p>
-            <p>
-              When you fill out any “Get In Touch” or contact inquiry forms on
-              our site, we collect personal contact details such as your name,
-              email address, and phone number. We also collect any message
-              content you submit to help us respond to your inquiries or
-              requests.
-            </p>
-            <p className=" mt-3">Job Applicant Data:</p>
-            <p>
-              For our careers or hiring process, we collect information
-              submitted by applicants. This may include resume details, work
-              history, educational background, contact details, and other
-              information you provide when applying for a position.
-            </p>
-            <p className=" mt-3">Automatically Collected Data:</p>
-            <p>
-              We automatically collect certain technical information when you
-              visit our site, such as your IP address, browser type, device
-              type, and pages viewed. This is done through cookies and similar
-              tracking technologies to improve site functionality and analytics.
-            </p>
+          {/* The vertical line container */}
+          <div className="relative border-l-4 border-gray-100">
+            <ul className="flex flex-col gap-4">
+              {privacyContent.map((item) => (
+                <li key={item.id} className="relative">
+                  {/* The Active Red Indicator Line */}
+                  {activeId === item.id && (
+                    <div className="absolute left-[-3px] top-0 h-[70px] w-[3px] bg-red-500 rounded-full " />
+                  )}
 
-            {/* second paragraph */}
-
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              2. How We Use Your Information
-            </h1>
-
-            <p className=" mt-3">
-              Customer Service and Communication: We use your contact details to
-              respond to inquiries, provide information, and maintain
-              communication.
-            </p>
-
-            <p className=" mt-3">
-              Hiring and Recruitment: Your job application data is used
-              exclusively for evaluating and conducting the hiring process. Only
-              our HR team and authorized hiring managers have access to this
-              information.
-            </p>
-
-            <p className=" mt-3">
-              Marketing and Updates: With your consent, we may use your email to
-              share news, project updates, or event information related to Anvi.
-              You can opt out at any time by following unsubscribe instructions
-              in our emails.
-            </p>
-            <p className=" mt-3">
-              Analytics and Site Improvement: We use tools (see Third-Party
-              Services below) to understand site traffic and improve user
-              experience.
-            </p>
-            <p className=" mt-3">
-              Legal Compliance: We may use or disclose your information as
-              required by law or to protect our legal rights.
-            </p>
-
-            {/* third paragraph */}
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              3. Third-Party Services and Integrations
-            </h1>
-
-            <p className=" mt-3">
-              Web Analytics: Our site may use Google Analytics and/or Wix
-              Analytics to understand visitor behavior. These services use
-              cookies and IP addresses to collect anonymous visitor information.
-              You can learn how Google Analytics collects and processes data at
-              Google’s Privacy Policy.
-            </p>
-
-            <p className=" mt-3">
-              Social Media Links: We provide links to our official social media
-              pages (e.g., LinkedIn and Instagram). Visiting those platforms is
-              subject to their own privacy practices, which we do not control.
-            </p>
-
-            <p className=" mt-3">
-              Recruitment Platforms: We may use third-party recruiting tools or
-              email systems to manage job applications. Any shared data (such as
-              resumes) will be handled securely and only for recruitment
-              purposes.
-            </p>
-
-            {/* fourth paragraph */}
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              4. Data Security and Retention
-            </h1>
-
-            <p className=" mt-3">
-              Security Measures: We implement reasonable safeguards (such as SSL
-              encryption and secure servers) to protect your data from
-              unauthorized access, disclosure, or alteration.
-            </p>
-
-            <p className=" mt-3">
-              Data Retention: We retain personal information only as long as
-              necessary for communication, recruitment, or compliance with legal
-              obligations. Job applicant data for unsuccessful candidates may be
-              stored for a limited period (e.g., up to 2 years) in case future
-              opportunities arise.
-            </p>
-
-            <p className=" mt-3">
-              Children’s Data: Our services are not directed to children under
-              13, and we do not knowingly collect information from them.
-            </p>
-
-            {/* fifth paragraph */}
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              5. Your Rights and Choices
-            </h1>
-            <p className="mt-3">
-              Depending on your location, you may have rights to:
-            </p>
-            <span></span>
-
-            <ul className="list-disc list-inside space-y-2 mt-3">
-              <li>Access or request a copy of your data.</li>
-              <li>Correct or update inaccurate information.</li>
-              <li>Request deletion of your data (“Right to be Forgotten”).</li>
-              <li>
-                Withdraw consent for marketing communications at any time.
-              </li>
+                  <a
+                    href={`#${item.id}`}
+                    className={`block pl-6 pt-5 pb-5 text-sm font-raleway  transition-all duration-500 ${
+                      activeId === item.id
+                        ? "text-red-500 font-bold"
+                        : "text-[#575757] hover:text-gray-700"
+                    }`}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
             </ul>
-
-            <p className="mt-3">
-              We do not sell personal data. To exercise any of these rights,
-              please contact us (see below).
-            </p>
-
-            {/* sixth paragraph */}
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              6. Contact Us
-            </h1>
-            <p className="mt-3">
-              For questions about this Privacy Policy or our data practices,
-              please contact us:
-            </p>
-            <p className=" mt-3">
-              <span className="font-semibold mr-1">Email:</span>
-              info@anvi.co
-            </p>
-            <p>
-              <span className=" font-semibold mr-1">Address:</span>
-              1st Floor, Profound Builders, Whitefields, Kondapur, Hyderabad,
-              Telangana 500084.
-            </p>
-            <p className="mt-3">
-              We will review and respond to your request in accordance with
-              applicable laws.
-            </p>
-            {/* seventh paragrap*/}
-
-            <h1 className=" mt-5  font-semibold text-black text-[18px]">
-              7. Changes to This Policy
-            </h1>
-            <p className=" mt-3">
-              We may update this Privacy Policy to reflect changes in our
-              practices or legal requirements. The “Last Updated” date will
-              indicate when changes were made. Please review this page
-              periodically for updates.
-            </p>
           </div>
-        </section>
+        </aside>
+
+        {/* RIGHT CONTENT SECTION */}
+        <article className="flex-1 max-w-auto">
+          <div className="space-y-12">
+            {privacyContent.map((item) => (
+              <article key={item.id} id={item.id} className="scroll-mt-32">
+                {/* Heading (Dynamic h2) */}
+                <h2 className="text-[#CD0054] font-[500] font-raleway text-[20px] mb-6 underline underline-offset-[10px] decoration-1">
+                  {item.title}
+                </h2>
+
+                {/* Paragraphs (Dynamic p) */}
+                <div className="space-y-5 text-[#575757] text-[16px] font-raleway leading-[1.8]">
+                  {item.paragraphs?.map((p, idx) => (
+                    <p key={idx}>{p}</p>
+                  ))}
+
+                  {/* Sub-sections (Dynamic h3 + p) */}
+                  {item.sections?.map((sec, idx) => (
+                    <div key={idx} className="pt-2">
+                      <h3 className="text-[#100000] font-raleway font-medium mb-2">
+                        {sec.head}
+                      </h3>
+                      <p>{sec.text}</p>
+                    </div>
+                  ))}
+
+                  <h3 className="text-[#100000] font-raleway font-medium mb-2">
+                    {item.head01}
+                  </h3>
+                  <div>
+                    {item.list01 && (
+                      <ul className="list-disc list-inside space-y-0">
+                        {item.list01.map((li, idx) => (
+                          <li key={idx}>{li}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                  <a href="mailto:info@anvi.co">{item.link}</a>
+                  <br />
+                  <a href="https://www.google.com/maps/place/Anvi+Space+Private+Limited/@17.4571026,78.370425,21z/data=!3m1!5s0x3bcb93cf84a648eb:0xf42ea2f9403a7a36!4m14!1m7!3m6!1s0x3bcb93cf9bc32c83:0x1e85e5cc49998439!2sProfound+Builders!8m2!3d17.4571626!4d78.370505!16s%2Fg%2F11bw2fmfdw!3m5!1s0x3bcb93301fcdcf79:0xece2e84e0d5308e3!8m2!3d17.4570773!4d78.3703841!16s%2Fg%2F11xf52f6kh?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDIwNC4wIKXMDSoASAFQAw%3D%3D">
+                    {item.address}
+                  </a>
+
+                  <p style={{ margin: 0 }}>{item.paragraphs01}</p>
+                  <p style={{ margin: 0 }}>{item.paragraphs02}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </article>
       </main>
 
-      {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
     </>
   );

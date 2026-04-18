@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://anvimailbackend-bmcka4bdeudxg8be.southindia-01.azurewebsites.net"; "http://192.168.1.50:8000";
+const API = "https://mailsbackend-f9czamgmfzatdxgs.southindia-01.azurewebsites.net"; 
 
 // Send OTP
 export const sendOTP = async (email) => {

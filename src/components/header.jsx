@@ -100,7 +100,7 @@ const Header = () => {
                 return (
                   <li
                     key={link}
-                    className={`flex place-items-center ${currentPageStyle(
+                    className={`flex place-items-center text-center ${currentPageStyle(
                       link,
                     )}`}
                   >

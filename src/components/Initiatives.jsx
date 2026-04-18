@@ -17,7 +17,7 @@ const scrollItems = [
     description:
       "Building sustainable space systems through debris removal, recycling, and future-ready infrastructure - powering a cleaner, smarter orbital future.",
     img_1: "/images/home/space-galactica.png",
-    img_2: "/images/home/galactica-logo.png",
+    img_2: "/images/home/galactica-logo.webp",
   },
   {
     title: "Project SHUDH",
@@ -52,7 +52,7 @@ const InitiativeSection = () => {
           {/* Desktop Scroll Ul Box */}
           <motion.ul
             style={{ x: xScroll }}
-            className="w-max max-md:hidden flex flex-col md:flex-row flex-nowrap gap-x-[20px] gap-y-[20px] md:gap-y-[180px] md:gap-[120px] mb-[80px] items-center md:px-[80px] max-md:px-[20px] max-lg:pr-[120px] lg:px-[100px] transition-transform duration-200"
+            className="w-max max-md:hidden flex flex-col md:flex-row flex-nowrap gap-x-[20px] gap-y-[20px] md:gap-y-[180px] md:gap-[120px] mb-[80px] items-center md:px-[80px] max-md:px-[20px] max-lg:pr-[120px] lg:px-[100px] transition-transform ease-linear duration-200"
           >
             {scrollItems.map((item, index) => (
               <li
@@ -88,7 +88,7 @@ const InitiativeSection = () => {
                     <img
                       src={item.img_2}
                       alt={item.title + "_2"}
-                      className="w-full max-w-[50vw] aspect-[16/9] h-auto rounded-[12px] object-cover
+                      className="w-full max-w-[50vw] aspect-[16/9] h-auto rounded-[12px] object-fit
                         md:max-w-[350px] lg:max-w-[350px] xl:max-w-[490px] 2xl:max-w-[500px]"
                       draggable={false}
                     />

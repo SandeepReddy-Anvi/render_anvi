@@ -1,5 +1,6 @@
 import { div } from "framer-motion/client";
 import React from "react";
+import { SmartCountUp } from "../CountAnimOnScroll";
 
 const ImpactSolutions = () => {
   return (
@@ -8,8 +9,14 @@ const ImpactSolutions = () => {
       {/* Box 1 */}
       <div className="w-full flex max-md:flex-col justify-center align-middle gap-[20px] md:gap-[90px]">
         <div className="md:w-1/2 mx-auto flex flex-col justify-start align-middle">
+          <div className="flex items-center gap-2 pb-4">
+            <span className="w-6 h-[2px] bg-[#CD0054]" />
+            <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+              Our Solutions  Impact
+            </p>
+          </div>
           <h2 className="text-[36px] lg:text-[46px] leading-tight tracking-[-1.2px] text-[#100000] font-medium">
-            How Our Solutions <br/> Create Real Impact
+            How Our Solutions <br /> Create Real Impact
           </h2>
           <p className="text-[16px] w-full mt-[20px] mx-auto text-[#101010] leading-[27.6px]">
             Our intelligent systems deliver measurable improvements across
@@ -40,24 +47,23 @@ const ImpactSolutions = () => {
         </div>
 
         <div className="md:w-1/2 mx-auto flex flex-col justify-start align-middle gap-[20px]">
-        <div className="flex flex-col gap-8 sm:flex-row sm:flex-wrap md:grid md:grid-cols-2">
-
+          <div className="flex flex-col gap-8 sm:flex-row sm:flex-wrap md:grid md:grid-cols-2">
             {/* Stat Card 1: Reduced Effort */}
-
             <div className="rounded-xl flex flex-col justify-around align-middle gap-[10px] bg-[#F3F7F4] text-[#465455] py-5 px-4 lg:px-[40px] lg:py-[50px] sm:flex">
               {/* py-[50px] pr-[5px] pl-[40px]"> */}
               <p className="text-6xl font-bold text-[#477379] font-inter">
-                60%
+                <SmartCountUp text={"60%"} />
               </p>
               <h3 className="text-[22px] font-bold">Reduced Effort</h3>
               <p className="text-[16px]">
-                Our systems reduce manual effort and strain using automation and optimization.
+                Our systems reduce manual effort and strain using automation and
+                optimization.
               </p>
             </div>
             {/* Stat Card 2: Faster Workflow */}
             <div className="rounded-xl flex flex-col justify-around align-middle gap-[10px] bg-[#F3F7F3]  text-[#465455] py-5 px-6 lg:px-[40px] lg:py-[50px]">
               <p className="text-6xl font-bold text-[#477379] font-inter">
-                40%
+                <SmartCountUp text={"40%"} />
               </p>
               <h3 className="text-[22px] font-bold">Faster Workflow</h3>
               <p className="text-[16px]">
@@ -67,13 +73,13 @@ const ImpactSolutions = () => {
             {/* Stat Card 3: Operational Stability (Full Width) */}
             <div className="rounded-xl flex flex-col col-span-2 justify-around align-middle gap-[10px] bg-[#F4F3F7]  text-[#465455] py-5 px-6 lg:px-[40px] lg:py-[50px]">
               <p className="text-6xl font-bold text-[#477379] font-inter">
-                92%
+                <SmartCountUp text={"92%"} duration={0.8} />
               </p>
-              <h3 className="text-[22px] font-bold">
-                Operational Stability
-              </h3>
+              <h3 className="text-[22px] font-bold">Operational Stability</h3>
               <p className="text-[16px]">
-                Our autonomous systems deliver consistent performance through predictive monitoring and resilient engineering, ensuring high uptime.
+                Our autonomous systems deliver consistent performance through
+                predictive monitoring and resilient engineering, ensuring high
+                uptime.
               </p>
             </div>
           </div>

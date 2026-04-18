@@ -10,19 +10,13 @@ module.exports = {
       scale: {
         '102': '1.02',
       },
-      fontFamily: {
 
+      fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
         wix: ['Wix Madefor Display', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
-        /* arial :["Arial","sans-serif"],
-        'dm-sans': ['"DM Sans"', 'sans-serif'],
-        manrope: ['"Manrope"', 'sans-serif'],
-        wix: ['"Wix Madefor Display"', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif'],
-        urbanist: ['Urbanist', 'sans-serif'],
-        bauhaus: ['Bauhaus', 'sans-serif'], */
       },
+
     },
   },
   plugins: [],

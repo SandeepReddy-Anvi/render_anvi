@@ -56,7 +56,7 @@ const HeroSection = ({
             </span>
           </h1>
         ) : (
-          <h1 className="text-[36px] w-full lg:w-full lg:text-[48px]  bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent font-[800] leading-tight w-full lg:w-max break-words">
+          <h1 className="text-[36px] w-full lg:w-full lg:text-[46px] bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent font-[600] leading-tight w-full lg:w-max break-words">
             {title}
           </h1>
         )}
@@ -72,7 +72,7 @@ const HeroSection = ({
         {buttonText && buttonLink && (
           <Link
             to={buttonLink} 
-            className="link-bg-icon hero-section-button w-max text-[16px] min-w-[170px] mt-[16px]"
+            className="link-bg-icon hero-section-button w-max text-[18px] min-w-[170px] mt-[16px]"
             
           >
             

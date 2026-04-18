@@ -1,11 +1,13 @@
-import { ContentCardUl } from "../components/ContentCardUl";
-import CareerAndGrowth from "../components/CareersAndGrowth";
+import { ContentCardUl } from "../components/About/ContentCardUl";
+import CareerAndGrowth from "../components/About/CareersAndGrowth";
+import WeWork from "../components/About/WeWork";
 import Footer from "../components/footer";
 import GradientText from "../components/GradientText";
 import HeroSection from "../components/HeroSection";
-import TimelineSection from "../components/TimelineSection";
+import TimelineSection from "../components/About/TimelineSection";
 import { mainPagesLinksObj } from "../data/PagesLinkList";
 import { SmartCountUp } from "../components/CountAnimOnScroll";
+import { text } from "framer-motion/client";
 
 const footerUpBoxInfoObj = {
   head: `Ready to explore the future with anvi?`,
@@ -18,42 +20,43 @@ const footerUpBoxInfoObj = {
 const aboutCardList = [
   {
     title: "Our Mission",
+    desc1: `To transform human potential through purposeful engineering - building technology that is 
+       bold, accessible, and future-shaping.`,
     desc: [
-      "At ANVI, our mission is to use technology as a force of transformation. We believe engineering should elevate people, improve systems, and shape a better future for generations to come. Through robotics, space innovation, creative storytelling, and lifestyle design, we build solutions that unlock human potential and bring progress closer to everyday life.",
-      "We aim to go beyond product creation - challenging limitations, redefining industries, and making advanced technology accessible to all. By combining research, engineering, and creativity, we develop purposeful solutions that drive long-term growth. Our commitment is to build ethical, sustainable, and human-centric innovation that empowers communities, strengthens industries, and shapes the future of tomorrow.",
-    ],
-    mobile: [
-      `At ANVI, we use technology to drive meaningful transformation.
-      We believe engineering should elevate people, strengthen systems, and shape a better future. Through robotics, space innovation, storytelling, and lifestyle design, we create solutions that unlock human potential and bring progress closer to everyday life.
-      Our mission is to build ethical, sustainable, and human-centric innovation that empowers communities and accelerates long-term growth.`,
+      `We use technology as a force for progress, creating solutions that elevate people, 
+      strengthen industries, and improve everyday life. Through robotics, space innovation, 
+      creative media, and lifestyle design, ANVI develops systems that challenge limitations, 
+      redefine industries, and make advanced innovation accessible to all. Our commitment is 
+      simple - build ethical, sustainable, and human-centric technologies that create long-term 
+      impact.`,
     ],
     imgUrl: "/images/about/mission.webp",
   },
   {
     title: "Our Vision",
+    desc1: `Engineering a Future Where Deep Technology Transforms Industries, Elevates Humanity, 
+      and Expands What’s Possible.`,
     desc: [
-      "Our vision at ANVI is to become a global leader in deep-technology innovation, shaping industries and inspiring future generations through engineering, science, and creativity. We imagine a world where robotics, space technology, creative communication, and lifestyle design work together to build smarter, safer, and more sustainable systems for humanity. We aim to redefine how technology is created, experienced, and integrated into everyday life, expanding possibilities for businesses and communities.",
-      "Through continuous research, ethical practices, and human-centric thinking, our vision is to engineer not just the future we imagine, but the future the world genuinely needs - driving lasting progress and inspiring change everywhere.",
-    ],
-    mobile: [
-      `ANVI’s vision is to become a global leader in deep-tech innovation.
-      We imagine a future where robotics, space technology, creative engineering, and lifestyle design come together to build smarter, safer, and more sustainable systems.
-      Through continuous research and human-centric thinking, we aim to create technology that truly serves the world and drives long-term progress.`,
+
+      `At ANVI, our vision is to lead global deep-tech innovation by uniting engineering, 
+      science, and creativity. We imagine a world where robotics, space systems, communication, 
+      and lifestyle design come together to build smarter and more sustainable solutions. 
+      Through continuous research and human-centric thinking, we create technology that 
+      serves real needs and drives meaningful progress for future generations.`,
     ],
     imgUrl: "/images/about/about2.1.webp",
   },
   {
     title: "Our Value",
+    desc1: `Guided by Values That Drive Innovation, Integrity, Human-Centered Progress, 
+       and Meaningful Transformation.`,
     desc: [
-      "At ANVI, our values shape every idea and decision we make. Innovation drives us—we push boundaries, explore possibilities, and treat curiosity as a way of thinking. Engineering excellence guides our work, ensuring precision, reliability, and lasting impact. We act with transparency and integrity, building trust with teams, partners, and communities. Human-centric thinking inspires us to design technology that serves people and improves life.",
-      "We value sustainability and create solutions that respect our planet and future generations. Collaboration fuels progress as we unite engineering, creativity, science, and strategy to solve challenges together. Above all, we value purpose - using technology to elevate humanity and turn ambitious ideas into real progress.",
-    ],
-    mobile: [
-      `At ANVI, our values guide every idea and decision.
-      We innovate boldly, pursue engineering excellence, and act with transparency and integrity.
-      Our approach is human-centric, designing technology that truly serves people.
-      We prioritise sustainability, creating solutions that respect the planet and future generations.
-      Driven by collaboration and purpose, we use technology to elevate humanity and turn ambitious ideas into progress.`,
+      `At ANVI, our values shape how we think, build, and solve problems. Innovation pushes 
+      us to explore new possibilities, while engineering excellence ensures precision and 
+      lasting impact. We act with transparency and integrity, design with people at the 
+      center, and create solutions that respect our planet. Through collaboration and 
+      purpose-driven thinking, we use technology to elevate humanity and turn ambitious 
+      ideas into meaningful progress.`,
     ],
     imgUrl: "/images/about/value.webp",
   },
@@ -78,26 +81,61 @@ const ourDescriptionMobile = [
 
 const countList = [
   {
+    text: "Building across focused verticals that drive innovation and long-term impact.",
     head: "4",
     subtext: "Core Verticals",
   },
   {
+    text: "Delivering intelligent solutions across diverse industries and real-world applications.",
     head: "8+",
     subtext: "Industry Sectors",
   },
   {
-    head: "1 Purpose",
-    subtext: "Engineering Your Edge",
+    text: "Driving continuous innovation through research, experimentation, and advanced development.",
+    head: "50+",
+    subtext: "R&D Experiments",
+  },
+  {
+    text: "Driven by a single unified purpose - Engineering Your Edge - to build meaningful, future-ready solutions.",
+    head: "1",
+    subtext: "Unified Purpose",
+  },
+];
+
+const whyList = [
+  {
+    sectionImg: "/images/about/about3.1.webp",
+    number:"01",
+    text: "Technological Excellence",
+    desc: "Robotics engineered with precision and innovation",
+  },
+  {
+    sectionImg: "/images/about/about3.2.webp",
+    number:"02",
+    text: "Strategic Focus",
+    desc: "Solutions addressing real challenges with impact and scalability",
+  },
+  {
+    sectionImg: "/images/about/about3.3.webp",
+    number:"03",
+    text: "Collaborative Approach",
+    desc: "Progress through partnerships driving collective growth",
+  },
+  {
+    sectionImg: "/images/about/about3.4.webp",
+    number:"04",
+    text: "Impact-Driven Solutions",
+    desc: "Designing systems for measurable impact",
   },
 ];
 
 const About = () => {
   return (
-    <div
+    <section
       id="about"
       className="w-full bg-[#FFFFFF] overflow-hidden lg:overflow-visible"
     >
-      {/* Hero Section */}
+      {/* section 1 -> Hero Section */}
       <HeroSection
         backgroundImage="/videos/Heroo2_org.mp4"
         title="We Engineer It."
@@ -106,46 +144,80 @@ const About = () => {
       />
 
       {/* section 2 */}
-      <div className=" items-center justify-center content-center">
+      <div className="items-center justify-center content-center">
         <GradientText
-          ourTitle="About Us"
+
+          header="About Us"
           ourDescription={ourDescriptionDesktop}
           mobileDescription={ourDescriptionMobile}
         />
       </div>
 
-      {/* section 3 -> Vision, Mission, Value Section*/}
-      <section className="">
+      <div className="px-[20px] md:px-[40px] lg:px-[60px] pb-14 md:pb-[100px]">
+        <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 lg:gap-[32px]">
+          {countList.map((each, index) =>
+            <li key={each.head + index} className="flex flex-col gap-4 place-content-center bg-[#F5F5F7] p-6 rounded-[12px]">
+              <p className="font-medium text-[14px] md:text-[14px] text-[#000000] mb-4">
+                {each.text}
+              </p>
+              <h2 className="font-wix font-medium text-[20px] md:text-[40px] lg:text-[60px] whitespace-nowrap bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                <SmartCountUp text={each.head} />
+              </h2>
+              <p className="font-medium text-[16px] md:text-[18px] text-[#100000] whitespace-nowrap">
+                {each.subtext}
+              </p>
+            </li>
+          )}
+        </ul>
+      </div>
+
+      {/* section 3 -> Mission, Vision, Value Section*/}
+      <section className="w-full overflow-hidden">
         <ContentCardUl infoList={aboutCardList} />
       </section>
 
       {/* section 4 -> Our journey began*/}
-      <section className="relative px-[20px] md:px-[60px] py-[100px] md:py-[102px]">
-        <div className="flex flex-col md:flex-row md:gap-[40px] lg:gap-[60px] place-content-center">
-          <div>
+      <section className="w-full relative px-[20px] md:px-[40px] lg:px-[60px] py-[60px] md:py-[80px]">
+        <div className="w-full flex flex-col md:flex-row md:gap-[2vw] lg:gap-[60px] place-content-center">
+          <div className="w-full md:w-[40%] xl:w-[50%] xl:max-w-[500px]">
             <img
               src="/images/about/anvi.webp"
               alt="Anvi Entrance"
-              className="w-full max-w-full max-h-[300px] md:max-w-[450px] md:h-auto mb-10 md:mb-0"
+              className="w-full max-w-full max-md:max-w-[600px] max-md:mx-auto max-md:aspect-[4/3] md:h-auto mb-10 md:mb-0 md:max-h-[630px] aspect-[9/16]"
             />
           </div>
-          <div className="w-full max-w-[744px] flex flex-col justify-center items-start md:items-start text-left">
-            <h2 className="w-full font-medium text-[32px] md:text-[36px] lg:text-[43px]">
-              Our journey began with a bold purpose
-            </h2>
-            <div className="w-full hidden md:flex md:flex-col">
-              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D] py-8">
-                ANVI began with the belief that technology should evolve beyond
-                products and shape how humanity lives, works, and explores. What
-                started as engineering excellence grew into a deep-tech
-                ecosystem spanning robotics, space, creative media, and
-                lifestyle innovation - expanding what technology can mean for
-                people and the planet.
+
+          <div className="w-full md:w-[60%] xl:w-[50%] max-w-[744px] flex flex-col justify-center items-start md:items-start text-left">
+            <div className="flex items-center gap-2 pb-4">
+              <span className="w-6 h-[2px] bg-[#CD0054]" />
+              <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+                Our Story
               </p>
-              <p className="font-medium text-[16px] md:text-[18px] text-[#3D3D3D]">
-                Today, ANVI operates at the intersection of science, creativity,
-                and engineering, building purposeful, resilient, and
-                future-ready systems that turn challenges into possibilities.
+            </div>
+            <div className="flex gap-4">
+              <span className="h-auto w-[2px] bg-[#CD0054]" />
+              <h2 className="w-full font-semibold text-[32px] md:text-[36px] lg:text-[46px] uppercase leading-tight">
+                "Our story began <br className="hidden lg:block" />with a bold purpose."
+              </h2>
+            </div>
+            <div className="w-full hidden md:flex md:flex-col">
+              <p className="font-medium text-[16px] text-[#3D3D3D] py-8">
+                ANVI began with a simple belief  that engineering can rewrite what humanity 
+                is capable of. What started as a pursuit of deep-tech excellence has grown 
+                into a multi-vertical ecosystem spanning robotics, space technologies, 
+                creative studios, lifestyle innovation, and sustainable future systems.
+              </p>
+              <p className="font-medium text-[16px] text-[#3D3D3D]">
+                From solving ground-level challenges with intelligent robots to designing 
+                orbital platforms that expand the boundaries of exploration, 
+                <span className="font-semibold text-[#100000]"> ANVI has always been driven by one unified Purpose: Engineering Your Edge™.</span>
+              </p>
+              <p className="font-medium text-[16px] text-[#3D3D3D] py-8">
+                Every milestone in our journey reflects curiosity, courage, and a 
+                commitment to building technology that creates real progress  for 
+                industries, for communities, and for the world. Our story is still unfolding, 
+                powered by ideas that dare to challenge the present and shape the next 
+                era of human innovation.
               </p>
             </div>
 
@@ -164,164 +236,101 @@ const About = () => {
               </p>
             </div>
 
-            {/* Count Ul Box */}
-            <ul className="w-full mt-[60px] flex justify-between text-center">
-              {countList.map((each, index) =>
-              <li key={each.head+index} className="w-max place-content-center mx-auto">
-                <h2 className="font-medium text-[20px] md:text-[40px] lg:text-[70px] whitespace bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
-                  <SmartCountUp text={each.head} smallText={true} />
-                </h2>
-                <p className="font-medium text-[14px] md:text-[20px] text-[#100000] whitespace-nowrap">
-                  {each.subtext}
-                </p>
-              </li>
-              )}
-            </ul>
           </div>
         </div>
       </section>
 
-      {/* section 5 */}
-      <section className="w-full bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF] px-5 lg:px-[60px] py-[100px]">
+      {/* section 6 -> What Makes ANVI Different */}
+      <section className="w-full max-w-[1800px] mx-auto px-5 lg:px-[60px] py-[60px]">
         {/* Heading Section */}
         <div className="sm:flex-row md:flex-row items-center justify-center text-clip">
-          <div className="mt-0 2xl:mt-[20px] max-w-[1161px] text-center text-[#100000] mx-auto ">
+          <div className="flex items-center gap-2 pb-4 justify-center">
+            <span className="w-6 h-[2px] bg-[#CD0054]" />
+            <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+              Why ANVI
+            </p>
+          </div>
+          <div className="mt-0 2xl:mt-[20px] max-w-[1100px] text-center text-[#100000] mx-auto ">
             <p className="w-full max-md:text-center leading-[50.569px] text-[32px] md:text-[46px] font-medium">
               What Makes ANVI Different
             </p>
-            <p className="w-full text-center justify-center mt-6 px-0 lg:px-[130px] text-[18px] md:text-[20]">
-              ANVI stands apart not by what we build, but how we build combining
-              science, creativity, and human-centric design to create technology
-              that truly transforms lives, industries, and our shared future.
+            <p className="w-full text-center justify-center mt-6 px-0 lg:px-[130px] text-[16px] md:text-[18]">
+              ANVI stands apart not by what we build, but how we build - combining science, 
+              creativity, and human-centric design to create technology that truly transforms 
+              lives, industries, and our shared future.
             </p>
           </div>
         </div>
 
-        {/* Image Grid Section   */}
-        <div className="w-full flex flex-col gap-6 mt-[50px] lg:mt-[60px] 2xl:mt-[100px]">
-          {/* Row 1: Large + Small */}
-          <div className="grid grid-cols-1 md:grid-cols-[1.5fr_2fr] gap-6">
-            {/* Large Card */}
-            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
-              <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
-                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                  Technological Excellence
-                </h3>
-                <p className="text-[15px] text-[#100000] font-regular mt-2">
-                  Robotics engineered with precision and innovation
+        <div className="my-[60px]">
+          <ul className="grid grid-row md:grid-cols-2 gap-[2px] bg-[#E0E0E0] rounded-[12px] overflow-hidden">
+            {whyList.map((i, item) =>
+              <li key={i.head + item} className="group relative flex flex-col gap-2 place-content-center 
+                bg-[#F5F5F7] p-5 lg:p-[60px] transition-all duration-300
+                after:content-[''] after:absolute after:left-0 after:bottom-0 
+                after:h-[3px] after:w-0 after:bg-[#CD0054] after:transition-all after:duration-300 hover:after:w-full"
+              >
+                <div className="overflow-hidden max-w-[532px] h-[250px]">
+                  <img 
+                    loading="lazy"
+                    src={i.sectionImg}
+                    className="w-full h-full object-cover content-center transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
+                </div>
+                <p className="font-wix font-medium text-[32px] md:text-[36px] lg:text-[46px] text-[#00000038] my-1">
+                  {i.number}
                 </p>
-              </div>
-              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
-                <img
-                  loading="lazy"
-                  src="/images/about/about3.1.webp"
-                  alt="Strategic Focus"
-                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
-                />
-              </div>
-            </div>
-
-            {/* Small Card */}
-            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-full ">
-              <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
-                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                  Strategic Focus
-                </h3>
-                <p className="text-[15px] text-[#100000] font-regular mt-2">
-                  Solutions addressing real challenges with impact and
-                  scalability
+                <h2 className="font-medium text-[20px] lg:text-[22px]">
+                  {i.text}
+                </h2>
+                <p className="font-regular text-[16px] text-[#000000] whitespace-nowrap">
+                  {i.desc}
                 </p>
-              </div>
-              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
-                <img
-                  loading="lazy"
-                  src="/images/about/about3.2.webp"
-                  alt="Strategic Focus"
-                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Row 2: Small + Large */}
-          <div className="grid grid-cols-1 md:grid-cols-[2fr_1.5fr] gap-6">
-            {/* Small Card */}
-            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-[370px] md:h-full ">
-              <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
-                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                  Collaborative Approach
-                </h3>
-                <p className="text-[15px] text-[#100000] font-regular mt-2">
-                  Progress through partnerships driving collective growth
-                </p>
-              </div>
-              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
-                <img
-                  loading="lazy"
-                  src="/images/about/about3.3.webp"
-                  alt="Strategic Focus"
-                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
-                />
-              </div>
-            </div>
-
-            {/* Large Card          */}
-            <div className="relative group px-6 py-6 overflow-hidden rounded-3xl md:rounded-[46px] bg-[#FFFFFF] content-center h-[370px] md:h-full ">
-              <div className="sm:mx-20  md:mx-10 mb-5 md:mb-10">
-                <h3 className="text-[22px] md:text-[25px] text-[#100000] font-medium">
-                  Impact-Driven Solutions
-                </h3>
-                <p className="text-[15px] text-[#100000] font-regular mt-2">
-                  Designing systems for measurable impact
-                </p>
-              </div>
-              <div className="overflow-hidden md:object-cover sm:mx-20 md:mx-10 content-center h-[240px] lg:h-[440px] rounded-3xl md:rounded-[37px]">
-                <img
-                  loading="lazy"
-                  src="/images/about/about3.4.webp"
-                  alt="Strategic Focus"
-                  className="object-cover h-full w-full content-center transition-transform duration-500 ease-out hover:scale-110"
-                />
-              </div>
-            </div>
-          </div>
+              </li>
+            )}
+          </ul>
         </div>
       </section>
 
-      {/* careers and growth */}
-      <CareerAndGrowth />
-
-      {/*section 4*/}
+      {/* Section 6 -> Our Journey of Innovation Timeline Box */}
       <div className="relative w-full py-20 px-8 md:px-20 lg:px-22">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-start">
           {/* Section Heading */}
           <div className="md:sticky md:top-[120px] lg:sticky  self-start">
+
+            <div className="flex items-center gap-2 pb-4">
+              <span className="w-6 h-[2px] bg-[#CD0054]" />
+              <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+                Our Journey
+              </p>
+            </div>
+
             <h2 className="text-[32px] md:text-[46px] font-medium leading-[54.7px] text-[#100000] mb-[27px]">
               Our Journey of Innovation
             </h2>
-            <p className="text-[16px] md:text-[18px] font-medium text-[#323232]">
+            <p className="text-[14px] font-medium text-[#323232]">
               Shaping the Future, Step by Step. <br />
               From our first prototypes to large-scale deployments, every
               milestone reflects our vision to engineer meaningful innovation.
             </p>
           </div>
 
-          {/* Timeline */}
+          {/* Timeline Box */}
           <div className="relative">
-            {/* Vertical line */}
-            <div className="absolute left-[1.6px] rounded-full top-0 h-full mt-[5px] w-[2px] bg-gradient-to-b from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054]">
-              {/* <div className="w-1 h-2 bg-blue-600 sticky top-10"></div> */}
-            </div>
-
             {/* Timeline Section Component */}
             <TimelineSection />
           </div>
         </div>
       </div>
 
+      {/* section 7 -> Careers and Growth */}
+      <CareerAndGrowth />
+
+      <WeWork />
+
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />
-    </div>
+    </section>
   );
 };
 

@@ -7,7 +7,6 @@ const footerUpBoxInfoObj = {
   head: "Ready to Be a Part of Something Bigger at ANVI?",
   linkLabel: "Browse Openings",
   link: pagesLinksObj.Career_Openings,
-  //  link: pagesLinksObj.Career_Openings+"#job-openings-container",
 };
 
 export const News = () => {
@@ -19,7 +18,6 @@ export const News = () => {
           backgroundImage="/videos/Heroo2_org.mp4"
           title="News & Updates"
           description="Stay informed with Anvi latest announcements, official press releases, and exciting new opportunities."
-   
           descriptionWidth="570px"
         />
       </main>
