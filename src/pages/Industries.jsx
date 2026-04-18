@@ -82,7 +82,7 @@ export const Industries = () => {
         />
 
         <GradientText
-          ourTitle="Our Industries"
+          header="Our Industries"
           ourDescription={ourDescriptionDesktop}
           mobileDescription={ourDescriptionMobile}
         />

@@ -51,12 +51,9 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
                   />
                   <p
                     className="text-white text-start text-[14px] font-[500] leading-[22.4px] tracking-[-0.32px] max-w-[450px]"
-                    style={{ fontFamily: '"DM Sans", sans-serif' }}
                   >
-                    <span className="block mb-2 text-[16px] font-medium">
-                      Engineering Your Edge™
-                    </span>
-                    We build breakthrough products, deep-tech systems, and
+                    <span className="mb-2 text-[16px] font-medium">
+                      Engineering Your Edge™</span> - We build breakthrough products, deep-tech systems, and
                     future-proof robotics solutions across industries.
                   </p>
                 </div>

@@ -1,6 +1,6 @@
 import IndustryLayout from "../../components/IndustryLayout";
 import GradientText from "../../components/GradientText";
-import WhySection from "../../components/WhySection";
+import WhySection from "../../components/All_Industries/WhySection"
 import Footer from "../../components/footer";
 import { mainPagesLinksObj } from "../../data/PagesLinkList";
 import { IndustriesBlackBox } from "../../components/All_Industries/IndustriesBlackBox";

@@ -9,6 +9,12 @@ const ImpactSolutions = () => {
       {/* Box 1 */}
       <div className="w-full flex max-md:flex-col justify-center align-middle gap-[20px] md:gap-[90px]">
         <div className="md:w-1/2 mx-auto flex flex-col justify-start align-middle">
+          <div className="flex items-center gap-2 pb-4">
+            <span className="w-6 h-[2px] bg-[#CD0054]" />
+            <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+              Our Solutions  Impact
+            </p>
+          </div>
           <h2 className="text-[36px] lg:text-[46px] leading-tight tracking-[-1.2px] text-[#100000] font-medium">
             How Our Solutions <br /> Create Real Impact
           </h2>
@@ -46,7 +52,7 @@ const ImpactSolutions = () => {
             <div className="rounded-xl flex flex-col justify-around align-middle gap-[10px] bg-[#F3F7F4] text-[#465455] py-5 px-4 lg:px-[40px] lg:py-[50px] sm:flex">
               {/* py-[50px] pr-[5px] pl-[40px]"> */}
               <p className="text-6xl font-bold text-[#477379] font-inter">
-                <SmartCountUp text={"60%"}/>
+                <SmartCountUp text={"60%"} />
               </p>
               <h3 className="text-[22px] font-bold">Reduced Effort</h3>
               <p className="text-[16px]">
@@ -57,7 +63,7 @@ const ImpactSolutions = () => {
             {/* Stat Card 2: Faster Workflow */}
             <div className="rounded-xl flex flex-col justify-around align-middle gap-[10px] bg-[#F3F7F3]  text-[#465455] py-5 px-6 lg:px-[40px] lg:py-[50px]">
               <p className="text-6xl font-bold text-[#477379] font-inter">
-                <SmartCountUp text={"40%"}/>
+                <SmartCountUp text={"40%"} />
               </p>
               <h3 className="text-[22px] font-bold">Faster Workflow</h3>
               <p className="text-[16px]">
@@ -67,7 +73,7 @@ const ImpactSolutions = () => {
             {/* Stat Card 3: Operational Stability (Full Width) */}
             <div className="rounded-xl flex flex-col col-span-2 justify-around align-middle gap-[10px] bg-[#F4F3F7]  text-[#465455] py-5 px-6 lg:px-[40px] lg:py-[50px]">
               <p className="text-6xl font-bold text-[#477379] font-inter">
-                <SmartCountUp text={"92%"} duration={0.8}/>
+                <SmartCountUp text={"92%"} duration={0.8} />
               </p>
               <h3 className="text-[22px] font-bold">Operational Stability</h3>
               <p className="text-[16px]">

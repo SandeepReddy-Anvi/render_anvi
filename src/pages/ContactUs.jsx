@@ -110,12 +110,13 @@ export const ContactUs = () => {
         />
 
         <GradientText
+          header="Connect with ANVI"
           ourTitle="Let’s Build What’s Next, Together."
           ourDescription={ourDescription}
         />
 
         {/* Section3 */}
-        <div className="w-full px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
+        <div className="w-full overflow-hidden px-[20px] md:px-[40px] lg:px-[60px] py-10 md:py-[20px] lg:py-[30px] bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]">
           <h2 className="text-[34px] md:text-[38px] lg:text-[46px] md:text-center text-[#000000] font-medium w-full md:max-w-[890px] mx-auto leading-[57px] pt-5 md:pt-10 mb-10 md:mb-20">
             Contact us for innovative and powerful engineering collaborations.
           </h2>
@@ -226,7 +227,7 @@ export const ContactUs = () => {
                 office.
               </p>
 
-              <div className="flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4 flex-wrap">
+              <div className="w-full overflow-hidden flex flex-col md:flex-row gap-4 text-[18px] font-medium text-[#000000] mt-4">
                 {/* Address */}
                 <a
                   className="flex items-start gap-3"

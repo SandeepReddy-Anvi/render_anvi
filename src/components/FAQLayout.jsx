@@ -12,8 +12,8 @@ const FAQLayout = ({ faqs }) => {
     <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-16 md:gap-[20px] p-[20px] md:p-[40px] lg:p-[60px]">
       {/* LEFT TEXT */}
       <div className="flex flex-col gap-4 md:gap-[16px] w-full md:w-[470px]">
-        <span className="flex items-center gap-2 text-[14px] text-[#CD0054] font-medium">
-          <span className="h-[1px] w-4 bg-[#CD0054]"></span>
+        <span className="flex items-center gap-2 text-[14px] text-[#CD0054] font-bold font-wix">
+          <span className="h-[2px] w-6 bg-[#CD0054]"></span>
           FAQ
         </span>
         <p className="text-3xl sm:text-3xl md:text-4xl lg:text-[46px] text-[#1F1F1F] font-medium leading-tight lg:leading-[52px]">

@@ -32,10 +32,20 @@ export const ContentCardUl = ({ infoList = [] }) => {
   const activeItem = infoList[active];
 
   return (
-    <div className="w-full bg-[#000000] text-[#FFFFFF] h-max">
-      {/* ---------- NAVIGATION ---------- */}
+    <div className="w-full bg-[#000000] text-[#FFFFFF] h-max px-[20px] md:px-[60px] py-[80px]">
 
-      <div className="w-full max-w-[1440px] px-[20px] md:px-[60px] py-[80px] mx-auto flex flex-col md:flex-row justify-between gap-[20px] xl:gap-[90px]">
+      {/* ---------- NAVIGATION ---------- */}
+      <div className="flex items-center gap-2 pb-4">
+        <span className="w-6 h-[2px] bg-[#CD0054]" />
+        <p className="text-[14px] text-[#FA293E] font-bold font-wix uppercase">
+          Who We Are
+        </p>
+      </div>
+      <h2 className="font-semibold text-[32px] md:text-[46px] pb-8 md:pb-10 lg:pb-14">
+        Our Guiding Principles
+      </h2>
+
+      <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between gap-[20px] xl:gap-[90px]">
         {/* LEFT COLUMN */}
         <div className="flex-1 w-full md:w-[65%] lg:w-[60%] xl:max-w-[830px]">
           {/* NAVIGATION */}
@@ -48,9 +58,8 @@ export const ContentCardUl = ({ infoList = [] }) => {
                 key={i}
                 ref={setTabRef}
                 onClick={() => setActive(i)}
-                className={`pb-4 md:pb-8 text-[24px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[38px] font-medium lg:font-semibold transition-colors lg:whitespace-nowrap ${
-                  active === i ? "text-white" : "text-white/50 hover:text-white"
-                }`}
+                className={`pb-4 md:pb-8 text-[24px] md:text-[24px] lg:text-[22px] font-medium transition-colors lg:whitespace-nowrap ${active === i ? "text-white" : "text-white/50 hover:text-white"
+                  }`}
               >
                 {item.title}
               </button>
@@ -63,35 +72,35 @@ export const ContentCardUl = ({ infoList = [] }) => {
             />
           </ul>
 
-          {/* Desktop DESCRIPTION (UNDER TITLE) */}
-          <div className="hidden md:block mt-16 space-y-6 max-w-[900px]">
-            {(Array.isArray(activeItem.desc)
-              ? activeItem.desc
-              : activeItem.desc.split("\n\n")
+          <div className="mt-16 space-y-6 max-w-[900px]">
+            {(Array.isArray(activeItem.desc1)
+              ? activeItem.desc1
+              : activeItem.desc1.split("\n\n")
             ).map((para, index) => (
               <p
                 key={index}
-                className="text-[#FFFFFF] text-[14px] md:text-[16px] 2xl:text-[17px] font-medium leading-relaxed"
+                className="text-[#FFFFFF] text-[14px] md:text-[16px] 2xl:text-[17px] leading-[28px] font-medium"
               >
                 {para}
               </p>
             ))}
           </div>
 
-          {/* Mobile DESCRIPTION (UNDER TITLE) */}
-          <div className="block md:hidden mt-16 space-y-6 max-w-[900px]">
-            {(Array.isArray(activeItem.mobile)
-              ? activeItem.mobile
-              : activeItem.mobile.split("\n\n")
+          {/* Desktop DESCRIPTION (UNDER TITLE) */}
+          <div className="mt-6 space-y-6 max-w-[900px]">
+            {(Array.isArray(activeItem.desc)
+              ? activeItem.desc
+              : activeItem.desc.split("\n\n")
             ).map((para, index) => (
               <p
                 key={index}
-                className="text-[#FFFFFF] text-[16px] md:text-[16px] 2xl:text-[17px] leading-[28px] font-medium"
+                className="text-[#FFFFFFB2] text-[14px] md:text-[14px] 2xl:text-[16px] font-medium leading-relaxed"
               >
                 {para}
               </p>
             ))}
           </div>
+
         </div>
 
         {/* RIGHT COLUMN — IMAGE */}

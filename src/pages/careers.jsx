@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { IconsObj } from "../utils/Iconify_icons";
 import Footer from "../components/footer";
 import HeroSection from "../components/HeroSection";
@@ -46,25 +47,27 @@ const cultureCards = [
     title: "Innovate with Purpose",
     image: "/images/careers/career6.1.png",
     description:
-      "We believe innovation should create real impact. At Anvi, every idea starts with purpose—designing intelligent systems that make cities safer, smarter, and more sustainable.",
+      "Build solutions that matter - not just technology for the sake of it, but innovations that create real-world impact and meaningful progress.",
   },
   {
     id: 2,
     title: "Collaborate to Grow",
     image: "/images/careers/career6.2.jpg",
     description:
-      "Great ideas grow stronger together. Our people bring diverse skills and perspectives that fuel creativity, teamwork, and progress—helping us build better, together.",
+      "Work together across teams, ideas, and disciplines to learn faster, build better, and grow as one unified ecosystem.",
   },
   {
     id: 3,
     title: "Lead with Integrity",
     image: "/images/careers/career6.3.png",
     description:
-      "Integrity is at the heart of everything we do. We act with honesty, responsibility, and transparency—earning trust through every action and decision.",
+      "Act with honesty, accountability, and responsibility in everything we do  ensuring trust, transparency, and long-term value.",
   },
 ];
 
 const Careers = () => {
+  const [active, setActive] = useState(0);
+
   return (
     <div id="careers" className="w-full bg-[#FFFFFF]">
       {/* Hero Section */}
@@ -80,7 +83,12 @@ const Careers = () => {
       <section className="w-full flex flex-col md:flex-row gap-10 items-center px-5 md:px-[60px] 2xl:px-[100px] py-[60px] md:py-[100px] bg-[#FFFFFF]">
         {/* Left Content */}
         <div className="md:max-w-[506px] 2xl:max-w-[650px] pr-10">
-          <p className="text-[18px] text-[#5C5D5E] font-medium">ANVI CAREERS</p>
+          <div className="flex items-center gap-2 pb-4">
+            <span className="w-6 h-[2px] bg-[#CD0054]" />
+            <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+              ANVI CAREERS
+            </p>
+          </div>
           <h2 className="text-[#100000] font-medium text-[30px] md:text-[40px] lg:text-[46px] leading-[57px] my-2">
             Together, We Build What’s Next
           </h2>
@@ -110,8 +118,8 @@ const Careers = () => {
       </section>
 
       <GradientText
-        ourTitle="Our Culture"
-        para="Built on curiosity, responsibility, and the courage to engineer what’s next."
+        header="Our Culture"
+        ourTitle="Built on curiosity, responsibility, and the courage to engineer what’s next."
         ourDescription={ourDescriptionDesktop}
         mobileDescription={ourDescriptionMobile}
         className="bg-gradient-to-b from-[#F9FAFB] to-[#FFFFFF]"
@@ -133,105 +141,116 @@ const Careers = () => {
       </div>
 
       <GradientText
-        ourTitle="Our Team"
-        gradientTitle="The People Behind the Innovation."
-        para="A collective of engineers, creators, and thinkers shaping the future together."
+        header="Our Team"
+        ourTitle="A collective of engineers, creators, and thinkers shaping the future together."
         ourDescription={ourDescriptionDesktop2}
         mobileDescription={ourDescriptionMobile2}
       />
 
       {/* Team Picture */}
-      <section className="px-10 lg:px-[60px] overflow-hidden">
+      <section className="w-full overflow-hidden">
         <div className="relative w-full min-h-[55vh] sm:min-h-[65vh] md:min-h-[75vh] lg:min-h-[90vh] py-5 sm:py-6 md:py-10 lg:py-16 px-4">
           {/* Background Image */}
           <div className="absolute inset-0 overflow-hidden z-0">
             <img
               src="/images/careers/team.jpg"
               alt="Our Team"
-              className="w-full h-full object-cover rounded-[16px] sm:rounded-[20px] md:rounded-[28px] lg:rounded-[32px] max-md:object-contain"
+              /* className="w-full h-full object-cover rounded-[16px] sm:rounded-[20px] md:rounded-[28px] lg:rounded-[32px] max-md:object-contain" */
+              className="w-full h-full object-cover"
               draggable={false}
             />
-          </div>
-
-          {/* Overlay Card */}
-          <div className="absolute inset-0 flex items-end justify-center z-10">
-            <div
-              className="w-[90%] sm:w-[85%] md:w-[70%] lg:w-[60%] 
-              bg-[#FFFFFF] backdrop-blur-sm rounded-2xl sm:rounded-3xl lg:rounded-[32px] 
-              px-5 py-6 sm:px-8 sm:py-7 md:px-12 md:py-9 lg:px-16 lg:py-12
-              translate-y-3 sm:translate-y-5 md:translate-y-10"
-            >
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#100000] text-center font-medium leading-[37px]">
-                The Core Values That Shape Everything We Do
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
-      <ul className="px-5 md:px-[60px] xl:px-[100px] flex flex-col md:flex-row justify-center md:gap-4 lg:gap-16 py-6 md:py-20 lg:py-24 text-center">
-        {cultureCards.map((card) => (
-          <li key={card.id} className="flex flex-col items-center gap-2 group">
-            {/* IMAGE / FLIP WRAPPER */}
-            <div className="relative w-full max-w-[400px] md:max-w-[250px] lg:max-w-[290px] aspect-[4/3] h-[220px]">
-              {/* FLIP CARD — only active on lg+ */}
+      <section className="w-full flex flex-col py-14 md:py-[100px] px-[20px] md:px-[60px] 2xl:px-[100px]">
+
+        <div className="flex items-center gap-2 pb-4">
+          <span className="w-6 h-[2px] bg-[#CD0054]" />
+          <p className="text-[14px] text-[#CD0054] font-bold font-wix uppercase">
+            Our Core Values
+          </p>
+        </div>
+        <h2 className="text-[#100000] font-medium text-[30px] md:text-[40px] lg:text-[46px] leading-[57px] my-2">
+          The Core Values That Shape Everything We Do
+        </h2>
+
+        <div className="w-full flex lg:flex-cols-2 gap-10 items-center py-6 hidden lg:flex">
+
+          {/* LEFT */}
+          <div className="w-[65%] shrink-0">
+            {cultureCards.map((item, index) => (
               <div
-                className="
-                  relative w-full h-full
-                  lg:transition-transform lg:duration-700 lg:ease-in-out
-                  lg:[transform-style:preserve-3d]
-                  lg:group-hover:[transform:rotateY(180deg)]
-                "
+                key={item.id}
+                onMouseEnter={() => setActive(index)}
+                className={`flex gap-6 items-start p-8 border-b border-[#CBCBCB] transition-all duration-300 cursor-pointer
+                ${active === index ? "bg-[#F5F5F7]" : "bg-transparent"}
+              `}
               >
-                {/* FRONT — IMAGE */}
-                <div
-                  className="
-                    absolute inset-0 rounded-[12px] overflow-hidden
-                    [backface-visibility:hidden]
-                  "
-                >
+                {/* NUMBER */}
+                <h1 className="font-medium font-wix text-[#CBCBCB] text-[40px] md:text-[48px] lg:text-[58px] text-gray-300 font-light w-[60px]">
+                  {String(item.id).padStart(2, "0")}
+                </h1>
+
+                {/* CONTENT */}
+                <div className="border-l-[1.5px] border-[#CBCBCB] px-6 ml-2">
+                  <h2 className="text-[20px] md:text-[22px] font-semibold mb-2">
+                    {item.title}
+                  </h2>
+                  <p className="font-medium text-[#4B4B4B] text-[18px] leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="w-full flex justify-center">
+            <img
+              src={cultureCards[active].image}
+              alt="visual"
+              className="w-full max-w-[420px] h-[420px] object-cover rounded-xl transition-all duration-500"
+            />
+          </div>
+        </div>
+
+        {/* mobile + tablet */}
+        <div className="flex flex-col gap-10 lg:hidden px-4 py-6">
+          {cultureCards.map((item, index) => (
+            <div key={item.id} className="flex gap-4 items-stretch border-b border-[#CBCBCB] pb-6">
+
+              {/* LEFT NUMBER + LINE */}
+              <div className="flex w-[10%] shrink-0 h-auto items-center font-medium font-wix text-[#CBCBCB] text-[22px] md:text-[48px]">
+                <h1 className="">
+                  {String(item.id).padStart(2, "0")}
+                </h1>
+                {/* <div className="w-[2px] h-auto bg-[#CBCBCB]"></div> */}
+              </div>
+
+              {/* RIGHT CONTENT */}
+              <div className="flex-1 border-l border-[#CBCBCB] pl-4">
+                <h2 className="text-[18px] font-semibold mb-2 text-[#100000]">
+                  {item.title}
+                </h2>
+
+                <p className="text-[14px] text-[#4B4B4B] leading-[20px] mb-4">
+                  {item.description}
+                </p>
+
+                {/* IMAGE */}
+                <div className="w-full h-[180px] md:h-[300px] object-cover rounded-xl overflow-hidden">
                   <img
-                    src={card.image}
-                    alt={card.title}
+                    src={item.image}
+                    alt={item.title}
                     className="w-full h-full object-cover"
                   />
-
-                  {/* DARK OVERLAY + TEXT (mobile & md only) */}
-                  <div
-                    className="
-                      absolute inset-0 flex items-center justify-center px-5
-                      bg-black/50 text-white
-                      text-[14px] font-medium leading-relaxed
-                      lg:hidden
-                    "
-                  >
-                    {card.description}
-                  </div>
-                </div>
-
-                {/* BACK — DESCRIPTION (lg+ only) */}
-                <div
-                  className="
-                    absolute inset-0 rounded-[12px]
-                    hidden lg:flex items-center justify-center px-6
-                    bg-[#100000] text-white
-                    text-[14px] font-medium leading-relaxed
-                    [transform:rotateY(180deg)]
-                    [backface-visibility:hidden]
-                  "
-                >
-                  {card.description}
                 </div>
               </div>
             </div>
-
-            {/* TITLE — NEVER FLIPS */}
-            <h2 className="text-[18px] text-[#100000] font-medium">
-              {card.title}
-            </h2>
-          </li>
-        ))}
-      </ul>
+          ))}
+        </div>
+      </section>
 
       {/* Footer */}
       <Footer footerUpBoxInfo={footerUpBoxInfoObj} />

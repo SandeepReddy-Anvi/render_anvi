@@ -1,4 +1,4 @@
-import HeroSection from "../components/HeroSection";
+ import HeroSection from "../components/HeroSection";
 import { pagesLinksObj } from "../data/PagesLinkList";
 import Footer from "../components/footer";
 import NewsFeeds from "../components/News/NewsFeeds";

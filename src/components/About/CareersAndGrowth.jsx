@@ -96,7 +96,7 @@
 // }
 
 import React from "react";
-import { IconsObj } from "../utils/Iconify_icons";
+import { IconsObj } from "../../utils/Iconify_icons";
 
 export default function CareersGrowthComponent({
   title = "Careers and Growth",
@@ -126,7 +126,7 @@ export default function CareersGrowthComponent({
         <div className="absolute inset-0">
           <img
             aria-hidden
-            src="/images/about/careerGrowth2.jpg"
+            src="/images/about/careerGrowth2.webp"
             alt="background"
             className="absolute inset-0 w-full h-full object-cover -z-20 mix-blend-multiply opacity-45"
           />
@@ -137,6 +137,12 @@ export default function CareersGrowthComponent({
         {/* Content Box */}
         {/* Left - Text */}
         <div className="lg:col-span-7 z-10 px-5 md:px-[60px] text-[#FFFFFF]">
+          <div className="flex items-center gap-2 pb-4">
+              <span className="w-6 h-[2px] bg-[#FA293E]" />
+              <p className="text-[14px] text-[#FA293E] font-bold font-wix uppercase">
+                Join With Us
+              </p>
+            </div>
           <h2 className="text-[32px] md:text-[46px] font-medium leading-tight">
             {title}
           </h2>
