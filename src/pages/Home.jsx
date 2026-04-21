@@ -41,8 +41,8 @@ const countList = [
     subtext: "R&D Experiments",
   },
   {
-    head: "1 Purpose",
-    subtext: "Engineering Your Edge",
+    head: "1",
+    subtext: "Unified Purpose",
   },
 ];
 
@@ -225,13 +225,13 @@ const Home = () => {
             </div>
 
             {/* Count Ul Box */}
-            <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 lg:gap-[150px] pt-[60px] px-0 md:px-10 lg:px-20 justify-between text-center">
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-10 lg:gap-[150px] pt-[60px] px-0 md:px-10 lg:px-20 justify-between text-start">
               {countList.map((each, index) =>
                 <li key={each.head + index} className="w-max place-content-center mx-auto">
-                  <h2 className="font-medium text-[20px] md:text-[40px] whitespace-nowrap bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
+                  <h2 className="font-wix font-medium text-[20px] md:text-[40px] lg:text-[60px] whitespace-nowrap bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] bg-clip-text text-transparent">
                     <SmartCountUp text={each.head} />
                   </h2>
-                  <p className="font-medium text-[14px] md:text-[20px] text-[#100000] whitespace-nowrap">
+                  <p className="font-medium text-[16px] md:text-[18px] text-[#100000] whitespace-nowrap">
                     {each.subtext}
                   </p>
                 </li>

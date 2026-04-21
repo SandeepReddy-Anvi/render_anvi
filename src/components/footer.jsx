@@ -212,7 +212,7 @@ const Footer = ({ footerUpBoxInfo = {}, footerUpBoxInfo2 = {} }) => {
           <div className="w-[95%] max-w-[1312px] mx-auto h-[1px] bg-[#FAFAFA80]" />
 
           {/* Bottom Row */}
-          <div className="px-[60px] py-[24px] max-md:px-6">
+          <div className="px-[60px] py-[24px] max-md:px-6 pb-[80px]">
             <div className="flex flex-row justify-between items-center max-w-[1400px] mx-auto text-[#B0B0B0] text-[14px] max-md:gap-4">
               <p>©2025 anvi.co</p>
 

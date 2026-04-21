@@ -38,6 +38,7 @@ import CareersJobApply from "./pages/CareersInfo/CareersJobApply";
 
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AnviCollective from "./components/News/AnviCollective";
+import ScrollProgressButton from "./components/ScrollProgressButton";
 
 
 /* =======================
@@ -137,6 +138,7 @@ const App = () => {
   return (
     <Router>
       <AppRoutes />
+      <ScrollProgressButton />
     </Router>
   );
 };

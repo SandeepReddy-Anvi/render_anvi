@@ -33,7 +33,7 @@ const InitiativeSection = () => {
         {initiatives.map((item, index) => (
           <div
           key={index}
-          className="bg-[#F5F5F7] rounded-2xl p-5 md:max-w-[400px] md:flex-shrink-0"
+          className="bg-[#F5F5F7] rounded-2xl p-5 md:max-w-[400px] md:flex-shrink-0 group"
         >
             {item.layout === "text-top" ? (
               <div className="flex flex-col">
@@ -53,7 +53,7 @@ const InitiativeSection = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover content-center transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                 </div>
               </div>
@@ -64,7 +64,7 @@ const InitiativeSection = () => {
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover content-center transition-transform duration-500 ease-out group-hover:scale-110"
                   />
                 </div>
 
