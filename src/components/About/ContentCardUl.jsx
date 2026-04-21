@@ -44,33 +44,56 @@ export const ContentCardUl = ({ infoList = [] }) => {
       <h2 className="font-semibold text-[32px] md:text-[46px] pb-8 md:pb-10 lg:pb-14">
         Our Guiding Principles
       </h2>
+{/* ---------- NAVIGATION ---------- */}
+<div className="w-full">
+  <div className="w-full border-b-[2px] border-[#FFFFFF50] relative">
+    
+    {/* Tabs wrapper */}
+    <ul
+      ref={navRef}
+      className="
+        flex md:grid md:grid-cols-3
+        w-full md:w-[60%]
+        overflow-x-auto md:overflow-visible
+        no-scrollbar
+        gap-4 md:gap-0
+      "
+    >
+      {infoList.map((item, i) => (
+        <button
+          key={i}
+          ref={setTabRef}
+          onClick={() => setActive(i)}
+          className={`
+            shrink-0 md:shrink
+            px-2 md:px-0
+            pb-4 md:pb-6
+            text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px]
+            font-medium text-center
+            transition-colors whitespace-nowrap
+            ${
+              active === i
+                ? "text-white"
+                : "text-white/50 hover:text-white"
+            }
+          `}
+        >
+          {item.title}
+        </button>
+      ))}
 
-      <div className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between gap-[20px] xl:gap-[90px]">
+      {/* Underline */}
+      <span
+        ref={underlineRef}
+        className="absolute left-0 -bottom-[2px] h-[2px] bg-gradient-to-r from-[#FE6100] to-[#D10000] transition-all duration-300"
+      />
+    </ul>
+  </div>
+</div>
+
+      <div className="w-full max-w-[1440px] mt-4 mx-auto flex flex-col md:flex-row justify-between gap-[20px] xl:gap-[90px]">
         {/* LEFT COLUMN */}
         <div className="flex-1 w-full md:w-[65%] lg:w-[60%] xl:max-w-[830px]">
-          {/* NAVIGATION */}
-          <ul
-            ref={navRef}
-            className="w-auto grid grid-cols-3 relative border-b-[2px] border-solid border-[#FFFFFF50]"
-          >
-            {infoList.map((item, i) => (
-              <button
-                key={i}
-                ref={setTabRef}
-                onClick={() => setActive(i)}
-                className={`pb-4 md:pb-8 text-[24px] md:text-[24px] lg:text-[22px] font-medium transition-colors lg:whitespace-nowrap ${active === i ? "text-white" : "text-white/50 hover:text-white"
-                  }`}
-              >
-                {item.title}
-              </button>
-            ))}
-
-            {/* Underline */}
-            <span
-              ref={underlineRef}
-              className="absolute left-0 -bottom-[2px] h-[2px] bg-gradient-to-r from-[#FE6100] to-[#D10000] transition-all duration-300"
-            />
-          </ul>
 
           <div className="mt-16 space-y-6 max-w-[900px]">
             {(Array.isArray(activeItem.desc1)
@@ -108,7 +131,7 @@ export const ContentCardUl = ({ infoList = [] }) => {
           <img
             src={activeItem.imgUrl}
             alt={activeItem.title}
-            className="w-full flex md:w-[35%] lg:w-[40%] object-center place-content-center max-w-[400px] h-auto aspect-square object-contain transition-all duration-150 self-center"
+            className="w-full flex md:w-[35%] lg:w-[40%] object-center rounded-lg place-content-center max-w-[400px] h-auto aspect-square object-contain transition-all duration-150 self-center"
           />
         )}
       </div>
