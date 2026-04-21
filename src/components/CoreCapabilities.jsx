@@ -88,7 +88,7 @@ const CoreCapabilities = () => {
 
             {/* Cards */}
             {/* On Scroll Component */}
-            <div className="hidden md:block">
+            <div className="hidden md:block mt-10">
                 <div
                     ref={containerRef}
                     style={{ height: maxScroll ? `${maxScroll}px` : "300vh", }}

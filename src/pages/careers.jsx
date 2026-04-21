@@ -45,7 +45,7 @@ const cultureCards = [
   {
     id: 1,
     title: "Innovate with Purpose",
-    image: "/images/careers/career6.1.png",
+    image: "/images/careers/career6.1.jpg",
     description:
       "Build solutions that matter - not just technology for the sake of it, but innovations that create real-world impact and meaningful progress.",
   },
@@ -59,7 +59,7 @@ const cultureCards = [
   {
     id: 3,
     title: "Lead with Integrity",
-    image: "/images/careers/career6.3.png",
+    image: "/images/careers/career6.3.jpg",
     description:
       "Act with honesty, accountability, and responsibility in everything we do  ensuring trust, transparency, and long-term value.",
   },
