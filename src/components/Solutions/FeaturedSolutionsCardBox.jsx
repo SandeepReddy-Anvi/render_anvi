@@ -17,7 +17,8 @@ const featuredSolutionsList = [
       "24/7 autonomous operation",
     ],
     imageUrl: "/images/solutions/solutionCard-1.webp",
-    link: pagesLinksObj.Solutions_AROP,
+    /* link: pagesLinksObj.Solutions_AROP, */
+    link: "/docs/AROP-WhitePaper.pdf",
   },
   {
     id: 2,
@@ -113,6 +114,10 @@ const FeaturedSolutionsCardBox = () => {
 
                     <a
                       href={item.link}
+
+                      /* newly added */
+                      target={item.id === 1 ? "_blank" : "_self"}
+                      rel="noopener noreferrer"
                       className="text-[#CD0054] font-semibold text-[14px] self-start leading-[20.53px] border-b-2 border-[#CD0054]"
                     >
                       View White Paper
