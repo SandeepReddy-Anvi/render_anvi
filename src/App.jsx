@@ -20,8 +20,20 @@ import { Industries } from "./pages/Industries";
 import { Investors } from "./pages/Investors";
 import { ContactUs } from "./pages/ContactUs";
 import Solutions from "./pages/Solutions";
+
 import SolutionsArop from "./pages/All_Solutions/SolutionsArop";
 import SolutionsSewage from "./pages/All_Solutions/SolutionsSewage";
+import SolutionsAiDefect from "./pages/All_Solutions/AiDefect";
+import SolutionsAutoInvestment from "./pages/All_Solutions/AutoInvestment";
+import SolutionsAnviBuild from "./pages/All_Solutions/AnviBuild";
+import SolutionsConnectedFactory from "./pages/All_Solutions/ConnectedFactory";
+import SolutionsPredictiveMaintenance from "./pages/All_Solutions/PredMaintainenceAI";
+import SolutionsRoboticsSoftware from "./pages/All_Solutions/RoboticsSoftwEngineer"; 
+import SolutionsPharmaManufacturing from "./pages/All_Solutions/PharmaManufacturingAuto";
+import SolutionsProductThroughput from "./pages/All_Solutions/ProductThroughtputOpti";
+import SolutionsAutoSystems from "./pages/All_Solutions/AutoSystems";
+import SolutionsWorkerSafety from "./pages/All_Solutions/WorkerSafety";
+
 import { News } from "./pages/News";
 
 import Energy from "./pages/All_Industries/Energy";
@@ -100,6 +112,16 @@ const AppRoutes = () => {
           <Route path={pagesLinksObj.Solutions} element={<Solutions />} />
           <Route path={pagesLinksObj.Solutions_AROP} element={<SolutionsArop />} />
           <Route path={pagesLinksObj.Solutions_Sewage} element={<SolutionsSewage />} />
+          <Route path={pagesLinksObj.Solutions_AI_Defect} element={<SolutionsAiDefect />} />
+          <Route path={pagesLinksObj.Solutions_AutoInvestment} element={<SolutionsAutoInvestment />} />
+          <Route path={pagesLinksObj.Solutions_AnviBuild} element={<SolutionsAnviBuild />} />
+          <Route path={pagesLinksObj.Solutions_ConnectedFactory} element={<SolutionsConnectedFactory />} />
+          <Route path={pagesLinksObj.Solutions_PredictiveMaintenance} element={<SolutionsPredictiveMaintenance />} />
+          <Route path={pagesLinksObj.Solutions_RoboticsSoftware} element={<SolutionsRoboticsSoftware />} />
+          <Route path={pagesLinksObj.Solutions_PharmaManufacAuto} element={<SolutionsPharmaManufacturing />} />
+          <Route path={pagesLinksObj.Solutions_ProdThroughputOpti} element={<SolutionsProductThroughput />} />
+          <Route path={pagesLinksObj.Solutions_AutoSystemsIntegration} element={<SolutionsAutoSystems />} />
+          <Route path={pagesLinksObj.Solutions_workerSafety} element={<SolutionsWorkerSafety />} />
 
           {/* Industries */}
           <Route path={pagesLinksObj.Industries} element={<Industries />} />

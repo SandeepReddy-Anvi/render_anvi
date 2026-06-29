@@ -1,6 +1,4 @@
-// Total 20 pages and links
 
-import { Mail } from "lucide-react";
 
 // =================================
 export const pagesLinksObj = {
@@ -17,7 +15,17 @@ export const pagesLinksObj = {
   Solutions: "/solutions",
   Solutions_AROP: "/solutions/arop",
   Solutions_Sewage: "/solutions/sewage",
-
+  Solutions_AI_Defect: "/solutions/ai-defect",
+  Solutions_AutoInvestment: "/solutions/auto-investment",
+  Solutions_AnviBuild: "/solutions/anvi-build",
+  Solutions_ConnectedFactory: "/solutions/connected-factory",
+  Solutions_PredictiveMaintenance: "/solutions/predictive-maintenance",
+  Solutions_RoboticsSoftware: "/solutions/robotics-software-engineering",
+  Solutions_PharmaManufacAuto: "/solutions/pharma-manufacturing-automation",
+  Solutions_ProdThroughputOpti: "/solutions/product-throughput-optimization",
+  Solutions_AutoSystemsIntegration: "/solutions/autonomous-systems-integration",
+  Solutions_workerSafety: "/solutions/worker-safety",
+  
   // Industries
   Industries: "/industries",
   Space: "https://anvispace.com",
