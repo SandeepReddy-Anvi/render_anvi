@@ -22,8 +22,8 @@ const Solutions = () => {
       <HeroSection
         backgroundImage="/videos/Heroo3_org.mp4"
         title="Our Solutions"
-        description="From Robotics to Space, Anvi transforms industries with intelligent automation and advanced technology."
-        descriptionWidth="450px"
+        description="We build intelligent systems and future-ready technologies that transform industries and empower people."
+        descriptionWidth="550px"
       />
 
       {/* Featured Solution */}
@@ -31,8 +31,8 @@ const Solutions = () => {
         header="Featured Solutions"
         ourTitle="Engineering Solutions for a Smarter, Stronger Tomorrow"
         gradientTitle="We Engineer it."
-        ourDescription={["At ANVI, our solutions are engineered ecosystems built to solve real-world challenges across robotics, space, lifestyle, entertainment, semiconductors, textiles, life sciences, and social impact. We combine research, engineering, creativity, and intelligence to create systems that adapt and scale with the future.",
-          "From advanced automation to immersive digital environments and purpose-led community projects, ANVI solutions deliver lasting value for industries and society."]}
+        ourDescription={["At ANVI, we develop intelligent engineering solutions that address real-world challenges across robotics, AI, automation, manufacturing, industrial IoT, aviation, life sciences, and smart infrastructure. Our portfolio combines advanced technologies with practical innovation to build scalable, future-ready systems.",
+          "Explore AI-powered platforms, autonomous robotics, industrial automation, and intelligent software solutions designed to improve efficiency, safety, productivity, and operational excellence across industries."]}
       />
 
       <div>

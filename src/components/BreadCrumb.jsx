@@ -12,6 +12,7 @@ const BreadCrumb = ({ showHeader, location }) => {
 
     "/solutions/arop": "Arop",
     "/solutions/sewage": "Sewage",
+    "/solutions/anvi-build": "Anvi Build",
 
     "/careers/job-openings": "Job Openings",
 

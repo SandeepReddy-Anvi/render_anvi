@@ -126,7 +126,7 @@ const SolutionsArop = () => {
         </div>
 
         <p className="pt-[56px] text-[16px] sm:text-[18px] leading-[29.25px] md:pr-[110px]">
-By unifying these capabilities, AROP transforms airport operations from reactive and manual checks into a proactive, always-on safety system. The result is a platform that not only enhances safety and operational efficiency, but also significantly reduces costs and ensures compliance with global aviation regulations (ICAO, FAA, DGCA).        </p>
+          By unifying these capabilities, AROP transforms airport operations from reactive and manual checks into a proactive, always-on safety system. The result is a platform that not only enhances safety and operational efficiency, but also significantly reduces costs and ensures compliance with global aviation regulations (ICAO, FAA, DGCA).        </p>
       </section>
 
       {/* Section 4 */}

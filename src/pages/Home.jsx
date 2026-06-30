@@ -11,6 +11,7 @@ import CoreCapabilities from "../components/CoreCapabilities";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/footer";
 import { CountAnimOnScroll, SmartCountUp } from "../components/CountAnimOnScroll";
+import TickerItems from "../components/Solutions/Tickeritems";
 
 const footerUpBoxInfoObj = {
   head: `Let's Build the Future Together`,
@@ -155,40 +156,7 @@ const Home = () => {
         </section>
 
         {/* Ticker Items */}
-        <div className="w-full overflow-hidden">
-          <div className="bg-gradient-to-r from-[#FE7F2C] via-[#FF4A3A] via-[#FA293E] to-[#CD0054] py-4">
-            <div
-              style={{
-                display: "flex",
-                animation: "marquee 10s linear infinite",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  flexShrink: 0,
-                  whiteSpace: "nowrap",
-                  minWidth: "max-content",
-                }}
-              >
-                {[...tickerItems, ...tickerItems].map((text, i) => (
-                  <span
-                    key={i}
-                    style={{
-                      color: "white",
-                      fontSize: 16,
-                      fontWeight: 500,
-                      padding: "0 32px",
-                    }}
-                  >
-                    • {text}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+        <TickerItems tickerItems={tickerItems} />
 
         <div className="">
           {/* Section3 -> About */}
