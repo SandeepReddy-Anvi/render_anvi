@@ -13,9 +13,11 @@ const BreadCrumb = ({ showHeader, location }) => {
     "/solutions/arop": "Arop",
     "/solutions/sewage": "Sewage",
     "/solutions/anvi-build": "Anvi Build",
+    "/solutions/ai-defect": "AI-Defect",
+    "/solutions/auto-investment": "Auto Investment",
 
     "/careers/job-openings": "Job Openings",
-
+    
     // Special case (array = custom breadcrumb)
     "/collective": ["NewsRoom", "Collective"],
   };
