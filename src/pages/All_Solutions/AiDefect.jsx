@@ -221,7 +221,7 @@ automated, real-time defect detection.
               {/* Stats Row */}
               <div className="flex flex-row gap-12 sm:gap-16 md:gap-24 mt-2">
                 <div className="flex flex-col">
-                  <span className="text-[32px] md:text-[40px] font-bold text-[#CD0054] leading-tight mb-1">
+                  <span className="text-[32px] md:text-[40px] font-bold text-[#CD0054] font-wix leading-tight mb-1">
                     100%
                   </span>
                   <span className="text-sm md:text-base text-[#545454] font-medium font-raleway">
@@ -229,7 +229,7 @@ automated, real-time defect detection.
                   </span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-[32px] md:text-[40px] font-bold text-[#CD0054] leading-tight mb-1">
+                  <span className="text-[32px] md:text-[40px] font-bold text-[#CD0054] font-wix leading-tight mb-1">
                     &lt;50ms
                   </span>
                   <span className="text-sm md:text-base text-[#545454] font-medium font-raleway">

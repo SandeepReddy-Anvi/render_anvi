@@ -160,7 +160,7 @@ investments before committing capital."
             </p>
 
             {/* Image with Quote Overlay */}
-            <div className="relative w-full rounded-xl overflow-hidden mt-auto">
+            <div className="relative w-full  overflow-hidden mt-auto">
               <img 
                 src="/images/solutions/Automation/auto1.png" // Update this path to your actual image
                 alt="Business professionals in a meeting" 
@@ -186,7 +186,7 @@ investments before committing capital."
             {failureReasons.map((reason, index) => (
               <div 
                 key={index}
-                className="bg-[#F8F9FA] rounded-xl p-6 md:p-8 flex items-start gap-4 hover:shadow-md transition-shadow duration-300"
+                className="bg-[#F8F9FA]   p-6 md:p-8 flex items-start gap-4 hover:shadow-md transition-shadow duration-300"
               >
                 {/* Icon Container */}
                 <div className="flex-shrink-0 bg-[#FDF0F4] w-10 h-10 rounded-lg flex items-center justify-center mt-1">
@@ -242,7 +242,7 @@ investments before committing capital."
             >
               {/* Top Row: Number and Icon */}
               <div className="flex justify-between items-start mb-12">
-                <span className="text-4xl md:text-5xl font-bold text-gray-200/80 italic tracking-tighter">
+                <span className="text-3xl md:text-4xl font-semibold text-gray-200/80 font-wix tracking-tighter">
                   {stage.number}
                 </span>
                 <div className="p-1.5 bg-pink-50/50 rounded-md">
@@ -278,37 +278,37 @@ investments before committing capital."
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
           
           {/* Left Column: List Items */}
-          <div className="w-full lg:w-1/2 flex flex-col border border-gray-200 rounded-l shadow-sm bg-white overflow-hidden">
-            {frameworkItems.map((item, index) => (
-              <div 
-                key={index} 
-                className={`flex items-start gap-6 p-8 ${
-                  index !== frameworkItems.length - 1 ? 'border-b border-gray-200' : ''
-                }`}
-              >
-                {/* Icon Container with Gradient */}
-                <div 
-                  className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 shadow-sm"
-                  style={{
-                    background: "linear-gradient(135deg, #FF4A3A 0%, #FA293E 100%)",
-                  }}
-                >
-                  {item.icon}
-                </div>
-                
-                {/* Text Content */}
-                <div>
-                  <h3 className="text-[18px] md:text-[20px] font-semibold font-raleway text-[#333333] mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm md:text-[15px] lg:text-[16px] font-inter     text-[#545454] font-medium leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
+         <div className="w-full lg:w-1/2 flex flex-col border border-gray-200 rounded-l shadow-sm bg-white overflow-hidden">
+  {frameworkItems.map((item, index) => (
+    <div 
+      key={index} 
+      // Added relative, z-index, hover:shadow, and transition classes here
+      className={`flex items-start gap-6 p-8 relative transition-shadow duration-300 hover:shadow-lg hover:z-10 bg-white ${
+        index !== frameworkItems.length - 1 ? 'border-b border-gray-200' : ''
+      }`}
+    >
+      {/* Icon Container with Gradient */}
+      <div 
+        className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0 mt-1 shadow-sm"
+        style={{
+          background: "linear-gradient(135deg, #FF4A3A 0%, #FA293E 100%)",
+        }}
+      >
+        {item.icon}
+      </div>
+      
+      {/* Text Content */}
+      <div>
+        <h3 className="text-[18px] md:text-[20px] font-semibold font-raleway text-[#333333] mb-3">
+          {item.title}
+        </h3>
+        <p className="text-sm md:text-[15px] lg:text-[16px] font-inter text-[#545454] font-medium leading-relaxed">
+          {item.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
           {/* Right Column: Image with Overlay */}
           <div className="w-full lg:w-1/2 relative rounded-xl overflow-hidden shadow-sm min-h-[400px] lg:min-h-full flex">
             <img 
