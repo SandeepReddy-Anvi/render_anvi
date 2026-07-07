@@ -13,8 +13,11 @@ const BreadCrumb = ({ showHeader, location }) => {
     "/solutions/arop": "Arop",
     "/solutions/sewage": "Sewage",
     "/solutions/anvi-build": "Anvi Build",
-    "/solutions/ai-defect": "AI-Defect",
-    "/solutions/auto-investment": "Auto Investment",
+    "/solutions/ai-defect": "AI Defect Inspection",
+    "/solutions/auto-investment": "Automation Investment Advisory",
+    "/solutions/connected-factory": "Connected Factory",
+    "/solutions/predictive-maintenance": " Predictive Maintenance AI",
+
 
     "/careers/job-openings": "Job Openings",
     
