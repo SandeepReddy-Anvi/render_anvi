@@ -314,11 +314,12 @@ const costStats = [
       </div>
     </section>
 
-    <section className="w-full bg-white px-[20px] sm:px-[30px] md:px-[40px] lg:px-[60px] py-8 md:py-16 lg:py-[100px] font-raleway">
+  <section className="w-full bg-white px-[20px] sm:px-[30px] md:px-[40px] lg:px-[60px] py-8 md:py-16 lg:py-[100px] font-raleway">
       <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
         
         {/* Left Column: Text and Image */}
-        <div className="w-full lg:w-1/2 flex flex-col sticky top-24">
+        {/* REMOVED 'sticky top-24' from the className below */}
+        <div className="w-full lg:w-1/2 flex flex-col">
           <h2 className="text-[32px] sm:text-[36px] md:text-[40px] lg:text-[48px] font-bold text-[#100000] leading-[1.15] mb-6 max-w-[500px]">
             A five-step<br />framework from<br />pilot to plant-wide.
           </h2>

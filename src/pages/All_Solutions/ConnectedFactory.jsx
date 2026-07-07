@@ -202,15 +202,16 @@ const engineeringFeatures = [
         <div className="w-full flex flex-col border border-gray-100 rounded-xl overflow-hidden shadow-sm">
           
           {/* Grid Header */}
-          <div className="grid grid-cols-1 md:grid-cols-2 text-[13px] md:text-[14px] font-bold tracking-wider uppercase">
+          {/* Forced grid-cols-2 on all screens so it stays side-by-side */}
+          <div className="grid grid-cols-2 text-[12px] sm:text-[13px] md:text-[14px] font-bold tracking-wider uppercase">
             {/* Manual Header */}
-            <div className="bg-[#FAFAFA] text-[#333333] p-6 md:px-8 font-semibold md:py-6 flex items-center gap-3">
-              <EyeOff className="w-5 h-5 text-[#CD0054]" strokeWidth={2} />
+            <div className="bg-[#FAFAFA] text-[#333333] p-4 sm:p-6 md:px-8 font-semibold flex items-center gap-2 sm:gap-3">
+              <EyeOff className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD0054] flex-shrink-0" strokeWidth={2} />
               <span>Manual Factory</span>
             </div>
             {/* Connected Header */}
-            <div className="bg-[#0B0D17] text-white p-6 font-semibold md:px-8 md:py-6 flex items-center gap-3">
-              <Eye className="w-5 h-5 text-[#CD0054]" strokeWidth={2} />
+            <div className="bg-[#0B0D17] text-white p-4 sm:p-6 font-semibold md:px-8 flex items-center gap-2 sm:gap-3">
+              <Eye className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD0054] flex-shrink-0" strokeWidth={2} />
               <span>Connected Factory</span>
             </div>
           </div>
@@ -220,15 +221,17 @@ const engineeringFeatures = [
             {comparisonData.map((row, index) => (
               <div 
                 key={index} 
-                className="grid grid-cols-1 md:grid-cols-2 border-t border-gray-100 bg-white"
+             
+                className="grid grid-cols-2 border-t border-gray-100 bg-white"
               >
                 {/* Manual Data */}
-                <div className="p-6 md:px-8 md:py-6 text-sm md:text-[15px] lg:text-[16px] text-[#545454] font-medium border-b md:border-b-0 md:border-r border-gray-100 flex items-center">
+                {/* Kept border-r on all sizes so the divider line is always visible */}
+                <div className="p-4 sm:p-6 md:px-8 md:py-6 text-[13px] sm:text-sm md:text-[15px] lg:text-[16px] text-[#545454] font-medium border-r border-gray-100 flex items-center">
                   {row.manual}
                 </div>
                 {/* Connected Data */}
-                <div className="p-6 md:px-8 md:py-6 text-sm md:text-[15px] lg:text-[16px] text-[#282828] font-medium flex items-center gap-3 bg-white">
-                  <CheckCircle2 className="w-5 h-5 text-[#CD0054] flex-shrink-0" strokeWidth={2} />
+                <div className="p-4 sm:p-6 md:px-8 md:py-6 text-[13px] sm:text-sm md:text-[15px] lg:text-[16px] text-[#282828] font-medium flex items-start sm:items-center gap-2 sm:gap-3 bg-white">
+                  <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-[#CD0054] flex-shrink-0 mt-0.5 sm:mt-0" strokeWidth={2} />
                   <span>{row.connected}</span>
                 </div>
               </div>
